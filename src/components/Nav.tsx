@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const location = useLocation();
 
   const handleScroll = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -14,21 +16,21 @@ const Nav: React.FC = () => {
     }
     setIsMobileMenuOpen(false); // Close the mobile menu
   };
+    const isTeamPage = location.pathname === "/team";
 
   return (
     <nav className="bg-white sticky top-0 z-50">
       <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <button
-            className="text-black font-bold text-lg flex items-center"
-            onClick={() => handleScroll("top")}
-          >
+        <div className="flex items-center font-bold">
+          <Link to={"/"}>
             BigwigMedia®
-          </button>
+          </Link>
         </div>
 
-        {/* Hamburger Menu for Mobile */}
+        {!isTeamPage && (
+          <>
+          {/* Hamburger Menu for Mobile */}
         <button
           className="md:hidden text-black"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -56,7 +58,6 @@ const Nav: React.FC = () => {
             )}
           </svg>
         </button>
-
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-black-600 font-bold relative">
           <li
@@ -218,11 +219,27 @@ const Nav: React.FC = () => {
               <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
           </li>
+          <li>
+            <button
+              className="relative overflow-hidden group rounded-lg px-3 py-2"
+              onClick={() => handleScroll("blog")}
+            >
+              <span className="relative z-10"><Link to="/team">Teams</Link></span>
+              <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+            </button>
+          </li>
+
         </ul>
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-6"></div>
-      </div>
+    
+          </>
+        )}
+</div>
+        
+
+        
 
       {/* Overlay for Darkening/Blur Effect */}
       {isMobileMenuOpen && (

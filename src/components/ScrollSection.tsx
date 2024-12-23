@@ -6,7 +6,7 @@ import google_ad from "../assets/google_ad.png"
 import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp"
 import performance from "../assets/Handleey-SMS-New-removebg-preview.webp"
 import web from "../assets/webdev.png"
-import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaMapMarkerAlt, FaMobileAlt, FaShieldAlt, FaStar, FaYoutube, FaChartLine, FaTags, FaCommentDots, FaGlobe, FaPalette, FaCode, FaLaptopCode, FaBuilding, FaLinkedin, FaSnapchat, FaWhatsapp, FaYahoo } from "react-icons/fa"; // Example icons
+import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaMapMarkerAlt, FaMobileAlt, FaShieldAlt, FaStar, FaYoutube, FaChartLine, FaTags, FaCommentDots, FaGlobe, FaPalette, FaCode, FaLaptopCode, FaBuilding, FaLinkedin, FaYahoo } from "react-icons/fa"; // Example icons
 import { MdSearch } from "react-icons/md";
 
 type Section = {
@@ -95,9 +95,7 @@ const ScrollSections: React.FC = () => {
         <FaTwitter className="text-blue-600 text-4xl" />,
         <FaYoutube className="text-red-700 text-4xl" />,
         <FaLinkedin className="text-blue-700 text-4xl" />,
-        <FaSnapchat className="text-yellow-700 text-4xl" />,
-        <FaGoogle className="text-blue-700 text-4xl" />,
-        <FaWhatsapp className="text-green-700 text-4xl" />,
+        <FaGoogle className="text-red-700 text-4xl" />,
       ],
     },
     {
