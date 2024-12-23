@@ -282,7 +282,7 @@ const Nav: React.FC = () => {
     rel="noopener noreferrer"
     className="text-gray-600 hover:text-black"
   >
-    Teams
+    Team
   </a>
 </li>
           </ul>
