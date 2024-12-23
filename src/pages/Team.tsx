@@ -1,6 +1,5 @@
 import React from "react";
 import ceo from "../assets/ceo.jpg"
-import Nav from "../components/Nav";
 
 const Team: React.FC = () => {
   // Sample data for team members
@@ -8,7 +7,6 @@ const Team: React.FC = () => {
 
   return (
     <>
-    <Nav/>
     <section className=" container mx-auto py-12 px-4 lg:px-8">
       <div className="max=w-6xl px-6 md:px-8 gap-8">
         {/* CEO Section */}

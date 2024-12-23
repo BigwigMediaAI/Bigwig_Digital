@@ -46,7 +46,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({ section, isReversed }
       >
         {section.content}
         {section.icons && (
-          <div className="mt-4 flex gap-4">
+          <div id="solutions" className="mt-4 flex gap-4">
             {section.icons.map((icon, index) => (
               <span key={index} className="text-2xl">
                 {icon}
