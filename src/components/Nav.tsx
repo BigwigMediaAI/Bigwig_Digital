@@ -247,7 +247,7 @@ const Nav: React.FC = () => {
       )}
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-14 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
+        <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
               <button
@@ -280,6 +280,13 @@ const Nav: React.FC = () => {
               >
                 Blogs
               </button>
+            </li>
+            <li>
+              <Link to={"/team"}
+                className="text-gray-600 hover:text-black"
+              >
+                Teams
+              </Link>
             </li>
           </ul>
         </div>
