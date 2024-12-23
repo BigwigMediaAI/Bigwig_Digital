@@ -73,15 +73,10 @@ function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
+              
               <li>
               <button
-                  className="text-gray-400 hover:text-white"
-                >
-                  blog
-                </button>
-              </li>
-              <li>
-              <button
+              onClick={() => handleScrollToSection("case")}
                   className="text-gray-400 hover:text-white"
                 >
                   Case Studies
@@ -89,18 +84,13 @@ function Footer() {
               </li>
               <li>
               <button
+              onClick={() => handleScrollToSection("faq")}
                   className="text-gray-400 hover:text-white"
                 >
                   FAQ
                 </button>
               </li>
-              <li>
-              <button
-                  className="text-gray-400 hover:text-white"
-                >
-                  Support
-                </button>
-              </li>
+              
             </ul>
           </div>
 
@@ -114,8 +104,6 @@ function Footer() {
                 <FontAwesomeIcon icon={faEnvelope} className="mr-2" />{" "}
                 info@bigwigmedia.in
               </li>
-              <li className="text-gray-400">Delhi,India</li>
-              <li className="text-gray-400">+91-11 49 384 555</li>
             </ul>
           </div>
         </div>
@@ -159,7 +147,7 @@ function Footer() {
           </div>
 
           {/* Footer Links */}
-          <div className="flex space-x-6 text-gray-400 text-sm">
+          <div className=" space-x-6 text-gray-400 text-sm hidden">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Service</a>
             <a href="#" className="hover:underline">Sitemap</a>
@@ -167,7 +155,7 @@ function Footer() {
 
           {/* Footer Copy */}
           <p className="text-sm text-gray-500 mt-4 md:mt-0">
-            © 2024 BigwigMedia.ae. All rights reserved.
+            © 2025 BigwigMedia.ae. All rights reserved.
           </p>
         </div>
       </div>

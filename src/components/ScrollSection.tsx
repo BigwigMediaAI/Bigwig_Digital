@@ -6,8 +6,8 @@ import google_ad from "../assets/google_ad.png"
 import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp"
 import performance from "../assets/Handleey-SMS-New-removebg-preview.webp"
 import web from "../assets/webdev.png"
-import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaMapMarkerAlt, FaMobileAlt, FaShieldAlt, FaStar, FaYoutube, FaChartLine, FaTags, FaPercentage, FaCommentDots, FaGlobe, FaPalette, FaCode, FaLaptopCode, FaBuilding } from "react-icons/fa"; // Example icons
-import { MdSearch, MdOutlineCampaign } from "react-icons/md";
+import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaMapMarkerAlt, FaMobileAlt, FaShieldAlt, FaStar, FaYoutube, FaChartLine, FaTags, FaCommentDots, FaGlobe, FaPalette, FaCode, FaLaptopCode, FaBuilding, FaLinkedin, FaSnapchat, FaWhatsapp, FaYahoo } from "react-icons/fa"; // Example icons
+import { MdSearch } from "react-icons/md";
 
 type Section = {
   id: number;
@@ -84,7 +84,7 @@ const ScrollSections: React.FC = () => {
             Balancing Your Brand's Mission and Social Media Presence
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Social media is like a party, and your brand needs to be the life of it—not the awkward one in the corner. With our strategies, you'll charm the crowd, start meaningful conversations, and leave everyone wanting more. All powered by some serious research and trend magic!
+            Social media is like a party, and your brand needs to be the life of it—not the awkward one in the corner. With our strategies, you'll charm the crowd, start meaningful conversations, increase your brands community and leave everyone wanting more. All powered by some serious research and trend magic!
           </p>
         </>
       ),
@@ -94,6 +94,10 @@ const ScrollSections: React.FC = () => {
         <FaInstagram className="text-pink-500 text-4xl" />,
         <FaTwitter className="text-blue-600 text-4xl" />,
         <FaYoutube className="text-red-700 text-4xl" />,
+        <FaLinkedin className="text-blue-700 text-4xl" />,
+        <FaSnapchat className="text-yellow-700 text-4xl" />,
+        <FaGoogle className="text-blue-700 text-4xl" />,
+        <FaWhatsapp className="text-green-700 text-4xl" />,
       ],
     },
     {
@@ -116,6 +120,7 @@ const ScrollSections: React.FC = () => {
         <FaGoogle className="text-red-500 text-4xl" />,
         <FaChartLine className="text-blue-700 text-4xl" />,
         <FaTags className="text-yellow-500 text-4xl" />,
+        <FaYahoo className="text-purple-700 text-4xl" />,
       ],
     },
     {
@@ -128,16 +133,18 @@ const ScrollSections: React.FC = () => {
             Marketing Strategies That Help You Stay Ahead of the Competition
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Marketing is a race, and we’re here to make sure you’re not the one tripping over your shoelaces. Our data-driven approach will keep you ahead of the pack, converting browsers into buyers faster than you can say ‘ROI.’
+            Marketing is a race, and we’re here to make sure you’re not the one tripping over your shoelaces. Our data-driven approach will keep you ahead of the pack, converting browsers into buyers faster than you can say ‘ROI’ on Google Adwords, Instagram Ads, Facebook Ads, LinkedIn Ads, Botim Ads, Youtube Ads etc.
           </p>
         </>
       ),
       image: performance,
       icons: [
-        <MdOutlineCampaign className="text-yellow-500 text-4xl" />,
         <FaGoogle className="text-red-500 text-4xl" />,
         <FaChartLine className="text-blue-700 text-4xl" />,
-        <FaPercentage className="text-green-600 text-4xl" />,
+        <FaYoutube className="text-red-700 text-4xl" />,
+        <FaLinkedin className="text-blue-700 text-4xl" />,
+        <FaFacebook className="text-blue-600 text-4xl" />,
+        <FaInstagram className="text-pink-500 text-4xl" />,
       ],
       
     },
@@ -174,7 +181,7 @@ const ScrollSections: React.FC = () => {
             Crafting Seamless Digital Experiences!
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            From pixel-perfect websites to feature-rich mobile apps, we bring your ideas to life with designs that inspire and functionality that delivers. Let us help you create a digital presence that's as sleek as it is user-friendly, ensuring your audience stays engaged and your brand stands out.
+            From pixel-perfect responsive websites to feature-rich mobile apps on Android & IOS, we bring your ideas to life with designs that inspire and functionality that delivers. Let us help you create a digital presence that's as sleek as it is user-friendly, ensuring your audience stays engaged and your brand stands out.
           </p>
         </>
       ),
@@ -197,7 +204,7 @@ const ScrollSections: React.FC = () => {
             Elevate Your Local Presence with GMB
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Get your business noticed on Google search and maps! With a strategic Google My Business profile, we'll help you attract more local customers, build credibility, and keep your audience engaged. From setup to optimization, we’ll ensure your business shines brightly in your neighborhood and beyond.
+            Get your business locally & vocally noticed on Google search and maps! With a strategic Google My Business profile, we'll help you attract more local customers, build credibility, and keep your audience engaged. From setup to optimization, we’ll ensure your business shines brightly in your neighborhood and beyond.
           </p>
         </>
       ),

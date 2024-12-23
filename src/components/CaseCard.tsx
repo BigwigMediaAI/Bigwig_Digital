@@ -46,7 +46,7 @@ const CaseCard: React.FC = () => {
     <div className="p-8 min-h-screen w-11/12 mx-auto">
       {/* Header Section */}
       <h1 className="text-3xl font-semibold text-gray-900 mb-8 text-center">
-        Leading business trusted <span className="text-yellow-500">👍</span> us
+        Why leading businesses trust us<span className="text-yellow-500">👍</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
