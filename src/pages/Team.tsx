@@ -17,13 +17,11 @@ const Team: React.FC = () => {
             className="w-48 h-48 mx-auto rounded-full object-cover mb-4"
           />
           <h3 className="text-xl font-semibold text-center">Vipul Dutta</h3>
-          <p className="text-blue-600 text-center my-3">CEO & Founder</p>
+          <p className="text-black font-semibold text-center my-3">Founder & CEO</p>
           <p className="text-gray-600 md:text-center text-justify">
           Make way for Bigwig Media, the superhero of the digital marketing world with a black belt in AI tech! Our mission? To catapult businesses like yours straight into the glitzy realm of online success. 
           </p>
-          <h2 className="text-gray-600 mt-4 md:text-center text-justify">
-          Step up, folks, and prepare to be amazed by the spectacle that is Unifyi! Picture it: An AI-fuelled, SAAS platform that acts as a one-stop-shop for managing leads through the maze-like hilarity that is the universities and institutions admission process. Think of Unifyi as your ticket to the roller coaster ride of lead capture, nurturing, and conversion into admissions, all without losing your hair (or your sanity).
-          </h2>
+          <h2 className="font-bold text-gray-700 mt-6 text-center text-2xl">About Bigwig Media</h2>
           <h2 className="text-gray-600 mt-4 md:text-center text-justify">
           We don't just talk a big game -- we deliver. Whether it's magnetizing leads like bees to honey, bolstering your brand till it's as big as you wish, fanning the flames of creativity, conjuring mind-blowing content, or playing king of the hill one search engine at a time—we've got the magic sauce.
           </h2>

@@ -219,7 +219,7 @@ const Nav: React.FC = () => {
   >
     <span className="relative z-10">
       <a href="/team" target="_blank" rel="noopener noreferrer">
-        Teams
+        Team
       </a>
     </span>
     <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
