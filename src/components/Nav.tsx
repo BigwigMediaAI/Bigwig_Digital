@@ -16,17 +16,18 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white sticky top-0 z-50">
-      <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3">
+    <nav className="bg-gray-800 sticky top-0 z-50 text-white">
+      <div className="container px-4 md:px-6 mx-auto flex justify-between items-center py-3 ">
         {/* Logo Section */}
-        <div className="flex items-center font-bold">
-          <button onClick={() => handleScroll("top")}><a href="/">BigwigMedia®</a></button>
-          
+        <div className="flex items-center font-bold text-2xl">
+          <button onClick={() => handleScroll("top")}>
+            <a href="/">BigwigMedia®</a>
+          </button>
         </div>
 
-          {/* Hamburger Menu for Mobile */}
+        {/* Hamburger Menu for Mobile */}
         <button
-          className="md:hidden text-black"
+          className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -83,14 +84,14 @@ const Nav: React.FC = () => {
                 </svg>
               </span>
 
-              <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
             {/* Dropdown Container */}
             {isSolutionsOpen && (
               <div
                 onMouseEnter={() => setIsSolutionsOpen(true)}
                 onMouseLeave={() => setIsSolutionsOpen(false)}
-                className="absolute top-full left-0 bg-white shadow-lg rounded-md px-10 w-[600px] h-[400px] grid grid-cols-4 gap-6"
+                className="absolute top-full left-0 bg-blue-50 shadow-lg rounded-md px-10 w-[600px] h-[400px] grid grid-cols-4 gap-6"
               >
                 <button
                   className="text-gray-600 hover:text-black text-sm text-left"
@@ -192,7 +193,7 @@ const Nav: React.FC = () => {
               onClick={() => handleScroll("about")}
             >
               <span className="relative z-10">About</span>
-              <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
           </li>
           <li>
@@ -201,7 +202,7 @@ const Nav: React.FC = () => {
               onClick={() => handleScroll("faq")}
             >
               <span className="relative z-10">FAQ</span>
-              <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
           </li>
           <li>
@@ -210,53 +211,42 @@ const Nav: React.FC = () => {
               onClick={() => handleScroll("blog")}
             >
               <span className="relative z-10">Blogs</span>
-              <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
           </li>
           <li>
-  <button
-    className="relative overflow-hidden group rounded-lg px-4 py-2"
-  >
-    <span className="relative z-10">
-      <a href="/team" target="_blank" rel="noopener noreferrer">
-        Team
-      </a>
-    </span>
-    <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
-  </button>
+            <button className="relative overflow-hidden group rounded-lg px-4 py-2">
+              <span className="relative z-10">
+                <a href="/team" target="_blank" rel="noopener noreferrer">
+                  Team
+                </a>
+              </span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+            </button>
 
-  <button
-    className="relative overflow-hidden group rounded-lg px-3 py-2"
-  >
-    <span className="relative z-10">
-      <a href="/contact" target="_blank" rel="noopener noreferrer">
-        Contact Us
-      </a>
-    </span>
-    <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
-  </button>
-</li>
-
+            <button className="relative overflow-hidden group rounded-lg px-3 py-2">
+              <span className="relative z-10">
+                <a href="/contact">Contact Us</a>
+              </span>
+              <span className="absolute inset-0 bg-gray-600 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+            </button>
+          </li>
         </ul>
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-6"></div>
-</div>
-        
-
-        
-
+      </div>
       {/* Overlay for Darkening/Blur Effect */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-20 right-0 bg-black bg-opacity-70" />
       )}
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
+        <div className="absolute top-15 right-0 bg-blue-50 shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
               <button
-                className="text-gray-600 hover:text-black"
+                className="text-black"
                 onClick={() => handleScroll("solutions")}
               >
                 Solutions
@@ -264,7 +254,7 @@ const Nav: React.FC = () => {
             </li>
             <li>
               <button
-                className="text-gray-600 hover:text-black"
+                className="text-black"
                 onClick={() => handleScroll("about")}
               >
                 About
@@ -272,7 +262,7 @@ const Nav: React.FC = () => {
             </li>
             <li>
               <button
-                className="text-gray-600 hover:text-black"
+                className="text-black"
                 onClick={() => handleScroll("faq")}
               >
                 FAQ
@@ -280,22 +270,27 @@ const Nav: React.FC = () => {
             </li>
             <li>
               <button
-                className="text-gray-600 hover:text-black"
+                className="text-black"
                 onClick={() => handleScroll("blog")}
               >
                 Blogs
               </button>
             </li>
             <li>
-  <a
-    href="/team"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-gray-600 hover:text-black"
-  >
-    Team
-  </a>
-</li>
+              <a
+                href="/team"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black"
+              >
+                Team
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="text-black">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       )}

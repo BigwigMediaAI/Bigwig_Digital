@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useTrail, animated } from "@react-spring/web"; // Import animations
-import hero_img from "../assets/desk-office-with-online-marketing-business-concept-removebg-preview.png"
+import hero_img from "../assets/desk-office-with-online-marketing-business-concept-removebg-preview.png";
 import ContactUs from "./Contact";
 
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-    
-      // const openModal = () => setIsModalOpen(true);
-      const closeModal = () => setIsModalOpen(false);
 
+  // const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   // Content for animation
   const items = [
@@ -16,7 +15,7 @@ const Hero: React.FC = () => {
     "to old marketing",
     "Try BigWigMedia ",
     "Powered by AI",
-    "Discover a smarter way to manage your marketing campaigns with the power of AI. Transform your brand and reach new heights effortlessly."
+    "Discover a smarter way to manage your marketing campaigns with the power of AI. Transform your brand and reach new heights effortlessly.",
   ];
 
   // Animation logic
@@ -55,12 +54,9 @@ const Hero: React.FC = () => {
             )}
           </animated.div>
         ))}
-        <button
-          
-            className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700"
-          >
-            <a href="/Contact">Contact Us</a>
-          </button>
+        <button className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">
+          <a href="/Contact">Contact Us</a>
+        </button>
       </div>
 
       {/* Image Section */}

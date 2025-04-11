@@ -86,7 +86,7 @@ export default function ContactPage() {
 
   return (
     <div>
-      <div className="mb-14 md:mb-14">
+      <div className="mb-20 md:mb-24">
         <Navbar2 />
       </div>
 
@@ -161,16 +161,17 @@ export default function ContactPage() {
       </section>
 
       <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
-        Have questions, need marketing advice, or interested in growing your brand online?
+        Have questions, need marketing advice, or interested in growing your
+        brand online?
       </h2>
       <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">
-        Reach out to us via email, phone, or simply fill out the form below. Your inquiry will be directed to the right Bigwig Digital marketing expert, and we’ll get back to you within 24 hours.
+        Reach out to us via email, phone, or simply fill out the form below.
+        Your inquiry will be directed to the right Bigwig Digital marketing
+        expert, and we’ll get back to you within 24 hours.
       </p>
 
       <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
-        {/* Updated FORM SECTION */}
-        {/* Form & Map */}
-      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
+        {/* Form Section */}
         <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-left">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
@@ -191,7 +192,9 @@ export default function ContactPage() {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
               required
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
 
             <PhoneInput
               placeholder="Enter phone number"
@@ -201,7 +204,9 @@ export default function ContactPage() {
               international
               className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
             />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}
 
             <textarea
               rows={4}
@@ -220,10 +225,8 @@ export default function ContactPage() {
             </button>
           </form>
         </div>
-        </div>
 
-
-        {/* MAP SECTION */}
+        {/* Map Section */}
         <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.668560792657!2d55.264871674024235!3d25.18066683237258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69004a524faf%3A0x13d5b1575adb574a!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1744201890505!5m2!1sen!2sin"

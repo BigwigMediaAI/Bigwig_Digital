@@ -1,12 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import social from "../assets/Handleey-Social-Media-Post.webp"
-import google_ad from "../assets/google_ad.png"
-import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp"
-import performance from "../assets/Handleey-SMS-New-removebg-preview.webp"
-import web from "../assets/webdev.png"
-import { FaFacebook, FaInstagram, FaTwitter, FaGoogle, FaMapMarkerAlt, FaMobileAlt, FaShieldAlt, FaStar, FaYoutube, FaChartLine, FaTags, FaCommentDots, FaGlobe, FaPalette, FaCode, FaLaptopCode, FaBuilding, FaLinkedin, FaYahoo } from "react-icons/fa"; // Example icons
+import social from "../assets/Handleey-Social-Media-Post.webp";
+import google_ad from "../assets/google_ad.png";
+import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp";
+import performance from "../assets/Handleey-SMS-New-removebg-preview.webp";
+import web from "../assets/webdev.png";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTwitter,
+  FaGoogle,
+  FaMapMarkerAlt,
+  FaMobileAlt,
+  FaShieldAlt,
+  FaStar,
+  FaYoutube,
+  FaChartLine,
+  FaTags,
+  FaCommentDots,
+  FaGlobe,
+  FaPalette,
+  FaCode,
+  FaLaptopCode,
+  FaBuilding,
+  FaLinkedin,
+  FaYahoo,
+} from "react-icons/fa"; // Example icons
 import { MdSearch } from "react-icons/md";
 
 type Section = {
@@ -22,9 +42,12 @@ type AnimatedSectionProps = {
   isReversed: boolean;
 };
 
-const AnimatedSection: React.FC<AnimatedSectionProps> = ({ section, isReversed }) => {
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  section,
+  isReversed,
+}) => {
   const [ref, inView] = useInView({
-    threshold: 0.2,   
+    threshold: 0.2,
   });
 
   return (
@@ -84,7 +107,11 @@ const ScrollSections: React.FC = () => {
             Balancing Your Brand's Mission and Social Media Presence
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Social media is like a party, and your brand needs to be the life of it—not the awkward one in the corner. With our strategies, you'll charm the crowd, start meaningful conversations, increase your brands community and leave everyone wanting more. All powered by some serious research and trend magic!
+            Social media is like a party, and your brand needs to be the life of
+            it—not the awkward one in the corner. With our strategies, you'll
+            charm the crowd, start meaningful conversations, increase your
+            brands community and leave everyone wanting more. All powered by
+            some serious research and trend magic!
           </p>
         </>
       ),
@@ -108,7 +135,10 @@ const ScrollSections: React.FC = () => {
             Boosting Your Online Visibility to Help Your Brand Shine
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Think of us as your brand’s personal trainer, but for search engines. We’ll whip your online presence into shape, get you climbing those rankings, and have your audience saying, ‘How did we not see this sooner?’
+            Think of us as your brand’s personal trainer, but for search
+            engines. We’ll whip your online presence into shape, get you
+            climbing those rankings, and have your audience saying, ‘How did we
+            not see this sooner?’
           </p>
         </>
       ),
@@ -131,7 +161,11 @@ const ScrollSections: React.FC = () => {
             Marketing Strategies That Help You Stay Ahead of the Competition
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Marketing is a race, and we’re here to make sure you’re not the one tripping over your shoelaces. Our data-driven approach will keep you ahead of the pack, converting browsers into buyers faster than you can say ‘ROI’ on Google Adwords, Instagram Ads, Facebook Ads, LinkedIn Ads, Botim Ads, Youtube Ads etc.
+            Marketing is a race, and we’re here to make sure you’re not the one
+            tripping over your shoelaces. Our data-driven approach will keep you
+            ahead of the pack, converting browsers into buyers faster than you
+            can say ‘ROI’ on Google Adwords, Instagram Ads, Facebook Ads,
+            LinkedIn Ads, Botim Ads, Youtube Ads etc.
           </p>
         </>
       ),
@@ -144,7 +178,6 @@ const ScrollSections: React.FC = () => {
         <FaFacebook className="text-blue-600 text-4xl" />,
         <FaInstagram className="text-pink-500 text-4xl" />,
       ],
-      
     },
     {
       id: 4,
@@ -156,18 +189,20 @@ const ScrollSections: React.FC = () => {
             Building and Protecting Your Brand’s Online Reputation
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            The internet never forgets, but don’t worry—we’ve got your back. With us on your team, your brand will look so good online that even your competitors might want to leave a five-star review!
+            The internet never forgets, but don’t worry—we’ve got your back.
+            With us on your team, your brand will look so good online that even
+            your competitors might want to leave a five-star review!
           </p>
         </>
       ),
-      image: "https://handleey.com/handleey/assets/img/images/Pending-Reviews.png",
+      image:
+        "https://handleey.com/handleey/assets/img/images/Pending-Reviews.png",
       icons: [
         <FaShieldAlt className="text-blue-500 text-4xl" />,
         <FaStar className="text-yellow-500 text-4xl" />,
         <FaCommentDots className="text-green-500 text-4xl" />,
         <FaGlobe className="text-gray-600 text-4xl" />,
       ],
-      
     },
     {
       id: 5,
@@ -179,7 +214,11 @@ const ScrollSections: React.FC = () => {
             Crafting Seamless Digital Experiences!
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            From pixel-perfect responsive websites to feature-rich mobile apps on Android & IOS, we bring your ideas to life with designs that inspire and functionality that delivers. Let us help you create a digital presence that's as sleek as it is user-friendly, ensuring your audience stays engaged and your brand stands out.
+            From pixel-perfect responsive websites to feature-rich mobile apps
+            on Android & IOS, we bring your ideas to life with designs that
+            inspire and functionality that delivers. Let us help you create a
+            digital presence that's as sleek as it is user-friendly, ensuring
+            your audience stays engaged and your brand stands out.
           </p>
         </>
       ),
@@ -190,7 +229,6 @@ const ScrollSections: React.FC = () => {
         <FaMobileAlt className="text-green-500 text-4xl" />,
         <FaLaptopCode className="text-gray-600 text-4xl" />,
       ],
-      
     },
     {
       id: 6,
@@ -202,7 +240,11 @@ const ScrollSections: React.FC = () => {
             Elevate Your Local Presence with GMB
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
-            Get your business locally & vocally noticed on Google search and maps! With a strategic Google My Business profile, we'll help you attract more local customers, build credibility, and keep your audience engaged. From setup to optimization, we’ll ensure your business shines brightly in your neighborhood and beyond.
+            Get your business locally & vocally noticed on Google search and
+            maps! With a strategic Google My Business profile, we'll help you
+            attract more local customers, build credibility, and keep your
+            audience engaged. From setup to optimization, we’ll ensure your
+            business shines brightly in your neighborhood and beyond.
           </p>
         </>
       ),
@@ -213,11 +255,8 @@ const ScrollSections: React.FC = () => {
         <FaBuilding className="text-blue-500 text-4xl" />,
         <FaStar className="text-yellow-400 text-4xl" />,
       ],
-      
     },
   ];
-  
-  
 
   return (
     <div>

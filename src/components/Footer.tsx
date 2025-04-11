@@ -4,7 +4,7 @@ import {
   faInstagram,
   faXTwitter,
   faYoutube,
-} from "@fortawesome/free-brands-svg-icons"; // Social Media Icons
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
@@ -14,11 +14,12 @@ function Footer() {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
-    <div className="bg-gray-800 text-white py-16">
+    <footer className="bg-gray-800 text-white py-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          {/* Branding Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          {/* Branding */}
           <div>
             <h2 className="text-2xl font-bold mb-4">BigwigMedia.ae</h2>
             <p className="text-gray-400">
@@ -30,14 +31,12 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4">
-              Quick Links
-            </h3>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => handleScrollToSection("top")}
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Home
                 </button>
@@ -45,7 +44,7 @@ function Footer() {
               <li>
                 <button
                   onClick={() => handleScrollToSection("about")}
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   About Us
                 </button>
@@ -53,16 +52,15 @@ function Footer() {
               <li>
                 <button
                   onClick={() => handleScrollToSection("solution")}
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Solution
                 </button>
               </li>
-
               <li>
                 <button
                   onClick={() => handleScrollToSection("blog")}
-                  className="text-gray-400 hover:text-white"
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Blogs
                 </button>
@@ -70,53 +68,50 @@ function Footer() {
             </ul>
           </div>
 
+          {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-xl font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              
               <li>
-              <button
-              onClick={() => handleScrollToSection("case")}
-                  className="text-gray-400 hover:text-white"
+                <button
+                  onClick={() => handleScrollToSection("case")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   Case Studies
                 </button>
               </li>
               <li>
-              <button
-              onClick={() => handleScrollToSection("faq")}
-                  className="text-gray-400 hover:text-white"
+                <button
+                  onClick={() => handleScrollToSection("faq")}
+                  className="text-gray-400 hover:text-white transition"
                 >
                   FAQ
                 </button>
               </li>
-              
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold text-white mb-4">
-              Contact Info
-            </h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />{" "}
+            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
+            <ul className="space-y-2 text-gray-400">
+              <li>
+                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                 info@bigwigmedia.in
               </li>
             </ul>
           </div>
         </div>
 
-         {/* Bottom Section */}
-         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-8">
-          {/* Social Icons */}
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-8">
+          {/* Social Links */}
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
               href="https://www.facebook.com/bigwigmedia.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-white transition"
+              className="text-xl text-gray-400 hover:text-white transition"
             >
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
@@ -124,7 +119,7 @@ function Footer() {
               href="https://www.instagram.com/bigwigmedia/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-white transition"
+              className="text-xl text-gray-400 hover:text-white transition"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
@@ -132,7 +127,7 @@ function Footer() {
               href="https://www.youtube.com/channel/UCA0GIfKW7ORxUT6_mMnEEzQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-white transition"
+              className="text-xl text-gray-400 hover:text-white transition"
             >
               <FontAwesomeIcon icon={faYoutube} />
             </a>
@@ -140,27 +135,32 @@ function Footer() {
               href="https://x.com/bigwig_media"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-white transition"
+              className="text-xl text-gray-400 hover:text-white transition"
             >
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </div>
 
           {/* Footer Links */}
-          <div className=" space-x-6 text-gray-400 text-sm hidden">
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <a href="#" className="hover:underline">Terms of Service</a>
-            <a href="#" className="hover:underline">Sitemap</a>
+          <div className="flex space-x-6 text-gray-400 text-sm mb-4 md:mb-0">
+            <a href="#" className="hover:text-white transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white transition">
+              Terms of Service
+            </a>
+            <a href="#" className="hover:text-white transition">
+              Sitemap
+            </a>
           </div>
 
-          {/* Footer Copy */}
-          <p className="text-sm text-gray-500 mt-4 md:mt-0">
+          {/* Copyright */}
+          <p className="text-sm text-gray-500">
             © 2025 BigwigMedia.ae. All rights reserved.
           </p>
         </div>
       </div>
-      </div>
-
+    </footer>
   );
 }
 
