@@ -19,16 +19,12 @@ const Nav: React.FC = () => {
     <nav className="bg-white sticky top-0 z-50">
       <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3">
         {/* Logo Section */}
-        <div className="flex items-center">
-          <button
-            className="text-black font-bold text-lg flex items-center"
-            onClick={() => handleScroll("top")}
-          >
-            BigwigMedia®
-          </button>
+        <div className="flex items-center font-bold">
+          <button onClick={() => handleScroll("top")}>BigwigMedia®</button>
+          
         </div>
 
-        {/* Hamburger Menu for Mobile */}
+          {/* Hamburger Menu for Mobile */}
         <button
           className="md:hidden text-black"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -56,7 +52,6 @@ const Nav: React.FC = () => {
             )}
           </svg>
         </button>
-
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-6 text-black-600 font-bold relative">
           <li
@@ -218,11 +213,27 @@ const Nav: React.FC = () => {
               <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
             </button>
           </li>
+          <li>
+  <button
+    className="relative overflow-hidden group rounded-lg px-3 py-2"
+  >
+    <span className="relative z-10">
+      <a href="/team" target="_blank" rel="noopener noreferrer">
+        Team
+      </a>
+    </span>
+    <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+  </button>
+</li>
+
         </ul>
 
         {/* Right Section */}
         <div className="hidden md:flex items-center space-x-6"></div>
-      </div>
+</div>
+        
+
+        
 
       {/* Overlay for Darkening/Blur Effect */}
       {isMobileMenuOpen && (
@@ -230,7 +241,7 @@ const Nav: React.FC = () => {
       )}
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-14 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
+        <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
           <ul className="flex flex-col items-center space-y-4 py-4">
             <li>
               <button
@@ -264,6 +275,16 @@ const Nav: React.FC = () => {
                 Blogs
               </button>
             </li>
+            <li>
+  <a
+    href="/team"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-600 hover:text-black"
+  >
+    Team
+  </a>
+</li>
           </ul>
         </div>
       )}
