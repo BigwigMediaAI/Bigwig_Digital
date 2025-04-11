@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+
 
 interface ContactForm {
   name: string;
   email: string;
-  phone: string;
+  phone: string; // now includes country code via PhoneInput
   description: string;
 }
 
@@ -127,24 +130,23 @@ const ContactUs: React.FC = () => {
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
           </div>
           <div>
-            <label
-              htmlFor="phone"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Phone Number
-            </label>
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              placeholder="Enter your phone number"
-              className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-            />
-            {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
-          </div>
+  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+    Phone Number
+  </label>
+  <PhoneInput
+    id="phone"
+    international
+    defaultCountry="IN"
+    value={formData.phone}
+    onChange={(value) => {
+      setFormData({ ...formData, phone: value || "" });
+      setErrors((prevErrors) => ({ ...prevErrors, phone: "" }));
+    }}
+    className="react-phone-input mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+  />
+  {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+</div>
+
           <div>
             <label
               htmlFor="description"
