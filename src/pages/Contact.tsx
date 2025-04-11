@@ -2,11 +2,11 @@ import { useState } from "react";
 import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import Navbar from "../components/Nav";
+import Navbar2 from "../components/Nav2";
 import { Mail, MessageSquareText } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-export default function Contact() {
+export default function ContactPage() {
   const [formData, setFormData] = useState<{
     fullName: string;
     email: string;
@@ -38,7 +38,7 @@ export default function Contact() {
   return (
     <div>
       <div className="mb-14 md:mb-14">
-        <Navbar />
+        <Navbar2 />
       </div>
 
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
@@ -159,7 +159,7 @@ export default function Contact() {
             />
             <button
               type="submit"
-              className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full bg-[#f2ae37] transition"
+              className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full transition"
             >
               SUBMIT
             </button>

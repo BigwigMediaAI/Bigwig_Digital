@@ -20,7 +20,7 @@ const Nav: React.FC = () => {
       <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3">
         {/* Logo Section */}
         <div className="flex items-center font-bold">
-          <button onClick={() => handleScroll("top")}>BigwigMedia®</button>
+          <button onClick={() => handleScroll("top")}><a href="/">BigwigMedia®</a></button>
           
         </div>
 
@@ -215,11 +215,22 @@ const Nav: React.FC = () => {
           </li>
           <li>
   <button
-    className="relative overflow-hidden group rounded-lg px-3 py-2"
+    className="relative overflow-hidden group rounded-lg px-4 py-2"
   >
     <span className="relative z-10">
       <a href="/team" target="_blank" rel="noopener noreferrer">
         Team
+      </a>
+    </span>
+    <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>
+  </button>
+
+  <button
+    className="relative overflow-hidden group rounded-lg px-3 py-2"
+  >
+    <span className="relative z-10">
+      <a href="/contact" target="_blank" rel="noopener noreferrer">
+        Contact Us
       </a>
     </span>
     <span className="absolute inset-0 bg-gray-200 transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out"></span>

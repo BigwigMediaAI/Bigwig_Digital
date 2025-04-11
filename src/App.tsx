@@ -1,7 +1,7 @@
 import Landing from "./pages/Landing";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Team from './pages/Team';
-import Contact from "./pages/Contact";
+import ContactPage from "./pages/Contact";
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
 
         {/* Route for Team Page */}
         <Route path="/team" element={<Team />} />
-        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );
