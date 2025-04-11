@@ -25,22 +25,23 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  const handlePhoneChange = (value: any) => {
-    setFormData({ ...formData, phone: value });
+
+  const handlePhoneChange = (value: string | undefined) => {
+    setFormData((prev) => ({ ...prev, phone: value || "" }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitting Form:", formData);
   };
+
   return (
     <div>
-      <div className="mb-32 md:mb-16">
+      <div className="mb-14 md:mb-14">
         <Navbar />
       </div>
 
-      <section className=" w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
-        {/* Head Office */}
+      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
         <div>
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
           <p className="mb-4">
@@ -49,25 +50,23 @@ export default function Contact() {
           <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2>
           <p>KPD Developers,</p>
           <p className="mb-4">
-            Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
+            Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
           <p>KPD Developers,</p>
           <p className="mb-4">
-            CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
+            CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
           </p>
           <p>KPD Developers,</p>
           <p className="mb-4">
-            26 Jacranda Marg DLF Phase - , Gurugram, Haryana
+            26 Jacranda Marg DLF Phase - , Gurugram, Haryana
           </p>
           <hr className="mb-4" />
           <p className="text-gray-500">
             Our business operating hours are as follows:
           </p>
           <p className="mt-2">Monday to Saturday: 10:30am - 7:30pm</p>
-          {/* <p>Saturdays: 10am - 4pm</p> */}
         </div>
 
-        {/* Get in Touch */}
         <div>
           <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
           <p className="mb-4 text-gray-500">
@@ -75,7 +74,6 @@ export default function Contact() {
             Office in Business Bay during operating hours.
           </p>
 
-          {/* Contact Buttons */}
           <div className="flex flex-wrap gap-4">
             <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
               UAE FREE PHONE: +91 83685 73451
@@ -112,16 +110,17 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
       <h2 className="px-5 w-full md:w-[90%] mx-auto text-lg text-[var(--secondary-color)]">
-  Have questions, need marketing advice, or interested in growing your brand online?
-</h2>
-<p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">
-  Reach out to us via email, phone, or simply fill out the form below. Your inquiry will be directed to the right Bigwig Digital marketing expert, and we’ll get back to you within 24 hours.
-</p>
+        Have questions, need marketing advice, or interested in growing your brand online?
+      </h2>
+      <p className="px-5 w-full md:w-[90%] mx-auto text-md text-gray-400">
+        Reach out to us via email, phone, or simply fill out the form below. Your inquiry will be directed to the right Bigwig Digital marketing expert, and we’ll get back to you within 24 hours.
+      </p>
 
       <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
-        {/* FORM SECTION */}
-        <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-center">
+        {/* Updated FORM SECTION */}
+        <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-left">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -129,7 +128,7 @@ export default function Contact() {
               placeholder="Your Full Name"
               value={formData.fullName}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg p-2 w-full focus:ring-2 focus:ring-black"
+              className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-[var(--primary-color)]"
               required
             />
             <input
@@ -138,31 +137,29 @@ export default function Contact() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded-lg w-full focus:ring-2 focus:ring-black"
+              className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
               required
             />
-            <div className="w-full">
-              <PhoneInput
-                placeholder="Enter phone number"
-                value={formData.phone}
-                onChange={handlePhoneChange}
-                defaultCountry="IN"
-                international
-                className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
-              />
-            </div>
+            <PhoneInput
+              placeholder="Enter phone number"
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              defaultCountry="IN"
+              international
+              className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
+            />
             <textarea
               rows={4}
               name="message"
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="border border-gray-300 p-2 rounded-lg w-full focus:ring-2 focus:ring-black"
+              className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
               required
             />
             <button
               type="submit"
-              className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full hover:bg-[#f2ae37] transition"
+              className="bg-[var(--primary-color)] text-white py-3 px-6 rounded-lg w-full bg-[#f2ae37] transition"
             >
               SUBMIT
             </button>
