@@ -94,7 +94,7 @@ const ContactUs: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label
-              htmlFor="name"
+              htmlFor="name "
               className="block text-sm font-medium text-gray-700"
             >
               Name
