@@ -5,34 +5,83 @@ import "react-phone-number-input/style.css";
 import Navbar2 from "../components/Nav2";
 import { Mail, MessageSquareText } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState<{
-    fullName: string;
-    email: string;
-    phone: string;
-    message: string;
-  }>({
+  const [formData, setFormData] = useState({
     fullName: "",
     email: "",
     phone: "",
     message: "",
   });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [errors, setErrors] = useState<{ email?: string; phone?: string }>({});
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePhone = (phone: string): boolean => {
+    const phoneRegex = /^\+?[1-9]\d{1,14}$/;
+    return phoneRegex.test(phone);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handlePhoneChange = (value: string | undefined) => {
     setFormData((prev) => ({ ...prev, phone: value || "" }));
+    setErrors((prev) => ({ ...prev, phone: "" }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submitting Form:", formData);
+
+    const { fullName, email, phone, message } = formData;
+    let hasErrors = false;
+    const newErrors: { email?: string; phone?: string } = {};
+
+    if (!validateEmail(email)) {
+      newErrors.email = "Please enter a valid email address.";
+      hasErrors = true;
+    }
+
+    if (!validatePhone(phone)) {
+      newErrors.phone = "Please enter a valid phone number.";
+      hasErrors = true;
+    }
+
+    if (hasErrors) {
+      setErrors(newErrors);
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        "service_qyxu7x5", // Your Service ID
+        "template_c221e6s", // Your Template ID
+        {
+          from_name: fullName,
+          from_email: email,
+          phone: phone,
+          message: message,
+        },
+        "fy4d7_jFodorXPOJT" // Your Public Key
+      );
+
+      setFormSubmitted(true);
+      setFormData({ fullName: "", email: "", phone: "", message: "" });
+      alert("Message sent successfully!");
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("There was an error sending your message.");
+    }
   };
 
   return (
@@ -120,6 +169,8 @@ export default function ContactPage() {
 
       <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
         {/* Updated FORM SECTION */}
+        {/* Form & Map */}
+      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
         <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-left">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
@@ -140,6 +191,8 @@ export default function ContactPage() {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
               required
             />
+            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+
             <PhoneInput
               placeholder="Enter phone number"
               value={formData.phone}
@@ -148,6 +201,8 @@ export default function ContactPage() {
               international
               className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
             />
+            {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
+
             <textarea
               rows={4}
               name="message"
@@ -161,10 +216,12 @@ export default function ContactPage() {
               type="submit"
               className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full transition"
             >
-              SUBMIT
+              {formSubmitted ? "Thank You!" : "SUBMIT"}
             </button>
           </form>
         </div>
+        </div>
+
 
         {/* MAP SECTION */}
         <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow">
