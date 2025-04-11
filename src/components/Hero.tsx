@@ -6,8 +6,9 @@ import ContactUs from "./Contact";
 const Hero: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
     
-      const openModal = () => setIsModalOpen(true);
+      // const openModal = () => setIsModalOpen(true);
       const closeModal = () => setIsModalOpen(false);
+
 
   // Content for animation
   const items = [
@@ -55,10 +56,10 @@ const Hero: React.FC = () => {
           </animated.div>
         ))}
         <button
-          onClick={openModal}
+          
             className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700"
           >
-            Contact Us
+            <a href="/Contact">Contact Us</a>
           </button>
       </div>
 
