@@ -86,7 +86,7 @@ export default function ContactPage() {
 
   return (
     <div>
-      <div className="mb-20 md:mb-24">
+      <div className="mb-28 md:mb-32">
         <Navbar2 />
       </div>
 
