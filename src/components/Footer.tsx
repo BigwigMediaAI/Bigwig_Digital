@@ -110,7 +110,7 @@ function Footer() {
             {[
               {
                 icon: faFacebookF,
-                href: "https://www.facebook.com/bigwigmedia.in/",
+                href: "https://www.facebook.com/profile.php?id=61575340735142",
               },
               {
                 icon: faInstagram,
@@ -126,7 +126,7 @@ function Footer() {
               },
               {
                 icon: faLinkedin,
-                href: "https://www.linkedin.com/company/bigwig-media---digital-media-solutions/",
+                href: "https://www.linkedin.com/company/106698073/admin/dashboard/",
               },
             ].map((social, index) => (
               <a
