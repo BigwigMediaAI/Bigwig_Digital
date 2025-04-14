@@ -25,7 +25,6 @@ const CaseCard: React.FC = () => {
       tags: ["SEO", "Lead Generation", "Content Marketing", "SaaS"],
     },
   ];
-  
 
   // Define a mapping of tags to specific colors
   const tagColorMap: { [key: string]: string } = {
@@ -40,13 +39,13 @@ const CaseCard: React.FC = () => {
     "Brand Awareness": "bg-indigo-200",
     "Creative Innovations": "bg-gray-200",
   };
-  
 
   return (
     <div className="p-8 min-h-screen w-11/12 mx-auto">
       {/* Header Section */}
       <h1 className="text-3xl font-semibold text-gray-900 mb-8 text-center">
-        Why leading businesses trust us<span className="text-yellow-500">👍</span>
+        Why leading businesses trust us
+        <span className="text-yellow-500">👍</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -59,11 +58,11 @@ const CaseCard: React.FC = () => {
             />
 
             <div className="p-4">
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+              <h3 className="text-md md:text-xl font-semibold text-gray-900">
                 {caseItem.title}
               </h3>
               <hr className="my-3 border-t-2" />
-              <p className="text-gray-600 mt-2 text-md md:text-xl">
+              <p className="text-gray-600 mt-2 text-sm md:text-md">
                 {caseItem.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
