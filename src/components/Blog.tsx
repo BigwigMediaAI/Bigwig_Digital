@@ -210,7 +210,7 @@ const ViewAllButton = styled.button`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: white;
-  background-color: #2563eb;
+  background-color: #1752b4;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css';
-
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 interface ContactForm {
   name: string;
@@ -84,14 +83,14 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 mb-10">
+    <div className="max-w-3xl mx-auto pt-4">
       {formSubmitted ? (
         <div className="text-center text-green-600 mb-4">
           <p>Thank you for reaching out to us!</p>
           <p>We will get back to you soon.</p>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3">
           <div>
             <label
               htmlFor="name "
@@ -127,25 +126,32 @@ const ContactUs: React.FC = () => {
               placeholder="Enter your email"
               className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email}</p>
+            )}
           </div>
           <div>
-  <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
-    Phone Number
-  </label>
-  <PhoneInput
-    id="phone"
-    international
-    defaultCountry="IN"
-    value={formData.phone}
-    onChange={(value) => {
-      setFormData({ ...formData, phone: value || "" });
-      setErrors((prevErrors) => ({ ...prevErrors, phone: "" }));
-    }}
-    className="react-phone-input mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-  />
-  {errors.phone && <p className="text-red-500 text-sm">{errors.phone}</p>}
-</div>
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Phone Number
+            </label>
+            <PhoneInput
+              id="phone"
+              international
+              defaultCountry="IN"
+              value={formData.phone}
+              onChange={(value) => {
+                setFormData({ ...formData, phone: value || "" });
+                setErrors((prevErrors) => ({ ...prevErrors, phone: "" }));
+              }}
+              className="react-phone-input mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone}</p>
+            )}
+          </div>
 
           <div>
             <label
@@ -161,7 +167,7 @@ const ContactUs: React.FC = () => {
               onChange={handleChange}
               required
               placeholder="Enter your message"
-              rows={4}
+              rows={3}
               className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>

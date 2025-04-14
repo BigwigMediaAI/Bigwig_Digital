@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/bigwigDigital.png";
 
 const Nav: React.FC = () => {
   const handleScroll = (sectionId: string) => {
@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gray-800 fixed top-0 w-full z-50 shadow-md">
+    <nav className="bg-white fixed top-0 w-full z-50 shadow-md">
       <div className="container px-4 md:px-16 mx-auto flex justify-between items-center py-3 text-white ">
         {/* Logo Section */}
         <div className="font-bold text-3xl cursor-pointer ">

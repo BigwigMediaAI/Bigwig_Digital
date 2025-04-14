@@ -63,7 +63,7 @@ function Landing() {
         {/* Contact Us Button - Always Visible */}
         <button
           onClick={openContactPanel}
-          className="bg-blue-500 text-white py-4 px-4 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110"
+          className="bg-[#1752B4] text-white py-4 px-4 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110"
           title="Contact Us"
         >
           <FaRegMessage className="size-5" />
@@ -88,11 +88,15 @@ function Landing() {
       >
         <button
           onClick={closeContactPanel}
-          className="absolute top-8 left-1/2 border-2 p-2 border-black rounded-full text-gray-500 hover:text-gray-800"
+          className="absolute top-4 left-1/2 transform -translate-x-1/2 border-2 p-2 border-black rounded-full text-gray-500 hover:text-gray-800"
         >
           ✖
         </button>
-        <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+
+        <h2 className="text-2xl font-bold mb-6 text-center mt-12">
+          Contact Us
+        </h2>
+
         <div className="overflow-y-auto max-h-[calc(100vh-100px)]">
           <ContactUs />
         </div>

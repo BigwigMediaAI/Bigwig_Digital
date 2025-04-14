@@ -6,10 +6,10 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/logo.png";
+import logo from "../assets/bigwigDigital.png";
 
 function Footer() {
-  const handleScrollToSection = (sectionId: any) => {
+  const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -17,68 +17,52 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gray-800 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-[#0F3A80] text-white pt-12 pb-6">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
           {/* Branding */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">
-              <img src={logo} alt="" className="w-56 md:w-full" />
-            </h2>
-            <p className="text-gray-400">
+            <div className="bg-white py-2 md:px-2 md:py-1 flex justify-center md:inline-block rounded-lg mb-4">
+              <img src={logo} alt="Bigwig Logo" className="w-56" />
+            </div>
+            <p className="text-sm text-gray-300 leading-relaxed">
               Elevating your media presence with innovative solutions and
-              unmatched creativity. Let's build something extraordinary
+              unmatched creativity. Let’s build something extraordinary
               together.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => handleScrollToSection("top")}
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleScrollToSection("about")}
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  About Us
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleScrollToSection("solution")}
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Solution
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => handleScrollToSection("blog")}
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  Blogs
-                </button>
-              </li>
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              {[
+                { name: "Home", id: "top" },
+                { name: "About Us", id: "about" },
+                { name: "Solution", id: "solution" },
+                { name: "Blogs", id: "blog" },
+              ].map((link) => (
+                <li key={link.id}>
+                  <button
+                    onClick={() => handleScrollToSection(link.id)}
+                    className="text-gray-300 hover:text-white transition"
+                  >
+                    {link.name}
+                  </button>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Resources */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-3">Resources</h3>
+            <ul className="space-y-2 text-sm">
               <li>
                 <button
                   onClick={() => handleScrollToSection("case")}
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-300 hover:text-white transition"
                 >
                   Case Studies
                 </button>
@@ -86,7 +70,7 @@ function Footer() {
               <li>
                 <button
                   onClick={() => handleScrollToSection("faq")}
-                  className="text-gray-400 hover:text-white transition"
+                  className="text-gray-300 hover:text-white transition"
                 >
                   FAQ
                 </button>
@@ -96,10 +80,13 @@ function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>
-                <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+            <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li className="flex items-center">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="mr-2 text-white"
+                />
                 info@bigwigmedia.in
               </li>
             </ul>
@@ -107,45 +94,41 @@ function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-8">
+        <div className="border-t border-gray-500 pt-6 flex flex-col items-center gap-6 md:flex-row md:justify-between">
           {/* Social Links */}
-          <div className="flex space-x-4 mb-4 md:mb-0">
-            <a
-              href="https://www.facebook.com/bigwigmedia.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-gray-400 hover:text-white transition"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            <a
-              href="https://www.instagram.com/bigwigmedia/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-gray-400 hover:text-white transition"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a
-              href="https://www.youtube.com/channel/UCA0GIfKW7ORxUT6_mMnEEzQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-gray-400 hover:text-white transition"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
-            <a
-              href="https://x.com/bigwig_media"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xl text-gray-400 hover:text-white transition"
-            >
-              <FontAwesomeIcon icon={faXTwitter} />
-            </a>
+          <div className="flex space-x-4">
+            {[
+              {
+                icon: faFacebookF,
+                href: "https://www.facebook.com/bigwigmedia.in/",
+              },
+              {
+                icon: faInstagram,
+                href: "https://www.instagram.com/bigwigmedia/",
+              },
+              {
+                icon: faYoutube,
+                href: "https://www.youtube.com/channel/UCA0GIfKW7ORxUT6_mMnEEzQ",
+              },
+              {
+                icon: faXTwitter,
+                href: "https://x.com/bigwig_media",
+              },
+            ].map((social, index) => (
+              <a
+                key={index}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl text-gray-300 hover:text-white transition"
+              >
+                <FontAwesomeIcon icon={social.icon} />
+              </a>
+            ))}
           </div>
 
           {/* Footer Links */}
-          <div className="flex space-x-6 text-gray-400 text-sm mb-4 md:mb-0">
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
             <a href="#" className="hover:text-white transition">
               Privacy Policy
             </a>
@@ -158,7 +141,7 @@ function Footer() {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400 text-center">
             © 2025 BigwigMedia.ae. All rights reserved.
           </p>
         </div>
