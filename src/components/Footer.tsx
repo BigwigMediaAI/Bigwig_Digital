@@ -23,7 +23,7 @@ function Footer() {
           {/* Branding */}
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              <img src={logo} alt="" className="w-full" />
+              <img src={logo} alt="" className="w-56 md:w-full" />
             </h2>
             <p className="text-gray-400">
               Elevating your media presence with innovative solutions and

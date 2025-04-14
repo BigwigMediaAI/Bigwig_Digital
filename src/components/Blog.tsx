@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import styled from "styled-components";
 
 type BlogPost = {
   _id: string;
@@ -23,14 +23,18 @@ const Blog = () => {
   useEffect(() => {
     const fetchBlogPosts = async () => {
       try {
-        const response = await axios.get(`https://bigwigmedia-backend.onrender.com/api/v1/blog/viewblog`);
+        const response = await axios.get(
+          `https://bigwigaibackend.onrender.com/api/v1/blog/viewblog`
+        );
         const sortedPosts = response.data.sort(
-          (a: BlogPost, b: BlogPost) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+          (a: BlogPost, b: BlogPost) =>
+            new Date(b.datePublished).getTime() -
+            new Date(a.datePublished).getTime()
         );
         setBlogPosts(sortedPosts);
         setLoading(false);
       } catch (error) {
-        setError('Failed to fetch blog posts');
+        setError("Failed to fetch blog posts");
         setLoading(false);
       }
     };
@@ -55,14 +59,17 @@ const Blog = () => {
   }
 
   return (
-    <Container id='blog'>
+    <Container id="blog">
       <BlogTitle>Our Trending Blogs</BlogTitle>
       <Description>
         Boost content creation, save time, and enhance productivity.
       </Description>
       <Grid>
-        {blogPosts.slice(0, 4).map(post => (
-          <BookContainer key={post._id} onClick={() => handlePostClick(post.slug)}>
+        {blogPosts.slice(0, 4).map((post) => (
+          <BookContainer
+            key={post._id}
+            onClick={() => handlePostClick(post.slug)}
+          >
             <Book>
               <BookCover>
                 <BookImage src={post.image} alt={post.title} />
@@ -98,12 +105,12 @@ const BlogTitle = styled.h1`
   font-weight: 600;
   color: #1f2937;
   text-align: center;
- margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 const Description = styled.h1`
   text-align: center;
-  color: #4A5568;
+  color: #4a5568;
   font-size: 1rem;
   margin-bottom: 2rem;
 `;
@@ -143,8 +150,8 @@ const BookCover = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
-  border: 1px solid #D1D5DB;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   overflow: hidden;
   transform-origin: left center;
@@ -163,7 +170,7 @@ const BookInfo = styled.div`
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.6);
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 10px;
 `;
 
@@ -180,8 +187,8 @@ const BookSpine = styled.div`
   position: absolute;
   width: 20px;
   height: 100%;
-  background-color: #D1D5DB;
-  border: 1px solid #E5E7EB;
+  background-color: #d1d5db;
+  border: 1px solid #e5e7eb;
   transform-origin: left center;
   z-index: 0;
 `;
@@ -190,8 +197,8 @@ const BookBackCover = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #F3F4F6;
-  border: 1px solid #D1D5DB;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
   border-radius: 0 0.5rem 0.5rem 0;
   transform: rotateY(0deg);
   z-index: -1;
@@ -199,29 +206,29 @@ const BookBackCover = styled.div`
 
 const ViewAllButton = styled.button`
   display: block;
-  margin: 2rem auto ;
+  margin: 2rem auto;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: white;
-  background-color: #2563EB;
+  background-color: #2563eb;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: #1D4ED8;
+    background-color: #1d4ed8;
   }
 `;
 
 const Loading = styled.div`
   text-align: center;
   font-size: 1.25rem;
-  color: #4A5568;
+  color: #4a5568;
 `;
 
 const Error = styled.div`
   text-align: center;
   font-size: 1.25rem;
-  color: #F56565;
+  color: #f56565;
 `;
