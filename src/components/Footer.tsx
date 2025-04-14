@@ -140,9 +140,6 @@ function Footer() {
             <a href="#" className="hover:text-white transition">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-white transition">
-              Sitemap
-            </a>
           </div>
 
           {/* Copyright */}
