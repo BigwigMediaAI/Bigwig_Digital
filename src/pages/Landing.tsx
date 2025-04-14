@@ -59,7 +59,7 @@ function Landing() {
       <Footer />
 
       {/* Scroll and Contact Us Buttons */}
-      <div className="fixed bottom-10 right-2 flex flex-col items-center space-y-4 z-50">
+      <div className="fixed bottom-10 right-10 flex flex-col items-center space-y-4 z-50">
         {/* Contact Us Button - Always Visible */}
         <button
           onClick={openContactPanel}
