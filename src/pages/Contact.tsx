@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Footer from "../components/Footer";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Navbar2 from "../components/Nav2";
@@ -239,8 +238,6 @@ export default function ContactPage() {
           ></iframe>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
