@@ -6,7 +6,7 @@ import {
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/bigwigDigital.png";
 
 function Footer() {
@@ -88,7 +88,16 @@ function Footer() {
                   icon={faEnvelope}
                   className="mr-2 text-white"
                 />
-                info@bigwigmedia.in
+                <a
+                  href="mailto:vipul@bigwigmedia.in"
+                  className="hover:underline text-gray-300"
+                >
+                  vipul@bigwigmedia.in
+                </a>
+              </li>
+              <li className="flex items-center">
+                <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
+                +91 83685 73451
               </li>
             </ul>
           </div>
