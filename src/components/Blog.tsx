@@ -61,9 +61,6 @@ const Blog = () => {
   return (
     <Container id="blog">
       <BlogTitle>Our Trending Blogs</BlogTitle>
-      <Description>
-        Boost content creation, save time, and enhance productivity.
-      </Description>
       <Grid>
         {blogPosts.slice(0, 4).map((post) => (
           <BookContainer
@@ -105,14 +102,7 @@ const BlogTitle = styled.h1`
   font-weight: 600;
   color: #1f2937;
   text-align: center;
-  margin-bottom: 0.5rem;
-`;
-
-const Description = styled.h1`
-  text-align: center;
-  color: #4a5568;
-  font-size: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 const Grid = styled.div`

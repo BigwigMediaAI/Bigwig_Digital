@@ -155,10 +155,10 @@ const ContactUs: React.FC = () => {
 
           <div>
             <label
-              htmlFor="description"
+              htmlFor="requirement"
               className="block text-sm font-medium text-gray-700"
             >
-              Description
+              Requirement
             </label>
             <textarea
               id="description"

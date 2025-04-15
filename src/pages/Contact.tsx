@@ -2,7 +2,7 @@ import { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Navbar2 from "../components/Nav2";
-import { Mail, MessageSquareText } from "lucide-react";
+import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
@@ -92,22 +92,20 @@ export default function ContactPage() {
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
         <div>
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
+          <p className="mb-1 text-lg">Dubai</p>
           <p className="mb-4">
             1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
           </p>
           <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2>
-          <p>KPD Developers,</p>
+          <p className="mb-1 text-lg">Delhi</p>
           <p className="mb-4">
             Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
-          <p>KPD Developers,</p>
+          <p className="mb-1 text-lg">Delhi</p>
           <p className="mb-4">
-            CASA LOTUS House # 4/213 A, Porba Vaddo, Calangute 403516, Goa
+            S-1, 3rd Floor, Janta Market, Rajouri Garden New Delhi - 110027
           </p>
-          <p>KPD Developers,</p>
-          <p className="mb-4">
-            26 Jacranda Marg DLF Phase - , Gurugram, Haryana
-          </p>
+
           <hr className="mb-4" />
           <p className="text-gray-500">
             Our business operating hours are as follows:
@@ -116,44 +114,48 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
-          <p className="mb-4 text-gray-500">
+          <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
+          <p className="mb-4 text-gray-600 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="border rounded-md px-4 py-2 text-sm hover:bg-gray-100">
-              UAE FREE PHONE: +91 83685 73451
-            </button>
-            <button className="bg-black text-white px-4 py-2 rounded-md text-sm">
-              TEL: (+91) 83685 73451
-            </button>
+          <div className="flex flex-col gap-4">
+            {/* Phone Button */}
+            <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
+              <Phone className="w-6 h-6 text-gray-700" />
+              <span className="text-sm text-gray-700">+91 83685 73451</span>
+            </div>
 
+            {/* WhatsApp Button */}
             <a
               href="https://wa.me/+918368573451"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center border p-4 rounded-md flex-1 min-w-[220px] gap-4 hover:bg-gray-50 transition"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
-              <FaWhatsapp className="w-7 h-7 text-green-600 flex-shrink-0" />
-              <span className="text-sm text-gray-700">+918368573451</span>
+              <FaWhatsapp className="w-6 h-6 text-green-600" />
+              <span className="text-sm text-gray-700">+91 83685 73451</span>
             </a>
 
+            {/* Email Button */}
             <a
-              href="mailto:info@Bigwig Digital.ae"
-              className="bg-black text-white p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-800 transition"
+              href="mailto:vipul@bigwigmedia.in"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
-              <Mail className="w-6 h-6" />
-              <span className="text-sm">vipul@bigwigmedia.in</span>
+              <Mail className="w-6 h-6 text-gray-700" />
+              <span className="text-sm text-gray-700">
+                vipul@bigwigmedia.in
+              </span>
             </a>
 
+            {/* SMS Button */}
             <a
-              href="sms:+971502304888"
-              className="border p-4 rounded-md flex items-center gap-4 flex-1 min-w-[220px] hover:bg-gray-50 transition"
+              href="sms:+918368573451"
+              className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans"
             >
               <MessageSquareText className="w-6 h-6 text-gray-700" />
-              <span className="text-sm text-gray-700">+918368573451</span>
+              <span className="text-sm text-gray-700">+91 83685 73451</span>
             </a>
           </div>
         </div>
@@ -199,7 +201,7 @@ export default function ContactPage() {
               placeholder="Enter phone number"
               value={formData.phone}
               onChange={handlePhoneChange}
-              defaultCountry="IN"
+              defaultCountry="AE"
               international
               className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
             />

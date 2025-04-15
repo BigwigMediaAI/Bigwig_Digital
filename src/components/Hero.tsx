@@ -1,65 +1,41 @@
 import React from "react";
-import { useTrail, animated } from "@react-spring/web"; // Import animations
-import hero_img from "../assets/desk-office-with-online-marketing-business-concept-removebg-preview.png";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
-  // Content for animation
-  const items = [
-    "Say goodbye 👋 ",
-    "to old marketing",
-    "Try BigWigMedia ",
-    "Powered by AI",
-    "Discover a smarter way to manage your marketing campaigns with the power of AI. Transform your brand and reach new heights effortlessly.",
-  ];
-
-  // Animation logic
-  const trail = useTrail(items.length, {
-    from: { opacity: 0, transform: "translateX(-50px)" },
-    to: { opacity: 1, transform: "translateX(0)" },
-    config: { tension: 200, friction: 30 }, // Adjust for smoother animation
-    delay: 200, // Optional delay
-  });
-
   return (
-    <div
-      id="top"
-      className="flex flex-col md:flex-row items-center justify-between bg-white mt-5 mb-10 md:mb-12 px-4 md:px-16"
-    >
-      {/* Text Section */}
-      <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
-        {trail.map((style, index) => (
-          <animated.div key={index} style={style} className="mb-2">
-            {index === 0 || index === 1 ? (
-              <h1
-                className={`text-4xl md:text-6xl font-bold ${
-                  index === 1 ? "line-through text-gray-400" : ""
-                }`}
-              >
-                {items[index]}
-              </h1>
-            ) : index === 2 ? (
-              <h1 className="text-4xl md:text-6xl font-bold">{items[index]}</h1>
-            ) : index === 3 ? (
-              <h1 className="text-3xl md:text-6xl font-bold text-[#1752B4] italic">
-                {items[index]}
-              </h1>
-            ) : (
-              <p className="text-gray-600 mt-4">{items[index]}</p>
-            )}
-          </animated.div>
-        ))}
-        <button className="inline-block mt-6 bg-[#1752B4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700">
-          <a href="/Contact">Contact Us</a>
-        </button>
+    <div className="relative w-full h-[60vh] md:h-[80vh] mb-10">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://i.pinimg.com/originals/85/04/77/850477fed08bfe98598082bcd309ce70.gif"
+          alt="Hero Background"
+          className="w-full h-full object-cover"
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-90"></div>
       </div>
 
-      {/* Image Section */}
-      <div className="md:w-1/2 flex justify-center md:justify-end">
-        <img
-          src={hero_img}
-          alt="Marketing AI Illustration"
-          className="w-full md:w-[800px] object-cover rounded-lg"
-        />
+      {/* Text Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 md:px-20">
+        <h1 className=" font-bold text-sm md:text-lg mb-6 max-w-4xl">
+          We help businesses grow digitally!
+        </h1>
+        <h1 className="text-sm md:text-lg mb-6 max-w-4xl">
+          At BigwigDigital, we combine creativity, cutting-edge technology and
+          smart media strategies to increase your sales and strengthen your
+          relationship with your customers. <br />
+          <br /> Excited to take your brand to the next level? Partner with us
+          for an incredible journey toward success & growth!
+        </h1>
+
+        <h2 className="text-sm md:text-lg italic mb-6">Powered by AI</h2>
+
+        {/* Contact Button */}
+        <Link to="/Contact">
+          <button className="bg-[#1752B4] hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+            Contact Us
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,13 @@
-import { useState,useRef } from "react";
-import { FaUsers, FaBullhorn, FaBroadcastTower, FaNewspaper, FaVideo, FaLightbulb, FaBrush } from "react-icons/fa";
+import { useState, useRef } from "react";
+import {
+  FaUsers,
+  FaBullhorn,
+  FaBroadcastTower,
+  FaNewspaper,
+  FaVideo,
+  FaLightbulb,
+  FaBrush,
+} from "react-icons/fa";
 import { GiAwareness } from "react-icons/gi";
 import { SiGooglemarketingplatform } from "react-icons/si";
 const FlipCard = () => {
@@ -86,8 +94,6 @@ const FlipCard = () => {
       icon: <SiGooglemarketingplatform className="text-4xl text-red-400" />,
     },
   ];
-  
-
 
   const [flippedStates, setFlippedStates] = useState<boolean[]>(
     Array(cards.length).fill(false)
@@ -101,9 +107,11 @@ const FlipCard = () => {
     setFlippedStates(updatedStates);
   };
 
-
   return (
-    <div id="solution" className="grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto pt-4 mb-10 md:mb-12">
+    <div
+      id="solution"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto pt-4 mb-10 md:mb-12"
+    >
       {cards.map((card, index) => (
         <div
           key={card.id}
@@ -119,10 +127,8 @@ const FlipCard = () => {
             <div
               className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden ${card.bgColor}`}
             >
-              <div className="absolute top-6 left-4">
-                {card.icon}
-              </div>
-  
+              <div className="absolute top-6 left-4">{card.icon}</div>
+
               <div className="absolute top-6 right-4 rounded-full text-sm font-semibold">
                 <img
                   src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
@@ -130,12 +136,14 @@ const FlipCard = () => {
                   className="w-8"
                 />
               </div>
-  
+
               <div className="p-4 h-1/2 flex flex-col mt-20">
-                <h3 className="text-lg md:text-xl font-bold text-left">{card.solution}</h3>
+                <h3 className="text-lg md:text-xl font-bold text-left">
+                  {card.solution}
+                </h3>
                 <p className="mt-6">{card.title}</p>
               </div>
-  
+
               <button
                 onClick={() => handleFlip(index)}
                 className="absolute bottom-4 right-4 px-4 py-4 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
@@ -148,17 +156,23 @@ const FlipCard = () => {
                   stroke="currentColor"
                   className="w-6 h-6"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </button>
             </div>
-  
+
             <div
               className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg flex flex-col items-center justify-center p-6 ${card.bgColor}`}
             >
-              <div className="border-2 border-black absolute top-6 left-4 bg-white px-6 py-3 rounded-full text-sm font-semibold">
-                Solution
-              </div>
+              <a href="contact">
+                <div className="border-2 border-black absolute top-6 left-4 bg-white px-6 py-3 rounded-full text-sm font-semibold">
+                  Contact
+                </div>
+              </a>
               <div className="absolute top-6 right-4 rounded-full text-sm font-semibold">
                 <img
                   src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
@@ -181,7 +195,6 @@ const FlipCard = () => {
       ))}
     </div>
   );
-  
 };
 
 export default FlipCard;

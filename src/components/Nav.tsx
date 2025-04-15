@@ -150,10 +150,12 @@ const Nav: React.FC = () => {
             </a>
             <a
               href="/contact"
-              className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white"
+              className="relative overflow-hidden group rounded-lg py-2 hover:text-white"
             >
-              <span className="relative z-10">Contact Us</span>
-              <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+              <span className="relative z-10 border-2 border-[#D10B0B] p-2 rounded-md">
+                Contact Us
+              </span>
+              <span className="absolute inset-0 bg-[#D10B0B] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
             </a>
           </li>
         </ul>
@@ -187,7 +189,7 @@ const Nav: React.FC = () => {
                 Team
               </a>
             </li>
-            <li>
+            <li className="inline border-2 border-[#D10B0B] px-2 py-1 w-fit rounded-sm">
               <a href="/contact">Contact</a>
             </li>
           </ul>

@@ -7,39 +7,49 @@ const AboutUs = () => {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
   return (
-    <section id="about" className=" px-8 md:px-14 lg:px-20">
-      <h2 className="text-3xl font-semibold text-gray-900 mb-4 text-center">
+    <section id="about" className="px-6 md:px-14 lg:px-16">
+      <h2 className="text-3xl font-semibold text-gray-900 mb-2 text-center">
         About Us
       </h2>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
         <div>
-          <p className="text-lg text-justify text-gray-600 mt-4 md:text-md">
-            Ever wondered what you'd get if you crossed a digital advertising
-            agency with Artificial Intelligence & Machine learning technology?
-            Well, stop racking your brain cells! The answer is BIGWIG MEDIA, an
-            AI & ML infused, pow-bam-slammingly amazing digital advertising
-            agency that's breaking the internet!
+          <p className="text-sm text-justify text-gray-600 mt-2">
+            Introducing BigwigDigital, the premier digital marketing solution in
+            Dubai. This dynamic, results-driven service is designed to catapult
+            your online presence and make your brand the talk of the town.We
+            specialize in groundbreaking and effective online marketing
+            strategies that ensure your brand doesn't just exist, but thrives.
           </p>
-          <p className="text-md text-gray-600 mt-4 text-justify">
-            With AI and ML as our trusty sidekicks, we're transforming the
-            online ad world, offering ground-breaking services that help
-            businesses master the digital arena. Our special blend for success
-            includes our very own AI tech, marketing prowess, dynamite creative
-            skills, top-notch tech solutions, streamlined processes, and our
-            Sherlock-Holmes-like understanding of analytics. We don't just
-            partner with our clients to reach their goals. We're like the suave
-            secret agent, always aiming to outperform and exceed expectations!
+          <p className="text-sm text-justify text-gray-600 mt-2">
+            We delve deeper, understanding your brand's unique edge, then
+            meticulously craft a marketing strategy that makes that advantage
+            shine brightly. Our services range across Search Engine
+            Optimization, Social Media Marketing, Email Marketing, Content
+            Marketing, and PPC advertising.
           </p>
-          <p className="text-md text-gray-600 mt-4 text-justify">
-            At Bigwig Media, we don't just click buttons and pull levers behind
-            the screen! We're the mad scientists, the innovators, the
-            trailblazers at the frontier of the digital marketing universe!{" "}
+          <p className="text-sm text-justify text-gray-600 mt-2">
+            Moreover, BigwigDigital offers easy, real-time tracking that allows
+            you to witness the magic as it happens. You can watch as your
+            visitor numbers soar, your bounce rates drop, and your sales explode
+            on your journey towards exponential growth.
+          </p>
+          <p className="text-sm text-justify text-gray-600 mt-2">
+            But what truly sets BigwigDigital apart is its constant strive for
+            innovation. We don't believe in one-size-fits-all approaches, so our
+            strategies are never stagnant. We keep analyzing the market trends
+            continuously, always staying two steps ahead of the game.
+          </p>
+          <p className="text-sm text-justify text-gray-600 mt-2">
+            If you're tired of low traffic and sales, it's time to upgrade to
+            the best. Experience the BigwigDigital difference and leap ahead of
+            your competitors.
           </p>
           <button
             onClick={openModal}
-            className="inline-block mt-6 bg-[#1752B4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700"
+            className="inline-block mt-4 bg-[#1752B4] text-white px-5 py-2.5 rounded-lg shadow-md hover:bg-blue-700 text-sm"
           >
             Contact Us
           </button>
@@ -48,13 +58,13 @@ const AboutUs = () => {
         {/* Image */}
         <div className="flex justify-center">
           <img
-            // src="https://img.freepik.com/free-vector/company-employees-planning-task-brainstorming_74855-6316.jpg?t=st=1734522063~exp=1734525663~hmac=0173b10e7d1b47300e9882cbd216299d458cb3b4601fad857cef4df878b0abd6&w=996" // Replace this URL with your actual image source
             src={about}
             alt="About Us"
             className="w-full max-w-sm md:max-w-xl rounded-lg"
           />
         </div>
       </div>
+
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">

@@ -43,10 +43,14 @@ const CaseCard: React.FC = () => {
   return (
     <div className="p-8 min-h-screen w-11/12 mx-auto">
       {/* Header Section */}
-      <h1 className="text-3xl font-semibold text-gray-900 mb-8 text-center">
-        Why leading businesses trust us
-        <span className="text-yellow-500">👍</span>
+      <h1 className="text-3xl font-semibold text-gray-900 mb-4 text-center">
+        Why Bigwig?
       </h1>
+      <p className="text-center mb-10">
+        Good things take time to occur. We, on the other hand, make this
+        procedure faster. Let us be your 3rd Eye & 6th Sense and make your end
+        results to be nothing but <strong>ROI</strong> spectacular.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {cases.map((caseItem, index) => (
