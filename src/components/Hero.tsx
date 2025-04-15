@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import hero from "../assets/hero-elelment.gif";
 
 const Hero: React.FC = () => {
   return (
@@ -7,12 +8,12 @@ const Hero: React.FC = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://i.pinimg.com/originals/85/04/77/850477fed08bfe98598082bcd309ce70.gif"
+          src={hero}
           alt="Hero Background"
           className="w-full h-full object-cover"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-90"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
       </div>
 
       {/* Text Content */}

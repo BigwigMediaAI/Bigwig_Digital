@@ -4,8 +4,8 @@ import { useInView } from "react-intersection-observer";
 import social from "../assets/Handleey-Social-Media-Post.webp";
 import google_ad from "../assets/google-my-business.png";
 import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp";
-import performance from "../assets/Handleey-SMS-New-removebg-preview.webp";
-import web from "../assets/webdev.png";
+import performance from "../assets/Meta-Dashboard-Template-Example.png";
+import web from "../assets/app-development.png";
 import {
   FaFacebook,
   FaInstagram,

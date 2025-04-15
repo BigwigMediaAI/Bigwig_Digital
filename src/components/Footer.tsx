@@ -155,7 +155,7 @@ function Footer() {
 
             {/* Copyright */}
             <p className="text-sm text-gray-800 text-center">
-              © 2025 BigwigMedia.ae. All rights reserved.
+              © 2025 BigwigDigital.in. All rights reserved.
             </p>
           </div>
         </div>
