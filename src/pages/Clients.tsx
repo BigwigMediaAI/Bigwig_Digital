@@ -7,7 +7,10 @@ const images = [
   "https://www.vedicascholars.com/ywli/images/Logo.svg",
   "https://www.gisbindia.com/wp-content/uploads/2024/07/GISB-Logo-Horizontal-Black.png",
   "https://ciicpl.com/wp-content/uploads/2022/12/jklu-logo-2.png",
-  // Add more
+  "https://upload.wikimedia.org/wikipedia/en/3/39/International_Management_Institute_Kolkata_Logo.svg",
+  "https://static.aurouniversity.edu.in/2022/10/cropped-Logo-Png.png",
+  "https://www.reviewadda.com/assets/uploads/college/logo/CSMU_logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mgm-u-logo.png",
 ];
 
 const stylePairs = [

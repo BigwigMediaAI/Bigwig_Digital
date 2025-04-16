@@ -24,85 +24,85 @@ function Footer() {
       <footer className="bg-gradient-to-r from-[#84a4db] via-[#497dd8] to-[#1A54B5] text-white pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-6">
           {/* Top Section */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
-            {/* Branding */}
-            <div>
-              <div className=" py-2 md:px-2 md:py-1 flex justify-center md:inline-block  mb-4">
+          <div className="flex flex-col md:flex-row gap-14 mb-12">
+            {/* Branding - 1/3 */}
+            <div className="md:w-1/3">
+              <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
                 <img src={logo} alt="Bigwig Logo" className="w-56" />
               </div>
-              <p className="text-sm white leading-relaxed">
+              <p className="text-sm leading-relaxed">
                 Elevating your media presence with innovative solutions and
                 unmatched creativity. Let’s build something extraordinary
                 together.
               </p>
             </div>
 
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
-                {[
-                  { name: "Home", id: "top" },
-                  { name: "About Us", id: "about" },
-                  { name: "Solution", id: "solution" },
-                  { name: "Blogs", id: "blog" },
-                ].map((link) => (
-                  <li key={link.id}>
+            {/* Quick Links, Resources, Contact Info - 2/3 */}
+            <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+                <ul className="space-y-2 text-sm">
+                  {[
+                    { name: "Home", id: "top" },
+                    { name: "About Us", id: "about" },
+                    { name: "Solution", id: "solution" },
+                    { name: "Blogs", id: "blog" },
+                  ].map((link) => (
+                    <li key={link.id}>
+                      <button
+                        onClick={() => handleScrollToSection(link.id)}
+                        className="hover:text-gray-900 transition"
+                      >
+                        {link.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Resources */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Resources</h3>
+                <ul className="space-y-2 text-sm">
+                  <li>
                     <button
-                      onClick={() => handleScrollToSection(link.id)}
-                      className="white hover:text-gray-900 transition"
+                      onClick={() => handleScrollToSection("case")}
+                      className="hover:text-gray-900 transition"
                     >
-                      {link.name}
+                      Case Studies
                     </button>
                   </li>
-                ))}
-              </ul>
-            </div>
+                  <li>
+                    <button
+                      onClick={() => handleScrollToSection("faq")}
+                      className="hover:text-gray-900 transition"
+                    >
+                      FAQ
+                    </button>
+                  </li>
+                </ul>
+              </div>
 
-            {/* Resources */}
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Resources</h3>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <button
-                    onClick={() => handleScrollToSection("case")}
-                    className="white hover:text-gray-900 transition"
-                  >
-                    Case Studies
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleScrollToSection("faq")}
-                    className="white hover:text-gray-900 transition"
-                  >
-                    FAQ
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
-              <ul className="space-y-2 text-sm white">
-                <li className="flex items-center">
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    className="mr-2 text-white"
-                  />
-                  <a
-                    href="mailto:vipul@bigwigmedia.in"
-                    className="hover:underline white"
-                  >
-                    vipul@bigwigmedia.in
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
-                  +91 83685 73451
-                </li>
-              </ul>
+              {/* Contact Info */}
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center">
+                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                    <a
+                      href="mailto:vipul@bigwigmedia.in"
+                      className="hover:underline"
+                    >
+                      vipul@bigwigmedia.in
+                    </a>
+                  </li>
+                  <li className="flex items-center">
+                    <FontAwesomeIcon icon={faPhone} className="mr-2" />
+                    +91 83685 73451
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
@@ -137,7 +137,7 @@ function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl white hover:text-black transition"
+                  className="text-xl hover:text-black transition"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -145,7 +145,7 @@ function Footer() {
             </div>
 
             {/* Footer Links */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm white">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <a href="#" className="hover:text-black transition">
                 Privacy Policy
               </a>
@@ -155,7 +155,7 @@ function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm white text-center">
+            <p className="text-sm text-center">
               © 2025 BigwigDigital.in. All rights reserved.
             </p>
           </div>
