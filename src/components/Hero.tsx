@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
   }, [displayText, isDeleting, waitBeforeDelete]);
 
   return (
-    <div className="relative w-full h-[60vh] md:h-[80vh] mb-10 overflow-hidden">
+    <div className="relative w-full h-[240px] sm:h-[400px] md:h-[80vh] mb-10 overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
         playsInline
         ref={(videoRef) => {
           if (videoRef) {
-            videoRef.playbackRate = 0.6; // Adjust this value for slower speed (e.g., 0.5 for half speed)
+            videoRef.playbackRate = 0.6;
           }
         }}
       />
