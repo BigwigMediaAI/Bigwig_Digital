@@ -19,8 +19,7 @@ function Footer() {
 
   return (
     <div>
-      <div className="bg-black h-1"></div>
-      <footer className="bg-gray-100 text-black pt-12 pb-6">
+      <footer className="bg-pink-200 text-black pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-6">
           {/* Top Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">

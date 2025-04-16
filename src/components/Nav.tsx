@@ -140,6 +140,13 @@ const Nav: React.FC = () => {
 
           <li className="flex space-x-2">
             <a
+              href="/clients"
+              className="relative overflow-hidden group rounded-lg py-2 hover:text-white"
+            >
+              <span className="relative p-2 z-10 rounded-md">Clients</span>
+              <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+            </a>
+            <a
               href="/team"
               target="_blank"
               rel="noopener noreferrer"
@@ -185,10 +192,14 @@ const Nav: React.FC = () => {
               <button onClick={() => handleScroll("blog")}>Blogs</button>
             </li>
             <li>
+              <a href="/clients">Clients</a>
+            </li>
+            <li>
               <a href="/team" target="_blank" rel="noopener noreferrer">
                 Team
               </a>
             </li>
+
             <li className="inline border-2 border-[#D10B0B] px-2 py-1 w-fit rounded-sm">
               <a href="/contact">Contact</a>
             </li>
