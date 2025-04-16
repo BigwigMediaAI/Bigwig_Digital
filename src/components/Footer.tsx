@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/bigwigDigital.png";
+import line2 from "../assets/line2.png";
 
 function Footer() {
   const handleScrollToSection = (sectionId: string) => {
@@ -18,8 +19,9 @@ function Footer() {
   };
 
   return (
-    <div>
-      <footer className="bg-pink-200 text-black pt-12 pb-6">
+    <div className="relative">
+      <img src={line2} alt="" className="absolute top-0 left-0" />
+      <footer className="bg-gradient-to-r from-[#84a4db] via-[#497dd8] to-[#1A54B5] text-white pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-6">
           {/* Top Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
@@ -28,7 +30,7 @@ function Footer() {
               <div className=" py-2 md:px-2 md:py-1 flex justify-center md:inline-block  mb-4">
                 <img src={logo} alt="Bigwig Logo" className="w-56" />
               </div>
-              <p className="text-sm text-gray-800 leading-relaxed">
+              <p className="text-sm white leading-relaxed">
                 Elevating your media presence with innovative solutions and
                 unmatched creativity. Let’s build something extraordinary
                 together.
@@ -48,7 +50,7 @@ function Footer() {
                   <li key={link.id}>
                     <button
                       onClick={() => handleScrollToSection(link.id)}
-                      className="text-gray-800 hover:text-gray-900 transition"
+                      className="white hover:text-gray-900 transition"
                     >
                       {link.name}
                     </button>
@@ -64,7 +66,7 @@ function Footer() {
                 <li>
                   <button
                     onClick={() => handleScrollToSection("case")}
-                    className="text-gray-800 hover:text-gray-900 transition"
+                    className="white hover:text-gray-900 transition"
                   >
                     Case Studies
                   </button>
@@ -72,7 +74,7 @@ function Footer() {
                 <li>
                   <button
                     onClick={() => handleScrollToSection("faq")}
-                    className="text-gray-800 hover:text-gray-900 transition"
+                    className="white hover:text-gray-900 transition"
                   >
                     FAQ
                   </button>
@@ -83,21 +85,21 @@ function Footer() {
             {/* Contact Info */}
             <div>
               <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
-              <ul className="space-y-2 text-sm text-gray-800">
+              <ul className="space-y-2 text-sm white">
                 <li className="flex items-center">
                   <FontAwesomeIcon
                     icon={faEnvelope}
-                    className="mr-2 text-black"
+                    className="mr-2 text-white"
                   />
                   <a
                     href="mailto:vipul@bigwigmedia.in"
-                    className="hover:underline text-gray-800"
+                    className="hover:underline white"
                   >
                     vipul@bigwigmedia.in
                   </a>
                 </li>
                 <li className="flex items-center">
-                  <FontAwesomeIcon icon={faPhone} className="mr-2 text-black" />
+                  <FontAwesomeIcon icon={faPhone} className="mr-2 text-white" />
                   +91 83685 73451
                 </li>
               </ul>
@@ -135,7 +137,7 @@ function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl text-gray-800 hover:text-black transition"
+                  className="text-xl white hover:text-black transition"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -143,7 +145,7 @@ function Footer() {
             </div>
 
             {/* Footer Links */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-800">
+            <div className="flex flex-wrap justify-center gap-4 text-sm white">
               <a href="#" className="hover:text-black transition">
                 Privacy Policy
               </a>
@@ -153,7 +155,7 @@ function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-gray-800 text-center">
+            <p className="text-sm white text-center">
               © 2025 BigwigDigital.in. All rights reserved.
             </p>
           </div>

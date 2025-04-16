@@ -16,31 +16,26 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
         <div>
-          <p className="text-sm text-justify text-gray-600 mt-2">
-            Introducing BigwigDigital, the premier digital marketing solution in
-            Dubai. This dynamic, results-driven service is designed to catapult
-            your online presence and make your brand the talk of the town.We
-            specialize in groundbreaking and effective online marketing
-            strategies that ensure your brand doesn't just exist, but thrives.
+          <p className="text-md font-semibold text-justify text-gray-600 mt-2">
+            Introducing BigwigDigital — Dubai’s premier digital marketing
+            solution.
           </p>
           <p className="text-sm text-justify text-gray-600 mt-2">
-            We delve deeper, understanding your brand's unique edge, then
-            meticulously craft a marketing strategy that makes that advantage
-            shine brightly. Our services range across Search Engine
-            Optimization, Social Media Marketing, Email Marketing, Content
-            Marketing, and PPC advertising.
+            We specialize in powerful, results-driven strategies that boost your
+            online presence and make your brand stand out.
           </p>
           <p className="text-sm text-justify text-gray-600 mt-2">
-            Moreover, BigwigDigital offers easy, real-time tracking that allows
-            you to witness the magic as it happens. You can watch as your
-            visitor numbers soar, your bounce rates drop, and your sales explode
-            on your journey towards exponential growth.
+            From SEO and social media to email, content marketing, and PPC — we
+            tailor each strategy to your unique brand edge. With real-time
+            tracking, you’ll see your traffic rise, bounce rates fall, and
+            conversions grow.
           </p>
           <p className="text-sm text-justify text-gray-600 mt-2">
-            But what truly sets BigwigDigital apart is its constant strive for
-            innovation. We don't believe in one-size-fits-all approaches, so our
-            strategies are never stagnant. We keep analyzing the market trends
-            continuously, always staying two steps ahead of the game.
+            What sets us apart? Innovation. We don’t do one-size-fits-all. Our
+            strategies evolve with market trends to keep you two steps ahead.
+          </p>
+          <p className="text-md font-semibold text-justify text-gray-600 mt-2">
+            Tired of low traffic and sales?
           </p>
           <p className="text-sm text-justify text-gray-600 mt-2">
             If you're tired of low traffic and sales, it's time to upgrade to

@@ -13,6 +13,8 @@ import ContactUs from "../components/Contact";
 import { FaRegMessage } from "react-icons/fa6";
 import WhatsAppButton from "../components/FloatingButton";
 import { IoMdClose } from "react-icons/io";
+import Stats from "../components/Stats";
+import { MessageCircle, Phone } from "lucide-react";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -29,6 +31,7 @@ function Landing() {
     <>
       <Nav />
       <Hero />
+      <Stats />
       <ScrollOverlappingSections />
       <FlipCard />
       <CaseCard />
@@ -54,14 +57,16 @@ function Landing() {
       <div className="fixed bottom-0 left-0 w-full z-50 flex md:hidden">
         <a
           href="tel:+918368573451"
-          className="w-1/2 bg-[#D10B0B] text-white text-center py-4 font-semibold hover:bg-red-700 transition-all"
+          className="w-1/2 bg-[#D10B0B] text-white text-center py-4 font-semibold hover:bg-red-700 transition-all flex items-center justify-center gap-2"
         >
+          <Phone size={20} />
           Call Me
         </a>
         <button
           onClick={openContactPanel}
-          className="w-1/2 bg-[#1752B4] text-white py-4 font-semibold hover:bg-blue-700 transition-all"
+          className="w-1/2 bg-[#1752B4] text-white text-center py-4 font-semibold hover:bg-blue-700 transition-all flex items-center justify-center gap-2"
         >
+          <MessageCircle size={20} />
           I'm Interested
         </button>
       </div>

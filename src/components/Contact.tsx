@@ -146,7 +146,7 @@ const ContactUs: React.FC = () => {
                 setFormData({ ...formData, phone: value || "" });
                 setErrors((prevErrors) => ({ ...prevErrors, phone: "" }));
               }}
-              className="react-phone-input mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
+              className="bg-white react-phone-input mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
             {errors.phone && (
               <p className="text-red-500 text-sm">{errors.phone}</p>
