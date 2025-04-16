@@ -2,8 +2,11 @@ import Nav2 from "../components/Nav2";
 import "./Clients.css";
 
 const images = [
-  "https://i.pinimg.com/736x/2c/06/d5/2c06d53983ee08766feb4b4582239c5b.jpg",
-  "https://seeklogo.com/images/S/srm-institute-of-science-and-technology-logo-A378D5138F-seeklogo.com.png",
+  "https://sodel.jnujaipur.ac.in/img/jnu-logo-final.jpg",
+  "https://images.seeklogo.com/logo-png/38/2/srm-institute-of-science-and-technology-logo-png_seeklogo-381994.png",
+  "https://www.vedicascholars.com/ywli/images/Logo.svg",
+  "https://www.gisbindia.com/wp-content/uploads/2024/07/GISB-Logo-Horizontal-Black.png",
+  "https://ciicpl.com/wp-content/uploads/2022/12/jklu-logo-2.png",
   // Add more
 ];
 
@@ -36,7 +39,7 @@ function Clients() {
                     <img
                       src={img}
                       alt={`Client ${index + 1}`}
-                      className="w-3/5 object-contain"
+                      className="w-4/5 object-contain"
                     />
                   </div>
                   <div
@@ -45,7 +48,7 @@ function Clients() {
                     <img
                       src={img}
                       alt={`Client ${index + 1}`}
-                      className="w-3/5 object-contain"
+                      className="w-4/5 object-contain"
                     />
                   </div>
                 </div>

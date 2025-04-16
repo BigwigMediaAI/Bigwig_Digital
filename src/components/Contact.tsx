@@ -91,10 +91,10 @@ const ContactUs: React.FC = () => {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-3">
-          <div>
+          <div className="w-2/3 mx-auto ">
             <label
               htmlFor="name "
-              className="block text-sm font-medium text-gray-700"
+              className="block  text-sm font-medium text-gray-700"
             >
               Name
             </label>
@@ -109,7 +109,7 @@ const ContactUs: React.FC = () => {
               className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
-          <div>
+          <div className="w-2/3 mx-auto ">
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
@@ -123,14 +123,14 @@ const ContactUs: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
             )}
           </div>
-          <div>
+          <div className="w-2/3 mx-auto ">
             <label
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700"
@@ -153,12 +153,12 @@ const ContactUs: React.FC = () => {
             )}
           </div>
 
-          <div>
+          <div className="w-2/3 mx-auto ">
             <label
               htmlFor="requirement"
               className="block text-sm font-medium text-gray-700"
             >
-              Requirement
+              Requirements
             </label>
             <textarea
               id="description"
@@ -166,7 +166,7 @@ const ContactUs: React.FC = () => {
               value={formData.description}
               onChange={handleChange}
               required
-              placeholder="Enter your message"
+              placeholder="Enter your requirements"
               rows={3}
               className="mt-1 p-2 block w-full rounded-md border border-gray-800 shadow-sm focus:ring-blue-500 focus:border-blue-500"
             />
