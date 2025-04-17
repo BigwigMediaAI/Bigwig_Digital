@@ -1,65 +1,132 @@
-import React from "react";
-import { FaGlobe, FaMedal } from "react-icons/fa";
-import line2 from "../assets/line2.png";
-import line1 from "../assets/line1.png";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  FaGlobe,
+  FaUserFriends,
+  FaIndustry,
+  FaExchangeAlt,
+  FaBuilding,
+} from "react-icons/fa";
+
+const stats = [
+  {
+    value: 50,
+    label: "EXPERIENCE SALES EXECUTIVE",
+    icon: <FaGlobe size={30} />,
+  },
+  {
+    value: 30,
+    label: "BUYER NATIONALITIES",
+    icon: <FaUserFriends size={30} />,
+  },
+  {
+    value: 25,
+    label: "REAL ESTATE INDUSTRY EXPERIENCE",
+    icon: <FaIndustry size={30} />,
+  },
+  {
+    value: 800,
+    label: "TRANSACTIONS EVERY YEAR",
+    icon: <FaExchangeAlt size={30} />,
+  },
+  {
+    value: 20,
+    label: "TURN OVER",
+    icon: <FaBuilding size={30} />,
+    suffix: "B+",
+  },
+];
 
 const Stats: React.FC = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          setCurrentIndex(0); // Restart animation
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!inView) return;
+
+    const durations = [1500, 2000, 1800, 2200, 2500];
+    const steps = 50;
+
+    stats.forEach((stat, index) => {
+      let start = 0;
+      const stepValue = Math.ceil(stat.value / steps);
+      const duration = durations[index] / steps;
+
+      const interval = setInterval(() => {
+        start += stepValue;
+        if (start >= stat.value) {
+          start = stat.value;
+          clearInterval(interval);
+        }
+        setAnimatedValues((prev) => {
+          const updated = [...prev];
+          updated[index] = start;
+          return updated;
+        });
+      }, duration);
+    });
+  }, [inView]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % stats.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="relative bg-[#1752B4] py-8 overflow-hidden mb-6">
-      {/* Top Decorative Line */}
-      <img
-        src={line2}
-        alt="top decoration"
-        className="absolute top-0 left-0 w-full z-0"
-      />
-
-      {/* Main Stats Section */}
-      <div className="relative w-11/12 lg:w-10/12 mx-auto z-10">
-        <div className="grid p-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
-          <div className="text-center flex flex-col justify-center items-center">
-            <div className="flex items-center gap-2">
-              <FaMedal className="text-2xl text-white" />
-              <p className="text-lg lg:text-2xl text-white font-bold">No.1</p>
-            </div>
-            <p className="text-sm lg:text-lg text-white">Product</p>
+    <div ref={sectionRef} className="w-full md:py-8 bg-white dark:bg-gray-900">
+      {/* Desktop View */}
+      <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
+        {stats.map((stat, index) => (
+          <div key={index} className="w-1/5 p-4 flex flex-col items-center">
+            <h2 className="text-3xl font-bold text-[#1752B4] dark:text-white">
+              {animatedValues[index]}
+              {stat.suffix || "+"}
+            </h2>
+            <p className="text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
+              {stat.label}
+            </p>
           </div>
-
-          <div className="text-center flex flex-col justify-center items-center">
-            <div className="flex items-center gap-2">
-              <FaGlobe className="text-2xl text-white" />
-              <p className="text-lg lg:text-2xl text-white font-bold">20+</p>
-            </div>
-            <p className="text-sm lg:text-lg text-white">Countries</p>
-          </div>
-
-          <div className="text-center flex flex-col justify-center items-center">
-            <p className="text-lg lg:text-2xl text-white font-bold">1.4M+</p>
-            <p className="text-sm lg:text-lg text-white">Happy Users</p>
-          </div>
-
-          <div className="text-center flex flex-col justify-center items-center">
-            <p className="text-lg lg:text-2xl text-white font-bold">8.5M+</p>
-            <p className="text-sm lg:text-lg text-white">Files Converted</p>
-          </div>
-
-          <div className="text-center flex flex-col justify-center items-center">
-            <p className="text-lg lg:text-2xl text-white font-bold">150+</p>
-            <p className="text-sm lg:text-lg text-white">Online Tools</p>
-          </div>
-
-          <div className="text-center flex flex-col justify-center items-center">
-            <p className="text-lg lg:text-2xl text-white font-bold">12.6M+</p>
-            <p className="text-sm lg:text-lg text-white">Content Generated</p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Bottom Decorative Line */}
-      <img
-        src={line1}
-        alt="bottom decoration"
-        className="absolute bottom-0 left-0 w-full z-0"
-      />
+      {/* Mobile View - Carousel */}
+      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-[#0e1c2c]">
+        <div
+          className="flex transition-transform ease-in-out duration-500"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="min-w-full flex flex-col items-center text-center p-4 text-gray-600"
+            >
+              {stat.icon}
+              <h2 className="text-2xl font-semibold text-white">
+                {stat.value}
+              </h2>
+              <p className="text-sm text-white uppercase mt-2">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
