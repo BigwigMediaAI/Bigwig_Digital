@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
 
       {/* Text Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 md:px-20">
-        <h1 className="font-bold text-lg md:text-4xl mb-3 max-w-4xl">
+        <h1 className="font-bold text-lg md:text-5xl mb-3 max-w-4xl">
           We help businesses grow digitally!
         </h1>
         <h2 className="text-sm md:text-lg italic mb-6">

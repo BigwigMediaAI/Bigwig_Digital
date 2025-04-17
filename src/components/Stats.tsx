@@ -1,38 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  FaGlobe,
-  FaUserFriends,
-  FaIndustry,
-  FaExchangeAlt,
-  FaBuilding,
-} from "react-icons/fa";
 
 const stats = [
   {
-    value: 50,
-    label: "EXPERIENCE SALES EXECUTIVE",
-    icon: <FaGlobe size={30} />,
+    value: 70,
+    label: "Crazy Digital Marketers",
   },
   {
-    value: 30,
-    label: "BUYER NATIONALITIES",
-    icon: <FaUserFriends size={30} />,
+    value: 223,
+    label: "Happy Global Clients",
   },
   {
-    value: 25,
-    label: "REAL ESTATE INDUSTRY EXPERIENCE",
-    icon: <FaIndustry size={30} />,
+    value: 8,
+    label: "Beautiful Years of Experience",
   },
   {
-    value: 800,
-    label: "TRANSACTIONS EVERY YEAR",
-    icon: <FaExchangeAlt size={30} />,
+    value: 6,
+    label: "Astonishing In-House AI Products",
   },
   {
-    value: 20,
-    label: "TURN OVER",
-    icon: <FaBuilding size={30} />,
-    suffix: "B+",
+    value: 5,
+    label: "Stunning Worldwide Offices",
+  },
+  {
+    value: 10,
+    label: "Apploudable Awards & Partnership",
   },
 ];
 
@@ -98,7 +89,7 @@ const Stats: React.FC = () => {
           <div key={index} className="w-1/5 p-4 flex flex-col items-center">
             <h2 className="text-3xl font-bold text-[#1752B4] dark:text-white">
               {animatedValues[index]}
-              {stat.suffix || "+"}
+              {"+"}
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
               {stat.label}
@@ -118,9 +109,8 @@ const Stats: React.FC = () => {
               key={index}
               className="min-w-full flex flex-col items-center text-center p-4 text-gray-600"
             >
-              {stat.icon}
-              <h2 className="text-2xl font-semibold text-black">
-                {stat.value}
+              <h2 className="text-2xl font-semibold text-[#1752B4]">
+                {stat.value + "+"}
               </h2>
               <p className="text-sm text-gray-700 uppercase mt-2">
                 {stat.label}

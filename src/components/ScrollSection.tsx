@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import social from "../assets/social.mp4";
+import social from "../assets/socialmedia.mp4";
 import google_ad from "../assets/google-my-business.png";
 import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp";
 import performance from "../assets/Meta-Dashboard-Template-Example.png";
-import web from "../assets/app-development.png";
+import web from "../assets/web-develop.mp4";
 import {
   FaFacebook,
   FaInstagram,
