@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full md:py-8 bg-white dark:bg-gray-900">
+    <div ref={sectionRef} className="w-full md:py-4 bg-white ">
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
@@ -108,7 +108,7 @@ const Stats: React.FC = () => {
       </div>
 
       {/* Mobile View - Carousel */}
-      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 bg-[#0e1c2c]">
+      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 ">
         <div
           className="flex transition-transform ease-in-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -119,10 +119,12 @@ const Stats: React.FC = () => {
               className="min-w-full flex flex-col items-center text-center p-4 text-gray-600"
             >
               {stat.icon}
-              <h2 className="text-2xl font-semibold text-white">
+              <h2 className="text-2xl font-semibold text-black">
                 {stat.value}
               </h2>
-              <p className="text-sm text-white uppercase mt-2">{stat.label}</p>
+              <p className="text-sm text-gray-700 uppercase mt-2">
+                {stat.label}
+              </p>
             </div>
           ))}
         </div>

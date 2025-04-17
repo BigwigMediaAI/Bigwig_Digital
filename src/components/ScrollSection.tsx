@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import social from "../assets/Handleey-Social-Media-Post.webp";
+import social from "../assets/social.mp4";
 import google_ad from "../assets/google-my-business.png";
 import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp";
 import performance from "../assets/Meta-Dashboard-Template-Example.png";
@@ -49,6 +49,11 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   const [ref, inView] = useInView({
     threshold: 0.2,
   });
+  const isVideo = (src: string) => {
+    return (
+      src.endsWith(".mp4") || src.endsWith(".webm") || src.endsWith(".ogg")
+    );
+  };
 
   return (
     <motion.div
@@ -85,11 +90,22 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="w-full md:w-1/2 flex justify-center"
       >
-        <img
-          src={section.image}
-          alt={`Section ${section.id}`}
-          className="rounded-lg w-full h-[25vh] md:h-[60vh]"
-        />
+        {isVideo(section.image) ? (
+          <video
+            src={section.image}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="rounded-lg w-full h-[25vh] md:h-[60vh] object-cover"
+          />
+        ) : (
+          <img
+            src={section.image}
+            alt={`Section ${section.id}`}
+            className="rounded-lg w-full h-[25vh] md:h-[60vh] object-cover"
+          />
+        )}
       </motion.div>
     </motion.div>
   );

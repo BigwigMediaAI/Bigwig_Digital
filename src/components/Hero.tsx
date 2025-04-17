@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
 import hero from "../assets/video.mp4";
 
-// Dummy logo imports or use your actual logos
-import googleLogo from "../assets/partner/Google-Partner-Logo-Vector.svg-.png";
-import metaLogo from "../assets/partner/Met-Business-Partners.png";
-import bingads from "../assets/partner/bing-ads.png";
-import hubspotLogo from "../assets/partner/hubspot.png";
-
 const keywords = [
   "Website & Mobile App Designing",
   "Social Media Marketing (SMO)",
@@ -58,7 +52,7 @@ const Hero: React.FC = () => {
   }, [displayText, isDeleting, waitBeforeDelete]);
 
   return (
-    <div className="relative w-full h-[240px] sm:h-[400px] md:h-[80vh] overflow-hidden">
+    <div className="relative w-full h-[240px] sm:h-[400px] md:h-[65vh] overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -89,40 +83,6 @@ const Hero: React.FC = () => {
           </span>
         </h2>
         <h2 className="text-sm md:text-lg italic mb-6">Powered by AI</h2>
-      </div>
-
-      {/* Partner Logos Overlayed at Bottom */}
-      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 px-4 w-full">
-        <div className="py-2 px-4 max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-4">
-          <div className="flex items-center gap-4">
-            <img
-              src={googleLogo}
-              alt="Google"
-              className="w-16 md:w-28 h-7 md:h-10 object-contain bg-white p-1 md:p-2 rounded-sm"
-            />
-            <div className="w-px h-10 bg-white"></div>
-
-            <img
-              src={metaLogo}
-              alt="Meta"
-              className="w-16 md:w-28 h-7 md:h-10 object-contain bg-white p-1 md:p-2 rounded-sm"
-            />
-            <div className="w-px h-10 bg-white"></div>
-
-            <img
-              src={bingads}
-              alt="SEMrush"
-              className="w-16 md:w-28 h-7 md:h-10 object-contain bg-white p-1 md:p-2 rounded-sm"
-            />
-            <div className="w-px h-10 bg-white"></div>
-
-            <img
-              src={hubspotLogo}
-              alt="HubSpot"
-              className="w-16 md:w-28 h-7 md:h-10 object-contain bg-white p-1 md:p-2 rounded-sm"
-            />
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -15,6 +15,7 @@ import WhatsAppButton from "../components/FloatingButton";
 import { IoMdClose } from "react-icons/io";
 import Stats from "../components/Stats";
 import { MessageCircle, Phone } from "lucide-react";
+import Partners from "../components/Partners";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -31,6 +32,7 @@ function Landing() {
     <>
       <Nav />
       <Hero />
+      <Partners />
       <Stats />
       <ScrollOverlappingSections />
       <FlipCard />
