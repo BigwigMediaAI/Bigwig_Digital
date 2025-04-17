@@ -132,7 +132,7 @@ const Nav: React.FC = () => {
           </li>
 
           {/* Other Sections */}
-          {["about", "faq", "blog"].map((section) => (
+          {["about", "faq", "blog", "clients"].map((section) => (
             <li key={section}>
               <button
                 className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300"
@@ -146,13 +146,13 @@ const Nav: React.FC = () => {
 
           {/* Extra Links */}
           <li className="flex space-x-3 items-center">
-            <a
+            {/* <a
               href="/clients"
               className="relative overflow-hidden group rounded-lg py-2 hover:text-white transition"
             >
               <span className="relative px-3 z-10">Clients</span>
               <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
-            </a>
+            </a> */}
             <a
               href="/team"
               target="_blank"
@@ -199,8 +199,9 @@ const Nav: React.FC = () => {
               <button onClick={() => handleScroll("blog")}>Blogs</button>
             </li>
             <li>
-              <a href="/clients">Clients</a>
+              <button onClick={() => handleScroll("clients")}>Clients</button>
             </li>
+
             <li>
               <a href="/team" target="_blank" rel="noopener noreferrer">
                 Team

@@ -34,3 +34,12 @@
   transform: rotateY(180deg);
   z-index: 1;
 }
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

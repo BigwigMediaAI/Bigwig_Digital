@@ -16,6 +16,7 @@ import { IoMdClose } from "react-icons/io";
 import Stats from "../components/Stats";
 import { MessageCircle, Phone } from "lucide-react";
 import Partners from "../components/Partners";
+import Clients2 from "./client2";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -40,6 +41,7 @@ function Landing() {
       <Blog />
       <AboutUs />
       <ImageSlider />
+      <Clients2 />
       <FAQ />
       <Footer />
 
