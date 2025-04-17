@@ -7,7 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/bigwigDigital.png";
+import logo from "../assets/footer-logo.png";
 import line2 from "../assets/line2.png";
 
 function Footer() {
@@ -28,7 +28,7 @@ function Footer() {
             {/* Branding - 1/3 */}
             <div className="md:w-1/3">
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
-                <img src={logo} alt="Bigwig Logo" className="w-56" />
+                <img src={logo} alt="Bigwig Logo" className="w-60" />
               </div>
               <p className="text-sm leading-relaxed">
                 Elevating your media presence with innovative solutions and

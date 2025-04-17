@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import hero from "../assets/video.mp4";
 
+// Dummy logo imports or use your actual logos
+import googleLogo from "../assets/partner/Google-Partner.png";
+import metaLogo from "../assets/partner/Met-Business-Partners.png";
+import bingads from "../assets/partner/bing-ads.png";
+import hubspotLogo from "../assets/partner/hubspot.png";
+
 const keywords = [
   "Website & Mobile App Designing",
   "Social Media Marketing (SMO)",
@@ -31,9 +37,7 @@ const Hero: React.FC = () => {
         setDisplayText((prev) => {
           if (!isDeleting) {
             const nextText = currentWord.substring(0, prev.length + 1);
-            if (nextText === currentWord) {
-              setWaitBeforeDelete(true); // trigger wait before deleting
-            }
+            if (nextText === currentWord) setWaitBeforeDelete(true);
             return nextText;
           } else {
             const nextText = prev.substring(0, prev.length - 1);
@@ -47,7 +51,7 @@ const Hero: React.FC = () => {
           }
         });
       },
-      isDeleting ? 70 : 100
+      isDeleting ? 20 : 60
     );
 
     return () => clearTimeout(timeout);
@@ -65,7 +69,7 @@ const Hero: React.FC = () => {
         playsInline
         ref={(videoRef) => {
           if (videoRef) {
-            videoRef.playbackRate = 0.6;
+            videoRef.playbackRate = 0.8;
           }
         }}
       />
@@ -78,13 +82,47 @@ const Hero: React.FC = () => {
         <h1 className="font-bold text-lg md:text-4xl mb-3 max-w-4xl">
           We help businesses grow digitally!
         </h1>
-        <h2 className="text-sm md:text-lg italic mb-6">Powered by AI</h2>
         <h2 className="text-sm md:text-lg italic mb-6">
           <span className="text-white text-3xl font-bold">
             {displayText}
             <span className="border-r-2 border-blue-300 animate-pulse ml-1"></span>
           </span>
         </h2>
+        <h2 className="text-sm md:text-lg italic mb-6">Powered by AI</h2>
+      </div>
+
+      {/* Partner Logos Overlayed at Bottom */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 px-4 w-full">
+        <div className="py-2 px-4 max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-4">
+          <div className="flex items-center gap-4">
+            <img
+              src={googleLogo}
+              alt="Google"
+              className="w-20 h-10 object-contain"
+            />
+            <div className="w-px h-10 bg-white"></div>
+
+            <img
+              src={metaLogo}
+              alt="Meta"
+              className="w-20 h-10 object-contain"
+            />
+            <div className="w-px h-10 bg-white"></div>
+
+            <img
+              src={bingads}
+              alt="SEMrush"
+              className="w-20 h-10 object-contain"
+            />
+            <div className="w-px h-10 bg-white"></div>
+
+            <img
+              src={hubspotLogo}
+              alt="HubSpot"
+              className="w-20 h-10 object-contain"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
