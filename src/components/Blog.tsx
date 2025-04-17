@@ -62,8 +62,8 @@ const Blog = () => {
     <Container id="blog">
       <BlogTitle>Our Trending Blogs</BlogTitle>
       <Description>
-        Boost content creation, save time, and enhance productivity with
-        BigwigDigital.
+        Boost content creation and enhance productivity with
+        <DescriptionText>BigwigDigital.</DescriptionText>
       </Description>
       <Grid>
         {blogPosts.slice(0, 4).map((post) => (
@@ -172,6 +172,9 @@ const Description = styled.h1`
   color: #4a5568; /* Description text color */
   font-size: 1rem;
   margin-bottom: 2rem;
+`;
+const DescriptionText = styled.h1`
+  font-weight: bold;
 `;
 
 const Title = styled.h2`

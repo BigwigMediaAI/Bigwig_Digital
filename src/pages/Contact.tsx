@@ -91,23 +91,30 @@ export default function ContactPage() {
 
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
         <div>
+          <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
+          <hr />
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
           <p className="mb-1 text-lg">Dubai</p>
           <p className="mb-4">
             1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
           </p>
+          <h2 className="text-2xl mb-2 font-semibold">India</h2>
+          <hr />
           <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2>
-          <p className="mb-1 text-lg">Delhi</p>
+          <p className="mb-1 text-lg font-semibold">Delhi</p>
           <p className="mb-4">
             Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
-          <p className="mb-1 text-lg">Delhi</p>
+          <p className="mb-1 text-lg font-semibold">Delhi</p>
           <p className="mb-4">
             S-1, 3rd Floor, Janta Market, Rajouri Garden New Delhi - 110027
           </p>
+          <h2 className="text-2xl mb-2 font-semibold">Australia</h2>
+          <hr />
+          <p className="mb-1 text-lg font-semibold">Melbourne</p>
+          <p className="mb-4">80 Lsabella way, Tarneit 3029 Melbourne</p>
 
-          <hr className="mb-4" />
-          <p className="text-gray-500">
+          <p className="text-gray-500 mt-8">
             Our business operating hours are as follows:
           </p>
           <p className="mt-2">Monday to Saturday: 10:30am - 7:30pm</p>
