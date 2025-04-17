@@ -37,8 +37,12 @@ const locations: Location[] = [
 ];
 
 const LocationCard = ({ city, address, image }: Location) => {
+  const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    address
+  )}`;
+
   return (
-    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg min-h-[230px]">
+    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg min-h-[280px]">
       {/* Hover Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
@@ -54,9 +58,14 @@ const LocationCard = ({ city, address, image }: Location) => {
         <h3 className="text-xl font-bold group-hover:text-white text-gray-800">
           {city}
         </h3>
-        <p className="text-lg whitespace-pre-line group-hover:text-white text-gray-600">
+        <a
+          href={mapsLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-lg whitespace-pre-line group-hover:text-white text-gray-600  hover:text-blue-400 transition"
+        >
           {address}
-        </p>
+        </a>
       </div>
     </div>
   );
@@ -64,8 +73,10 @@ const LocationCard = ({ city, address, image }: Location) => {
 
 const LocationsSection = () => {
   return (
-    <section className="px-4 md:px-16 lg:px-24 py-16 bg-white text-gray-900">
-      <h2 className="text-3xl font-bold text-center mb-12">Our Locations</h2>
+    <section className="px-4 md:px-16 lg:px-24 pb-8 bg-white text-gray-900">
+      <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
+        Our Locations
+      </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {locations.map((location, index) => (
           <LocationCard key={index} {...location} />
