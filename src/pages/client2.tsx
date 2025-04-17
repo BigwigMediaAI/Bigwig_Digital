@@ -67,7 +67,7 @@ function Clients2() {
 
   return (
     <div className="py-10" id="clients">
-      <div className="px-4 py-8 max-w-6xl mx-auto">
+      <div className="px-4 pb-8 max-w-6xl mx-auto">
         <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
           Our Clients
         </h2>
@@ -117,7 +117,7 @@ function Clients2() {
         </div>
 
         {/* Show More Button */}
-        <div className="mt-12 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <button className="inline-block mt-4 bg-[#1752B4] text-white px-5 py-2.5 rounded-lg shadow-md hover:bg-blue-700 text-sm">
             <a href="/clients">Show More</a>
           </button>

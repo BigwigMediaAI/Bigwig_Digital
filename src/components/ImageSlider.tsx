@@ -101,6 +101,9 @@ export default function ImageSlider() {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-6">
+        <h1 className="text-3xl text-center text-gray-900 font-semibold">
+          Look What Our Beloved Clients Say About Us
+        </h1>
         {/* Heading & Rating */}
         <div className="flex flex-col md:flex-row items-center gap-6">
           <div className="md:w-1/3 text-center md:text-left">
@@ -163,6 +166,13 @@ export default function ImageSlider() {
               ))}
             </Slider>
           </div>
+        </div>
+        <div className="flex justify-center mx-auto">
+          <a href="/contact">
+            <button className="mt-4 bg-[#1752B4] text-white px-5 py-2.5 rounded-lg shadow-md hover:bg-blue-700 text-sm">
+              Want to grow your business
+            </button>
+          </a>
         </div>
       </div>
     </section>
