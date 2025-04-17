@@ -42,7 +42,7 @@ const LocationCard = ({ city, address, image }: Location) => {
   )}`;
 
   return (
-    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg min-h-[280px]">
+    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg min-h-[230px]">
       {/* Hover Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"

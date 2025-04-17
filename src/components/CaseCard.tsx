@@ -46,7 +46,7 @@ const CaseCard: React.FC = () => {
       <h1 className="text-3xl font-semibold text-gray-900 mb-4 text-center">
         Why Bigwig?
       </h1>
-      <p className="text-center mb-10 text-[#4a5568]">
+      <p className="text-center mb-10 text-[#4a5568] font-base">
         Let us be your <strong>3rd Eye & 6th Sense</strong> and make your end
         results to be nothing but <strong>ROI</strong> spectacular.
       </p>

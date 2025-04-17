@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import social from "../assets/socialmedia.mp4";
-import google_ad from "../assets/google-my-business.png";
-import seo from "../assets/Handleey-Web_Analysis-New-removebg-preview.webp";
-import performance from "../assets/Meta-Dashboard-Template-Example.png";
+import social from "../assets/social2.mp4";
+import google_ad from "../assets/gmb.mp4";
+import seo from "../assets/seo.mp4";
+import performance from "../assets/performance-marketing.mp4";
 import web from "../assets/web-develop.mp4";
 import {
   FaFacebook,
@@ -90,22 +90,24 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="w-full md:w-1/2 flex justify-center"
       >
-        {isVideo(section.image) ? (
-          <video
-            src={section.image}
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="rounded-lg w-full h-[25vh] md:h-[60vh] object-cover"
-          />
-        ) : (
-          <img
-            src={section.image}
-            alt={`Section ${section.id}`}
-            className="rounded-lg w-full h-[25vh] md:h-[60vh] object-cover"
-          />
-        )}
+        <div className="bg-black p-2 md:p-3 rounded-[1.5rem] shadow-xl border-4 border-gray-300 w-full max-w-[700px] aspect-[4/3] flex items-center justify-center">
+          {isVideo(section.image) ? (
+            <video
+              src={section.image}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="rounded-lg w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={section.image}
+              alt={`Section ${section.id}`}
+              className="rounded-lg w-full h-full object-cover"
+            />
+          )}
+        </div>
       </motion.div>
     </motion.div>
   );

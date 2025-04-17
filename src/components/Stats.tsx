@@ -7,7 +7,7 @@ const stats = [
   },
   {
     value: 223,
-    label: "Happy Global Clients",
+    label: "Happy Global\nClients",
   },
   {
     value: 8,
@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
               {animatedValues[index]}
               {"+"}
             </h2>
-            <p className="text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
+            <p className="whitespace-pre-line text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
               {stat.label}
             </p>
           </div>
