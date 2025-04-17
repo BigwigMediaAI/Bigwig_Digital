@@ -35,6 +35,9 @@ const images = [
   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/GAIL.svg/2560px-GAIL.svg.png",
   "https://i.pinimg.com/474x/28/95/2e/28952ecc561a5a5ccb26d3ce0b3d0201.jpg",
   "https://mahakumbhascent.com/wp-content/uploads/2024/12/goibibo-01.png.webp",
+  "https://www.reviewadda.com/assets/uploads/college/logo/CSMU_logo.png",
+  "https://upload.wikimedia.org/wikipedia/commons/8/8f/Mgm-u-logo.png",
+  "https://www.iipm.edu/public/iipm_logo.png",
 ];
 
 function Clients2() {

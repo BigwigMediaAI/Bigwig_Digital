@@ -90,7 +90,7 @@ const stylePairs = [
 
 function Clients() {
   return (
-    <div className="bg-[#d10b0b]">
+    <div className="bg-blue-200">
       <div className="mb-20">
         <Nav2 />
       </div>

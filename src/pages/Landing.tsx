@@ -17,6 +17,7 @@ import Stats from "../components/Stats";
 import { MessageCircle, Phone } from "lucide-react";
 import Partners from "../components/Partners";
 import Clients2 from "./client2";
+import LocationsSection from "../components/Location";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -43,6 +44,7 @@ function Landing() {
       <ImageSlider />
       <Clients2 />
       <FAQ />
+      <LocationsSection />
       <Footer />
 
       {/* WhatsApp and Contact Icon - Hidden on Mobile */}
