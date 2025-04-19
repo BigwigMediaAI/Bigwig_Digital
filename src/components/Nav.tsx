@@ -132,17 +132,19 @@ const Nav: React.FC = () => {
           </li>
 
           {/* Other Sections */}
-          {["about", "faq", "blog", "clients"].map((section) => (
-            <li key={section}>
-              <button
-                className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300"
-                onClick={() => handleScroll(section)}
-              >
-                <span className="relative z-10 capitalize">{section}</span>
-                <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
-              </button>
-            </li>
-          ))}
+          {["about", "faq", "blog", "clients", "method to madness"].map(
+            (section) => (
+              <li key={section}>
+                <button
+                  className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300"
+                  onClick={() => handleScroll(section)}
+                >
+                  <span className="relative z-10 capitalize">{section}</span>
+                  <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+                </button>
+              </li>
+            )
+          )}
 
           {/* Extra Links */}
           <li className="flex space-x-3 items-center">
@@ -200,6 +202,11 @@ const Nav: React.FC = () => {
             </li>
             <li>
               <button onClick={() => handleScroll("clients")}>Clients</button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("method to madness")}>
+                Method To Madness
+              </button>
             </li>
 
             <li>
