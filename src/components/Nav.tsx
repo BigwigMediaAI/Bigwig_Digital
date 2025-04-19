@@ -62,7 +62,7 @@ const Nav: React.FC = () => {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-6 text-[#1752B4] font-medium relative">
+        <ul className="hidden md:flex items-center space-x-3 text-[#1752B4] font-medium relative">
           {/* Solutions Dropdown */}
           <li
             onMouseEnter={() => setIsSolutionsOpen(true)}
