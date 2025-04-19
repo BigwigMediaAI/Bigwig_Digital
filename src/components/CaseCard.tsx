@@ -41,7 +41,7 @@ const CaseCard: React.FC = () => {
   };
 
   return (
-    <div className="p-2 min-h-screen w-full md:w-11/12 mx-auto">
+    <div className="py-5 px-3 min-h-screen w-full md:w-11/12 mx-auto">
       {/* Header Section */}
       <h1 className="text-5xl font-bold text-white mb-4 text-center">
         Why Bigwig?

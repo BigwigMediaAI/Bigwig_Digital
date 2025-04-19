@@ -39,14 +39,16 @@ function Landing() {
       <Hero />
       <Partners />
       <Stats />
+      <Clients2 />
       <ScrollOverlappingSections />
       <FlipCard />
-      <HowWeWork />
-      <CaseCard />
-      <Blog />
-      <AboutUs />
       <ImageSlider />
-      <Clients2 />
+      <AboutUs />
+      <CaseCard />
+      <HowWeWork />
+
+      <Blog />
+
       <FAQ />
       <LocationsSection />
       <Footer />

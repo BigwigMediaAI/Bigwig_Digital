@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import logo from "../assets/bigwigDigital.png";
+import {
+  LayoutDashboard,
+  Info,
+  HelpCircle,
+  FileText,
+  Users,
+  Settings,
+  UsersRound,
+  Phone,
+} from "lucide-react";
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -71,7 +81,7 @@ const Nav: React.FC = () => {
           >
             <button className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300">
               <span className="relative z-10 flex items-center">
-                Solutions
+                Services
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -98,7 +108,8 @@ const Nav: React.FC = () => {
             {/* Dropdown Menu */}
             {isSolutionsOpen && (
               <div
-                className="absolute top-full left-0 bg-white text-[#1752B4] shadow-2xl rounded-xl p-6 w-[640px] grid grid-cols-3 gap-4 z-50"
+                className="absolute top-full left-0 bg-[#1f1f1f] text-white shadow-2xl border border-[#2a2a2a] rounded-xl p-6 w-[640px] grid grid-cols-3 gap-4 z-50"
+                style={{ backgroundColor: "#1f1f1f", opacity: 1 }}
                 onMouseEnter={() => setIsSolutionsOpen(true)}
                 onMouseLeave={() => setIsSolutionsOpen(false)}
               >
@@ -121,7 +132,7 @@ const Nav: React.FC = () => {
                 ].map((item) => (
                   <button
                     key={item.id}
-                    className="text-left text-sm hover:text-[#021f4b] transition hover:scale-[1.02]"
+                    className="text-left text-sm transition hover:scale-[1.02]"
                     onClick={() => handleScroll(item.id)}
                   >
                     {item.label}
@@ -182,44 +193,60 @@ const Nav: React.FC = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-20 right-0 bg-white shadow-xl rounded-md p-6 w-full max-w-md z-50">
-          <ul className="flex flex-col space-y-5 text-[#1752B4] font-medium">
-            <li>
-              <button onClick={() => handleScroll("solutions")}>
-                Solutions
-              </button>
-            </li>
-            <li>
-              <button onClick={() => handleScroll("about")}>About</button>
-            </li>
-            <li>
-              <button onClick={() => handleScroll("faq")}>FAQ</button>
-            </li>
-            <li>
-              <button onClick={() => handleScroll("blog")}>Blogs</button>
-            </li>
-            <li>
-              <button onClick={() => handleScroll("clients")}>Clients</button>
-            </li>
-            <li>
-              <button onClick={() => handleScroll("method")}>Method</button>
-            </li>
+        <>
+          {/* Overlay with blur effect */}
+          <div
+            className="fixed bg-black bg-opacity-50 backdrop-blur-sm z-40"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
 
-            <li>
-              <a href="/team" target="_blank" rel="noopener noreferrer">
-                Team
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className="inline-block border-2 border-[#D10B0B] px-4 py-2 rounded-md text-[#D10B0B] hover:bg-[#D10B0B] hover:text-white transition"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
+          {/* Mobile Menu */}
+          <div className="absolute top-16 right-0 bg-[#1f1f1f] shadow-xl rounded-md p-6 w-full max-w-md z-50">
+            <ul className="flex flex-col space-y-5 text-white font-medium">
+              <li className="flex items-center gap-2">
+                <LayoutDashboard size={18} />
+                <button onClick={() => handleScroll("solutions")}>
+                  Services
+                </button>
+              </li>
+              <li className="flex items-center gap-2">
+                <Info size={18} />
+                <button onClick={() => handleScroll("about")}>About</button>
+              </li>
+              <li className="flex items-center gap-2">
+                <HelpCircle size={18} />
+                <button onClick={() => handleScroll("faq")}>FAQ</button>
+              </li>
+              <li className="flex items-center gap-2">
+                <FileText size={18} />
+                <button onClick={() => handleScroll("blog")}>Blogs</button>
+              </li>
+              <li className="flex items-center gap-2">
+                <Users size={18} />
+                <button onClick={() => handleScroll("clients")}>Clients</button>
+              </li>
+              <li className="flex items-center gap-2">
+                <Settings size={18} />
+                <button onClick={() => handleScroll("method")}>Method</button>
+              </li>
+              <li className="flex items-center gap-2">
+                <UsersRound size={18} />
+                <a href="/team" target="_blank" rel="noopener noreferrer">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="flex items-center gap-2  py-2 rounded-md text-[#D10B0B]  transition"
+                >
+                  <Phone size={18} />
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </>
       )}
     </nav>
   );

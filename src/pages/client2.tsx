@@ -64,8 +64,8 @@ function Clients2() {
   }, []);
 
   return (
-    <div className="py-10" id="clients">
-      <div className="px-4 pb-8 max-w-6xl mx-auto">
+    <div className="pb-6" id="clients">
+      <div className="px-4 pb-5 max-w-6xl mx-auto">
         <h2 className="text-5xl font-bold text-white text-center my-12">
           Our Clients
         </h2>

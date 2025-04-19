@@ -99,85 +99,81 @@ export default function ImageSlider() {
   };
 
   return (
-    <section className="mt-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <h1 className="md:block hidden text-5xl mb-5 text-center text-gray-100 font-bold">
-          Look What Our Beloved Clients Say About Us
-        </h1>
+    <div className="max-w-6xl mx-auto px-6 py-6 mb-10">
+      <h1 className="md:block hidden text-5xl mb-5 text-center text-gray-100 font-bold">
+        Look What Our Beloved Clients Say About Us
+      </h1>
 
-        <div className="flex flex-col md:flex-row items-center gap-6">
-          {/* Left Side */}
-          <div className="md:w-1/3 text-center md:text-left">
-            <h2 className="text-2xl font-semibold text-gray-100">
-              CLIENT TESTIMONIALS
-            </h2>
-            <div className="flex items-center gap-2 mt-2 justify-center md:justify-start">
-              <div className="rounded-full p-2 text-gray-100 text-xl font-bold">
-                <img
-                  src="https://www.svgrepo.com/show/475656/google-color.svg"
-                  alt=""
-                  className="w-8"
-                />
-              </div>
-              <div>
-                <p className="font-bold text-lg text-gray-100">Rated 4.8/5</p>
-                <p className="text-gray-400 text-sm">250+ Google Reviews</p>
-              </div>
+      <div className="flex flex-col md:flex-row items-center gap-6 mt-5">
+        {/* Left Side */}
+        <div className="md:w-1/3 text-center md:text-left">
+          <h2 className="text-2xl font-semibold text-gray-100">
+            CLIENT TESTIMONIALS
+          </h2>
+          <div className="flex items-center gap-2 mt-2 justify-center md:justify-start">
+            <div className="rounded-full p-2 text-gray-100 text-xl font-bold">
+              <img
+                src="https://www.svgrepo.com/show/475656/google-color.svg"
+                alt=""
+                className="w-8"
+              />
             </div>
-            <p className="text-gray-400 mt-4">
-              Don't just take our word for it. Here's what our clients have to
-              say about their Unique experience.
-            </p>
+            <div>
+              <p className="font-bold text-lg text-gray-100">Rated 4.8/5</p>
+              <p className="text-gray-400 text-sm">250+ Google Reviews</p>
+            </div>
           </div>
+          <p className="text-gray-400 mt-4">
+            Don't just take our word for it. Here's what our clients have to say
+            about their Unique experience.
+          </p>
+        </div>
 
-          {/* Slider */}
-          <div className="md:w-2/3 w-full">
-            <Slider {...settings}>
-              {testimonials.map((item, index) => (
-                <div key={index} className="p-4">
-                  <div className="bg-[#1f1f1f] shadow-md rounded-lg p-6 h-72 border border-gray-700">
-                    <p className="text-gray-200 mb-4">
-                      {item.review.slice(0, 100)}...
-                    </p>
-                    <div className="flex items-center">
-                      <div className="w-10 h-10 rounded-full overflow-hidden">
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="ml-3">
-                        <p className="font-semibold text-gray-100">
-                          {item.name}
-                        </p>
-                        <div className="flex">
-                          {Array.from({ length: item.rating }).map((_, i) => (
-                            <Star
-                              key={i}
-                              size={16}
-                              fill="#d49325"
-                              stroke="none"
-                            />
-                          ))}
-                        </div>
+        {/* Slider */}
+        <div className="md:w-2/3 w-full">
+          <Slider {...settings}>
+            {testimonials.map((item, index) => (
+              <div key={index} className="p-4">
+                <div className="bg-[#1f1f1f] shadow-md rounded-lg p-6 h-72 border border-gray-700">
+                  <p className="text-gray-200 mb-4">
+                    {item.review.slice(0, 100)}...
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <p className="font-semibold text-gray-100">{item.name}</p>
+                      <div className="flex">
+                        {Array.from({ length: item.rating }).map((_, i) => (
+                          <Star
+                            key={i}
+                            size={16}
+                            fill="#d49325"
+                            stroke="none"
+                          />
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
-
-        <div className="flex justify-center mx-auto">
-          <a href="/contact">
-            <button className="mt-6 bg-[#1752B4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 text-sm">
-              Want to grow your business
-            </button>
-          </a>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
-    </section>
+
+      <div className="flex justify-center mx-auto">
+        <a href="/contact">
+          <button className="mt-6 bg-[#1752B4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 text-sm">
+            Want to grow your business
+          </button>
+        </a>
+      </div>
+    </div>
   );
 }

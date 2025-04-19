@@ -51,6 +51,11 @@ function Footer() {
                   alt=""
                   className="w-8"
                 />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
+                  alt=""
+                  className="w-10"
+                />
               </div>
             </div>
 
