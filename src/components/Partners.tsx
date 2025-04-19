@@ -6,6 +6,7 @@ import award4 from "../assets/partner/hubspot.png";
 import award5 from "../assets/partner/wordpress.jpg";
 import award6 from "../assets/partner/tiktok-partners (1).png";
 import award7 from "../assets/partner/Shopify_Partner.png";
+import award8 from "../assets/partner/microsoft.png";
 // Add more awards as needed
 
 const awards = [
@@ -37,6 +38,10 @@ const awards = [
   {
     title: "Google Premier Partner",
     image: award7,
+  },
+  {
+    title: "Microsoft Partner",
+    image: award8,
   },
 
   // Add more awards here if needed
