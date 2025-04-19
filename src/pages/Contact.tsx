@@ -114,6 +114,13 @@ export default function ContactPage() {
           <p className="mb-1 text-lg font-semibold">Melbourne</p>
           <p className="mb-4">80 Lsabella way, Tarneit 3029 Melbourne</p>
 
+          <h2 className="text-2xl mb-2 font-semibold">New Zealand</h2>
+          <hr />
+          <p className="mb-1 text-lg font-semibold">Auckland</p>
+          <p className="mb-4">
+            9/136 Marua Road, Mount Wellington, Auckland 1051
+          </p>
+
           <p className="text-gray-500 mt-8">
             Our business operating hours are as follows:
           </p>

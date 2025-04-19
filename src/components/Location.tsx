@@ -34,6 +34,12 @@ const locations: Location[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHo7qSHU9pmWI516rGGG1xDOiw0G5U0H54YA&s",
   },
+  {
+    city: "New Zealand",
+    address: "9/136 Marua Road, Mount Wellington, Auckland 1051",
+    image:
+      "https://assets.traveltriangle.com/blog/wp-content/uploads/2015/09/Auckland.jpg",
+  },
 ];
 
 const LocationCard = ({ city, address, image }: Location) => {
@@ -42,7 +48,7 @@ const LocationCard = ({ city, address, image }: Location) => {
   )}`;
 
   return (
-    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg min-h-[230px]">
+    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg md:min-h-[230px]">
       {/* Hover Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
@@ -77,7 +83,7 @@ const LocationsSection = () => {
       <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
         Our Locations
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols1 md:grid-cols-5 gap-6">
         {locations.map((location, index) => (
           <LocationCard key={index} {...location} />
         ))}
