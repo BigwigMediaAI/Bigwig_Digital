@@ -33,8 +33,8 @@ const AboutUs = () => {
         <div className="text-gray-300 text-lg text-justify leading-relaxed">
           In this convoluted industry that is subjected to exponential growth
           and constant evolution, the first impression lasts a lifetime. As the
-          best digital marketing company in India, our aim is not only to
-          harness the capability of SEO, Google Ads & Facebook Marketing to
+          best digital marketing company in India & Dubai, our aim is not only
+          to harness the capability of SEO, Google Ads & Facebook Marketing to
           propel your business but to creatively design stunning websites with
           ‘brand perception’ & ‘conversions’ as the key parameters. Working with
           us, you get the most of your investment in marketing. Listed below are
@@ -54,7 +54,8 @@ const AboutUs = () => {
             We serve as the catalyst propelling your brand’s journey to success,
             leveraging the transformative power of captivating storytelling and
             strategic brand building. Our strong passion for creativity makes us
-            the best digital marketing agency in Noida and other areas as well.
+            the best digital marketing agency in India & Dubai and other areas
+            as well.
           </p>
         </div>
 
@@ -93,7 +94,7 @@ const AboutUs = () => {
           <p className="text-lg text-gray-400">
             All of the services you might need are included in our list, from
             designing your website to advertising it online. Proudly recognised
-            as the best digital marketing agency in Noida, we provide a
+            as the best digital marketing agency in India , Dubai, we provide a
             comprehensive range of services, including web development, CMS
             development, e-commerce development, mobile app development, SEO,
             SEM, and SMO.
