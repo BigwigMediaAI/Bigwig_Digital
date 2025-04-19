@@ -24,7 +24,7 @@ function Footer() {
       <footer className="bg-gradient-to-r from-[#84a4db] via-[#497dd8] to-[#1A54B5] text-white pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-6">
           {/* Top Section */}
-          <div className="flex flex-col md:flex-row gap-14 mb-12">
+          <div className="flex flex-col md:flex-row gap-14 mb-8">
             {/* Branding - 1/3 */}
             <div className="md:w-1/3">
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
@@ -35,6 +35,23 @@ function Footer() {
                 unmatched creativity. Let’s build something extraordinary
                 together.
               </p>
+              <div className="flex gap-3 mt-4">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
+                  alt=""
+                  className="w-8"
+                />
+                <img
+                  src="https://media.istockphoto.com/id/482478655/photo/arab-emirates-flag.jpg?s=612x612&w=0&k=20&c=fJfB5DUYTEWrJ96RbIxJoLo7uQrYkCPqo0F2BTNNp8A="
+                  alt=""
+                  className="w-8"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png"
+                  alt=""
+                  className="w-8"
+                />
+              </div>
             </div>
 
             {/* Quick Links, Resources, Contact Info - 2/3 */}
