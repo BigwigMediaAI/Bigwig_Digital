@@ -121,7 +121,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Social Media Management</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center italic font-semibold py-1 rounded-full text-black text-sm">
             Balancing Your Brand's Mission and Social Media Presence
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
@@ -149,7 +149,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Search Engine Optimization</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
             Boosting Your Online Visibility to Help Your Brand Shine
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
@@ -175,7 +175,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Performance Marketing</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
             Marketing Strategies That Help You Stay Ahead of the Competition
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
@@ -203,7 +203,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Online Reputation Management</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
             Building and Protecting Your Brand’s Online Reputation
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
@@ -228,7 +228,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Web Design and App Development</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
             Crafting Seamless Digital Experiences!
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">
@@ -254,7 +254,7 @@ const ScrollSections: React.FC = () => {
       content: (
         <>
           <h1 className="text-4xl font-bold">Google My Business</h1>
-          <div className="mt-2 inline-flex items-center justify-center px-3 py-1 rounded-full bg-white text-black text-sm">
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
             Elevate Your Local Presence with GMB
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify">

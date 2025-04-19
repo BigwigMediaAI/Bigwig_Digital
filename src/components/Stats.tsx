@@ -3,23 +3,23 @@ import React, { useEffect, useRef, useState } from "react";
 const stats = [
   {
     value: 70,
-    label: "Crazy Digital Marketers",
+    label: "Crazy \n Digital Marketers",
   },
   {
     value: 223,
-    label: "Happy Global\nClients",
+    label: "Happy\n Global Clients",
   },
   {
     value: 8,
-    label: "Beautiful Years of Experience",
+    label: "Beautiful\n Years of Experience",
   },
   {
     value: 6,
-    label: "Astonishing In-House AI Products",
+    label: "Astonishing\n In-House AI Products",
   },
   {
     value: 5,
-    label: "Stunning Worldwide Offices",
+    label: "Stunning\n Worldwide Offices",
   },
   {
     value: 10,
