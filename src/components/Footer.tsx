@@ -37,17 +37,17 @@ function Footer() {
               </p>
               <div className="flex gap-3 mt-4">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
-                  alt=""
-                  className="w-8"
-                />
-                <img
                   src="https://media.istockphoto.com/id/482478655/photo/arab-emirates-flag.jpg?s=612x612&w=0&k=20&c=fJfB5DUYTEWrJ96RbIxJoLo7uQrYkCPqo0F2BTNNp8A="
                   alt=""
                   className="w-8"
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png"
+                  alt=""
+                  className="w-8"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
                   alt=""
                   className="w-8"
                 />
@@ -69,7 +69,7 @@ function Footer() {
                     <li key={link.id}>
                       <button
                         onClick={() => handleScrollToSection(link.id)}
-                        className="hover:text-gray-900 transition"
+                        className="hover:text-blue-600 transition"
                       >
                         {link.name}
                       </button>
@@ -85,7 +85,7 @@ function Footer() {
                   <li>
                     <button
                       onClick={() => handleScrollToSection("case")}
-                      className="hover:text-gray-900 transition"
+                      className="hover:text-blue-600 transition"
                     >
                       Case Studies
                     </button>
@@ -93,7 +93,7 @@ function Footer() {
                   <li>
                     <button
                       onClick={() => handleScrollToSection("faq")}
-                      className="hover:text-gray-900 transition"
+                      className="hover:text-blue-600 transition"
                     >
                       FAQ
                     </button>
@@ -154,7 +154,7 @@ function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl hover:text-black transition"
+                  className="text-xl hover:text-blue-600 transition"
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
@@ -163,10 +163,16 @@ function Footer() {
 
             {/* Footer Links */}
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="/privacy-policy" className="hover:text-black transition">
+              <a
+                href="/privacy-policy"
+                className="hover:text-blue-600 transition"
+              >
                 Privacy Policy
               </a>
-              <a href="/terms-of-use" className="hover:text-black transition">
+              <a
+                href="/terms-of-use"
+                className="hover:text-blue-600 transition"
+              >
                 Terms of Service
               </a>
             </div>

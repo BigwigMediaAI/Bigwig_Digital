@@ -1,10 +1,10 @@
 import { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-import Navbar2 from "../components/Nav2";
 import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
+import Nav2 from "../components/Nav2";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -84,13 +84,11 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
-      <div className="mb-28 md:mb-32">
-        <Navbar2 />
-      </div>
+    <div className="pt-24 md:pt-32 bg-black min-h-screen text-white">
+      <Nav2 />
 
-      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8 bg-white text-gray-800">
-        <div>
+      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white">
+        <div className="pt-4">
           <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
           <hr />
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
@@ -121,7 +119,7 @@ export default function ContactPage() {
             9/136 Marua Road, Mount Wellington, Auckland 1051
           </p>
 
-          <p className="text-gray-500 mt-8">
+          <p className="text-gray-400 mt-8">
             Our business operating hours are as follows:
           </p>
           <p className="mt-2">Monday to Saturday: 10:30am - 7:30pm</p>
@@ -129,7 +127,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
-          <p className="mb-4 text-gray-600 font-sans">
+          <p className="mb-4 text-gray-400 font-sans">
             Please contact us via phone or email below or visit us at our Head
             Office in Business Bay during operating hours.
           </p>
@@ -185,9 +183,9 @@ export default function ContactPage() {
         expert, and we’ll get back to you within 24 hours.
       </p>
 
-      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7">
+      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7 bg-black">
         {/* Form Section */}
-        <div className="w-full md:w-1/2 max-w-lg bg-white rounded-lg p-8 shadow text-left">
+        <div className="w-full md:w-1/2 max-w-lg bg-[#2c2c2c] rounded-lg p-8 shadow-lg text-left text-white">
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
@@ -195,7 +193,7 @@ export default function ContactPage() {
               placeholder="Your Full Name"
               value={formData.fullName}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg p-3 w-full focus:ring-2 focus:ring-[var(--primary-color)]"
+              className="bg-white border border-gray-600 text-white placeholder-gray-400 rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-500"
               required
             />
             <input
@@ -204,11 +202,11 @@ export default function ContactPage() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
+              className="bg-white border border-gray-600 text-white placeholder-gray-400 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               required
             />
             {errors.email && (
-              <p className="text-red-500 text-sm">{errors.email}</p>
+              <p className="text-red-400 text-sm">{errors.email}</p>
             )}
 
             <PhoneInput
@@ -217,10 +215,10 @@ export default function ContactPage() {
               onChange={handlePhoneChange}
               defaultCountry="AE"
               international
-              className="border border-gray-300 px-4 py-3 text-[16px] rounded-lg w-full"
+              className="bg-white border border-gray-600 px-4 py-3 text-[16px] rounded-lg w-full text-black placeholder-gray-400"
             />
             {errors.phone && (
-              <p className="text-red-500 text-sm">{errors.phone}</p>
+              <p className="text-red-400 text-sm">{errors.phone}</p>
             )}
 
             <textarea
@@ -229,12 +227,12 @@ export default function ContactPage() {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-[var(--primary-color)]"
+              className="bg-white border border-gray-600 text-white placeholder-gray-400 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               required
             />
             <button
               type="submit"
-              className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full transition"
+              className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg w-full transition font-semibold"
             >
               {formSubmitted ? "Thank You!" : "SUBMIT"}
             </button>
@@ -242,7 +240,7 @@ export default function ContactPage() {
         </div>
 
         {/* Map Section */}
-        <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow">
+        <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow-lg border border-gray-700">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.668560792657!2d55.264871674024235!3d25.18066683237258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69004a524faf%3A0x13d5b1575adb574a!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1744201890505!5m2!1sen!2sin"
             width="100%"

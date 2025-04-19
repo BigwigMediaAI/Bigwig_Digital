@@ -94,7 +94,7 @@ const ContactUs: React.FC = () => {
           <div className="w-2/3 mx-auto ">
             <label
               htmlFor="name "
-              className="block  text-sm font-medium text-gray-700"
+              className="block  text-sm font-medium text-white"
             >
               Name
             </label>
@@ -112,7 +112,7 @@ const ContactUs: React.FC = () => {
           <div className="w-2/3 mx-auto ">
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-white"
             >
               Email
             </label>
@@ -133,7 +133,7 @@ const ContactUs: React.FC = () => {
           <div className="w-2/3 mx-auto ">
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-white"
             >
               Phone Number
             </label>
@@ -156,7 +156,7 @@ const ContactUs: React.FC = () => {
           <div className="w-2/3 mx-auto ">
             <label
               htmlFor="requirement"
-              className="block text-sm font-medium text-gray-700"
+              className="block text-sm font-medium text-white"
             >
               Requirements
             </label>

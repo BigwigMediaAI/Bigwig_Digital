@@ -2,11 +2,11 @@ import Nav2 from "../components/Nav2";
 
 export default function PrivacyPolicy() {
   return (
-    <div>
-      <div className="mb-16 md:mb-20">
+    <div className="pt-24 md:pt-32 bg-black min-h-screen text-white">
+      <div>
         <Nav2 />
       </div>
-      <div className="bg-white text-gray-800 py-10 px-4 sm:px-8 max-w-5xl mx-auto">
+      <div className="bg-black text-white pb-10 px-4 sm:px-8 max-w-5xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
           🔐 Privacy Policy
         </h1>

@@ -19,6 +19,7 @@ import Partners from "../components/Partners";
 import Clients2 from "./client2";
 import LocationsSection from "../components/Location";
 import HowWeWork from "../components/HowWeWork";
+import CustomCursor from "../components/CursorTrail";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -33,6 +34,7 @@ function Landing() {
 
   return (
     <div className="bg-black">
+      <CustomCursor />
       <Nav />
       <Hero />
       <Partners />
@@ -81,7 +83,7 @@ function Landing() {
 
       {/* Contact Us Panel */}
       <div
-        className={`fixed top-0 right-0 w-full h-full bg-gray-100 rounded-lg shadow-lg p-6 z-50 transform ${
+        className={`fixed top-0 right-0 w-full h-full bg-[#2c2c2c] rounded-lg shadow-lg p-6 z-50 transform ${
           isContactPanelOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out flex flex-col justify-center`}
       >
@@ -92,7 +94,7 @@ function Landing() {
           <IoMdClose className="w-6 h-6" />
         </button>
 
-        <h2 className="text-2xl font-bold mb-6 text-center mt-12">
+        <h2 className="text-2xl text-white font-bold mb-6 text-center mt-12">
           Contact Us
         </h2>
 
