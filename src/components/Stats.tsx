@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
               {animatedValues[index]}
               {"+"}
             </h2>
-            <p className="whitespace-pre-line text-sm text-gray-300 dark:text-gray-400 uppercase mt-2">
+            <p className="whitespace-pre-line text-sm text-white dark:text-gray-400 uppercase mt-2">
               {stat.label}
             </p>
           </div>
@@ -107,14 +107,12 @@ const Stats: React.FC = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="min-w-full flex flex-col items-center text-center p-4 text-gray-600"
+              className="min-w-full flex flex-col items-center text-center p-4 text-white"
             >
-              <h2 className="text-2xl font-semibold text-[#1752B4]">
+              <h2 className="text-3xl font-bold text-[#1752B4]">
                 {stat.value + "+"}
               </h2>
-              <p className="text-sm text-gray-700 uppercase mt-2">
-                {stat.label}
-              </p>
+              <p className="text-md text-white uppercase mt-2">{stat.label}</p>
             </div>
           ))}
         </div>

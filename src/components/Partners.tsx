@@ -64,7 +64,7 @@ const Partners: React.FC = () => {
               src={award.image}
               alt={award.title}
               title={award.title}
-              className="w-8 h-6 md:w-20 md:h-16 object-contain hover:scale-105 transition"
+              className="w-12 h-10 md:w-20 md:h-16 object-contain hover:scale-105 transition"
             />
           ))}
         </div>
