@@ -90,7 +90,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         className="w-full md:w-1/2 flex justify-center"
       >
-        <div className="bg-black p-2 md:p-3 rounded-[1.5rem] shadow-xl border-4 border-gray-300 w-full max-w-[700px] aspect-[4/3] flex items-center justify-center">
+        <div className="bg-black p-2 md:p-3 rounded-[1.5rem] shadow-xl  w-full max-w-[700px] aspect-[3/2] flex items-center justify-center">
           {isVideo(section.image) ? (
             <video
               src={section.image}

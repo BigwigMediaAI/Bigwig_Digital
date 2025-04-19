@@ -70,7 +70,7 @@ const ToggleFAQ = () => {
           {faqs.map((faq, index) => (
             <div key={index} className="relative">
               {/* FAQ Box */}
-              <div className="bg-gray-50 border text-gray-900 border-gray-700 rounded-lg pl-12 pr-6 py-3 relative">
+              <div className="bg-gray-50 border text-gray-900 border-gray-700 rounded-lg pl-12 pr-6 py-3 relative max-w-xl w-full">
                 {/* Number Badge (half-overlapping from left) */}
                 <div className="absolute -left-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-black text-white rounded-full flex items-center justify-center text-xl font-bold border-2 border-orange-500">
                   {index + 1}
@@ -88,7 +88,9 @@ const ToggleFAQ = () => {
                   />
                 </button>
                 {openIndex === index && (
-                  <div className="pt-2 text-gray-700">{faq.answer}</div>
+                  <div className="pt-2 text-gray-700 transition-all duration-300 ease-in-out">
+                    {faq.answer}
+                  </div>
                 )}
               </div>
             </div>

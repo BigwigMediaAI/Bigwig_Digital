@@ -3,6 +3,10 @@ import understanding from "../assets/understanding.png";
 import brainstroming from "../assets/brainstorming.png";
 import implementation from "../assets/lmplementation.png";
 import maintenance from "../assets/maintenance.png";
+import chooseYou from "../assets/choices-order-svgrepo-com (1).svg";
+import Rocket from "../assets/rocket-svgrepo-com.svg";
+import analysis from "../assets/analysis-analytics-chart-2-svgrepo-com.svg";
+import support from "../assets/support-online-center-svgrepo-com.svg";
 
 const workFlowData = [
   {
@@ -36,28 +40,28 @@ const workFlowData = [
   {
     id: "You_choose",
     title: "You choose",
-    image: maintenance,
+    image: chooseYou,
     content:
       "Let's talk about how it all works. The Ideas are generated, of course from your side, and we work upon giving wings to that ideas. Cheesy enough?! But for real, the starter pack involves your basic knowledge/thoughts towards your business to which we further incorporate our ideas, fulfilling prophecies that never were written.",
   },
   {
     id: "We_Execute",
     title: "We Execute",
-    image: maintenance,
+    image: Rocket,
     content:
       "Once you have selected the best solution that inspires you, our team of specialists goes into execution mode. Whether it's a digital advertising campaign, web-design project, mobile application, web application, creative campaign, media and events - your project will be accomplished in a swift way and with our team's complete devotion.",
   },
   {
     id: "We_Analyze",
     title: "We Analyze and Optimize",
-    image: maintenance,
+    image: analysis,
     content:
       "Things are done. Not locked yet. If it works according to the plan, it is a success. If not, a king takes time to build his territory. Don’t Worry, backup plan A-Z are already in store",
   },
   {
     id: "We_retain",
     title: "We Retain",
-    image: maintenance,
+    image: support,
     content:
       "Once you've seen what we can do, you won’t want to let us go—and guess what? We feel the same! We’re like that loyal friend who remembers your coffee order and your business goals. We don’t just wrap things up and vanish. Nope. We stick around, annoyingly helpful, passionately committed, and always up for a new challenge. Like glitter at a party—you’ll find us long after the confetti settles.",
   },
@@ -69,7 +73,7 @@ export default function HowWeWork() {
   return (
     <div className="bg-gray-100 text-gray-900 py-8 px-2 sm:px-4">
       <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 sm:mb-10">
-        How We Work?
+        Method to Madness
       </h2>
 
       {/* Mobile View */}

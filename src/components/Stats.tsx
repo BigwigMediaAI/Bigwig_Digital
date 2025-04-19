@@ -23,7 +23,7 @@ const stats = [
   },
   {
     value: 10,
-    label: "Applaudable Awards & Partnership",
+    label: "Applaudable \nAwards",
   },
 ];
 
