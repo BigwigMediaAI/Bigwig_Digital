@@ -50,12 +50,10 @@ const awards = [
 const Partners: React.FC = () => {
   return (
     <section className="bg-gray-100 py-4 px-4 md:px-16">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-5 md:gap-16">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-16">
         {/* Left: Title */}
         <div className="text-center md:text-left">
-          <h2 className="text-md md:text-xl text-gray-800 mb-2">
-            PARTNERSHIPS
-          </h2>
+          <h2 className="text-xl text-gray-800">PARTNERSHIPS</h2>
         </div>
 
         {/* Right: Awards as images */}
@@ -66,7 +64,7 @@ const Partners: React.FC = () => {
               src={award.image}
               alt={award.title}
               title={award.title}
-              className="w-20 h-16 object-contain hover:scale-105 transition"
+              className="w-8 h-6 md:w-20 md:h-16 object-contain hover:scale-105 transition"
             />
           ))}
         </div>
