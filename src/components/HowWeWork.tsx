@@ -71,10 +71,7 @@ export default function HowWeWork() {
   const [active, setActive] = useState("We_Attend");
 
   return (
-    <div
-      id="method to madness"
-      className="bg-gray-100 text-gray-900 py-8 px-2 sm:px-4"
-    >
+    <div id="method" className="bg-gray-100 text-gray-900 py-8 px-2 sm:px-4">
       <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 sm:mb-10">
         Method to Madness
       </h2>
