@@ -102,9 +102,9 @@ const Container = styled.div`
 `;
 
 const BlogTitle = styled.h1`
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
   text-align: center;
   margin-bottom: 1rem;
 `;
@@ -169,7 +169,7 @@ const BookInfo = styled.div`
 `;
 const Description = styled.h1`
   text-align: center;
-  color: #4a5568; /* Description text color */
+  color: white; /* Description text color */
   font-size: 1rem;
   margin-bottom: 2rem;
 `;

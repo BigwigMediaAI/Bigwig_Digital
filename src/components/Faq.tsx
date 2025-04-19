@@ -59,7 +59,7 @@ const ToggleFAQ = () => {
 
   return (
     <section id="faq" className="text-white pb-12 px-10 md:px-20">
-      <h2 className="text-3xl font-semibold text-center mb-10 text-gray-900">
+      <h2 className="text-5xl font-bold text-center mb-5 text-white">
         Frequently Asked Questions
       </h2>
       <div className="flex flex-col md:flex-row justify-evenly  py-3 items-start ">

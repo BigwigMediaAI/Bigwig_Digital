@@ -71,33 +71,36 @@ export default function HowWeWork() {
   const [active, setActive] = useState("We_Attend");
 
   return (
-    <div id="method" className="bg-gray-100 text-gray-900 py-8 px-2 sm:px-4">
-      <h2 className="text-2xl sm:text-4xl font-bold text-center mb-6 sm:mb-10">
+    <div id="method" className="text-white py-12 px-4 bg-black">
+      <h2 className="text-5xl font-bold text-center mb-10 text-white">
         Method to Madness
       </h2>
 
       {/* Mobile View */}
-      <div className="flex flex-col md:hidden gap-2 sm:gap-4">
+      <div className="flex flex-col md:hidden gap-4">
         {workFlowData.map((item) => (
-          <div key={item.id} className="bg-white rounded-xl shadow p-2 sm:p-4">
+          <div
+            key={item.id}
+            className="bg-[#121212] border border-gray-700 rounded-xl shadow-md"
+          >
             <div
               onClick={() => setActive(active === item.id ? "" : item.id)}
-              className={`cursor-pointer p-3 rounded-xl text-center transition-all duration-300 ${
+              className={`cursor-pointer p-4 rounded-t-xl text-center transition-all duration-300 ${
                 active === item.id
                   ? "bg-[#D20E0E] text-white"
-                  : "bg-gray-100 hover:bg-gray-200"
+                  : "bg-[#1f1f1f] hover:bg-[#2c2c2c]"
               }`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-10 h-10 mx-auto mb-1 object-contain"
+                className="w-10 h-10 mx-auto mb-2"
               />
               <h3 className="text-base font-semibold">{item.title}</h3>
             </div>
             {active === item.id && (
-              <div className="whitespace-pre-line mt-2 text-gray-700 text-sm">
-                <p>{item.content}</p>
+              <div className="p-4 text-gray-300 whitespace-pre-line text-sm">
+                {item.content}
               </div>
             )}
           </div>
@@ -106,36 +109,36 @@ export default function HowWeWork() {
 
       {/* Desktop View */}
       <div className="hidden md:block">
-        <div className="max-w-5xl mx-auto grid grid-cols-4 gap-3 ">
+        <div className="max-w-6xl mx-auto grid grid-cols-4 gap-4">
           {workFlowData.map((item) => (
             <div
               key={item.id}
               onClick={() => setActive(item.id)}
-              className={`cursor-pointer p-4 rounded-xl w-60 text-center shadow transition-all duration-300 ${
+              className={`cursor-pointer p-4 rounded-xl text-center transition-all duration-300 shadow-md border border-gray-700 ${
                 active === item.id
-                  ? "bg-[#D20E0E] text-white"
-                  : "bg-white hover:bg-gray-200"
+                  ? "bg-[#D20E0E] text-white shadow-lg"
+                  : "bg-[#1f1f1f] text-gray-300 hover:bg-[#2c2c2c]"
               }`}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-12 h-12 mx-auto mb-2 object-contain"
+                className="w-12 h-12 mx-auto mb-3"
               />
-              <h3 className="text-md font-semibold">{item.title}</h3>
+              <h3 className="text-lg font-semibold">{item.title}</h3>
             </div>
           ))}
         </div>
 
-        <div className="mt-6 bg-white p-6 rounded-xl max-w-5xl mx-auto shadow-md">
+        <div className="mt-8 max-w-6xl mx-auto bg-[#1f1f1f] border border-gray-700 p-6 rounded-xl shadow-lg">
           {workFlowData
             .filter((item) => item.id === active)
             .map((item) => (
               <div key={item.id}>
-                <h3 className="text-xl font-bold mb-1 border-b border-[#D20E0E] inline-block pb-1">
+                <h3 className="text-2xl font-bold mb-3 text-white border-b border-[#D20E0E] inline-block pb-1">
                   {item.title}
                 </h3>
-                <p className="whitespace-pre-line mt-3 text-base text-gray-700">
+                <p className="mt-4 text-gray-300 whitespace-pre-line text-base leading-relaxed">
                   {item.content}
                 </p>
               </div>

@@ -20,8 +20,8 @@ function Footer() {
 
   return (
     <div className="relative">
-      <img src={line2} alt="" className="absolute top-0 left-0" />
-      <footer className="bg-gradient-to-r from-[#84a4db] via-[#497dd8] to-[#1A54B5] text-white pt-12 pb-6">
+      <img src={line2} alt="" className="absolute top-0 left-0 invert" />
+      <footer className="bg-[#1f1f1f] text-white pt-12 pb-6">
         <div className="max-w-6xl mx-auto px-6">
           {/* Top Section */}
           <div className="flex flex-col md:flex-row gap-14 mb-8">

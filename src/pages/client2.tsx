@@ -7,12 +7,10 @@ const images = [
   "https://scontent.fdel1-4.fna.fbcdn.net/v/t39.30808-1/327181153_737700978062011_8544089667636529118_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=nLaEOjYbvA4Q7kNvwHH-D3M&_nc_oc=Adn32FEiorMvQqTbXhyZ-ihjXpr8PJNLbY25kvsW3lOMojntC9mNk5JxXbJGFrcteLFg0RWybgVgxhonPbpxEUlW&_nc_zt=24&_nc_ht=scontent.fdel1-4.fna&_nc_gid=NygIh9BlOQZ2aOGZSQRQ6Q&oh=00_AfE81Q8_JBI9phNhSiKcEYJL_Z2t5O26SjnIxW2LKEDHmQ&oe=6806AFD1",
   "https://laninarestaurant.com/wp-content/themes/lanina-wordpress-theme/static/img/logo_color.png",
   "https://aylesforddubai.com/wp-content/uploads/2024/11/aylesford.svg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Park_Plaza_logo.svg/2420px-Park_Plaza_logo.svg.png",
   "https://www.shoutlo.com/assets/images/merchant_images/merchant-133212-5c65208474154.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/3e/Park_Inn_by_Radisson_logo.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Radisson_Blu_logo.svg/1280px-Radisson_Blu_logo.svg.png",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8ZV5K7FxPkLchCy1bSLTfp6aqptcTl8vGg&s",
-  "https://cdn.freebiesupply.com/logos/large/2x/peerless-logo-png-transparent.png",
   "https://searchlogovector.com/wp-content/uploads/2018/11/park-plaza-logo-vector.png",
   "https://companieslogo.com/img/orig/BIDU_BIG-fd4001c8.png?t=1720244491",
   "https://pngimg.com/d/skoda_PNG12322.png",
@@ -68,7 +66,7 @@ function Clients2() {
   return (
     <div className="py-10" id="clients">
       <div className="px-4 pb-8 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
+        <h2 className="text-5xl font-bold text-white text-center my-12">
           Our Clients
         </h2>
 

@@ -82,7 +82,7 @@ const Stats: React.FC = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full md:py-4 bg-white ">
+    <div ref={sectionRef} className="w-full md:py-4 ">
       {/* Desktop View */}
       <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
         {stats.map((stat, index) => (
@@ -91,7 +91,7 @@ const Stats: React.FC = () => {
               {animatedValues[index]}
               {"+"}
             </h2>
-            <p className="whitespace-pre-line text-sm text-gray-600 dark:text-gray-400 uppercase mt-2">
+            <p className="whitespace-pre-line text-sm text-gray-300 dark:text-gray-400 uppercase mt-2">
               {stat.label}
             </p>
           </div>

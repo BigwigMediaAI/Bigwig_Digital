@@ -1,4 +1,4 @@
-// app/components/Location.tsx (or wherever your component lives)
+// app/components/Location.tsx
 import { MapPin } from "lucide-react";
 
 type Location = {
@@ -21,7 +21,6 @@ const locations: Location[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQOAYA94K7nXM77wSGlX1svzvszrkWd7O0w&s",
   },
-
   {
     city: "Delhi",
     address: "S-1, 3rd Floor, Janta Market, Rajouri Garden New Delhi - 110027",
@@ -36,7 +35,7 @@ const locations: Location[] = [
   },
   {
     city: "New Zealand",
-    address: "9/136 Marua Road, Mount Wellington, Auckland 1051",
+    address: "9/136 Marua Road, Mount Wellington, Auckland 1051",
     image:
       "https://assets.traveltriangle.com/blog/wp-content/uploads/2015/09/Auckland.jpg",
   },
@@ -48,30 +47,36 @@ const LocationCard = ({ city, address, image }: Location) => {
   )}`;
 
   return (
-    <div className="relative group overflow-hidden rounded-xl border p-5 transition-all duration-300 hover:shadow-lg md:min-h-[230px]">
-      {/* Hover Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
-        style={{ backgroundImage: `url(${image})` }}
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 z-10" />
-
-      {/* Content */}
-      <div className="relative z-20 space-y-2">
-        <MapPin className="text-orange-500" />
-        <h3 className="text-xl font-bold group-hover:text-white text-gray-800">
-          {city}
-        </h3>
-        <a
-          href={mapsLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block text-lg whitespace-pre-line group-hover:text-white text-gray-600  hover:text-blue-400 transition"
+    <div className="group [perspective:1000px]">
+      <div className="relative h-60 w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+        {/* Front Side */}
+        <div
+          className="absolute inset-0 rounded-xl bg-cover bg-center text-white shadow-lg"
+          style={{ backgroundImage: `url(${image})` }}
         >
-          {address}
-        </a>
+          <div className="flex h-full w-full flex-col justify-end rounded-xl bg-black/50 p-4">
+            <MapPin className="text-orange-400 mb-1" />
+            <h3 className="text-xl font-semibold">{city}</h3>
+          </div>
+        </div>
+
+        {/* Back Side - Showing Image and Address */}
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center rounded-xl bg-cover bg-center text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]"
+          style={{ backgroundImage: `url(${image})` }}
+        >
+          <div className="flex h-full w-full flex-col justify-end rounded-xl bg-black/50 p-4">
+            <p className="text-sm mb-4">{address}</p>
+            <a
+              href={mapsLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded bg-orange-500 px-4 py-1 text-sm font-semibold hover:bg-orange-600 transition"
+            >
+              View on Map
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -79,11 +84,9 @@ const LocationCard = ({ city, address, image }: Location) => {
 
 const LocationsSection = () => {
   return (
-    <section className="px-4 md:px-16 lg:px-24 pb-8 bg-white text-gray-900">
-      <h2 className="text-3xl font-semibold text-gray-900 text-center mb-12">
-        Our Locations
-      </h2>
-      <div className="grid grid-cols1 md:grid-cols-5 gap-6">
+    <section className="px-4 md:px-16 lg:px-24 bg-black text-white mb-6">
+      <h2 className="text-5xl font-bold text-center mb-6">Our Locations</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
         {locations.map((location, index) => (
           <LocationCard key={index} {...location} />
         ))}

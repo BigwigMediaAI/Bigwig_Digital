@@ -17,7 +17,7 @@ const Nav: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white/70 backdrop-blur-lg sticky top-0 z-50 text-[#1752B4] w-full shadow-lg">
+    <nav className="bg-[#1f1f1f] opacity-90 backdrop-blur-lg sticky top-0 z-50 text-white w-full shadow-lg">
       <div className="px-4 md:px-16 container mx-auto flex justify-between items-center py-3 w-full">
         {/* Logo */}
         <div className="flex items-center font-bold text-2xl">
@@ -62,7 +62,7 @@ const Nav: React.FC = () => {
         </button>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-3 text-[#1752B4] font-medium relative">
+        <ul className="hidden md:flex items-center space-x-3 text-white font-medium relative">
           {/* Solutions Dropdown */}
           <li
             onMouseEnter={() => setIsSolutionsOpen(true)}
@@ -166,7 +166,7 @@ const Nav: React.FC = () => {
               href="/contact"
               className="relative overflow-hidden group rounded-lg py-2 hover:text-white transition"
             >
-              <span className="relative z-10 border-2 border-[#D10B0B] px-3 py-1 rounded-md text-[#D10B0B] hover:text-white">
+              <span className="relative z-10 border-2 border-[#D10B0B] px-3 py-1 rounded-md text-white hover:text-white">
                 Contact Us
               </span>
               <span className="absolute inset-0 bg-[#D10B0B] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />

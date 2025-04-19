@@ -43,10 +43,10 @@ const CaseCard: React.FC = () => {
   return (
     <div className="p-8 min-h-screen w-11/12 mx-auto">
       {/* Header Section */}
-      <h1 className="text-3xl font-semibold text-gray-900 mb-4 text-center">
+      <h1 className="text-5xl font-bold text-white mb-4 text-center">
         Why Bigwig?
       </h1>
-      <p className="text-center mb-10 text-[#4a5568] font-base">
+      <p className="text-center mb-10 text-gray-200 font-base">
         Let us be your <strong>3rd Eye & 6th Sense</strong> and make your end
         results to be nothing but <strong>ROI</strong> spectacular.
       </p>
@@ -61,11 +61,11 @@ const CaseCard: React.FC = () => {
             />
 
             <div className="p-4">
-              <h3 className="text-md md:text-xl font-semibold text-gray-900">
+              <h3 className="text-md md:text-xl font-semibold text-gray-300">
                 {caseItem.title}
               </h3>
               <hr className="my-3 border-t-2" />
-              <p className="text-gray-600 mt-2 text-sm md:text-md">
+              <p className="text-gray-400 mt-2 text-sm md:text-md">
                 {caseItem.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">

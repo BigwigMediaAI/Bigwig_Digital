@@ -278,6 +278,9 @@ const ScrollSections: React.FC = () => {
 
   return (
     <div>
+      <h2 className="text-5xl font-bold text-white text-center my-8">
+        Our Services       
+      </h2>
       {sections.map((section, index) => (
         <AnimatedSection
           key={section.id}

@@ -32,7 +32,7 @@ function Landing() {
   };
 
   return (
-    <>
+    <div className="bg-black">
       <Nav />
       <Hero />
       <Partners />
@@ -100,7 +100,7 @@ function Landing() {
           <ContactUs />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
