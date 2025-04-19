@@ -101,7 +101,7 @@ export default function ImageSlider() {
   return (
     <section className="py-12 bg-white">
       <div className="max-w-6xl mx-auto px-6">
-        <h1 className="text-3xl text-center text-gray-900 font-semibold">
+        <h1 className="md:block hidden text-3xl text-center text-gray-900 font-semibold">
           Look What Our Beloved Clients Say About Us
         </h1>
         {/* Heading & Rating */}

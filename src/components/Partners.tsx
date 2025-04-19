@@ -4,7 +4,7 @@ import award2 from "../assets/partner/Met-Business-Partners.png";
 import award3 from "../assets/partner/bing-ads.png";
 import award4 from "../assets/partner/hubspot.png";
 import award5 from "../assets/partner/wordpress.jpg";
-import award6 from "../assets/partner/Tiktok-partners.png";
+import award6 from "../assets/partner/tiktok-partners (1).png";
 import award7 from "../assets/partner/Shopify_Partner.png";
 // Add more awards as needed
 
