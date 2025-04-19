@@ -1,0 +1,51 @@
+:root {
+  --background: #0e1116;
+  --white: #ffffff;
+  --accent: #1bf8c7;
+  --gray: #818a91;
+  --green: #1bf8c7;
+  --font-primary: "Helvetica Neue", sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Keeps horizontal scroll hidden */
+  overflow-y: auto; /* Enables vertical scroll */
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 35px;
+  height: 25px;
+  background-color: transparent;
+  /* border: 1.5px solid var(--white); */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.cursor-dot {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.trail-segment {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(180, 6, 6, 0.993) 0%,
+    rgba(10, 6, 230, 0) 80%
+  );
+  pointer-events: none;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+}
