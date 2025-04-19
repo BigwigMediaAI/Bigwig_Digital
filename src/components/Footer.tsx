@@ -163,10 +163,10 @@ function Footer() {
 
             {/* Footer Links */}
             <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a href="#" className="hover:text-black transition">
+              <a href="/privacy-policy" className="hover:text-black transition">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-black transition">
+              <a href="/terms-of-use" className="hover:text-black transition">
                 Terms of Service
               </a>
             </div>

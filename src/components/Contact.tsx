@@ -140,7 +140,7 @@ const ContactUs: React.FC = () => {
             <PhoneInput
               id="phone"
               international
-              defaultCountry="IN"
+              defaultCountry="AE"
               value={formData.phone}
               onChange={(value) => {
                 setFormData({ ...formData, phone: value || "" });
