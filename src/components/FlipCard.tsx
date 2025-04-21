@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import { GiAwareness } from "react-icons/gi";
 import { SiGooglemarketingplatform } from "react-icons/si";
-import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const FlipCard = () => {
   const [mobileIndex, setMobileIndex] = useState(0);
@@ -125,10 +125,7 @@ const FlipCard = () => {
                 )
               }
             >
-              <ArrowLeftCircle
-                size={36}
-                className="text-white hover:text-orange-400"
-              />
+              <ChevronLeft size={28} className="text-white" />
             </button>
             <button
               onClick={() =>
@@ -137,14 +134,11 @@ const FlipCard = () => {
                 )
               }
             >
-              <ArrowRightCircle
-                size={36}
-                className="text-white hover:text-orange-400"
-              />
+              <ChevronRight size={28} className="text-white" />
             </button>
           </div>
 
-          <div className="w-full max-w-xs  mx-auto perspective">
+          <div className="w-full px-10  mx-auto perspective">
             <div
               className={`relative w-full h-[300px] rounded-lg transform-style-preserve-3d transition-transform duration-500 ${
                 flippedStates[mobileIndex] ? "rotate-y-180" : ""
@@ -172,7 +166,7 @@ const FlipCard = () => {
                 </div>
                 <button
                   onClick={() => handleFlip(mobileIndex)}
-                  className="absolute bottom-4 right-4 px-4 py-4 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
+                  className="absolute bottom-4 right-4 px-2 py-2 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -212,9 +206,22 @@ const FlipCard = () => {
                 </p>
                 <button
                   onClick={() => handleFlip(mobileIndex)}
-                  className="px-4 py-3 border-2 border-r-4 border-black absolute bottom-4 right-4 bg-white rounded-full shadow-md hover:bg-gray-100 transition font-bold text-2xl"
+                  className="px-2 py-2 border-2 border-r-4 border-black absolute bottom-4 right-4 bg-white rounded-full shadow-md hover:bg-gray-100 transition font-bold text-2xl"
                 >
-                  —
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
