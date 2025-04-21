@@ -7,6 +7,7 @@ import chooseYou from "../assets/choices-order-svgrepo-com (1).svg";
 import Rocket from "../assets/rocket-svgrepo-com.svg";
 import analysis from "../assets/analysis-analytics-chart-2-svgrepo-com.svg";
 import support from "../assets/support-online-center-svgrepo-com.svg";
+import { ArrowLeft, ArrowRight } from "lucide-react"; // Better arrow icons
 
 const workFlowData = [
   {
@@ -68,7 +69,16 @@ const workFlowData = [
 ];
 
 export default function HowWeWork() {
-  const [active, setActive] = useState("We_Attend");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [active, setActive] = useState(workFlowData[0].id); // Add missing desktop state
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev > 0 ? prev - 1 : workFlowData.length - 1));
+  };
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev < workFlowData.length - 1 ? prev + 1 : 0));
+  };
 
   return (
     <div id="method" className="text-white mb-10 py-4 bg-black px-5">
@@ -76,35 +86,43 @@ export default function HowWeWork() {
         Method to Madness
       </h2>
 
-      {/* Mobile View */}
-      <div className="flex flex-col md:hidden gap-4">
-        {workFlowData.map((item) => (
-          <div
-            key={item.id}
-            className="bg-[#121212] border border-gray-700 rounded-xl shadow-md"
-          >
-            <div
-              onClick={() => setActive(active === item.id ? "" : item.id)}
-              className={`cursor-pointer p-4 rounded-t-xl text-center transition-all duration-300 ${
-                active === item.id
-                  ? "bg-[#D20E0E] text-white"
-                  : "bg-[#1f1f1f] hover:bg-[#2c2c2c]"
-              }`}
+      {/* Mobile View - Show 1 card with arrows */}
+      <div className="md:hidden relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-700">
+        {/* Top Half - Red Background */}
+        <div className="relative bg-[#D20E0E] flex justify-center items-center h-40">
+          {/* Arrows in top half */}
+          <div className="absolute w-full top-1/2 -translate-y-1/2 flex justify-between px-4">
+            <button
+              onClick={handlePrev}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
             >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-10 h-10 mx-auto mb-2"
-              />
-              <h3 className="text-base font-semibold">{item.title}</h3>
-            </div>
-            {active === item.id && (
-              <div className="p-4 text-gray-300 whitespace-pre-line text-sm">
-                {item.content}
-              </div>
-            )}
+              <ArrowLeft size={20} />
+            </button>
+            <button
+              onClick={handleNext}
+              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
+            >
+              <ArrowRight size={20} />
+            </button>
           </div>
-        ))}
+
+          {/* Image in center */}
+          <img
+            src={workFlowData[activeIndex].image}
+            alt={workFlowData[activeIndex].title}
+            className="w-14 h-14 z-10"
+          />
+        </div>
+
+        {/* Bottom Half - Content Area */}
+        <div className="bg-[#1f1f1f] p-6 text-center">
+          <h3 className="text-lg font-semibold mb-2">
+            {workFlowData[activeIndex].title}
+          </h3>
+          <p className="text-gray-300 text-sm">
+            {workFlowData[activeIndex].content}
+          </p>
+        </div>
       </div>
 
       {/* Desktop View */}
@@ -130,7 +148,7 @@ export default function HowWeWork() {
           ))}
         </div>
 
-        <div className="mt-8 w-11/12 mx-auto bg-[#1f1f1f] border border-gray-700 p-4 rounded-xl shadow-lg">
+        <div className="mt-8 w-11/12 mx-auto bg-[#1f1f1f] border border-gray-700 p-6 rounded-xl shadow-lg">
           {workFlowData
             .filter((item) => item.id === active)
             .map((item) => (

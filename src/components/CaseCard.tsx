@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Slider from "react-slick"; // Import the react-slick component
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const CaseCard: React.FC = () => {
   const cases = [
@@ -41,6 +44,31 @@ const CaseCard: React.FC = () => {
     "Creative Innovations": "bg-gray-200",
   };
 
+  // Mobile view detection: consider width less than 768px as mobile
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Slider settings for mobile view
+  const sliderSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Infinite loop sliding
+    speed: 500,
+    slidesToShow: 1, // Show one at a time
+    slidesToScroll: 1,
+    arrows: false, // Optionally hide arrows on mobile
+    autoplay: true, // Automatically slide (optional)
+    autoplaySpeed: 3000, // Duration between slides
+  };
+
   return (
     <div className="px-3 w-full md:w-11/12 mb-10 py-4 mx-auto">
       {/* Header Section */}
@@ -48,42 +76,79 @@ const CaseCard: React.FC = () => {
         Why Bigwig?
       </h1>
       <p className="text-center mb-6 text-gray-200 font-base">
-        Let us be your <strong>3rd Eye & 6th Sense</strong> and make your end
-        results to be nothing but <strong>ROI</strong> spectacular.
+        Let us be your <strong>3rd Eye &amp; 6th Sense</strong> and make your
+        end results to be nothing but <strong>ROI</strong> spectacular.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4">
-        {cases.map((caseItem, index) => (
-          <div key={index}>
-            <img
-              src={caseItem.image}
-              alt={caseItem.title}
-              className="w-full h-64 object-cover rounded-3xl transition-transform duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl"
-            />
-            <div className="p-4">
-              <h3 className="text-md md:text-xl font-semibold text-gray-300">
-                {caseItem.title}
-              </h3>
-              <hr className="my-3 border-t-2" />
-              <p className="text-gray-400 mt-2 text-sm md:text-md">
-                {caseItem.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {caseItem.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className={`text-sm md:text-md font-medium px-4 py-2 rounded-full ${
-                      tagColorMap[tag] || "bg-gray-200"
-                    } text-gray-700`}
-                  >
-                    {tag}
-                  </span>
-                ))}
+      {isMobile ? (
+        // Mobile view: Render slider
+        <Slider {...sliderSettings}>
+          {cases.map((caseItem, index) => (
+            <div key={index} className="px-2">
+              <img
+                src={caseItem.image}
+                alt={caseItem.title}
+                className="w-full h-64 object-cover rounded-3xl transition-transform duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl"
+              />
+              <div className="p-4">
+                <h3 className="text-md md:text-xl font-semibold text-gray-300">
+                  {caseItem.title}
+                </h3>
+                <hr className="my-3 border-t-2" />
+                <p className="text-gray-400 mt-2 text-sm md:text-md">
+                  {caseItem.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {caseItem.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className={`text-sm md:text-md font-medium px-4 py-2 rounded-full ${
+                        tagColorMap[tag] || "bg-gray-200"
+                      } text-gray-700`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </Slider>
+      ) : (
+        // Desktop/Tablet view: Render grid layout
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4">
+          {cases.map((caseItem, index) => (
+            <div key={index}>
+              <img
+                src={caseItem.image}
+                alt={caseItem.title}
+                className="w-full h-64 object-cover rounded-3xl transition-transform duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl"
+              />
+              <div className="p-4">
+                <h3 className="text-md md:text-xl font-semibold text-gray-300">
+                  {caseItem.title}
+                </h3>
+                <hr className="my-3 border-t-2" />
+                <p className="text-gray-400 mt-2 text-sm md:text-md">
+                  {caseItem.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {caseItem.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className={`text-sm md:text-md font-medium px-4 py-2 rounded-full ${
+                        tagColorMap[tag] || "bg-gray-200"
+                      } text-gray-700`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
