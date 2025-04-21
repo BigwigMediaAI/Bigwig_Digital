@@ -133,7 +133,7 @@ const FlipCard = () => {
                 <img
                   src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
                   alt="icon"
-                  className="w-8 "
+                  className="w-8 invert"
                 />
               </div>
 
@@ -177,7 +177,7 @@ const FlipCard = () => {
                 <img
                   src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
                   alt="icon"
-                  className="w-8"
+                  className="w-8 invert"
                 />
               </div>
               <p className="text-justify text-md md:text-lg text-white">
