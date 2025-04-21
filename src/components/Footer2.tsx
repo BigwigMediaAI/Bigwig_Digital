@@ -7,7 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/bigwigDigital.png";
+import logo from "../assets/bigwig digital logo.png";
 import line2 from "../assets/line2.png";
 
 function Footer2() {

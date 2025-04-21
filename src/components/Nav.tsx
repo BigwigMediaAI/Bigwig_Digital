@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/bigwigDigital.png";
+import logo from "../assets/bigwig digital logo.png";
 import {
   LayoutDashboard,
   Info,

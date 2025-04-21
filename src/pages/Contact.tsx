@@ -5,6 +5,7 @@ import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Nav2 from "../components/Nav2";
+import Footer2 from "../components/Footer2";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -252,6 +253,7 @@ export default function ContactPage() {
           ></iframe>
         </div>
       </div>
+      <Footer2 />
     </div>
   );
 }

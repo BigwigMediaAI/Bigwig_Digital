@@ -31,14 +31,11 @@ const AboutUs = () => {
 
         {/* Right Side - Paragraph */}
         <div className="text-gray-300 text-lg text-justify leading-relaxed">
-          In this convoluted industry that is subjected to exponential growth
-          and constant evolution, the first impression lasts a lifetime. As the
-          best digital marketing company in India & Dubai, our aim is not only
-          to harness the capability of SEO, Google Ads & Facebook Marketing to
-          propel your business but to creatively design stunning websites with
-          ‘brand perception’ & ‘conversions’ as the key parameters. Working with
-          us, you get the most of your investment in marketing. Listed below are
-          some of the reasons why:
+          In a fast-changing digital world, first impressions are everything. As
+          a top digital marketing agency in India, we blend creativity with
+          strategy—crafting stunning websites while using SEO, Google Ads, and
+          Facebook Marketing to boost both perception and conversions. Here’s
+          why working with us maximizes your ROI:
         </div>
       </div>
 
@@ -47,57 +44,56 @@ const AboutUs = () => {
         {/* Card 1 */}
         <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
           <h3 className="text-xl font-semibold mb-2">
-            Innovative and Passionate
+            Driven by Innovation and Fueled by Passion
           </h3>
           <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400">
-            We serve as the catalyst propelling your brand’s journey to success,
-            leveraging the transformative power of captivating storytelling and
-            strategic brand building. Our strong passion for creativity makes us
-            the best digital marketing agency in India & Dubai and other areas
-            as well.
+          <p className="text-lg text-gray-400 text-justify">
+            We’re like rocket fuel for your brand—minus the explosion. With
+            powerful storytelling and creative spark, we help your business
+            soar. It’s no wonder we’re trusted as one of the best digital
+            marketing agencies in India and Dubai.
           </p>
         </div>
 
         {/* Card 2 */}
         <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
-          <h3 className="text-xl font-semibold mb-2">Communication is a key</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            Strong communication is the foundation of success.
+          </h3>
           <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400">
-            Effective communication helps to build a healthy relationship with
-            our clients. So, at every stage of the project, we are transparent
-            with our work, constantly updating results, delivering projects on
-            time, and keeping you on loop. No surprises, just smooth sailing and
-            high-fives prevailing!
+          <p className="text-lg text-gray-400 text-justify">
+            We believe clear communication is the backbone of every great
+            partnership. That’s why we keep things transparent—sharing updates,
+            hitting deadlines, and keeping you in the loop at every step. No
+            last-minute surprises—just smooth progress, solid results, and the
+            occasional virtual high-five!
           </p>
         </div>
         {/* Card 3 */}
         <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
           <h3 className="text-xl font-semibold mb-2">
-            Good Return on Investment
+            Strong return on investment
           </h3>
           <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400">
-            PWorking with us implies significant cost benefits for your company.
-            We provide all of our web development and digital marketing
-            solutions at reasonable prices. Our experts take every measure
-            possible to guarantee that all money invested in the project will
-            provide a profit.
+          <p className="text-lg text-gray-400 text-justify">
+            Partnering with us means big value without the big price tag. We
+            offer top-notch web and digital solutions at fair prices, making
+            sure every rupee you invest works hard. Our team’s goal? Maximum
+            results, minimum waste, and a return that makes you smile.
           </p>
         </div>
         {/* Card 4 */}
         <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
           <h3 className="text-xl font-semibold mb-2">
-            A Gamut of Services under One Roof
+            Experience a Broad Spectrum of Services All in One Place
           </h3>
           <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400">
-            All of the services you might need are included in our list, from
-            designing your website to advertising it online. Proudly recognised
-            as the best digital marketing agency in India , Dubai, we provide a
-            comprehensive range of services, including web development, CMS
-            development, e-commerce development, mobile app development, SEO,
-            SEM, and SMO.
+          <p className="text-lg text-gray-400 text-justify">
+            From building your website to putting it on the digital map—we’ve
+            got it all covered. As a leading digital marketing agency in India &
+            Dubai, we offer end-to-end services including web development, CMS,
+            e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools
+            you need.
           </p>
         </div>
       </div>
