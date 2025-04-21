@@ -6,6 +6,7 @@ import google_ad from "../assets/gmb.mp4";
 import seo from "../assets/seo.mp4";
 import performance from "../assets/performance.mp4";
 import web from "../assets/web-develop.mp4";
+import orm from "../assets/ORM.mp4";
 import {
   FaFacebook,
   FaInstagram,
@@ -221,8 +222,7 @@ const ScrollSections: React.FC = () => {
           </p>
         </>
       ),
-      image:
-        "https://handleey.com/handleey/assets/img/images/Pending-Reviews.png",
+      image: orm,
       icons: [
         <FaShieldAlt className="text-blue-500 text-4xl" />,
         <FaStar className="text-yellow-500 text-4xl" />,
