@@ -40,61 +40,100 @@ const AboutUs = () => {
       </div>
 
       {/* Cards */}
-      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
-        {/* Card 1 */}
-        <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
-          <h3 className="text-xl font-semibold mb-2">
-            Driven by Innovation and Fueled by Passion
-          </h3>
-          <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400 text-justify">
-            We’re like rocket fuel for your brand—minus the explosion. With
-            powerful storytelling and creative spark, we help your business
-            soar. It’s no wonder we’re trusted as one of the best digital
-            marketing agencies in India and Dubai.
-          </p>
+      {/* Cards */}
+      <div className="mt-14">
+        {/* Mobile View - Horizontal Scroll */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory space-x-5 md:hidden pb-4 px-1">
+          {[
+            {
+              title: "Driven by Innovation and Fueled by Passion",
+              content:
+                "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in India and Dubai.",
+            },
+            {
+              title: "Strong communication is the foundation of success.",
+              content:
+                "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the occasional virtual high-five!",
+            },
+            {
+              title: "Strong return on investment",
+              content:
+                "Partnering with us means big value without the big price tag. We offer top-notch web and digital solutions at fair prices, making sure every rupee you invest works hard. Our team’s goal? Maximum results, minimum waste, and a return that makes you smile.",
+            },
+            {
+              title: "Experience a Broad Spectrum of Services All in One Place",
+              content:
+                "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India & Dubai, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
+            },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="min-w-full snap-start bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+            >
+              <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+              <hr className="border-gray-600 mb-4" />
+              <p className="text-lg text-gray-400 text-justify">
+                {card.content}
+              </p>
+            </div>
+          ))}
         </div>
 
-        {/* Card 2 */}
-        <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
-          <h3 className="text-xl font-semibold mb-2">
-            Strong communication is the foundation of success.
-          </h3>
-          <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400 text-justify">
-            We believe clear communication is the backbone of every great
-            partnership. That’s why we keep things transparent—sharing updates,
-            hitting deadlines, and keeping you in the loop at every step. No
-            last-minute surprises—just smooth progress, solid results, and the
-            occasional virtual high-five!
-          </p>
-        </div>
-        {/* Card 3 */}
-        <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
-          <h3 className="text-xl font-semibold mb-2">
-            Strong return on investment
-          </h3>
-          <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400 text-justify">
-            Partnering with us means big value without the big price tag. We
-            offer top-notch web and digital solutions at fair prices, making
-            sure every rupee you invest works hard. Our team’s goal? Maximum
-            results, minimum waste, and a return that makes you smile.
-          </p>
-        </div>
-        {/* Card 4 */}
-        <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
-          <h3 className="text-xl font-semibold mb-2">
-            Experience a Broad Spectrum of Services All in One Place
-          </h3>
-          <hr className="border-gray-600 mb-4" />
-          <p className="text-lg text-gray-400 text-justify">
-            From building your website to putting it on the digital map—we’ve
-            got it all covered. As a leading digital marketing agency in India &
-            Dubai, we offer end-to-end services including web development, CMS,
-            e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools
-            you need.
-          </p>
+        {/* Desktop View - Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+            <h3 className="text-xl font-semibold mb-2">
+              Driven by Innovation and Fueled by Passion
+            </h3>
+            <hr className="border-gray-600 mb-4" />
+            <p className="text-lg text-gray-400 text-justify">
+              We’re like rocket fuel for your brand—minus the explosion. With
+              powerful storytelling and creative spark, we help your business
+              soar. It’s no wonder we’re trusted as one of the best digital
+              marketing agencies in India and Dubai.
+            </p>
+          </div>
+
+          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+            <h3 className="text-xl font-semibold mb-2">
+              Strong communication is the foundation of success.
+            </h3>
+            <hr className="border-gray-600 mb-4" />
+            <p className="text-lg text-gray-400 text-justify">
+              We believe clear communication is the backbone of every great
+              partnership. That’s why we keep things transparent—sharing
+              updates, hitting deadlines, and keeping you in the loop at every
+              step. No last-minute surprises—just smooth progress, solid
+              results, and the occasional virtual high-five!
+            </p>
+          </div>
+
+          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+            <h3 className="text-xl font-semibold mb-2">
+              Strong return on investment
+            </h3>
+            <hr className="border-gray-600 mb-4" />
+            <p className="text-lg text-gray-400 text-justify">
+              Partnering with us means big value without the big price tag. We
+              offer top-notch web and digital solutions at fair prices, making
+              sure every rupee you invest works hard. Our team’s goal? Maximum
+              results, minimum waste, and a return that makes you smile.
+            </p>
+          </div>
+
+          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+            <h3 className="text-xl font-semibold mb-2">
+              Experience a Broad Spectrum of Services All in One Place
+            </h3>
+            <hr className="border-gray-600 mb-4" />
+            <p className="text-lg text-gray-400 text-justify">
+              From building your website to putting it on the digital map—we’ve
+              got it all covered. As a leading digital marketing agency in India
+              & Dubai, we offer end-to-end services including web development,
+              CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the
+              tools you need.
+            </p>
+          </div>
         </div>
       </div>
     </section>
