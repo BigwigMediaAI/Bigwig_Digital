@@ -86,10 +86,15 @@ const LocationsSection = () => {
   return (
     <section className="px-4 md:px-16 lg:px-24 bg-black text-white mb-6">
       <h2 className="text-5xl font-bold text-center mb-6">Our Locations</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
-        {locations.map((location, index) => (
-          <LocationCard key={index} {...location} />
-        ))}
+
+      <div className="overflow-x-auto sm:overflow-x-visible">
+        <div className="flex sm:grid sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+          {locations.map((location, index) => (
+            <div key={index} className="min-w-[220px] sm:min-w-0">
+              <LocationCard {...location} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

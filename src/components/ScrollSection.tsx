@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import social from "../assets/social2.mp4";
-import google_ad from "../assets/gmb.mp4";
+import google_ad from "../assets/Google-My-Business.mp4";
 import seo from "../assets/seo.mp4";
-import performance from "../assets/performance.mp4";
+import performance from "../assets/Performance Marketing-1.mp4";
 import web from "../assets/web-develop.mp4";
 import orm from "../assets/ORM.mp4";
 import {

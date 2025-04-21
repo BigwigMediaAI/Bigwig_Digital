@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import styled from "styled-components";
 
 type BlogPost = {
   _id: string;
@@ -47,191 +46,52 @@ const Blog = () => {
   };
 
   const handleViewAllClick = () => {
-    window.location.href = `https://bigwigmedia.ai/blog`; // URL for viewing all blogs
+    window.location.href = `https://bigwigmedia.ai/blog`;
   };
 
-  if (loading) {
-    return <Loading>Loading...</Loading>;
-  }
-
-  if (error) {
-    return <Error>{error}</Error>;
-  }
+  if (loading)
+    return <div className="text-center text-gray-500">Loading...</div>;
+  if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <Container id="blog">
-      <BlogTitle>Our Trending Blogs</BlogTitle>
-      <Description>
-        Boost content creation and enhance productivity with
-        <DescriptionText>BigwigDigital.</DescriptionText>
-      </Description>
-      <Grid>
+    <div className="w-full px-6 md:px-16 py-10" id="blog">
+      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+        Our Trending Blogs
+      </h1>
+      <p className="text-center text-white text-sm md:text-base mb-8">
+        Boost content creation and enhance productivity with{" "}
+        <span className="font-bold">BigwigDigital.</span>
+      </p>
+
+      {/* Cards Grid */}
+      <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
         {blogPosts.slice(0, 4).map((post) => (
-          <BookContainer
+          <div
             key={post._id}
             onClick={() => handlePostClick(post.slug)}
+            className="relative bg-white h-[200px] md:h-[300px] rounded-lg overflow-hidden cursor-pointer shadow-lg transform transition-transform duration-300 hover:-rotate-y-6"
           >
-            <Book>
-              <BookCover>
-                <BookImage src={post.image} alt={post.title} />
-                <BookInfo>
-                  <Title>{post.title}</Title>
-                  <Author>by {post.author}</Author>
-                </BookInfo>
-              </BookCover>
-              <BookSpine />
-              <BookBackCover />
-            </Book>
-          </BookContainer>
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover hover:scale-110"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3">
+              <h2 className="text-sm md:text-lg font-semibold">{post.title}</h2>
+              <p className="text-xs md:text-sm">by {post.author}</p>
+            </div>
+          </div>
         ))}
-      </Grid>
-      <ViewAllButton onClick={handleViewAllClick}>View All Blogs</ViewAllButton>
-    </Container>
+      </div>
+
+      <button
+        onClick={handleViewAllClick}
+        className="mt-10 block mx-auto px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-600 text-sm md:text-base"
+      >
+        View All Blogs
+      </button>
+    </div>
   );
 };
 
 export default Blog;
-
-const Container = styled.div`
-  margin: 1rem auto;
-  padding: 10px 70px;
-  border-radius: 0.5rem;
-  @media (max-width: 768px) {
-    padding: 10px 30px;
-  }
-`;
-
-const BlogTitle = styled.h1`
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  margin-bottom: 1rem;
-`;
-
-const Grid = styled.div`
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(4, 1fr);
-  @media (max-width: 968px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 568px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
-
-const BookContainer = styled.div`
-  perspective: 1000px;
-  width: 100%;
-  cursor: pointer;
-`;
-
-const Book = styled.div`
-  position: relative;
-  width: 100%;
-  height: 300px;
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    transform: rotateY(-30deg);
-  }
-`;
-
-const BookCover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transform-origin: left center;
-  z-index: 1;
-`;
-
-const BookImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-
-const BookInfo = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  padding: 10px;
-`;
-const Description = styled.h1`
-  text-align: center;
-  color: white; /* Description text color */
-  font-size: 1rem;
-  margin-bottom: 2rem;
-`;
-const DescriptionText = styled.h1`
-  font-weight: bold;
-`;
-
-const Title = styled.h2`
-  font-size: 1.25rem;
-  font-weight: bold;
-`;
-
-const Author = styled.p`
-  font-size: 0.875rem;
-`;
-
-const BookSpine = styled.div`
-  position: absolute;
-  width: 20px;
-  height: 100%;
-  background-color: #d1d5db;
-  border: 1px solid #e5e7eb;
-  transform-origin: left center;
-  z-index: 0;
-`;
-
-const BookBackCover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #f3f4f6;
-  border: 1px solid #d1d5db;
-  border-radius: 0 0.5rem 0.5rem 0;
-  transform: rotateY(0deg);
-  z-index: -1;
-`;
-
-const ViewAllButton = styled.button`
-  display: block;
-  margin: 2rem auto;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  color: white;
-  background-color: #1752b4;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #1d4ed8;
-  }
-`;
-
-const Loading = styled.div`
-  text-align: center;
-  font-size: 1.25rem;
-  color: #4a5568;
-`;
-
-const Error = styled.div`
-  text-align: center;
-  font-size: 1.25rem;
-  color: #f56565;
-`;
