@@ -125,7 +125,7 @@ const FlipCard = () => {
             }`}
           >
             <div
-              className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden ${card.bgColor}`}
+              className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden border border-gray-700 ${card.bgColor}`}
             >
               <div className="absolute top-6 left-4">{card.icon}</div>
 
