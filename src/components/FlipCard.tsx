@@ -10,7 +10,11 @@ import {
 } from "react-icons/fa";
 import { GiAwareness } from "react-icons/gi";
 import { SiGooglemarketingplatform } from "react-icons/si";
+import { ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+
 const FlipCard = () => {
+  const [mobileIndex, setMobileIndex] = useState(0);
+
   const cards = [
     {
       id: "solutions1",
@@ -108,91 +112,199 @@ const FlipCard = () => {
   };
 
   return (
-    <div
-      id="solution"
-      className="grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto py-4 mb-10"
-    >
-      {cards.map((card, index) => (
-        <div
-          key={card.id}
-          ref={(el) => (sectionsRef.current[card.id] = el)}
-          id={card.id}
-          className="group w-full sm:w-full md:w-96 h-[300px] perspective mx-auto"
-        >
-          <div
-            className={`relative w-full h-full rounded-lg transform-style-preserve-3d transition-transform duration-500 ${
-              flippedStates[index] ? "rotate-y-180" : ""
-            }`}
-          >
-            <div
-              className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden border border-gray-700 ${card.bgColor}`}
+    <div id="solution" className="w-11/12 mx-auto py-4 mb-10">
+      {/* ✅ Mobile View - Single FlipCard with Arrows */}
+      <div className="block md:hidden relative">
+        <div className="flex justify-center items-center mb-4">
+          {/* Arrows Above */}
+          <div className="absolute top-1/2 left-0 right-0 flex justify-between  z-10">
+            <button
+              onClick={() =>
+                setMobileIndex((prev) =>
+                  prev === 0 ? cards.length - 1 : prev - 1
+                )
+              }
             >
-              <div className="absolute top-6 left-4">{card.icon}</div>
+              <ArrowLeftCircle
+                size={36}
+                className="text-white hover:text-orange-400"
+              />
+            </button>
+            <button
+              onClick={() =>
+                setMobileIndex((prev) =>
+                  prev === cards.length - 1 ? 0 : prev + 1
+                )
+              }
+            >
+              <ArrowRightCircle
+                size={36}
+                className="text-white hover:text-orange-400"
+              />
+            </button>
+          </div>
 
-              <div className="absolute top-6 right-4 rounded-full text-sm font-semibold">
-                <img
-                  src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
-                  alt="icon"
-                  className="w-8 invert"
-                />
-              </div>
-
-              <div className="p-4 h-1/2 flex flex-col mt-20">
-                <h3 className="text-lg md:text-xl font-bold text-left text-white">
-                  {card.solution}
-                </h3>
-                <p className="mt-6 text-white">{card.title}</p>
-              </div>
-
-              <button
-                onClick={() => handleFlip(index)}
-                className="absolute bottom-4 right-4 px-4 py-4 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
+          <div className="w-full max-w-sm  mx-auto perspective">
+            <div
+              className={`relative w-full h-[300px] rounded-lg transform-style-preserve-3d transition-transform duration-500 ${
+                flippedStates[mobileIndex] ? "rotate-y-180" : ""
+              }`}
+            >
+              {/* Front */}
+              <div
+                className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden border border-gray-700 ${cards[mobileIndex].bgColor}`}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div
-              className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg flex flex-col items-center justify-center p-6 ${card.bgColor}`}
-            >
-              <a href="contact">
-                <div className="border-2 border-black absolute top-6 left-4 bg-white px-6 py-3 rounded-full text-sm font-semibold">
-                  Contact
+                <div className="absolute top-6 left-4">
+                  {cards[mobileIndex].icon}
                 </div>
-              </a>
-              <div className="absolute top-6 right-4 rounded-full text-sm font-semibold">
-                <img
-                  src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
-                  alt="icon"
-                  className="w-8 invert"
-                />
+                <div className="absolute top-6 right-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
+                    alt="icon"
+                    className="w-8 invert"
+                  />
+                </div>
+                <div className="p-4 h-1/2 flex flex-col mt-20">
+                  <h3 className="text-lg font-bold text-left text-white">
+                    {cards[mobileIndex].solution}
+                  </h3>
+                  <p className="mt-6 text-white">{cards[mobileIndex].title}</p>
+                </div>
+                <button
+                  onClick={() => handleFlip(mobileIndex)}
+                  className="absolute bottom-4 right-4 px-4 py-4 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
               </div>
-              <p className="text-justify text-md md:text-lg text-white">
-                {card.description}
-              </p>
-              <button
-                onClick={() => handleFlip(index)}
-                className="px-4 py-3 border-2 border-r-4 border-black absolute bottom-4 right-4 bg-white rounded-full shadow-md hover:bg-gray-100 transition font-bold text-2xl"
+
+              {/* Back */}
+              <div
+                className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg flex flex-col items-center justify-center p-6 ${cards[mobileIndex].bgColor}`}
               >
-                —
-              </button>
+                <a href="contact">
+                  <div className="border-2 border-black absolute top-6 left-4 bg-white px-6 py-3 rounded-full text-sm font-semibold">
+                    Contact
+                  </div>
+                </a>
+                <div className="absolute top-6 right-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
+                    alt="icon"
+                    className="w-8 invert"
+                  />
+                </div>
+                <p className="text-justify text-sm text-white">
+                  {cards[mobileIndex].description}
+                </p>
+                <button
+                  onClick={() => handleFlip(mobileIndex)}
+                  className="px-4 py-3 border-2 border-r-4 border-black absolute bottom-4 right-4 bg-white rounded-full shadow-md hover:bg-gray-100 transition font-bold text-2xl"
+                >
+                  —
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      ))}
+      </div>
+
+      {/* ✅ Desktop Grid View */}
+      <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-4">
+        {cards.map((card, index) => (
+          <div
+            key={card.id}
+            ref={(el) => (sectionsRef.current[card.id] = el)}
+            id={card.id}
+            className="group w-full md:w-96 h-[300px] perspective mx-auto"
+          >
+            <div
+              className={`relative w-full h-full rounded-lg transform-style-preserve-3d transition-transform duration-500 ${
+                flippedStates[index] ? "rotate-y-180" : ""
+              }`}
+            >
+              {/* Front */}
+              <div
+                className={`absolute w-full h-full backface-hidden rounded-2xl overflow-hidden border border-gray-700 ${card.bgColor}`}
+              >
+                <div className="absolute top-6 left-4">{card.icon}</div>
+                <div className="absolute top-6 right-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
+                    alt="icon"
+                    className="w-8 invert"
+                  />
+                </div>
+                <div className="p-4 h-1/2 flex flex-col mt-20">
+                  <h3 className="text-lg font-bold text-left text-white">
+                    {card.solution}
+                  </h3>
+                  <p className="mt-6 text-white">{card.title}</p>
+                </div>
+                <button
+                  onClick={() => handleFlip(index)}
+                  className="absolute bottom-4 right-4 px-4 py-4 border-2 border-r-4 border-black bg-white rounded-full shadow-md hover:bg-gray-100 transition"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Back */}
+              <div
+                className={`absolute w-full h-full backface-hidden rotate-y-180 rounded-lg flex flex-col items-center justify-center p-6 ${card.bgColor}`}
+              >
+                <a href="contact">
+                  <div className="border-2 border-black absolute top-6 left-4 bg-white px-6 py-3 rounded-full text-sm font-semibold">
+                    Contact
+                  </div>
+                </a>
+                <div className="absolute top-6 right-4">
+                  <img
+                    src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
+                    alt="icon"
+                    className="w-8 invert"
+                  />
+                </div>
+                <p className="text-justify text-md text-white">
+                  {card.description}
+                </p>
+                <button
+                  onClick={() => handleFlip(index)}
+                  className="px-4 py-3 border-2 border-r-4 border-black absolute bottom-4 right-4 bg-white rounded-full shadow-md hover:bg-gray-100 transition font-bold text-2xl"
+                >
+                  —
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
