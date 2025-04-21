@@ -18,7 +18,7 @@ const FlipCard = () => {
       title: "Effortlessly Managing Leads from First Click to Final Sale",
       description:
         "Boost your brand with a lead system so smooth, your competitors will wonder if it's magic. Say goodbye to missed opportunities and hello to seamless conversions!",
-      bgColor: "bg-yellow-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaUsers className="text-4xl text-yellow-600" />,
     },
     {
@@ -27,7 +27,7 @@ const FlipCard = () => {
       title: "Unforgettable Campaigns to Make Your Brand the Talk of the Town",
       description:
         "Ready to shine? We’ll grab eyeballs, spark emotions, and deliver success with strategies so good, even your grandma will notice your brand.",
-      bgColor: "bg-blue-200",
+      bgColor: "bg-[#28282B]",
       icon: <GiAwareness className="text-4xl text-blue-600" />,
     },
     {
@@ -36,7 +36,7 @@ const FlipCard = () => {
       title: "Amplify Your Brand’s Story with Voices Everyone Trusts",
       description:
         "From strategy to stardom, we’ll pair you with influencers who make waves—and results that’ll make you say, ‘Is this real life?’",
-      bgColor: "bg-purple-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaBullhorn className="text-4xl text-purple-600" />,
     },
     {
@@ -45,7 +45,7 @@ const FlipCard = () => {
       title: "Teleporting Your Audience to the Heart of Every Event",
       description:
         "From concerts to conferences, we’ll bring the action to life—no FOMO, just unforgettable moments straight to their screens.",
-      bgColor: "bg-green-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaBroadcastTower className="text-4xl text-green-600" />,
     },
     {
@@ -54,7 +54,7 @@ const FlipCard = () => {
       title: "Turning Your Achievements into Headlines That Matter",
       description:
         "From local buzz to global fame, we’ll make sure your story lands where it counts. Fame not included, but definitely earned!",
-      bgColor: "bg-pink-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaNewspaper className="text-4xl text-pink-600" />,
     },
     {
@@ -63,7 +63,7 @@ const FlipCard = () => {
       title: "Capturing Your Brand’s Essence, One Frame at a Time",
       description:
         "From brand stories to jaw-dropping visuals, our videos don’t just tell stories—they make audiences stop scrolling.",
-      bgColor: "bg-teal-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaVideo className="text-4xl text-teal-600" />,
     },
     {
@@ -72,7 +72,7 @@ const FlipCard = () => {
       title: "Crafting Clever, Gorgeous Content That Speaks Your Brand’s Soul",
       description:
         "We make content that’s funny, smart, and drop-dead gorgeous. Your audience? They won’t just look; they’ll stay for the encore.",
-      bgColor: "bg-orange-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaBrush className="text-4xl text-orange-600" />,
     },
     {
@@ -81,7 +81,7 @@ const FlipCard = () => {
       title: "Bringing Your Wildest Brand Ideas to Life with Unmatched Flair",
       description:
         "No cookie-cutter solutions here! Just bold ideas so wild, your audience will say, ‘Wow, didn’t see that coming!’",
-      bgColor: "bg-violet-200",
+      bgColor: "bg-[#28282B]",
       icon: <FaLightbulb className="text-4xl text-violet-600" />,
     },
     {
@@ -90,7 +90,7 @@ const FlipCard = () => {
       title: "Partnering Smartly to Multiply Your Reach!",
       description:
         "Think of us as your brand’s ultimate matchmaker—pairing you up with affiliates who will shout your praises from the rooftops (or at least their websites). We’ll help you create a win-win partnership so smooth, even Cupid would be jealous. Cha-ching for everyone involved!",
-      bgColor: "bg-red-200",
+      bgColor: "bg-[#28282B]",
       icon: <SiGooglemarketingplatform className="text-4xl text-red-400" />,
     },
   ];
@@ -110,7 +110,7 @@ const FlipCard = () => {
   return (
     <div
       id="solution"
-      className="grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto pt-4 mb-10 md:mb-12"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 w-11/12 mx-auto py-4 mb-10"
     >
       {cards.map((card, index) => (
         <div
@@ -133,15 +133,15 @@ const FlipCard = () => {
                 <img
                   src="https://cdn.prod.website-files.com/66bbc417df501b935e5152c6/66cdb85d740ac1a54de3fdc1_icon-grid.svg"
                   alt="icon"
-                  className="w-8"
+                  className="w-8 "
                 />
               </div>
 
               <div className="p-4 h-1/2 flex flex-col mt-20">
-                <h3 className="text-lg md:text-xl font-bold text-left">
+                <h3 className="text-lg md:text-xl font-bold text-left text-white">
                   {card.solution}
                 </h3>
-                <p className="mt-6">{card.title}</p>
+                <p className="mt-6 text-white">{card.title}</p>
               </div>
 
               <button
@@ -180,7 +180,7 @@ const FlipCard = () => {
                   className="w-8"
                 />
               </div>
-              <p className="text-justify text-md md:text-lg">
+              <p className="text-justify text-md md:text-lg text-white">
                 {card.description}
               </p>
               <button

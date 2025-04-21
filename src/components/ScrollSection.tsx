@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import social from "../assets/social2.mp4";
 import google_ad from "../assets/gmb.mp4";
 import seo from "../assets/seo.mp4";
-import performance from "../assets/performance-marketing.mp4";
+import performance from "../assets/performance.mp4";
 import web from "../assets/web-develop.mp4";
 import {
   FaFacebook,
@@ -117,14 +117,16 @@ const ScrollSections: React.FC = () => {
   const sections: Section[] = [
     {
       id: 1,
-      backgroundColor: "bg-yellow-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Social Media Management</h1>
-          <div className="mt-2 inline-flex items-center justify-center italic font-semibold py-1 rounded-full text-black text-sm">
+          <h1 className="text-4xl text-white font-bold">
+            Social Media Management
+          </h1>
+          <div className="mt-2 inline-flex items-center justify-center italic font-semibold py-1 rounded-full text-white text-sm">
             Balancing Your Brand's Mission and Social Media Presence
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-lg leading-relaxed text-justify text-white">
             Social media is like a party, and your brand needs to be the life of
             it—not the awkward one in the corner. With our strategies, you'll
             charm the crowd, start meaningful conversations, increase your
@@ -145,14 +147,16 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 2,
-      backgroundColor: "bg-blue-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Search Engine Optimization</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
+          <h1 className="text-4xl font-bold text-white">
+            Search Engine Optimization
+          </h1>
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
             Boosting Your Online Visibility to Help Your Brand Shine
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-white text-lg leading-relaxed text-justify">
             Think of us as your brand’s personal trainer, but for search
             engines. We’ll whip your online presence into shape, get you
             climbing those rankings, and have your audience saying, ‘How did we
@@ -171,14 +175,16 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 3,
-      backgroundColor: "bg-pink-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Performance Marketing</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
+          <h1 className="text-4xl text-white font-bold">
+            Performance Marketing
+          </h1>
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
             Marketing Strategies That Help You Stay Ahead of the Competition
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-lg text-white leading-relaxed text-justify">
             Marketing is a race, and we’re here to make sure you’re not the one
             tripping over your shoelaces. Our data-driven approach will keep you
             ahead of the pack, converting browsers into buyers faster than you
@@ -199,14 +205,16 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 4,
-      backgroundColor: "bg-green-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Online Reputation Management</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
+          <h1 className="text-4xl font-bold text-white">
+            Online Reputation Management
+          </h1>
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
             Building and Protecting Your Brand’s Online Reputation
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-white text-lg leading-relaxed text-justify">
             The internet never forgets, but don’t worry—we’ve got your back.
             With us on your team, your brand will look so good online that even
             your competitors might want to leave a five-star review!
@@ -224,14 +232,16 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 5,
-      backgroundColor: "bg-purple-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Web Design and App Development</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
+          <h1 className="text-4xl text-white font-bold">
+            Web Design and App Development
+          </h1>
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
             Crafting Seamless Digital Experiences!
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-lg text-white leading-relaxed text-justify">
             From pixel-perfect responsive websites to feature-rich mobile apps
             on Android & IOS, we bring your ideas to life with designs that
             inspire and functionality that delivers. Let us help you create a
@@ -250,14 +260,14 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 6,
-      backgroundColor: "bg-teal-200",
+      backgroundColor: "bg-[#28282B]",
       content: (
         <>
-          <h1 className="text-4xl font-bold">Google My Business</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-black text-sm">
+          <h1 className="text-4xl font-bold text-white">Google My Business</h1>
+          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
             Elevate Your Local Presence with GMB
           </div>
-          <p className="mt-4 text-lg leading-relaxed text-justify">
+          <p className="mt-4 text-lg text-white leading-relaxed text-justify">
             Get your business locally & vocally noticed on Google search and
             maps! With a strategic Google My Business profile, we'll help you
             attract more local customers, build credibility, and keep your

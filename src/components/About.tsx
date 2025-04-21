@@ -15,7 +15,7 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10"
+      className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
     >
       {/* Heading and Description */}
       <div className=" grid grid-cols-1 md:grid-cols-2  items-start">
