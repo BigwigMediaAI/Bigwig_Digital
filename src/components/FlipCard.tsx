@@ -144,7 +144,7 @@ const FlipCard = () => {
             </button>
           </div>
 
-          <div className="w-full max-w-sm  mx-auto perspective">
+          <div className="w-full max-w-xs  mx-auto perspective">
             <div
               className={`relative w-full h-[300px] rounded-lg transform-style-preserve-3d transition-transform duration-500 ${
                 flippedStates[mobileIndex] ? "rotate-y-180" : ""
