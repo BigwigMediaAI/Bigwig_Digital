@@ -19,7 +19,6 @@ import Partners from "../components/Partners";
 import Clients2 from "./client2";
 import LocationsSection from "../components/Location";
 import HowWeWork from "../components/HowWeWork";
-import CustomCursor from "../components/CursorTrail";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -34,7 +33,6 @@ function Landing() {
 
   return (
     <div className="bg-black">
-      <CustomCursor />
       <Nav />
       <Hero />
       <Partners />

@@ -71,7 +71,7 @@ export default function HowWeWork() {
   const [active, setActive] = useState("We_Attend");
 
   return (
-    <div id="method" className="text-white py-6 px-4 bg-black">
+    <div id="method" className="text-white mb-10 py-4 bg-black">
       <h2 className="text-5xl font-bold text-center mb-10 text-white">
         Method to Madness
       </h2>
@@ -109,7 +109,7 @@ export default function HowWeWork() {
 
       {/* Desktop View */}
       <div className="hidden md:block">
-        <div className="max-w-6xl mx-auto grid grid-cols-4 gap-4">
+        <div className="w-11/12 mx-auto grid grid-cols-4 gap-4">
           {workFlowData.map((item) => (
             <div
               key={item.id}
@@ -130,7 +130,7 @@ export default function HowWeWork() {
           ))}
         </div>
 
-        <div className="mt-8 max-w-6xl mx-auto bg-[#1f1f1f] border border-gray-700 p-6 rounded-xl shadow-lg">
+        <div className="mt-8 w-11/12 mx-auto bg-[#1f1f1f] border border-gray-700 p-4 rounded-xl shadow-lg">
           {workFlowData
             .filter((item) => item.id === active)
             .map((item) => (

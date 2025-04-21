@@ -15,10 +15,10 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="bg-[#0f0f11] text-white px-6 md:px-14 lg:px-20 py-20"
+      className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10"
     >
       {/* Heading and Description */}
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2  items-start">
+      <div className=" grid grid-cols-1 md:grid-cols-2  items-start">
         {/* Left Side - Heading */}
         <div className="text-left">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -43,7 +43,7 @@ const AboutUs = () => {
       </div>
 
       {/* Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
         {/* Card 1 */}
         <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
           <h3 className="text-xl font-semibold mb-2">

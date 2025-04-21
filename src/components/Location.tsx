@@ -47,7 +47,7 @@ const LocationCard = ({ city, address, image }: Location) => {
   )}`;
 
   return (
-    <div className="group [perspective:1000px]">
+    <div className="group [perspective:1000px] mb-10 py-4">
       <div className="relative h-60 w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         {/* Front Side */}
         <div

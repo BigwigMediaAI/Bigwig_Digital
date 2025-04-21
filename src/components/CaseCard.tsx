@@ -1,3 +1,5 @@
+import React from "react";
+
 const CaseCard: React.FC = () => {
   const cases = [
     {
@@ -22,11 +24,10 @@ const CaseCard: React.FC = () => {
       title: "Scaling Lead Generation by 60%",
       description:
         "We boosted lead generation by 60% for a SaaS company by optimizing their website for SEO, running targeted ads, and delivering personalized content marketing strategies.",
-      tags: ["SEO", "Lead Generation", "Content Marketing", "SaaS"],
+      tags: ["SEO", "Lead Generation", "Content Marketing"],
     },
   ];
 
-  // Define a mapping of tags to specific colors
   const tagColorMap: { [key: string]: string } = {
     "Organic growth": "bg-teal-200",
     Advertising: "bg-red-300",
@@ -41,17 +42,17 @@ const CaseCard: React.FC = () => {
   };
 
   return (
-    <div className="py-5 px-3 min-h-screen w-full md:w-11/12 mx-auto">
+    <div className="px-3 w-full md:w-11/12 mb-10 py-4 mx-auto">
       {/* Header Section */}
       <h1 className="text-5xl font-bold text-white mb-4 text-center">
         Why Bigwig?
       </h1>
-      <p className="text-center mb-10 text-gray-200 font-base">
+      <p className="text-center mb-6 text-gray-200 font-base">
         Let us be your <strong>3rd Eye & 6th Sense</strong> and make your end
         results to be nothing but <strong>ROI</strong> spectacular.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4">
         {cases.map((caseItem, index) => (
           <div key={index}>
             <img
@@ -59,7 +60,6 @@ const CaseCard: React.FC = () => {
               alt={caseItem.title}
               className="w-full h-64 object-cover rounded-3xl transition-transform duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl"
             />
-
             <div className="p-4">
               <h3 className="text-md md:text-xl font-semibold text-gray-300">
                 {caseItem.title}

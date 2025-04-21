@@ -99,7 +99,7 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-6 mb-10">
+    <div className="w-11/12 mx-auto px-2 mb-10 py-4">
       <h1 className="md:block hidden text-5xl mb-5 text-center text-gray-100 font-bold">
         Look What Our Beloved Clients Say About Us
       </h1>
