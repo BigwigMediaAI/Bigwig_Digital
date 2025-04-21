@@ -1,3 +1,4 @@
+import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
 
 export default function PrivacyPolicy() {
@@ -146,6 +147,7 @@ export default function PrivacyPolicy() {
           </address>
         </section>
       </div>
+      <Footer2 />
     </div>
   );
 }
