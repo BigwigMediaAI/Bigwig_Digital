@@ -54,8 +54,8 @@ const Blog = () => {
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <div className="w-full px-6 md:px-16 py-10" id="blog">
-      <h1 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
+    <div className="w-11/12 mx-auto px-4 mb-10 py-4" id="blog">
+      <h1 className="text-5xl font-bold text-white text-center mb-4">
         Our Trending Blogs
       </h1>
       <p className="text-center text-white text-sm md:text-base mb-8">
