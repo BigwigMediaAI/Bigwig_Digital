@@ -28,23 +28,29 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
-      data-aos="zoom-in"
+      className="min-h-screen w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
     >
+      <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
+        About Us
+      </h1>
       {/* Heading and Description */}
       <div className=" grid grid-cols-1 md:grid-cols-2  items-start ">
         {/* Left Side - Heading */}
         <div className="text-left">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            What Makes us
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight pb-5">
+            What Makes us{" "}
+            <span className="underline italic text-gray-200 mt-2 transition-all duration-300 ease-in-out">
+              {rotatingWords[currentWordIndex]}?
+            </span>
+                      
           </h2>
-          <p className="text-3xl md:text-6xl pb-5 italic underline text-gray-200 mt-2 transition-all duration-300 ease-in-out">
-            {rotatingWords[currentWordIndex]}?
-          </p>
         </div>
 
         {/* Right Side - Paragraph */}
-        <div className="text-gray-300 text-lg text-justify leading-relaxed">
+        <div
+          className="text-gray-300 text-lg text-justify leading-relaxed"
+          data-aos="zoom-in"
+        >
           In a fast-changing digital world, first impressions are everything. As
           a top digital marketing agency in India, we blend creativity with
           strategy—crafting stunning websites while using SEO, Google Ads, and
@@ -62,22 +68,22 @@ const AboutUs = () => {
             {
               title: "Driven by Innovation and Fueled by Passion",
               content:
-                "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in India and Dubai.",
+                "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in Dubai, India, Australia, New Zealand.",
             },
             {
-              title: "Strong communication is the foundation of success.",
+              title: "Strong Communication is the Foundation of Success.",
               content:
-                "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the occasional virtual high-five!",
+                "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the frequent virtual high-five!",
             },
             {
-              title: "Strong return on investment",
+              title: "Higher Return on Investment",
               content:
                 "Partnering with us means big value without the big price tag. We offer top-notch web and digital solutions at fair prices, making sure every rupee you invest works hard. Our team’s goal? Maximum results, minimum waste, and a return that makes you smile.",
             },
             {
-              title: "Experience a Broad Spectrum of Services All in One Place",
+              title: "One Stop Shop - All Services in One Place",
               content:
-                "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India & Dubai, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
+                "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India, Dubai & Australasia, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
             },
           ].map((card, i) => (
             <div
@@ -107,7 +113,7 @@ const AboutUs = () => {
               We’re like rocket fuel for your brand—minus the explosion. With
               powerful storytelling and creative spark, we help your business
               soar. It’s no wonder we’re trusted as one of the best digital
-              marketing agencies in India and Dubai.
+              marketing agencies in Dubai, India, Australia, New Zealand..
             </p>
           </div>
 
@@ -116,7 +122,7 @@ const AboutUs = () => {
             data-aos="zoom-in"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Strong communication is the foundation of success.
+              Strong Communication is the Foundation of Success.
             </h3>
             <hr className="border-gray-600 mb-4" />
             <p className="text-lg text-gray-400 text-justify">
@@ -133,7 +139,7 @@ const AboutUs = () => {
             data-aos="zoom-in"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Strong return on investment
+              Higher return on investment
             </h3>
             <hr className="border-gray-600 mb-4" />
             <p className="text-lg text-gray-400 text-justify">
@@ -149,15 +155,15 @@ const AboutUs = () => {
             data-aos="zoom-in"
           >
             <h3 className="text-xl font-semibold mb-2">
-              Experience a Broad Spectrum of Services All in One Place
+              One Stop Shop - All Services in One Place
             </h3>
             <hr className="border-gray-600 mb-4" />
             <p className="text-lg text-gray-400 text-justify">
               From building your website to putting it on the digital map—we’ve
-              got it all covered. As a leading digital marketing agency in India
-              & Dubai, we offer end-to-end services including web development,
-              CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the
-              tools you need.
+              got it all covered. As a leading digital marketing agency in
+              India, Dubai & Australasia, we offer end-to-end services including
+              web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO.
+              One team, all the tools you need.
             </p>
           </div>
         </div>

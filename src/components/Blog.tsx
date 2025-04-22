@@ -70,7 +70,7 @@ const Blog = () => {
       <h1 className="text-5xl font-bold text-white text-center mb-4">
         Our Trending Blogs
       </h1>
-      <p className="text-center text-white text-sm md:text-base mb-8">
+      <p className="text-center text-white text-md md:text-xl mb-8">
         Boost content creation and enhance productivity with{" "}
         <span className="font-bold">BigwigDigital.</span>
       </p>
