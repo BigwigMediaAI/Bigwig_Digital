@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./Clients.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const images = [
   "https://riverfront.vercel.app/assets/logo-riverfront-DlE3NUiH.png",
@@ -38,6 +40,17 @@ const images = [
 
 function Clients2() {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 👈 slow animation (you can adjust between 1000–1500 for even slower)
+      once: false, // 👈 animate every time it scrolls into view
+      mirror: false, // 👈 don't animate again when scrolling back up (optional)
+      easing: "ease-in-out", // 👈 smoother slow animation
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
 
   const chunks = Array.from({ length: Math.ceil(images.length / 12) }, (_, i) =>
     images.slice(i * 12, i * 12 + 12)
@@ -83,6 +96,7 @@ function Clients2() {
                   <div
                     key={i}
                     className="aspect-square flex items-center justify-center"
+                    data-aos="zoom-in"
                   >
                     <img
                       src={img}
@@ -102,6 +116,7 @@ function Clients2() {
             <div
               key={index}
               className="aspect-square flex items-center justify-center"
+              data-aos="zoom-in"
             >
               <img
                 src={img}

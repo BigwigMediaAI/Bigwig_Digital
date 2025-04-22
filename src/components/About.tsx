@@ -1,9 +1,22 @@
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const rotatingWords = ["Trendsetters", "Innovative", "Unique", "Dynamic"];
 
 const AboutUs = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 👈 slow animation (you can adjust between 1000–1500 for even slower)
+      once: false, // 👈 animate every time it scrolls into view
+      mirror: false, // 👈 don't animate again when scrolling back up (optional)
+      easing: "ease-in-out", // 👈 smoother slow animation
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -16,9 +29,10 @@ const AboutUs = () => {
     <section
       id="about"
       className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
+      data-aos="zoom-in"
     >
       {/* Heading and Description */}
-      <div className=" grid grid-cols-1 md:grid-cols-2  items-start">
+      <div className=" grid grid-cols-1 md:grid-cols-2  items-start ">
         {/* Left Side - Heading */}
         <div className="text-left">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
@@ -81,7 +95,10 @@ const AboutUs = () => {
 
         {/* Desktop View - Grid */}
         <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+          <div
+            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+            data-aos="zoom-in"
+          >
             <h3 className="text-xl font-semibold mb-2">
               Driven by Innovation and Fueled by Passion
             </h3>
@@ -94,7 +111,10 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+          <div
+            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+            data-aos="zoom-in"
+          >
             <h3 className="text-xl font-semibold mb-2">
               Strong communication is the foundation of success.
             </h3>
@@ -108,7 +128,10 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+          <div
+            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+            data-aos="zoom-in"
+          >
             <h3 className="text-xl font-semibold mb-2">
               Strong return on investment
             </h3>
@@ -121,7 +144,10 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="bg-[#1b1b1e] rounded-xl p-6 shadow-md">
+          <div
+            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+            data-aos="zoom-in"
+          >
             <h3 className="text-xl font-semibold mb-2">
               Experience a Broad Spectrum of Services All in One Place
             </h3>

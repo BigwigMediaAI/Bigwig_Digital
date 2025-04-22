@@ -2,8 +2,20 @@ import React, { useEffect, useState } from "react";
 import Slider from "react-slick"; // Import the react-slick component
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const CaseCard: React.FC = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 👈 slow animation (you can adjust between 1000–1500 for even slower)
+      once: false, // 👈 animate every time it scrolls into view
+      mirror: false, // 👈 don't animate again when scrolling back up (optional)
+      easing: "ease-in-out", // 👈 smoother slow animation
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
+
   const cases = [
     {
       image:
@@ -118,7 +130,7 @@ const CaseCard: React.FC = () => {
         // Desktop/Tablet view: Render grid layout
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-4">
           {cases.map((caseItem, index) => (
-            <div key={index}>
+            <div key={index} data-aos="zoom-in">
               <img
                 src={caseItem.image}
                 alt={caseItem.title}

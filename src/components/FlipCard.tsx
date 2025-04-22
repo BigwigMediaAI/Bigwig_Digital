@@ -11,9 +11,22 @@ import {
 import { GiAwareness } from "react-icons/gi";
 import { SiGooglemarketingplatform } from "react-icons/si";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const FlipCard = () => {
   const [mobileIndex, setMobileIndex] = useState(0);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // 👈 slow animation (you can adjust between 1000–1500 for even slower)
+      once: false, // 👈 animate every time it scrolls into view
+      mirror: false, // 👈 don't animate again when scrolling back up (optional)
+      easing: "ease-in-out", // 👈 smoother slow animation
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
 
   const cards = [
     {
@@ -236,6 +249,7 @@ const FlipCard = () => {
             key={card.id}
             ref={(el) => (sectionsRef.current[card.id] = el)}
             id={card.id}
+            data-aos="zoom-in"
             className="group w-full md:w-96 h-[300px] perspective mx-auto"
           >
             <div
