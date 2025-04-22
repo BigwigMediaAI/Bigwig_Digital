@@ -7,7 +7,7 @@ const Team: React.FC = () => {
   return (
     <>
       <section className=" container mx-auto py-12 px-4 lg:px-8">
-        <div className="max-w-6xl px-6 md:px-8 gap-8">
+        <div className="w-11/12 mx-auto px-6 md:px-8 gap-8">
           {/* CEO Section */}
           <div className=" bg-gray-100 p-6 rounded-lg shadow-lg">
             <img

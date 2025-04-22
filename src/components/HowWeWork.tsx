@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import understanding from "../assets/understanding.png";
-import brainstroming from "../assets/brainstorming.png";
-import implementation from "../assets/lmplementation.png";
-import maintenance from "../assets/maintenance.png";
-import chooseYou from "../assets/choices-order-svgrepo-com (1).svg";
-import Rocket from "../assets/rocket-svgrepo-com.svg";
-import analysis from "../assets/analysis-analytics-chart-2-svgrepo-com.svg";
-import support from "../assets/support-online-center-svgrepo-com.svg";
+import understanding from "../assets/method/understanding.png";
+import brainstroming from "../assets/method/brainstorming.png";
+import implementation from "../assets/method/lmplementation.png";
+import maintenance from "../assets/method/maintenance.png";
+import chooseYou from "../assets/method/choices-order-svgrepo-com (1).svg";
+import Rocket from "../assets/method/rocket-svgrepo-com.svg";
+import analysis from "../assets/method/analysis-analytics-chart-2-svgrepo-com.svg";
+import support from "../assets/method/support-online-center-svgrepo-com.svg";
 import { ArrowLeft, ArrowRight } from "lucide-react"; // Better arrow icons
 import AOS from "aos";
 import "aos/dist/aos.css";
