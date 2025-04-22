@@ -19,7 +19,7 @@ function Footer2() {
           {/* Top Section */}
           <div className="flex flex-col md:flex-row gap-14 mb-8 ">
             {/* Branding - 1/3 */}
-            <div className="md:w-1/3">
+            <div className="md:w-2/3">
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
                 <img src={logo} alt="Bigwig Logo" className="w-60" />
               </div>
@@ -53,7 +53,7 @@ function Footer2() {
             </div>
 
             {/* Quick Links, Resources, Contact Info - 2/3 */}
-            <div className="   mx-auto">
+            <div>
               <div>
                 <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
                 <ul className="space-y-2 text-sm">

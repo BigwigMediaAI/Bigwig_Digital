@@ -1,5 +1,9 @@
+import { useEffect } from "react";
+import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
 import "./Clients.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const images = [
   "https://cdn.freebiesupply.com/logos/large/2x/jw-marriott-hotel-resorts-logo-svg-vector.svg",
@@ -89,6 +93,17 @@ const stylePairs = [
 ];
 
 function Clients() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+      mirror: true,
+      easing: "ease-in-out",
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
+
   return (
     <div className="bg-black">
       <div className="mb-20">
@@ -100,7 +115,11 @@ function Clients() {
           {images.map((img, index) => {
             const { bg, border } = stylePairs[index % stylePairs.length];
             return (
-              <div key={index} className="flip-card aspect-square w-full">
+              <div
+                key={index}
+                className="flip-card aspect-square w-full"
+                data-aos="zoom-in"
+              >
                 <div className="flip-inner w-full h-full">
                   <div
                     className={`flip-front ${bg} ${border} border-8 rounded-sm flex items-center justify-center w-full h-full`}
@@ -126,6 +145,7 @@ function Clients() {
           })}
         </div>
       </div>
+      <Footer2 />
     </div>
   );
 }
