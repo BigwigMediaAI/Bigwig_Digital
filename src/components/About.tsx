@@ -28,7 +28,7 @@ const AboutUs = () => {
   return (
     <section
       id="about"
-      className="min-h-screen w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
+      className=" w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
     >
       <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
         About Us
