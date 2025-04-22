@@ -1,15 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://www.bigwigdigital.in/$1",
-      "has": [
-        {
-          "type": "host",
-          "value": "bigwigdigital.in"
-        }
-      ],
-      "permanent": true
-    }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
