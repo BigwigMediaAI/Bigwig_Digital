@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import social from "../assets/services/social2.mp4";
 import google_ad from "../assets/services/Google-My-Business.mp4";
-import seo from "../assets/services/seo.mp4";
+import seo from "../assets/services/seo1.mp4";
 import performance from "../assets/services/Performance Marketing-1.mp4";
 import web from "../assets/services/web-develop.mp4";
 import orm from "../assets/services/ORM.mp4";
