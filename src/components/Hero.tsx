@@ -3,7 +3,7 @@ import hero from "../assets/video.mp4";
 
 const keywords = [
   "Website & Mobile App Designing",
-  "Social Media Marketing (SMO)",
+  "Social Media Marketing (SMM)",
   "Performance Marketing (Google & Meta Ads)",
   "Search Engine Optimization (SEO)",
   "Creatives Videos Graphics",

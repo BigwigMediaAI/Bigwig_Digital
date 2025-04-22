@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import understanding from "../assets/understanding.png";
 import brainstroming from "../assets/brainstorming.png";
 import implementation from "../assets/lmplementation.png";
@@ -8,6 +8,8 @@ import Rocket from "../assets/rocket-svgrepo-com.svg";
 import analysis from "../assets/analysis-analytics-chart-2-svgrepo-com.svg";
 import support from "../assets/support-online-center-svgrepo-com.svg";
 import { ArrowLeft, ArrowRight } from "lucide-react"; // Better arrow icons
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const workFlowData = [
   {
@@ -69,6 +71,17 @@ const workFlowData = [
 ];
 
 export default function HowWeWork() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+      mirror: true,
+      easing: "ease-in-out",
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [active, setActive] = useState(workFlowData[0].id); // Add missing desktop state
 
@@ -131,6 +144,7 @@ export default function HowWeWork() {
           {workFlowData.map((item) => (
             <div
               key={item.id}
+              data-aos="zoom-in"
               onClick={() => setActive(item.id)}
               className={`cursor-pointer p-4 rounded-xl text-center transition-all duration-300 shadow-md border border-gray-700 ${
                 active === item.id

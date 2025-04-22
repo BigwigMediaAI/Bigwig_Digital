@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 type BlogPost = {
   _id: string;
@@ -15,6 +17,16 @@ type BlogPost = {
 };
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+      mirror: false,
+      easing: "ease-in-out",
+    });
+
+    AOS.refresh(); // Ensures animations re-initialize correctly
+  }, []);
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,6 +80,7 @@ const Blog = () => {
         {blogPosts.slice(0, 4).map((post) => (
           <div
             key={post._id}
+            data-aos="zoom-in"
             onClick={() => handlePostClick(post.slug)}
             className="relative bg-white h-[200px] md:h-[300px] rounded-lg overflow-hidden cursor-pointer shadow-lg transform transition-transform duration-300 hover:-rotate-y-6"
           >
