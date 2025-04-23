@@ -63,53 +63,57 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`flex flex-col md:flex-row gap-9 w-11/12 mx-auto mb-12 rounded-xl h-fit border border-gray-700 ${
-        isReversed ? "md:flex-row-reverse" : ""
-      } items-center py-8 px-8 md:px-10 ${section.backgroundColor}`}
+      className={`w-full overflow-x-hidden px-5`}
     >
-      <motion.div
-        initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
-        animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="w-full md:w-1/2 text-black"
+      <div
+        className={`flex flex-col md:flex-row gap-8 md:gap-16 w-full max-w-[1440px] mx-auto mb-12 rounded-xl h-fit border border-gray-700 ${
+          isReversed ? "md:flex-row-reverse" : ""
+        } items-center py-8 md:py-10 px-4 md:px-8 ${section.backgroundColor}`}
       >
-        {section.content}
-        {section.icons && (
-          <div id="solutions" className="mt-4 flex gap-4">
-            {section.icons.map((icon, index) => (
-              <span key={index} className="text-2xl">
-                {icon}
-              </span>
-            ))}
-          </div>
-        )}
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={inView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-        className="w-full md:w-1/2 flex justify-center"
-      >
-        <div className="bg-black p-2 md:p-3 rounded-[1.5rem] shadow-xl  w-full max-w-[700px] aspect-[3/2] flex items-center justify-center">
-          {isVideo(section.image) ? (
-            <video
-              src={section.image}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="rounded-lg w-full h-full object-cover"
-            />
-          ) : (
-            <img
-              src={section.image}
-              alt={`Section ${section.id}`}
-              className="rounded-lg w-full h-full object-cover"
-            />
+        <motion.div
+          initial={{ opacity: 0, x: isReversed ? 50 : -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="w-full md:w-1/2 text-black"
+        >
+          {section.content}
+          {section.icons && (
+            <div id="solutions" className="mt-4 flex gap-4">
+              {section.icons.map((icon, index) => (
+                <span key={index} className="text-2xl">
+                  {icon}
+                </span>
+              ))}
+            </div>
           )}
-        </div>
-      </motion.div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          className="w-full md:w-1/2 flex justify-center"
+        >
+          <div className="bg-black p-2 md:p-3 rounded-[1.5rem] shadow-xl w-full max-w-[700px] aspect-[3/2] flex items-center justify-center">
+            {isVideo(section.image) ? (
+              <video
+                src={section.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="rounded-lg w-full h-full object-cover"
+              />
+            ) : (
+              <img
+                src={section.image}
+                alt={`Section ${section.id}`}
+                className="rounded-lg w-full h-full object-cover"
+              />
+            )}
+          </div>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };
