@@ -3,7 +3,32 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Star } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+
+// Custom Arrow Components
+const NextArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer md:hidden"
+      onClick={onClick}
+    >
+      <ChevronRight size={28} className="text-white" />
+    </div>
+  );
+};
+
+const PrevArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <div
+      className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 cursor-pointer md:hidden"
+      onClick={onClick}
+    >
+      <ChevronLeft size={28} className="text-white" />
+    </div>
+  );
+};
 
 export default function ImageSlider() {
   const testimonials = [
@@ -82,6 +107,8 @@ export default function ImageSlider() {
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -130,11 +157,11 @@ export default function ImageSlider() {
         </div>
 
         {/* Slider */}
-        <div className="md:w-2/3 w-full">
+        <div className="md:w-2/3 w-full relative">
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <div key={index} className="p-4">
-                <div className="bg-[#1f1f1f] shadow-md rounded-lg p-6 h-72 border border-gray-700">
+                <div className="bg-[#1f1f1f] shadow-md rounded-lg p-6 h-72 w-3/4 md:w-full mx-auto border border-gray-700">
                   <p className="text-gray-200 mb-4">
                     {item.review.slice(0, 100)}...
                   </p>
