@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const rotatingWords = ["Trendsetters", "Innovative", "Unique", "Dynamic"];
 
 const AboutUs = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [mobileIndex, setMobileIndex] = useState(0);
 
   useEffect(() => {
     AOS.init({
@@ -25,16 +27,39 @@ const AboutUs = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const cards = [
+    {
+      title: "Driven by Innovation and Fueled by Passion",
+      content:
+        "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in Dubai, India, Australia, New Zealand.",
+    },
+    {
+      title: "Strong Communication is the Foundation of Success.",
+      content:
+        "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the frequent virtual high-five!",
+    },
+    {
+      title: "Higher Return on Investment",
+      content:
+        "Partnering with us means big value without the big price tag. We offer top-notch web and digital solutions at fair prices, making sure every rupee you invest works hard. Our team’s goal? Maximum results, minimum waste, and a return that makes you smile.",
+    },
+    {
+      title: "One Stop Shop - All Services in One Place",
+      content:
+        "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India, Dubai & Australasia, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
+    },
+  ];
+
   return (
     <section
       id="about"
-      className=" w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-5"
+      className="w-11/12 mx-auto bg-[#0f0f11] text-white py-4 mb-10 px-0 md:px-5"
     >
       <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
         About Us
       </h1>
       {/* Heading and Description */}
-      <div className=" grid grid-cols-1 md:grid-cols-2  items-start ">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-start">
         {/* Left Side - Heading */}
         <div className="text-left">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight pb-5">
@@ -42,7 +67,6 @@ const AboutUs = () => {
             <span className="underline italic text-gray-200 mt-2 transition-all duration-300 ease-in-out">
               {rotatingWords[currentWordIndex]}?
             </span>
-                      
           </h2>
         </div>
 
@@ -60,35 +84,55 @@ const AboutUs = () => {
       </div>
 
       {/* Cards */}
-      {/* Cards */}
-      <div className="mt-14">
-        {/* Mobile View - Horizontal Scroll */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory space-x-5 md:hidden pb-4 px-1">
-          {[
-            {
-              title: "Driven by Innovation and Fueled by Passion",
-              content:
-                "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in Dubai, India, Australia, New Zealand.",
-            },
-            {
-              title: "Strong Communication is the Foundation of Success.",
-              content:
-                "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the frequent virtual high-five!",
-            },
-            {
-              title: "Higher Return on Investment",
-              content:
-                "Partnering with us means big value without the big price tag. We offer top-notch web and digital solutions at fair prices, making sure every rupee you invest works hard. Our team’s goal? Maximum results, minimum waste, and a return that makes you smile.",
-            },
-            {
-              title: "One Stop Shop - All Services in One Place",
-              content:
-                "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India, Dubai & Australasia, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
-            },
-          ].map((card, i) => (
+      <div className="mt-0 md:mt-14">
+        {/* Mobile View - Horizontal Scroll with One Card at a Time */}
+        <div className="block md:hidden relative">
+          <div className="flex justify-center items-center mb-4">
+            {/* Arrows Above */}
+            <div className="absolute top-1/2 left-0 right-0 flex justify-between z-10">
+              <button
+                onClick={() =>
+                  setMobileIndex((prev) =>
+                    prev === 0 ? cards.length - 1 : prev - 1
+                  )
+                }
+              >
+                <ChevronLeft size={28} className="text-white" />
+              </button>
+              <button
+                onClick={() =>
+                  setMobileIndex((prev) =>
+                    prev === cards.length - 1 ? 0 : prev + 1
+                  )
+                }
+              >
+                <ChevronRight size={28} className="text-white" />
+              </button>
+            </div>
+          </div>
+
+          {/* Display the current card with both title and content */}
+          <div
+            className="bg-[#28282B] border border-gray-700 rounded-xl shadow-md p-3 w-[85%] mx-auto mt-12"
+            data-aos="zoom-in"
+          >
+            <h3 className="text-xl font-semibold mb-2">
+              {cards[mobileIndex].title}
+            </h3>
+            <hr className="border-gray-600 mb-4" />
+            <p className="text-lg text-gray-400 text-justify">
+              {cards[mobileIndex].content}
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop View - Grid */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+          {cards.map((card, i) => (
             <div
               key={i}
-              className="min-w-full snap-start bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+              className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+              data-aos="zoom-in"
             >
               <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
               <hr className="border-gray-600 mb-4" />
@@ -97,75 +141,6 @@ const AboutUs = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Desktop View - Grid */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div
-            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
-            data-aos="zoom-in"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              Driven by Innovation and Fueled by Passion
-            </h3>
-            <hr className="border-gray-600 mb-4" />
-            <p className="text-lg text-gray-400 text-justify">
-              We’re like rocket fuel for your brand—minus the explosion. With
-              powerful storytelling and creative spark, we help your business
-              soar. It’s no wonder we’re trusted as one of the best digital
-              marketing agencies in Dubai, India, Australia, New Zealand..
-            </p>
-          </div>
-
-          <div
-            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
-            data-aos="zoom-in"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              Strong Communication is the Foundation of Success.
-            </h3>
-            <hr className="border-gray-600 mb-4" />
-            <p className="text-lg text-gray-400 text-justify">
-              We believe clear communication is the backbone of every great
-              partnership. That’s why we keep things transparent—sharing
-              updates, hitting deadlines, and keeping you in the loop at every
-              step. No last-minute surprises—just smooth progress, solid
-              results, and the occasional virtual high-five!
-            </p>
-          </div>
-
-          <div
-            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
-            data-aos="zoom-in"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              Higher return on investment
-            </h3>
-            <hr className="border-gray-600 mb-4" />
-            <p className="text-lg text-gray-400 text-justify">
-              Partnering with us means big value without the big price tag. We
-              offer top-notch web and digital solutions at fair prices, making
-              sure every rupee you invest works hard. Our team’s goal? Maximum
-              results, minimum waste, and a return that makes you smile.
-            </p>
-          </div>
-
-          <div
-            className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
-            data-aos="zoom-in"
-          >
-            <h3 className="text-xl font-semibold mb-2">
-              One Stop Shop - All Services in One Place
-            </h3>
-            <hr className="border-gray-600 mb-4" />
-            <p className="text-lg text-gray-400 text-justify">
-              From building your website to putting it on the digital map—we’ve
-              got it all covered. As a leading digital marketing agency in
-              India, Dubai & Australasia, we offer end-to-end services including
-              web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO.
-              One team, all the tools you need.
-            </p>
-          </div>
         </div>
       </div>
     </section>
