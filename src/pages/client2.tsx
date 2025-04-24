@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const images = [
   "https://riverfront.vercel.app/assets/logo-riverfront-DlE3NUiH.png",
   "https://www.eventfaqs.com/Uploads/Jobs/Organization/cineyug-logo-black1.jpg",
-  "https://scontent.fdel1-4.fna.fbcdn.net/v/t39.30808-1/327181153_737700978062011_8544089667636529118_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=nLaEOjYbvA4Q7kNvwHH-D3M&_nc_oc=Adn32FEiorMvQqTbXhyZ-ihjXpr8PJNLbY25kvsW3lOMojntC9mNk5JxXbJGFrcteLFg0RWybgVgxhonPbpxEUlW&_nc_zt=24&_nc_ht=scontent.fdel1-4.fna&_nc_gid=NygIh9BlOQZ2aOGZSQRQ6Q&oh=00_AfE81Q8_JBI9phNhSiKcEYJL_Z2t5O26SjnIxW2LKEDHmQ&oe=6806AFD1",
+  "https://i1.sndcdn.com/avatars-zrGoOnkGJPMFqycp-NUkwhg-t1080x1080.jpg",
   "https://laninarestaurant.com/wp-content/themes/lanina-wordpress-theme/static/img/logo_color.png",
   "https://aylesforddubai.com/wp-content/uploads/2024/11/aylesford.svg",
   "https://www.shoutlo.com/assets/images/merchant_images/merchant-133212-5c65208474154.jpg",
