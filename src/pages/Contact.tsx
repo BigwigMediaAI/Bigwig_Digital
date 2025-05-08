@@ -138,7 +138,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
               <Phone className="w-6 h-6 text-gray-700" />
               <span className="text-sm text-gray-700">
-                +971 502615979 (Dubai)
+                +971 505029471 (Dubai)
               </span>
             </div>
             <div className="bg-white rounded-md p-4 flex items-center gap-4 shadow-sm hover:bg-gray-200 transition font-sans">
