@@ -16,7 +16,7 @@ const Team: React.FC = () => {
             <img
               src={ceo} // Replace with your CEO image
               alt="CEO"
-              className="w-48 h-48 mx-auto rounded-full object-cover mb-4"
+              className="w-48 h-48 mx-auto rounded-full object-fill mb-4"
             />
             <h3 className="text-xl text-white font-semibold text-center">
               Vipul Dutta
