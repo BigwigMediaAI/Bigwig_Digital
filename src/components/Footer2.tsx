@@ -86,7 +86,7 @@ function Footer2() {
                 },
                 {
                   icon: faInstagram,
-                  href: "https://www.instagram.com/bigwigdigital/",
+                  href: "https://www.instagram.com/bigwigmediadigital/",
                 },
                 {
                   icon: faYoutube,

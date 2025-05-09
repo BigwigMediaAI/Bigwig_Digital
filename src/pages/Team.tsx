@@ -1,13 +1,16 @@
 import React from "react";
 import ceo from "../assets/ceo.jpg";
+import Nav from "../components/Nav2";
+import Footer2 from "../components/Footer2";
 
 const Team: React.FC = () => {
   // Sample data for team members
 
   return (
     <>
-      <section className=" container mx-auto py-12 px-4 lg:px-8 bg-black">
-        <div className="w-11/12 mx-auto px-6 md:px-8 gap-8">
+      <Nav />
+      <section className=" container mx-auto mt-16 md:mt-20 py-8 px-4 lg:px-8 bg-black">
+        <div className="md:w-11/12 mx-auto md:px-8 gap-8">
           {/* CEO Section */}
           <div className=" bg-[#1f1f1f] p-6 rounded-lg shadow-lg">
             <img
@@ -48,6 +51,7 @@ const Team: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer2 />
     </>
   );
 };
