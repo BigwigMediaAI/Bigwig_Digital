@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/bigwig digital logo.png";
+import logo from "../assets/bigwig digital logo (11).png";
 import {
   LayoutDashboard,
   Info,
@@ -36,7 +36,7 @@ const Nav: React.FC = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="w-44 md:w-48 hover:scale-105 transition duration-300"
+                className="w-44 md:w-48  transition duration-300"
               />
             </a>
           </button>
