@@ -35,7 +35,7 @@ const FlipCard = () => {
       title: "Effortlessly Managing Leads from First Click to Final Sale",
       description:
         "Boost your brand with a lead system so smooth, your competitors will wonder if it's magic. Say goodbye to missed opportunities and hello to seamless conversions!",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaUsers className="text-4xl text-yellow-600" />,
     },
     {
@@ -44,7 +44,7 @@ const FlipCard = () => {
       title: "Unforgettable Campaigns to Make Your Brand the Talk of the Town",
       description:
         "Ready to shine? We’ll grab eyeballs, spark emotions, and deliver success with strategies so good, even your grandma will notice your brand.",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <GiAwareness className="text-4xl text-blue-600" />,
     },
     {
@@ -53,7 +53,7 @@ const FlipCard = () => {
       title: "Amplify Your Brand’s Story with Voices Everyone Trusts",
       description:
         "From strategy to stardom, we’ll pair you with influencers who make waves—and results that’ll make you say, ‘Is this real life?’",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaBullhorn className="text-4xl text-purple-600" />,
     },
     {
@@ -62,7 +62,7 @@ const FlipCard = () => {
       title: "Teleporting Your Audience to the Heart of Every Event",
       description:
         "From concerts to conferences, we’ll bring the action to life—no FOMO, just unforgettable moments straight to their screens.",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaBroadcastTower className="text-4xl text-green-600" />,
     },
     {
@@ -71,7 +71,7 @@ const FlipCard = () => {
       title: "Turning Your Achievements into Headlines That Matter",
       description:
         "From local buzz to global fame, we’ll make sure your story lands where it counts. Fame not included, but definitely earned!",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaNewspaper className="text-4xl text-pink-600" />,
     },
     {
@@ -80,7 +80,7 @@ const FlipCard = () => {
       title: "Capturing Your Brand’s Essence, One Frame at a Time",
       description:
         "From brand stories to jaw-dropping visuals, our videos don’t just tell stories—they make audiences stop scrolling.",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaVideo className="text-4xl text-teal-600" />,
     },
     {
@@ -89,7 +89,7 @@ const FlipCard = () => {
       title: "Crafting Clever, Gorgeous Content That Speaks Your Brand’s Soul",
       description:
         "We make content that’s funny, smart, and drop-dead gorgeous. Your audience? They won’t just look; they’ll stay for the encore.",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaBrush className="text-4xl text-orange-600" />,
     },
     {
@@ -98,7 +98,7 @@ const FlipCard = () => {
       title: "Bringing Your Wildest Brand Ideas to Life with Unmatched Flair",
       description:
         "No cookie-cutter solutions here! Just bold ideas so wild, your audience will say, ‘Wow, didn’t see that coming!’",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <FaLightbulb className="text-4xl text-violet-600" />,
     },
     {
@@ -107,7 +107,7 @@ const FlipCard = () => {
       title: "Partnering Smartly to Multiply Your Reach!",
       description:
         "Think of us as your brand’s ultimate matchmaker—pairing you up with affiliates who will shout your praises from the rooftops (or at least their websites). We’ll help you create a win-win partnership so smooth, even Cupid would be jealous. Cha-ching for everyone involved!",
-      bgColor: "bg-[#28282B]",
+      bgColor: "bg-neutral-950",
       icon: <SiGooglemarketingplatform className="text-4xl text-red-400" />,
     },
   ];

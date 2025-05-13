@@ -122,7 +122,7 @@ const ScrollSections: React.FC = () => {
   const sections: Section[] = [
     {
       id: 1,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl text-white font-bold">
@@ -152,7 +152,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 2,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl font-bold text-white">
@@ -180,7 +180,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 3,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl text-white font-bold">
@@ -210,7 +210,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 4,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl font-bold text-white">
@@ -236,7 +236,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 5,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl text-white font-bold">
@@ -264,7 +264,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 6,
-      backgroundColor: "bg-[#28282B]",
+      backgroundColor: "bg-neutral-950",
       content: (
         <>
           <h1 className="text-4xl font-bold text-white">Google My Business</h1>

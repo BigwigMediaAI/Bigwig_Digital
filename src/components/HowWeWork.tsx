@@ -94,7 +94,7 @@ export default function HowWeWork() {
           <div className="absolute w-full top-1/2 -translate-y-1/2 flex justify-between px-4">
             <button
               onClick={handlePrev}
-              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
+              className="bg-neutral-950 hover:bg-white/30 text-white p-2 rounded-full"
             >
               <ArrowLeft size={20} />
             </button>
