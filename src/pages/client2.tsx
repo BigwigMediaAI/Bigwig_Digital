@@ -4,10 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const images = [
-  "https://riverfront.vercel.app/assets/logo-riverfront-DlE3NUiH.png",
+  "https://riverfront.vercel.app/assets/Logo%20for%20riverfront%20-CAIVvev0.png",
   "https://www.eventfaqs.com/Uploads/Jobs/Organization/cineyug-logo-black1.jpg",
   "https://i1.sndcdn.com/avatars-zrGoOnkGJPMFqycp-NUkwhg-t1080x1080.jpg",
-  "https://laninarestaurant.com/wp-content/themes/lanina-wordpress-theme/static/img/logo_color.png",
   "https://aylesforddubai.com/wp-content/uploads/2024/11/aylesford.svg",
   "https://www.shoutlo.com/assets/images/merchant_images/merchant-133212-5c65208474154.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/3e/Park_Inn_by_Radisson_logo.png",
