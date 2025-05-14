@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/bigwig digital logo.png";
+import logo from "../assets/bigwig digital logo (11).png";
 
 const Nav: React.FC = () => {
   const handleScroll = (sectionId: string) => {

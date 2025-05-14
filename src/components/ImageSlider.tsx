@@ -161,7 +161,7 @@ export default function ImageSlider() {
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <div key={index} className="p-4">
-                <div className="bg-[#1f1f1f] shadow-md rounded-lg p-6 h-72 w-3/4 md:w-full mx-auto border border-gray-700">
+                <div className="bg-neutral-950 shadow-md rounded-lg p-6 h-72 w-3/4 md:w-full mx-auto border border-gray-700">
                   <p className="text-gray-200 mb-4">
                     {item.review.slice(0, 100)}...
                   </p>
