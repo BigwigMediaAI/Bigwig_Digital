@@ -32,6 +32,7 @@ import { MdSearch } from "react-icons/md";
 
 type Section = {
   id: number;
+  title: string;
   backgroundColor: string;
   content: React.ReactNode;
   image: string;
@@ -78,12 +79,21 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
         >
           {section.content}
           {section.icons && (
-            <div id="solutions" className="mt-4 flex gap-4">
-              {section.icons.map((icon, index) => (
-                <span key={index} className="text-2xl">
-                  {icon}
-                </span>
-              ))}
+            <div className="mt-4">
+              <div id="solutions" className="flex gap-4">
+                {section.icons.map((icon, index) => (
+                  <span key={index} className="text-2xl">
+                    {icon}
+                  </span>
+                ))}
+              </div>
+
+              {/* Read More button */}
+              <a href={`${section.title}`}>
+                <button className="mt-8 px-5 py-2 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+                  Read More
+                </button>
+              </a>
             </div>
           )}
         </motion.div>
@@ -122,10 +132,14 @@ const ScrollSections: React.FC = () => {
   const sections: Section[] = [
     {
       id: 1,
+      title: "social-media-management",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
-          <h1 className="text-4xl text-white font-bold">
+          <h1
+            id="social-media-management"
+            className="text-4xl text-white font-bold"
+          >
             Social Media Management
           </h1>
           <div className="mt-2 inline-flex items-center justify-center italic font-semibold py-1 rounded-full text-white text-sm">
@@ -133,10 +147,7 @@ const ScrollSections: React.FC = () => {
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify text-white">
             Social media is like a party, and your brand needs to be the life of
-            it—not the awkward one in the corner. With our strategies, you'll
-            charm the crowd, start meaningful conversations, increase your
-            brands community and leave everyone wanting more. All powered by
-            some serious research and trend magic!
+            it—not the awkward one in the corner...
           </p>
         </>
       ),
@@ -150,8 +161,10 @@ const ScrollSections: React.FC = () => {
         <FaGoogle className="text-red-700 text-4xl" />,
       ],
     },
+
     {
       id: 2,
+      title: "search-engine-optimization",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -180,6 +193,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 3,
+      title: "performance-marketing",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -210,6 +224,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 4,
+      title: "online-reputation-management",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -236,6 +251,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 5,
+      title: "web-desing-and-app-developement",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -264,6 +280,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 6,
+      title: "google-my-business",
       backgroundColor: "bg-neutral-950",
       content: (
         <>

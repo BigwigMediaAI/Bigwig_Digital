@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/bigwig digital logo (11).png";
 
-const Nav: React.FC = () => {
+const Nav2: React.FC = () => {
   const handleScroll = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -28,4 +28,4 @@ const Nav: React.FC = () => {
   );
 };
 
-export default Nav;
+export default Nav2;

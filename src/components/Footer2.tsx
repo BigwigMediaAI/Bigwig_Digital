@@ -19,7 +19,7 @@ function Footer2() {
           {/* Top Section */}
           <div className="flex flex-col md:flex-row gap-14 mb-8 ">
             {/* Branding - 1/3 */}
-            <div className="md:w-2/3">
+            <div className="md:w-1/3">
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
                 <img src={logo} alt="Bigwig Logo" className="w-60" />
               </div>
@@ -50,6 +50,54 @@ function Footer2() {
                   className="w-10"
                 />
               </div>
+            </div>
+
+            <div className="md:w-1/3">
+              <h3 className="text-lg font-semibold mb-3">Our Services</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="/search-engine-optimization"
+                    className="hover:underline"
+                  >
+                    Search Engine Optimization
+                  </a>
+                </li>
+                <li>
+                  <a href="/performance-marketing" className="hover:underline">
+                    Performance Marketing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/online-reputation-management"
+                    className="hover:underline"
+                  >
+                    Online Reputation Management
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/web-desing-and-app-developement"
+                    className="hover:underline"
+                  >
+                    Web Design & App Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/google-my-business" className="hover:underline">
+                    Google My Business
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/social-media-management"
+                    className="hover:underline"
+                  >
+                    Social Media Management
+                  </a>
+                </li>
+              </ul>
             </div>
 
             {/* Quick Links, Resources, Contact Info - 2/3 */}

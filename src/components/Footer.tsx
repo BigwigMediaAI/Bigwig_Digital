@@ -68,7 +68,7 @@ function Footer() {
                   {[
                     { name: "Home", id: "top" },
                     { name: "About Us", id: "about" },
-                    { name: "Solution", id: "solution" },
+                    { name: "FAQ", id: "faq" },
                     { name: "Blogs", id: "blog" },
                   ].map((link) => (
                     <li key={link.id}>
@@ -85,23 +85,52 @@ function Footer() {
 
               {/* Resources */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">Resources</h3>
+                <h3 className="text-lg font-semibold mb-3">Services</h3>
                 <ul className="space-y-2 text-sm">
                   <li>
-                    <button
-                      onClick={() => handleScrollToSection("case")}
-                      className="hover:text-blue-600 transition"
+                    <a
+                      href="/search-engine-optimization"
+                      className="hover:underline"
                     >
-                      Case Studies
-                    </button>
+                      Search Engine Optimization
+                    </a>
                   </li>
                   <li>
-                    <button
-                      onClick={() => handleScrollToSection("faq")}
-                      className="hover:text-blue-600 transition"
+                    <a
+                      href="/performance-marketing"
+                      className="hover:underline"
                     >
-                      FAQ
-                    </button>
+                      Performance Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/online-reputation-management"
+                      className="hover:underline"
+                    >
+                      Online Reputation Management
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/web-desing-and-app-developement"
+                      className="hover:underline"
+                    >
+                      Web Design & App Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/google-my-business" className="hover:underline">
+                      Google My Business
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/social-media-management"
+                      className="hover:underline"
+                    >
+                      Social Media Management
+                    </a>
                   </li>
                 </ul>
               </div>
