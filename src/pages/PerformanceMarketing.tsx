@@ -91,7 +91,7 @@ function PerformanceMarketing() {
         >
           <blockquote className="text-2xl max-w-4xl mx-auto">
             “We saw a 4X return on ad spend within the first two months of
-            partnering with Big Wig Digital. Their paid strategy is sharp,
+            partnering with Bigwig Digital. Their paid strategy is sharp,
             focused, and data-driven.”
           </blockquote>
           <cite className="block mt-6 font-semibold text-white text-xl">

@@ -81,7 +81,7 @@ function WebDesign() {
         <section className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center">
           <blockquote className="text-2xl max-w-4xl mx-auto">
             “Our website and app were both delivered on time, beautifully
-            designed, and fully functional. Big Wig Digital's team brought our
+            designed, and fully functional. Bigwig Digital's team brought our
             vision to life with precision and creativity.”
           </blockquote>
           <cite className="block mt-6 font-semibold text-white text-xl">
@@ -92,7 +92,7 @@ function WebDesign() {
         {/* Closing */}
         <section className="bg-black bg-opacity-70 rounded-lg shadow-lg p-12">
           <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-            From pixel-perfect web design to feature-rich apps, Big Wig Digital
+            From pixel-perfect web design to feature-rich apps, Bigwig Digital
             is your trusted partner for digital excellence. Let's build
             something amazing together — contact us today to get started.
           </p>

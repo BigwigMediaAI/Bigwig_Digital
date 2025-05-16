@@ -24,7 +24,7 @@ function Seo() {
             Boost Your Visibility with Leading SEO Services in Delhi!
           </h1>
           <p className="text-xl md:text-2xl italic font-semibold max-w-3xl mx-auto mb-8">
-            Climb the Google rankings and attract the right audience. Big Wig
+            Climb the Google rankings and attract the right audience. Bigwig
             Digital helps your business grow with proven Search Engine
             Optimization strategies.
           </p>
@@ -90,7 +90,7 @@ function Seo() {
           className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
         >
           <blockquote className="text-2xl max-w-4xl mx-auto">
-            “With Big Wig Digital’s SEO strategy, we saw a 200% increase in
+            “With Bigwig Digital’s SEO strategy, we saw a 200% increase in
             organic traffic within months. Their expertise is unmatched and
             results speak for themselves.”
           </blockquote>

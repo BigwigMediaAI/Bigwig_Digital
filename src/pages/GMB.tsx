@@ -25,7 +25,7 @@ function GMB() {
             Dominate Local Search with Google My Business Optimization
           </h1>
           <p className="text-xl md:text-2xl italic font-semibold max-w-3xl mx-auto mb-8">
-            Stand out on Google Maps and local search results. Big Wig Digital
+            Stand out on Google Maps and local search results. Bigwig Digital
             helps your business capture nearby customers with effective GMB
             strategies.
           </p>
@@ -90,7 +90,7 @@ function GMB() {
           className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
         >
           <blockquote className="text-2xl max-w-4xl mx-auto">
-            “Thanks to Big Wig Digital’s GMB services, we doubled our foot
+            “Thanks to Bigwig Digital’s GMB services, we doubled our foot
             traffic in just 3 months. Our calls and reviews have skyrocketed!”
           </blockquote>
           <cite className="block mt-6 font-semibold text-white text-xl">

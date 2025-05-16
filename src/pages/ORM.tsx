@@ -26,7 +26,7 @@ function Orm() {
             Management
           </h1>
           <p className="text-xl md:text-2xl italic font-semibold max-w-3xl mx-auto mb-8">
-            Build trust, handle negative feedback, and shine online. Big Wig
+            Build trust, handle negative feedback, and shine online. Bigwig
             Digital is Delhi’s trusted ORM agency that secures your digital
             credibility.
           </p>
@@ -92,7 +92,7 @@ function Orm() {
           className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
         >
           <blockquote className="text-2xl max-w-4xl mx-auto">
-            “Big Wig Digital helped us regain control of our online presence
+            “Bigwig Digital helped us regain control of our online presence
             after a PR crisis. Their ORM team is sharp, proactive, and
             incredibly reliable.”
           </blockquote>
@@ -107,7 +107,7 @@ function Orm() {
           className="bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
         >
           <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-            With Big Wig Digital’s ORM services, your brand is protected and
+            With Bigwig Digital’s ORM services, your brand is protected and
             promoted the right way. Let us help you build a strong, trustworthy
             digital image that earns loyalty and drives business.
           </p>

@@ -27,7 +27,7 @@ function SMM() {
           </h1>
           <p className="text-xl md:text-2xl italic font-semibold max-w-4xl mx-auto mb-10">
             Looking for a top social media marketing agency in Delhi to boost
-            your online presence? Big Wig Digital is your trusted partner for
+            your online presence? Bigwig Digital is your trusted partner for
             expert social media management services.
           </p>
         </div>
@@ -95,10 +95,10 @@ function SMM() {
           className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
         >
           <blockquote className="text-2xl max-w-4xl mx-auto">
-            “Big Wig Digital helped our brand triple engagement in just 6
-            months. Their expert team is creative, responsive, and always ahead
-            of trends. Highly recommend for any serious business looking to grow
-            on social media.”
+            “Bigwig Digital helped our brand triple engagement in just 6 months.
+            Their expert team is creative, responsive, and always ahead of
+            trends. Highly recommend for any serious business looking to grow on
+            social media.”
           </blockquote>
           <cite className="block mt-6 font-semibold text-white text-xl">
             - Vipul Dutta, CEO, Bigwig Digital
