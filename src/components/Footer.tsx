@@ -30,7 +30,7 @@ function Footer() {
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
                 <img src={logo} alt="Bigwig Logo" className="w-60" />
               </div>
-              <p className="text-sm leading-relaxed">
+              <p className=" md:w-2/3 text-sm leading-relaxed">
                 Elevating your media presence with innovative solutions and
                 unmatched creativity. Let’s build something extraordinary
                 together.
@@ -90,7 +90,7 @@ function Footer() {
                   <li>
                     <a
                       href="/search-engine-optimization"
-                      className="hover:underline"
+                      className="hover:text-blue-600"
                     >
                       Search Engine Optimization
                     </a>
@@ -98,7 +98,7 @@ function Footer() {
                   <li>
                     <a
                       href="/performance-marketing"
-                      className="hover:underline"
+                      className="hover:text-blue-600"
                     >
                       Performance Marketing
                     </a>
@@ -106,7 +106,7 @@ function Footer() {
                   <li>
                     <a
                       href="/online-reputation-management"
-                      className="hover:underline"
+                      className="hover:text-blue-600"
                     >
                       Online Reputation Management
                     </a>
@@ -114,20 +114,23 @@ function Footer() {
                   <li>
                     <a
                       href="/web-desing-and-app-developement"
-                      className="hover:underline"
+                      className="hover:text-blue-600"
                     >
                       Web Design & App Development
                     </a>
                   </li>
                   <li>
-                    <a href="/google-my-business" className="hover:underline">
+                    <a
+                      href="/google-my-business"
+                      className="hover:text-blue-600"
+                    >
                       Google My Business
                     </a>
                   </li>
                   <li>
                     <a
                       href="/social-media-management"
-                      className="hover:underline"
+                      className="hover:text-blue-600"
                     >
                       Social Media Management
                     </a>

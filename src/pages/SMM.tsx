@@ -1,125 +1,126 @@
 import Footer2 from "../components/Footer2";
-
 import Nav2 from "../components/Nav2";
 
 function SMM() {
   return (
-    <div className="bg-neutral-950 text-white flex flex-col min-h-screen">
-      <div className="mb-24 md:mb-32">
+    <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
+      {/* Navbar */}
+      <div className="mb-16 md:mb-24">
         <Nav2 />
       </div>
 
-      {/* Hero Section Full Width */}
+      {/* Hero Section */}
       <section
-        className="relative w-full h-[450px] md:h-[600px] overflow-hidden"
-        aria-label="Social Media Management Hero"
+        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1920&q=80')",
+            "url('https://cdn.theatlantic.com/thumbor/iMhrXbIQnFskuL3cIFfawsz7mdg=/0x428:8256x5072/960x540/media/img/mt/2024/09/WR913lead/original.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        aria-label="Social Media Management Hero"
       >
-        <div className="absolute inset-0 bg-black/60 bg-opacity-70 flex flex-col justify-center items-center px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl leading-tight">
+        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Elevate Your Brand with the Best Social Media Management Company in
             Delhi!
           </h1>
-          <p className="text-xl md:text-2xl italic font-semibold max-w-4xl mx-auto mb-10">
+          <p className="text-base md:text-lg italic font-medium max-w-3xl">
             Looking for a top social media marketing agency in Delhi to boost
-            your online presence? Bigwig Digital is your trusted partner for
-            expert social media management services.
+            your online presence? Bigwig Digital is your trusted partner.
           </p>
         </div>
       </section>
 
-      {/* Main Content Section max-w-7xl */}
-      <main className="flex-grow max-w-7xl mx-auto mt-20 px-6 lg:px-8">
-        {/* Why Choose Us Section */}
-        <section
-          id="why-choose-us"
-          className="mb-20 bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
-        >
-          <h2 className="text-5xl font-bold mb-10 border-b border-gray-700 pb-4">
-            Why Choose Us for Social Media Management?
-          </h2>
-          <ul className="list-disc list-inside space-y-6 text-xl leading-relaxed">
-            <li>
-              <strong>Strategic Social Media Marketing</strong> – Tailored
-              campaigns for Facebook, Instagram, LinkedIn, Twitter &amp; more.
-            </li>
-            <li>
-              <strong>Content Creation &amp; Curation</strong> – High-quality
-              posts, videos, reels, and stories to captivate your audience.
-            </li>
-            <li>
-              <strong>Paid Advertising (PPC &amp; Social Ads)</strong> –
-              Targeted ads to maximize ROI and lead generation.
-            </li>
-            <li>
-              <strong>Community Engagement &amp; Growth</strong> – Active
-              interaction to build loyal followers and brand advocates.
-            </li>
-            <li>
-              <strong>Analytics &amp; Performance Tracking</strong> –
-              Data-driven insights to refine strategies and improve results.
-            </li>
-            <li>
-              <strong>Affordable &amp; Results-Driven</strong> – Customized
-              packages for startups, SMEs, and enterprises.
-            </li>
-          </ul>
+      {/* Main Content */}
+      <main className="flex-grow w-11/12 mx-auto mt-16 px-4 ">
+        {/* Why Choose Us */}
+        <section className="mb-16 flex flex-col md:flex-row gap-10 items-center bg-black bg-opacity-70 rounded-xl shadow-md ">
+          {/* Image */}
+          <div className="w-full md:w-1/2 md:p-8">
+            <img
+              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80"
+              alt="Why Choose Us"
+              className="rounded-lg w-full h-auto"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl md:text-3xl  mb-4 border-b border-gray-700 pb-2">
+              Why Choose Us for Social Media Management?
+            </h2>
+            <ul className="list-disc list-inside space-y-3  leading-relaxed">
+              <li>
+                <strong>Strategic Social Media Marketing</strong> – Tailored
+                campaigns for all platforms.
+              </li>
+              <li>
+                <strong>Content Creation & Curation</strong> – Captivating
+                posts, videos, and stories.
+              </li>
+              <li>
+                <strong>Paid Advertising</strong> – Maximize ROI with
+                precision-targeted ads.
+              </li>
+              <li>
+                <strong>Community Engagement</strong> – Build loyal followers
+                and advocates.
+              </li>
+              <li>
+                <strong>Analytics & Tracking</strong> – Data-driven insights to
+                boost performance.
+              </li>
+              <li>
+                <strong>Affordable Packages</strong> – For startups, SMEs, and
+                enterprises alike.
+              </li>
+            </ul>
+          </div>
         </section>
 
-        {/* Services Section */}
-        <section
-          id="services"
-          className="mb-20 bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
-        >
-          <h2 className="text-5xl font-bold mb-10 border-b border-gray-700 pb-4">
-            Our Social Media Services
-          </h2>
-          <ul className="list-disc list-inside space-y-6 text-xl leading-relaxed">
-            <li>Social Media Strategy &amp; Planning</li>
-            <li>Content Creation &amp; Scheduling</li>
-            <li>Influencer &amp; Collaborations Marketing</li>
-            <li>Paid Social Media Advertising (Meta, Google, LinkedIn Ads)</li>
-            <li>Reputation Management &amp; Brand Monitoring</li>
-            <li>Monthly Performance Reports &amp; Optimization</li>
-          </ul>
+        {/* Services */}
+        <section className="mb-16 flex flex-col-reverse md:flex-row gap-8 items-center bg-black bg-opacity-70 rounded-xl shadow-md">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
+              Our Social Media Services
+            </h2>
+            <ul className="list-disc list-inside space-y-3 text-base md:text-lg leading-relaxed">
+              <li>Social Media Strategy & Planning</li>
+              <li>Content Creation & Scheduling</li>
+              <li>Influencer & Collaborations Marketing</li>
+              <li>Paid Ads (Meta, Google, LinkedIn)</li>
+              <li>Reputation Management & Monitoring</li>
+              <li>Monthly Reports & Optimization</li>
+            </ul>
+          </div>
+
+          {/* Image */}
+          <div className="w-full md:w-1/2 md:p-8">
+            <img
+              src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80"
+              alt="Our Services"
+              className="rounded-lg w-full h-auto"
+            />
+          </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section
-          id="testimonial"
-          className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
-        >
-          <blockquote className="text-2xl max-w-4xl mx-auto">
-            “Bigwig Digital helped our brand triple engagement in just 6 months.
-            Their expert team is creative, responsive, and always ahead of
-            trends. Highly recommend for any serious business looking to grow on
-            social media.”
-          </blockquote>
-          <cite className="block mt-6 font-semibold text-white text-xl">
-            - Vipul Dutta, CEO, Bigwig Digital
-          </cite>
-        </section>
-
-        {/* Closing Section */}
+        {/* Closing */}
         <section
           id="closing"
-          className="bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
+          className="bg-black bg-opacity-70 md:max-w-5xl mx-auto rounded-xl shadow-md "
         >
-          <p className="text-xl leading-relaxed max-w-4xl mx-auto">
+          <p className="text-base md:text-lg leading-relaxed mx-auto text-center">
             As a leading social media agency in Delhi, we help businesses
-            dominate their niche with engaging, trend-driven content and smart
-            advertising strategies. Whether you need Facebook marketing in
-            Delhi, Instagram growth, or LinkedIn branding, we’ve
-            got&nbsp;you&nbsp;covered!
+            dominate their niche with engaging content and smart ad strategies.
+            Whether it’s Facebook, Instagram, or LinkedIn – we’ve got you
+            covered.
           </p>
         </section>
       </main>
 
+      {/* Footer */}
       <Footer2 />
     </div>
   );

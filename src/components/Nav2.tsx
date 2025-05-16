@@ -23,6 +23,15 @@ const Nav2: React.FC = () => {
             </a>
           </button>
         </div>
+        <a
+          href="/contact"
+          className="relative overflow-hidden group rounded-lg py-2 hover:text-white transition"
+        >
+          <span className="relative z-10 border-2 border-[#D10B0B] px-3 py-1 rounded-md text-white hover:text-white">
+            Contact Us
+          </span>
+          <span className="absolute inset-0 bg-[#D10B0B] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+        </a>
       </div>
     </nav>
   );

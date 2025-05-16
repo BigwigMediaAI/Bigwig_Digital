@@ -3,8 +3,9 @@ import Footer2 from "../components/Footer2";
 
 function GMB() {
   return (
-    <div className="bg-neutral-950 text-white flex flex-col min-h-screen">
-      <div className="mb-24 md:mb-28">
+    <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
+      {/* Navbar */}
+      <div className="mb-16 md:mb-24">
         <Nav2 />
       </div>
 
@@ -14,17 +15,16 @@ function GMB() {
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1920&q=80')",
-
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Google My Business Optimization Hero"
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 max-w-4xl leading-tight">
+        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-6 text-center">
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Dominate Local Search with Google My Business Optimization
           </h1>
-          <p className="text-xl md:text-2xl italic font-semibold max-w-3xl mx-auto mb-8">
+          <p className="text-base md:text-xl italic font-medium max-w-3xl">
             Stand out on Google Maps and local search results. Bigwig Digital
             helps your business capture nearby customers with effective GMB
             strategies.
@@ -33,77 +33,78 @@ function GMB() {
       </section>
 
       {/* Main Content */}
-      <main className="flex-grow max-w-7xl mx-auto mt-20 px-6 lg:px-8">
+      <main className="flex-grow max-w-7xl mx-auto mt-16 px-4 md:px-8">
         {/* Why GMB Section */}
-        <section
-          id="why-gmb"
-          className="mb-20 bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
-        >
-          <h2 className="text-5xl font-bold mb-10 border-b border-gray-700 pb-4">
-            Why GMB Optimization Matters
-          </h2>
-          <ul className="list-disc list-inside space-y-6 text-xl leading-relaxed">
-            <li>
-              <strong>Improve Local Visibility:</strong> Appear in map packs
-              when people search for your services nearby.
-            </li>
-            <li>
-              <strong>Drive Phone Calls & Visits:</strong> Encourage customers
-              to call or visit your physical location.
-            </li>
-            <li>
-              <strong>Gain Trust:</strong> Verified and updated profiles build
-              confidence with potential customers.
-            </li>
-            <li>
-              <strong>Boost Reviews & Ratings:</strong> Collect and manage
-              positive reviews to enhance credibility.
-            </li>
-            <li>
-              <strong>Track Engagement:</strong> See how people interact with
-              your listing using insights and analytics.
-            </li>
-          </ul>
+        <section className="mb-16 flex flex-col md:flex-row gap-10 items-center bg-black bg-opacity-70 rounded-xl shadow-md p-8">
+          {/* Image */}
+          <div className="w-full md:w-1/2 md:p-8">
+            <img
+              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80"
+              alt="Why GMB Optimization Matters"
+              className="rounded-lg w-full h-auto"
+            />
+          </div>
+
+          {/* Text Content */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl mb-6 border-b border-gray-700 pb-3">
+              Why GMB Optimization Matters
+            </h2>
+            <ul className="list-disc list-inside space-y-4 text-lg leading-relaxed">
+              <li>
+                <strong>Improve Local Visibility:</strong> Appear in map packs
+                when people search for your services nearby.
+              </li>
+              <li>
+                <strong>Drive Phone Calls & Visits:</strong> Encourage customers
+                to call or visit your physical location.
+              </li>
+              <li>
+                <strong>Gain Trust:</strong> Verified and updated profiles build
+                confidence with potential customers.
+              </li>
+              <li>
+                <strong>Boost Reviews & Ratings:</strong> Collect and manage
+                positive reviews to enhance credibility.
+              </li>
+              <li>
+                <strong>Track Engagement:</strong> See how people interact with
+                your listing using insights and analytics.
+              </li>
+            </ul>
+          </div>
         </section>
 
         {/* GMB Services Section */}
-        <section
-          id="services"
-          className="mb-20 bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
-        >
-          <h2 className="text-5xl font-bold mb-10 border-b border-gray-700 pb-4">
-            Our GMB Optimization Services
-          </h2>
-          <ul className="list-disc list-inside space-y-6 text-xl leading-relaxed">
-            <li>Google Business Profile Setup & Verification</li>
-            <li>NAP Consistency (Name, Address, Phone)</li>
-            <li>Image & Post Optimization</li>
-            <li>Review Management & Response Strategy</li>
-            <li>GMB SEO for Local Rankings</li>
-            <li>Weekly Updates and Reporting</li>
-          </ul>
-        </section>
+        <section className="mb-16 flex flex-col-reverse md:flex-row gap-10 items-center bg-black bg-opacity-70 rounded-xl shadow-md p-8">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl mb-6 border-b border-gray-700 pb-3">
+              Our GMB Optimization Services
+            </h2>
+            <ul className="list-disc list-inside space-y-4 text-lg leading-relaxed">
+              <li>Google Business Profile Setup & Verification</li>
+              <li>NAP Consistency (Name, Address, Phone)</li>
+              <li>Image & Post Optimization</li>
+              <li>Review Management & Response Strategy</li>
+              <li>GMB SEO for Local Rankings</li>
+              <li>Weekly Updates and Reporting</li>
+            </ul>
+          </div>
 
-        {/* Testimonial */}
-        <section
-          id="testimonial"
-          className="mb-20 bg-gray-900 bg-opacity-80 rounded-lg shadow-lg p-12 italic text-gray-300 text-center"
-        >
-          <blockquote className="text-2xl max-w-4xl mx-auto">
-            “Thanks to Bigwig Digital’s GMB services, we doubled our foot
-            traffic in just 3 months. Our calls and reviews have skyrocketed!”
-          </blockquote>
-          <cite className="block mt-6 font-semibold text-white text-xl">
-            - Vipul Dutta, CEO, Bigwig Digital
-          </cite>
+          {/* Image */}
+          <div className="w-full md:w-1/2 md:p-8">
+            <img
+              src="https://media.smallbiztrends.com/2023/07/local-business-marketing.png"
+              alt="GMB Services"
+              className="rounded-lg w-full h-auto"
+            />
+          </div>
         </section>
 
         {/* Closing */}
-        <section
-          id="closing"
-          className="bg-black bg-opacity-70 rounded-lg shadow-lg p-12"
-        >
-          <p className="text-xl leading-relaxed max-w-4xl mx-auto">
+        <section className="bg-black bg-opacity-70 rounded-xl shadow-md p-12 max-w-4xl mx-auto">
+          <p className="text-xl leading-relaxed text-center">
             Our GMB experts ensure your business gets noticed where it matters
             most—locally. Whether you run a salon, restaurant, clinic, or
             service center, we’ll optimize your Google profile for maximum
@@ -112,6 +113,7 @@ function GMB() {
         </section>
       </main>
 
+      {/* Footer */}
       <Footer2 />
     </div>
   );
