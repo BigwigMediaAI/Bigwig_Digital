@@ -51,7 +51,7 @@ function PerformanceMarketing() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why Performance Marketing is Essential
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Pay for Results</strong> – Only spend when users take
                 action—clicks, leads, or conversions.
@@ -70,6 +70,26 @@ function PerformanceMarketing() {
               </li>
               <li>
                 <strong>Scalable Campaigns</strong> – Start small, scale fast.
+              </li>
+              <li>
+                <strong>Custom Landing Pages</strong> – Direct traffic to
+                high-converting, tailored pages.
+              </li>
+              <li>
+                <strong>A/B Testing</strong> – Continuously optimize ads and
+                creatives for peak performance.
+              </li>
+              <li>
+                <strong>Remarketing Capabilities</strong> – Re-engage visitors
+                who didn’t convert the first time.
+              </li>
+              <li>
+                <strong>Budget Flexibility</strong> – Set daily or lifetime
+                budgets that suit your business.
+              </li>
+              <li>
+                <strong>Fast Results</strong> – See traffic and conversions
+                within hours of launch.
               </li>
             </ul>
           </div>

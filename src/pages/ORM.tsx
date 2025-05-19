@@ -53,7 +53,7 @@ function Orm() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why Online Reputation Management Matters
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3  py-4 leading-relaxed">
               <li>
                 <strong>Build Trust & Credibility:</strong> What people say
                 online shapes your brand’s image.
@@ -73,6 +73,27 @@ function Orm() {
               <li>
                 <strong>Influence Buyer Decisions:</strong> Positive reputation
                 directly impacts conversions and sales.
+              </li>
+              <li>
+                <strong>Monitor Brand Mentions:</strong> Stay alert to what’s
+                being said about your brand across the web.
+              </li>
+              <li>
+                <strong>Generate Positive Reviews:</strong> Encourage satisfied
+                customers to share their experiences.
+              </li>
+              <li>
+                <strong>Reputation Insights:</strong> Use sentiment analysis and
+                feedback trends to improve service and messaging.
+              </li>
+              <li>
+                <strong>Boost Employer Branding:</strong> Attract top talent
+                with a positive company image on platforms like Glassdoor and
+                LinkedIn.
+              </li>
+              <li>
+                <strong>Build Long-Term Brand Equity:</strong> A strong,
+                positive online presence increases brand value over time.
               </li>
             </ul>
           </div>

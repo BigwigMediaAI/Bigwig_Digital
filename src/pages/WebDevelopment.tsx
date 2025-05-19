@@ -51,7 +51,7 @@ function WebDesign() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why Choose Our Web & App Development?
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Responsive Web Design:</strong> Seamless experiences
                 across all devices.
@@ -71,6 +71,26 @@ function WebDesign() {
               <li>
                 <strong>Maintenance & Support:</strong> Long-term partnership
                 for performance and updates.
+              </li>
+              <li>
+                <strong>API Integration:</strong> Seamlessly connect third-party
+                tools and platforms.
+              </li>
+              <li>
+                <strong>E-Commerce Ready:</strong> Build powerful stores with
+                smooth checkout experiences.
+              </li>
+              <li>
+                <strong>SEO & Performance Optimized:</strong> Improve load times
+                and visibility on search engines.
+              </li>
+              <li>
+                <strong>Cross-Platform Compatibility:</strong> Consistent
+                performance across browsers and devices.
+              </li>
+              <li>
+                <strong>Agile Development Process:</strong> Transparent
+                workflows with regular progress updates.
               </li>
             </ul>
           </div>

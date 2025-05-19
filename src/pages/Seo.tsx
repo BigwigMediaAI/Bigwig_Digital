@@ -52,7 +52,7 @@ function Seo() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why SEO is Crucial for Your Business
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Increase Website Traffic:</strong> Rank higher on Google
                 and get discovered by your target audience.
@@ -72,6 +72,26 @@ function Seo() {
               <li>
                 <strong>Higher Conversion Rates:</strong> Organic visitors
                 convert better with the right optimization strategy.
+              </li>
+              <li>
+                <strong>Local SEO Optimization:</strong> Attract nearby
+                customers with geo-targeted search visibility.
+              </li>
+              <li>
+                <strong>Competitive Advantage:</strong> Outrank competitors and
+                capture more market share through smart SEO.
+              </li>
+              <li>
+                <strong>Long-Term Growth:</strong> Sustainable traffic and
+                visibility that builds over time.
+              </li>
+              <li>
+                <strong>Content Optimization:</strong> Enhance blog posts,
+                product pages, and landing pages for top performance.
+              </li>
+              <li>
+                <strong>Technical SEO Improvements:</strong> Fix crawl errors,
+                improve indexing, and boost site health.
               </li>
             </ul>
           </div>

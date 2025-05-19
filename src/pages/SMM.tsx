@@ -52,7 +52,7 @@ function SMM() {
             <h2 className="text-2xl md:text-3xl  mb-4 border-b border-gray-700 pb-2">
               Why Choose Us for Social Media Management?
             </h2>
-            <ul className="list-disc list-inside space-y-3  leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Strategic Social Media Marketing</strong> – Tailored
                 campaigns for all platforms.
@@ -76,6 +76,30 @@ function SMM() {
               <li>
                 <strong>Affordable Packages</strong> – For startups, SMEs, and
                 enterprises alike.
+              </li>
+              <li>
+                <strong>Platform-Specific Expertise</strong> – Custom strategies
+                for Instagram, TikTok, LinkedIn, Twitter, and more.
+              </li>
+              <li>
+                <strong>Brand Voice Development</strong> – Consistent messaging
+                that reflects your values and tone.
+              </li>
+              <li>
+                <strong>Trend Monitoring</strong> – Stay ahead with timely,
+                trend-driven content that resonates.
+              </li>
+              <li>
+                <strong>Campaign Management</strong> – End-to-end planning,
+                execution, and optimization.
+              </li>
+              <li>
+                <strong>24/7 Monitoring & Support</strong> – Proactive responses
+                and crisis management when needed.
+              </li>
+              <li>
+                <strong>Growth Hacking Techniques</strong> – Creative strategies
+                to rapidly grow your online presence.
               </li>
             </ul>
           </div>
