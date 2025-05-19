@@ -44,6 +44,7 @@ function SMM() {
               src={SMM2}
               alt="Why Choose Us"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -128,6 +129,7 @@ function SMM() {
               src={SMM3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

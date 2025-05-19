@@ -45,6 +45,7 @@ function Orm() {
               src={ORM2}
               alt="Why ORM Matters"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -123,6 +124,7 @@ function Orm() {
               src={ORM3}
               alt="ORM Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

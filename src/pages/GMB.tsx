@@ -44,6 +44,7 @@ function GMB() {
               src={GMB2}
               alt="Why GMB Optimization Matters"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -100,6 +101,7 @@ function GMB() {
               src={GMB3}
               alt="GMB Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

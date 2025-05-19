@@ -44,6 +44,7 @@ function Seo() {
               src={SEO2}
               alt="Why SEO"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -121,6 +122,7 @@ function Seo() {
               src={SEO3}
               alt="SEO Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

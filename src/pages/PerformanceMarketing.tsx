@@ -43,6 +43,7 @@ function PerformanceMarketing() {
               src={pm1}
               alt="Why Performance Marketing"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -119,6 +120,7 @@ function PerformanceMarketing() {
               src={pm2}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

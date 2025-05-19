@@ -43,6 +43,7 @@ function WebDesign() {
               src={WEB2}
               alt="Web Design Development"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -119,6 +120,7 @@ function WebDesign() {
               src={WEB3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>
