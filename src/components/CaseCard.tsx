@@ -135,6 +135,7 @@ const CaseCard: React.FC = () => {
                 src={caseItem.image}
                 alt={caseItem.title}
                 className="w-full h-64 object-cover rounded-3xl transition-transform duration-300 hover:rotate-3 hover:scale-105 hover:shadow-2xl"
+                draggable="false"
               />
               <div className="p-4">
                 <h3 className="text-md md:text-xl font-semibold text-gray-300">

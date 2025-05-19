@@ -10,7 +10,7 @@ import { useState } from "react";
 import Blog from "../components/Blog";
 import ImageSlider from "../components/ImageSlider";
 import ContactUs from "../components/Contact";
-import { FaRegMessage } from "react-icons/fa6";
+// import { FaRegMessage } from "react-icons/fa6";
 import WhatsAppButton from "../components/FloatingButton";
 import { IoMdClose } from "react-icons/io";
 import Stats from "../components/Stats";
@@ -52,14 +52,14 @@ function Landing() {
       <Footer />
 
       {/* WhatsApp and Contact Icon - Hidden on Mobile */}
-      <div className="fixed bottom-10 right-10 flex-col items-center space-y-4 z-50 hidden md:flex">
-        <button
+      <div className="fixed bottom-0 right-10 flex-col items-center space-y-4 z-50 hidden md:flex">
+        {/* <button
           onClick={openContactPanel}
           className="bg-[#1752B4] text-white py-4 px-4 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110"
           title="Contact Us"
         >
           <FaRegMessage className="size-5" />
-        </button>
+        </button> */}
         <WhatsAppButton />
       </div>
 
