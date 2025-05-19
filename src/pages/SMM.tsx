@@ -1,31 +1,33 @@
 import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
+import SMM1 from "../assets/SMM.png";
+import SMM2 from "../assets/SMM2.png";
+import SMM3 from "../assets/SMM3.png";
 
 function SMM() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-24">
+      <div className="mb-16 md:mb-28 py-1">
         <Nav2 />
       </div>
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://cdn.theatlantic.com/thumbor/iMhrXbIQnFskuL3cIFfawsz7mdg=/0x428:8256x5072/960x540/media/img/mt/2024/09/WR913lead/original.jpg')",
+          backgroundImage: `url(${SMM1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Social Media Management Hero"
       >
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug mt-28">
             Elevate Your Brand with the Best Social Media Management Company in
             Delhi!
           </h1>
-          <p className="text-base md:text-lg italic font-medium max-w-3xl">
+          <p className="text-sm md:text-lg italic font-medium max-w-3xl">
             Looking for a top social media marketing agency in Delhi to boost
             your online presence? Bigwig Digital is your trusted partner.
           </p>
@@ -39,7 +41,7 @@ function SMM() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80"
+              src={SMM2}
               alt="Why Choose Us"
               className="rounded-lg w-full h-auto"
             />
@@ -99,7 +101,7 @@ function SMM() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80"
+              src={SMM3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
             />

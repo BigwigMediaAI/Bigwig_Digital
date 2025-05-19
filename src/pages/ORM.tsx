@@ -1,31 +1,33 @@
 import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+import ORM from "../assets/ORM.png";
+import ORM2 from "../assets/ORM2.png";
+import ORM3 from "../assets/ORM3.png";
 
 function Orm() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-24">
+      <div className="mb-16 md:mb-28 py-1">
         <Nav2 />
       </div>
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[450px] md:h-[600px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[800px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: `url(${ORM})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Online Reputation Management Hero"
       >
         <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center px-6 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Protect & Elevate Your Brand with Expert Online Reputation
             Management
           </h1>
-          <p className="text-base md:text-xl italic font-medium max-w-3xl">
+          <p className="text-sm md:text-xl italic font-medium max-w-3xl">
             Build trust, handle negative feedback, and shine online. Bigwig
             Digital is Delhi’s trusted ORM agency that secures your digital
             credibility.
@@ -40,7 +42,7 @@ function Orm() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80"
+              src={ORM2}
               alt="Why ORM Matters"
               className="rounded-lg w-full h-auto"
             />
@@ -97,7 +99,7 @@ function Orm() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://cdn.prod.website-files.com/64d5a3ffa7b505860e94b3bc/65d7a68bd4046121656ff820_digital-marketing-team-achieving-business-goalsc.webp"
+              src={ORM3}
               alt="ORM Services"
               className="rounded-lg w-full h-auto"
             />

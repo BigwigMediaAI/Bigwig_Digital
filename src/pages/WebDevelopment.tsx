@@ -1,30 +1,32 @@
 import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+import WEB1 from "../assets/WEB1.png";
+import WEB2 from "../assets/WEB2.png";
+import WEB3 from "../assets/WEB3.png";
 
 function WebDesign() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-24">
+      <div className="mb-16 md:mb-28 py-1">
         <Nav2 />
       </div>
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: `url(${WEB1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Web Design Hero"
       >
         <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Innovative Web Design & App Development Services in Delhi
           </h1>
-          <p className="text-base md:text-xl italic font-medium max-w-3xl">
+          <p className="text-sm md:text-xl italic font-medium max-w-3xl">
             Elevate your digital presence with sleek websites and powerful
             mobile apps — designed to impress, built to perform.
           </p>
@@ -38,7 +40,7 @@ function WebDesign() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+              src={WEB2}
               alt="Web Design Development"
               className="rounded-lg w-full h-auto"
             />
@@ -94,7 +96,7 @@ function WebDesign() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src={WEB3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
             />

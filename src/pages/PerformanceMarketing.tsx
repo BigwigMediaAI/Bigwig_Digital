@@ -1,30 +1,32 @@
 import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+import img from "../assets/Performance marketing.png";
+import pm1 from "../assets/pm1.png";
+import pm2 from "../assets/pm2.png";
 
 function PerformanceMarketing() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-24">
+      <div className="mb-16 md:mb-28 py-1">
         <Nav2 />
       </div>
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1556742031-c6961e8560b0?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: `url(${img})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Performance Marketing Hero"
       >
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Drive Measurable Growth with Performance Marketing in Delhi
           </h1>
-          <p className="text-base md:text-lg italic font-medium max-w-3xl">
+          <p className="text-sm md:text-lg italic font-medium max-w-3xl">
             We deliver results you can track. From ad clicks to conversions,
             Bigwig Digital ensures every penny spent delivers ROI.
           </p>
@@ -38,7 +40,7 @@ function PerformanceMarketing() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80"
+              src={pm1}
               alt="Why Performance Marketing"
               className="rounded-lg w-full h-auto"
             />
@@ -94,7 +96,7 @@ function PerformanceMarketing() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?auto=format&fit=crop&w=800&q=80"
+              src={pm2}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
             />
