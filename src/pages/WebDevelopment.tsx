@@ -22,7 +22,7 @@ function WebDesign() {
         }}
         aria-label="Web Design Hero"
       >
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-4 text-center">
+        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center px-4 text-center">
           <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Innovative Web Design & App Development Services in Delhi
           </h1>

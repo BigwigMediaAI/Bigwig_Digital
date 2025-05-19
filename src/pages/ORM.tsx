@@ -22,7 +22,7 @@ function Orm() {
         }}
         aria-label="Online Reputation Management Hero"
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center px-6 text-center">
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-6 text-center">
           <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Protect & Elevate Your Brand with Expert Online Reputation
             Management

@@ -22,7 +22,7 @@ function Seo() {
         }}
         aria-label="SEO Hero"
       >
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-4 text-center">
+        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
           <h1 className="text-2xl md:text-5xl font-semibold mb-4 max-w-4xl leading-snug">
             Boost Your Visibility with Leading SEO Services in Delhi!
           </h1>
