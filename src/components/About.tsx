@@ -2,12 +2,27 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const rotatingWords = ["Trendsetters", "Innovative", "Unique", "Dynamic"];
 
 const AboutUs = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [mobileIndex, setMobileIndex] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 80;
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: sectionTop, behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     AOS.init({

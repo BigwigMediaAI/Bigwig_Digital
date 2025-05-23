@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useLocation } from "react-router-dom";
 
 type BlogPost = {
   _id: string;
@@ -17,6 +18,23 @@ type BlogPost = {
 };
 
 const Blog = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Delay to ensure DOM is rendered
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          const offset = 80;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 100); // delay ensures it's mounted
+    }
+  }, [location]);
+
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -66,7 +84,7 @@ const Blog = () => {
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <div className="w-11/12 mx-auto px-4 mb-10 py-4" id="blog">
+    <div id="blog" className="w-11/12 mx-auto px-4 mb-10 py-4">
       <h1 className="text-5xl font-bold text-white text-center mb-4">
         Our Trending Blogs
       </h1>

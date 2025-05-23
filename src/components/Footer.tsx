@@ -9,12 +9,24 @@ import {
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/bigwig digital logo (11).png";
 import line2 from "../assets/line2.png";
+import { useLocation } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
   const handleScrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      // Navigate to landing page with hash
+      window.location.href = `/#${sectionId}`;
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 120;
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY - offset;
+
+        // Instantly jump to position (no smooth scroll)
+        window.scrollTo({ top: sectionTop, behavior: "auto" });
+      }
     }
   };
 
@@ -66,7 +78,6 @@ function Footer() {
                 <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   {[
-                    { name: "Home", id: "top" },
                     { name: "About Us", id: "about" },
                     { name: "FAQ", id: "faq" },
                     { name: "Blogs", id: "blog" },

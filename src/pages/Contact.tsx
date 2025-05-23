@@ -4,8 +4,8 @@ import "react-phone-number-input/style.css";
 import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+import Nav from "../components/Nav";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -85,10 +85,10 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 md:pt-32 bg-black min-h-screen text-white">
-      <Nav2 />
+    <div className=" bg-black min-h-screen text-white">
+      <Nav />
 
-      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 pb-8  text-white">
+      <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-8  text-white">
         <div className="pt-4">
           <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
           <hr />

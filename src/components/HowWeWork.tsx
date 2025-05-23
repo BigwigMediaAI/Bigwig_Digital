@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import understanding from "../assets/method/understanding.png";
 import brainstroming from "../assets/method/brainstorming.png";
 import implementation from "../assets/method/lmplementation.png";
@@ -8,6 +8,7 @@ import Rocket from "../assets/method/rocket-svgrepo-com.svg";
 import analysis from "../assets/method/analysis-analytics-chart-2-svgrepo-com.svg";
 import support from "../assets/method/support-online-center-svgrepo-com.svg";
 import { ArrowLeft, ArrowRight } from "lucide-react"; // Better arrow icons
+import { useLocation } from "react-router-dom";
 
 const workFlowData = [
   {
@@ -71,6 +72,20 @@ const workFlowData = [
 export default function HowWeWork() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [active, setActive] = useState(workFlowData[0].id); // Add missing desktop state
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 80;
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: sectionTop, behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev > 0 ? prev - 1 : workFlowData.length - 1));

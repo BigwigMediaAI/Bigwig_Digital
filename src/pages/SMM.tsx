@@ -1,13 +1,12 @@
 import Footer2 from "../components/Footer2";
-import Nav2 from "../components/Nav2";
+import Nav from "../components/Nav";
 
 function SMM() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-24">
-        <Nav2 />
-      </div>
+
+      <Nav />
 
       {/* Hero Section */}
       <section
