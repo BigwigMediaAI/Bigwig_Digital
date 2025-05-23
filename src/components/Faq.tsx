@@ -63,8 +63,9 @@ const ToggleFAQ = () => {
         const el = document.getElementById(id);
         if (el) {
           const offset = 80;
-          const top = el.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top, behavior: "smooth" });
+          const sectionTop =
+            el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: sectionTop, behavior: "auto" });
         }
       }, 100); // delay ensures it's mounted
     }

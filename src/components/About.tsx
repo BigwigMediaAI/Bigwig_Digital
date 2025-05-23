@@ -16,7 +16,7 @@ const AboutUs = () => {
       const sectionId = location.hash.replace("#", "");
       const section = document.getElementById(sectionId);
       if (section) {
-        const offset = 80;
+        const offset = 120;
         const sectionTop =
           section.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: sectionTop, behavior: "smooth" });
