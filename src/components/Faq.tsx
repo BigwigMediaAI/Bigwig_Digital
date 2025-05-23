@@ -81,7 +81,12 @@ const ToggleFAQ = () => {
       </h2>
       <div className="flex flex-col md:flex-row justify-evenly  py-3 items-start ">
         <div className="md:flex items-start hidden  ">
-          <img src={faq_img} alt="FAQ Illustration" className="w-80 max-w-sm" />
+          <img
+            src={faq_img}
+            alt="FAQ Illustration"
+            className="w-80 max-w-sm"
+            draggable="false"
+          />
         </div>
         <div className="space-y-5 pt-10  ">
           {faqs.map((faq, index) => (

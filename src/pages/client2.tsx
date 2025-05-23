@@ -116,6 +116,7 @@ function Clients2() {
                       src={img}
                       alt={`Client ${index * 12 + i + 1}`}
                       className="w-4/5 object-contain"
+                      draggable="false"
                     />
                   </div>
                 ))}
@@ -136,6 +137,7 @@ function Clients2() {
                 src={img}
                 alt={`Client ${index + 1}`}
                 className="w-4/5 object-contain"
+                draggable="false"
               />
             </div>
           ))}

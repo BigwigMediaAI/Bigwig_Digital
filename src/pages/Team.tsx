@@ -19,6 +19,7 @@ const Team: React.FC = () => {
               src={ceo} // Replace with your CEO image
               alt="CEO"
               className="w-48 h-48 mx-auto rounded-full object-fill mb-4"
+              draggable="false"
             />
             <h3 className="text-xl text-white font-semibold text-center">
               Vipul Dutta

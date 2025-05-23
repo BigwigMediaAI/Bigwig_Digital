@@ -1,5 +1,10 @@
 import Footer2 from "../components/Footer2";
+
 import Nav from "../components/Nav";
+
+import WEB1 from "../assets/WEB1.png";
+import WEB2 from "../assets/WEB2.png";
+import WEB3 from "../assets/WEB3.png";
 
 function WebDesign() {
   return (
@@ -10,20 +15,19 @@ function WebDesign() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1920&q=80')",
+          backgroundImage: `url(${WEB1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Web Design Hero"
       >
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center px-4 text-center">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
             Innovative Web Design & App Development Services in Delhi
           </h1>
-          <p className="text-base md:text-xl italic font-medium max-w-3xl">
+          <p className="text-sm md:text-xl italic font-medium max-w-3xl">
             Elevate your digital presence with sleek websites and powerful
             mobile apps — designed to impress, built to perform.
           </p>
@@ -37,9 +41,10 @@ function WebDesign() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+              src={WEB2}
               alt="Web Design Development"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -48,7 +53,7 @@ function WebDesign() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why Choose Our Web & App Development?
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Responsive Web Design:</strong> Seamless experiences
                 across all devices.
@@ -68,6 +73,26 @@ function WebDesign() {
               <li>
                 <strong>Maintenance & Support:</strong> Long-term partnership
                 for performance and updates.
+              </li>
+              <li>
+                <strong>API Integration:</strong> Seamlessly connect third-party
+                tools and platforms.
+              </li>
+              <li>
+                <strong>E-Commerce Ready:</strong> Build powerful stores with
+                smooth checkout experiences.
+              </li>
+              <li>
+                <strong>SEO & Performance Optimized:</strong> Improve load times
+                and visibility on search engines.
+              </li>
+              <li>
+                <strong>Cross-Platform Compatibility:</strong> Consistent
+                performance across browsers and devices.
+              </li>
+              <li>
+                <strong>Agile Development Process:</strong> Transparent
+                workflows with regular progress updates.
               </li>
             </ul>
           </div>
@@ -93,9 +118,10 @@ function WebDesign() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src={WEB3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

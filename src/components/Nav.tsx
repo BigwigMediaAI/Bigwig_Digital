@@ -46,6 +46,7 @@ const Nav: React.FC = () => {
                 src={logo}
                 alt="Logo"
                 className="w-44 md:w-48  transition duration-300"
+                draggable="false"
               />
             </a>
           </button>

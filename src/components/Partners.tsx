@@ -65,6 +65,7 @@ const Partners: React.FC = () => {
               alt={award.title}
               title={award.title}
               className="w-12 h-10 md:w-20 md:h-16 object-contain hover:scale-105 transition"
+              draggable="false"
             />
           ))}
         </div>

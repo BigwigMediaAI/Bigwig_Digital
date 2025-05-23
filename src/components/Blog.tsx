@@ -106,6 +106,7 @@ const Blog = () => {
               src={post.image}
               alt={post.title}
               className="w-full h-full object-cover hover:scale-110"
+              draggable="false"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3">
               <h2 className="text-sm md:text-lg font-semibold">{post.title}</h2>

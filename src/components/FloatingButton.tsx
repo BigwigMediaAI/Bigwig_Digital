@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
 
   return (
-    <div className="fixed bottom-16 right-10 flex flex-col items-end z-50">
+    <div className="fixed bottom-0 right-10 flex flex-col items-end z-50">
       {isOpen && (
         <div className="flex items-center space-x-2 mb-2">
           {/* Call Button */}

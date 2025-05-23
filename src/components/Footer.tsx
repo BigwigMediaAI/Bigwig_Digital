@@ -32,7 +32,12 @@ function Footer() {
 
   return (
     <div className="relative">
-      <img src={line2} alt="" className="absolute top-0 left-0 invert" />
+      <img
+        src={line2}
+        alt=""
+        className="absolute top-0 left-0 invert"
+        draggable="false"
+      />
       <footer className="bg-[#1f1f1f] text-white pt-12 pb-6">
         <div className="w-11/12 mx-auto px-2">
           {/* Top Section */}
@@ -40,7 +45,12 @@ function Footer() {
             {/* Branding - 1/3 */}
             <div className="md:w-1/3">
               <div className="py-2 md:px-2 md:py-1 flex justify-center md:justify-start mb-4">
-                <img src={logo} alt="Bigwig Logo" className="w-60" />
+                <img
+                  src={logo}
+                  alt="Bigwig Logo"
+                  className="w-60"
+                  draggable="false"
+                />
               </div>
               <p className=" md:w-2/3 text-sm leading-relaxed">
                 Elevating your media presence with innovative solutions and
@@ -52,21 +62,25 @@ function Footer() {
                   src="https://media.istockphoto.com/id/482478655/photo/arab-emirates-flag.jpg?s=612x612&w=0&k=20&c=fJfB5DUYTEWrJ96RbIxJoLo7uQrYkCPqo0F2BTNNp8A="
                   alt=""
                   className="w-8"
+                  draggable="false"
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png"
                   alt=""
                   className="w-8"
+                  draggable="false"
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
                   alt=""
                   className="w-8"
+                  draggable="false"
                 />
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
                   alt=""
                   className="w-10"
+                  draggable="false"
                 />
               </div>
             </div>

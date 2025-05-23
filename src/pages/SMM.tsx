@@ -1,5 +1,10 @@
 import Footer2 from "../components/Footer2";
+
 import Nav from "../components/Nav";
+
+import SMM1 from "../assets/SMM.png";
+import SMM2 from "../assets/SMM2.png";
+import SMM3 from "../assets/SMM3.png";
 
 function SMM() {
   return (
@@ -10,21 +15,20 @@ function SMM() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://cdn.theatlantic.com/thumbor/iMhrXbIQnFskuL3cIFfawsz7mdg=/0x428:8256x5072/960x540/media/img/mt/2024/09/WR913lead/original.jpg')",
+          backgroundImage: `url(${SMM1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Social Media Management Hero"
       >
         <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 max-w-3xl leading-snug mt-28">
             Elevate Your Brand with the Best Social Media Management Company in
             Delhi!
           </h1>
-          <p className="text-base md:text-lg italic font-medium max-w-3xl">
+          <p className="text-sm md:text-lg italic font-medium max-w-3xl">
             Looking for a top social media marketing agency in Delhi to boost
             your online presence? Bigwig Digital is your trusted partner.
           </p>
@@ -38,9 +42,10 @@ function SMM() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=800&q=80"
+              src={SMM2}
               alt="Why Choose Us"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -49,7 +54,7 @@ function SMM() {
             <h2 className="text-2xl md:text-3xl  mb-4 border-b border-gray-700 pb-2">
               Why Choose Us for Social Media Management?
             </h2>
-            <ul className="list-disc list-inside space-y-3  leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Strategic Social Media Marketing</strong> – Tailored
                 campaigns for all platforms.
@@ -73,6 +78,30 @@ function SMM() {
               <li>
                 <strong>Affordable Packages</strong> – For startups, SMEs, and
                 enterprises alike.
+              </li>
+              <li>
+                <strong>Platform-Specific Expertise</strong> – Custom strategies
+                for Instagram, TikTok, LinkedIn, Twitter, and more.
+              </li>
+              <li>
+                <strong>Brand Voice Development</strong> – Consistent messaging
+                that reflects your values and tone.
+              </li>
+              <li>
+                <strong>Trend Monitoring</strong> – Stay ahead with timely,
+                trend-driven content that resonates.
+              </li>
+              <li>
+                <strong>Campaign Management</strong> – End-to-end planning,
+                execution, and optimization.
+              </li>
+              <li>
+                <strong>24/7 Monitoring & Support</strong> – Proactive responses
+                and crisis management when needed.
+              </li>
+              <li>
+                <strong>Growth Hacking Techniques</strong> – Creative strategies
+                to rapidly grow your online presence.
               </li>
             </ul>
           </div>
@@ -98,9 +127,10 @@ function SMM() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=800&q=80"
+              src={SMM3}
               alt="Our Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>

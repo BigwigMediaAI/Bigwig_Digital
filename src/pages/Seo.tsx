@@ -1,5 +1,10 @@
 import Footer2 from "../components/Footer2";
+
 import Nav from "../components/Nav";
+
+import SEO from "../assets/SEO.png";
+import SEO2 from "../assets/SEO2.png";
+import SEO3 from "../assets/SEO3.png";
 
 function Seo() {
   return (
@@ -10,20 +15,19 @@ function Seo() {
 
       {/* Hero Section */}
       <section
-        className="relative w-full h-[400px] md:h-[550px] overflow-hidden"
+        className="relative w-full h-[350px] md:h-[600px] overflow-hidden"
         style={{
-          backgroundImage:
-            "url('https://teamtweaks1-blog.s3.us-east-2.amazonaws.com/blog/wp-content/uploads/2023/09/05133724/Best-Digital-Marketing-Agencies-In-Mumbai.jpg')",
+          backgroundImage: `url(${SEO})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="SEO Hero"
       >
-        <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-semibold mb-4 max-w-4xl leading-snug">
+        <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center px-4 text-center">
+          <h1 className="text-2xl md:text-5xl font-semibold mb-4 max-w-4xl leading-snug">
             Boost Your Visibility with Leading SEO Services in Delhi!
           </h1>
-          <p className="text-base md:text-xl italic font-medium max-w-3xl">
+          <p className="text-sm md:text-xl italic font-medium max-w-3xl">
             Climb the Google rankings and attract the right audience. Bigwig
             Digital helps your business grow with proven Search Engine
             Optimization strategies.
@@ -38,9 +42,10 @@ function Seo() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920&q=80"
+              src={SEO2}
               alt="Why SEO"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
 
@@ -49,7 +54,7 @@ function Seo() {
             <h2 className="text-2xl md:text-3xl mb-4 border-b border-gray-700 pb-2">
               Why SEO is Crucial for Your Business
             </h2>
-            <ul className="list-disc list-inside space-y-3 leading-relaxed">
+            <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Increase Website Traffic:</strong> Rank higher on Google
                 and get discovered by your target audience.
@@ -69,6 +74,26 @@ function Seo() {
               <li>
                 <strong>Higher Conversion Rates:</strong> Organic visitors
                 convert better with the right optimization strategy.
+              </li>
+              <li>
+                <strong>Local SEO Optimization:</strong> Attract nearby
+                customers with geo-targeted search visibility.
+              </li>
+              <li>
+                <strong>Competitive Advantage:</strong> Outrank competitors and
+                capture more market share through smart SEO.
+              </li>
+              <li>
+                <strong>Long-Term Growth:</strong> Sustainable traffic and
+                visibility that builds over time.
+              </li>
+              <li>
+                <strong>Content Optimization:</strong> Enhance blog posts,
+                product pages, and landing pages for top performance.
+              </li>
+              <li>
+                <strong>Technical SEO Improvements:</strong> Fix crawl errors,
+                improve indexing, and boost site health.
               </li>
             </ul>
           </div>
@@ -95,9 +120,10 @@ function Seo() {
           {/* Image */}
           <div className="w-full md:w-1/2 md:p-8">
             <img
-              src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80"
+              src={SEO3}
               alt="SEO Services"
               className="rounded-lg w-full h-auto"
+              draggable="false"
             />
           </div>
         </section>
