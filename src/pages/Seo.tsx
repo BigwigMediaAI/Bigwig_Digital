@@ -1,5 +1,7 @@
-import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+
+import Nav from "../components/Nav";
+
 import SEO from "../assets/SEO.png";
 import SEO2 from "../assets/SEO2.png";
 import SEO3 from "../assets/SEO3.png";
@@ -8,9 +10,8 @@ function Seo() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-28 py-1">
-        <Nav2 />
-      </div>
+
+      <Nav />
 
       {/* Hero Section */}
       <section

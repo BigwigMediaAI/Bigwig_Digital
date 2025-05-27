@@ -1,5 +1,7 @@
-import Nav2 from "../components/Nav2";
 import Footer2 from "../components/Footer2";
+
+import Nav from "../components/Nav";
+
 import img from "../assets/Performance marketing.png";
 import pm1 from "../assets/pm1.png";
 import pm2 from "../assets/pm2.png";
@@ -8,9 +10,8 @@ function PerformanceMarketing() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-28 py-1">
-        <Nav2 />
-      </div>
+
+      <Nav />
 
       {/* Hero Section */}
       <section

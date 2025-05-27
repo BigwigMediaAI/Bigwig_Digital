@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import faq_img from "../assets/faq-img.png";
+import { useLocation } from "react-router-dom";
 
 type Faq = {
   question: string;
@@ -52,6 +53,23 @@ const faqs: Faq[] = [
 
 const ToggleFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Delay to ensure DOM is rendered
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          const offset = 80;
+          const sectionTop =
+            el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: sectionTop, behavior: "auto" });
+        }
+      }, 100); // delay ensures it's mounted
+    }
+  }, [location]);
 
   const toggleFaq = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

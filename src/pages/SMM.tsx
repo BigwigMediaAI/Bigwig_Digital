@@ -1,5 +1,7 @@
 import Footer2 from "../components/Footer2";
-import Nav2 from "../components/Nav2";
+
+import Nav from "../components/Nav";
+
 import SMM1 from "../assets/SMM.png";
 import SMM2 from "../assets/SMM2.png";
 import SMM3 from "../assets/SMM3.png";
@@ -8,9 +10,8 @@ function SMM() {
   return (
     <div className="bg-neutral-950 text-white flex flex-col min-h-screen font-raleway">
       {/* Navbar */}
-      <div className="mb-16 md:mb-28 py-1">
-        <Nav2 />
-      </div>
+
+      <Nav />
 
       {/* Hero Section */}
       <section

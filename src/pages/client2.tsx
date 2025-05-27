@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import "./Clients.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useLocation } from "react-router-dom";
 
 const images = [
   "https://riverfront.vercel.app/assets/Logo%20for%20riverfront%20-CAIVvev0.png",
@@ -39,6 +40,20 @@ const images = [
 
 function Clients2() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.replace("#", "");
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 120;
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: sectionTop, behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     AOS.init({

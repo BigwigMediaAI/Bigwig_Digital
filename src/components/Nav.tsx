@@ -10,20 +10,29 @@ import {
   UsersRound,
   Phone,
 } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const Nav: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
 
+  const location = useLocation();
   const handleScroll = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const offset = 80;
-      const sectionTop =
-        section.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: sectionTop, behavior: "smooth" });
+    if (location.pathname !== "/") {
+      // Navigate to landing page with hash
+      window.location.href = `/#${sectionId}`;
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const offset = 120;
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY - offset;
+
+        // Instantly jump to position (no smooth scroll)
+        window.scrollTo({ top: sectionTop, behavior: "auto" });
+      }
+      setIsMobileMenuOpen(false);
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -158,13 +167,6 @@ const Nav: React.FC = () => {
 
           {/* Extra Links */}
           <li className="flex space-x-3 items-center">
-            {/* <a
-              href="/clients"
-              className="relative overflow-hidden group rounded-lg py-2 hover:text-white transition"
-            >
-              <span className="relative px-3 z-10">Clients</span>
-              <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
-            </a> */}
             <a
               href="/team"
               target="_blank"
@@ -202,7 +204,7 @@ const Nav: React.FC = () => {
           />
 
           {/* Mobile Menu */}
-          <div className="absolute top-16 right-0 bg-[#1f1f1f] shadow-xl rounded-md p-6 w-full max-w-md z-50">
+          <div className="absolute top-24 right-0 bg-[#1f1f1f] shadow-xl rounded-md p-6 w-full max-w-md z-50">
             <ul className="flex flex-col space-y-5 text-white font-medium">
               <li className="flex items-center gap-2">
                 <LayoutDashboard size={18} />

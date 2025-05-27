@@ -7,9 +7,11 @@ const Team: React.FC = () => {
   // Sample data for team members
 
   return (
-    <>
-      <Nav2 />
-      <section className=" container mx-auto mt-16 md:mt-20 py-8 px-4 lg:px-8 bg-black">
+    <div className="bg-black min-h-screen">
+      <div className="mb-0">
+        <Nav2 />
+      </div>
+      <section className=" container mx-auto px-4 lg:px-8 pt-36 ">
         <div className="md:w-11/12 mx-auto md:px-8 gap-8">
           {/* CEO Section */}
           <div className=" bg-[#1f1f1f] p-6 rounded-lg shadow-lg">
@@ -53,7 +55,7 @@ const Team: React.FC = () => {
         </div>
       </section>
       <Footer2 />
-    </>
+    </div>
   );
 };
 
