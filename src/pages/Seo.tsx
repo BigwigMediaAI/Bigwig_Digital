@@ -27,11 +27,11 @@ function Seo() {
           <h1 className="text-2xl md:text-5xl font-semibold mb-4 max-w-4xl leading-snug">
             Boost Your Visibility with Leading SEO Services in Delhi!
           </h1>
-          <p className="text-sm md:text-xl italic font-medium max-w-3xl">
+          <h3 className="text-sm md:text-xl italic font-medium max-w-3xl">
             Climb the Google rankings and attract the right audience. Bigwig
             Digital helps your business grow with proven Search Engine
             Optimization strategies.
-          </p>
+          </h3>
         </div>
       </section>
 
@@ -56,9 +56,15 @@ function Seo() {
             </h2>
             <p className="py-6 leading-relaxed">
               Transformational business growth is what you can expect from our
-              SEO services in Delhi. Not just getting uplift in rankings and
-              traffic, but also upliftment in leads & sales! We will manage your
-              entire SEO strategy to be your partners in growth.
+              <a
+                className="px-2 hover:text-blue-400"
+                href="https://www.bigwigdigital.in/"
+              >
+                SEO services in Delhi
+              </a>
+              . Not just getting uplift in rankings and traffic, but also
+              upliftment in leads & sales! We will manage your entire SEO
+              strategy to be your partners in growth.
             </p>
             <h2 className="text-2xl md:text-2xl   pb-2">
               Drive Organic Traffic with the Best SEO Company in India
@@ -84,18 +90,29 @@ function Seo() {
             </h2>
             <p className="py-6 leading-relaxed">
               Creating a visually appealing website is one thing; turning it
-              into a lead-generating machine is another. We are one of the top
-              SEO Company in Delhi, contact us for our affordable SEO Services
-              in India. We are capable of improving the ranking and visibility
-              of your website. We follow a strategic and structured approach so
-              that your website tops the searches with the desired keywords. As
-              a Best SEO Company in Delhi India, BigWig Digital, fully
-              understand how to promote your business on the top of the searches
-              in Google, Bing & Yahoo. We use advanced internet marketing
-              strategy so as to improve your company branding. We use various
-              advanced techniques for link building like blogging, article
-              submission, press release, SEO content writing and various other
-              things in order to improve your visibility.
+              into a lead-generating machine is another. We are one of the{" "}
+              <i className="text-blue-400">
+                <a href="https://www.bigwigdigital.in/">
+                  top SEO Company in Delhi
+                </a>
+              </i>
+              , contact us for our affordable SEO Services in India. We are
+              capable of improving the ranking and visibility of your website.
+              We follow a strategic and structured approach so that your website
+              tops the searches with the desired keywords. As a{" "}
+              <a
+                href="https://www.bigwigdigital.in/"
+                className="italic text-blue-400"
+              >
+                Best SEO Company in Delhi India
+              </a>
+              , BigWig Digital, fully understand how to promote your business on
+              the top of the searches in Google, Bing & Yahoo. We use advanced
+              internet marketing strategy so as to improve your company
+              branding. We use various advanced techniques for link building
+              like blogging, article submission, press release, SEO content
+              writing and various other things in order to improve your
+              visibility.
             </p>
             <h2 className="text-2xl md:text-2xl   pb-2">
               Advanced SEO Strategies For Organic Search Results
@@ -105,8 +122,14 @@ function Seo() {
               SEO is running down in the veins of BigWig Digital, all we are
               masters of the game for the past numerous years. We offer Best SEO
               Service in Delhi that gives you beyond comparable results that
-              cross your imaginations. Being one of the Top SEO Company in
-              India, we apply great strategies that match the need of the Google
+              cross your imaginations. Being one of the{" "}
+              <a
+                href="https://www.bigwigdigital.in/"
+                className="italic text-blue-400"
+              >
+                Top SEO Company in India
+              </a>
+              , we apply great strategies that match the need of the Google
               algorithm and helps you to get the Organic SEO results in
               straightaway. If you think you have any doubt, don’t keep it to
               yourself, let’s do some chit-chat and discuss further. To give a
@@ -118,8 +141,14 @@ function Seo() {
               site which is search engine friendly. We offer SEO Services to our
               client at a pocket-friendly budget. Our SEO team have complete
               hands-on knowledge and expertise in making your site SEO-friendly.
-              Since 2000, we have been recognized as a reputable Digital
-              Marketing Company in Delhi.
+              Since 2000, we have been recognized as a reputable{" "}
+              <a
+                href="https://www.bigwigdigital.in/"
+                className="italic text-blue-400"
+              >
+                Digital Marketing Company in Delhi
+              </a>
+              .
             </p>
           </div>
 
@@ -152,15 +181,22 @@ function Seo() {
             </h2>
             <p className="py-6 leading-relaxed">
               Numerous people have false impression that SEO is just a business
-              formality. Search engine optimization, however, is actually the
-              practice of making a website or online content more visible in
-              search engine results pages (SERPs), mostly on pages like- Google,
-              Yahoo & Bing. Thus, the better the visibility, higher are the
-              chances of appearing in the search queries. An SEO strategy
-              typically includes working on four crucial aspects – 1.) Keyword
-              Analysis 2.) Backlink Building 3.) Content Creation 4.) Technical
-              Maintenance. Regardless of the type of SEO, these aspects are the
-              core of the methodologies at various SEO agencies.
+              formality.{" "}
+              <a
+                href="https://www.bigwigdigital.in/"
+                className="italic text-blue-400"
+              >
+                Search engine optimization
+              </a>
+              , however, is actually the practice of making a website or online
+              content more visible in search engine results pages (SERPs),
+              mostly on pages like- Google, Yahoo & Bing. Thus, the better the
+              visibility, higher are the chances of appearing in the search
+              queries. An SEO strategy typically includes working on four
+              crucial aspects – 1.) Keyword Analysis 2.) Backlink Building 3.)
+              Content Creation 4.) Technical Maintenance. Regardless of the type
+              of SEO, these aspects are the core of the methodologies at various
+              SEO agencies.
             </p>
             <h2 className="text-2xl md:text-2xl   pb-2">
               We have assembled a list of SEO statistics that show its
