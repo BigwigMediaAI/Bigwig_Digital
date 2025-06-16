@@ -177,6 +177,14 @@ const Nav: React.FC = () => {
               <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
             </a>
             <a
+              href="/Our-Work"
+              rel="noopener noreferrer"
+              className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition"
+            >
+              <span className="relative z-10">Our Work</span>
+              <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+            </a>
+            <a
               href="/contact"
               className="relative overflow-hidden group rounded-lg py-2 hover:text-white transition"
             >

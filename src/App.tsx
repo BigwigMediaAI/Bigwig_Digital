@@ -38,7 +38,7 @@ export default function App() {
           element={<WebDesign />}
         />
         <Route path="/google-my-business" element={<GMB />} />
-        <Route path="/gallery" element={<GallerySection />} />
+        <Route path="/Our-Work" element={<GallerySection />} />
       </Routes>
     </Router>
   );

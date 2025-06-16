@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Nav from "../components/Nav";
 import { postItems, PostItem } from "../data/postData";
 import { reelItems, ReelItem } from "../data/reelData";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos";
 
@@ -24,6 +27,10 @@ const GallerySection: React.FC = () => {
   const filteredItems = allItems.filter((item) =>
     activeCategory === "all" ? true : item.type === activeCategory
   );
+
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
 
   return (
     <div className="w-full text-black bg-white">
@@ -55,7 +62,7 @@ const GallerySection: React.FC = () => {
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredItems.map((item, i) =>
             "youtubeId" in item ? (
-              <div key={i} className="text-left">
+              <div key={i} className="text-left" data-aos="fade-up">
                 <div className="overflow-hidden border border-gray-200 shadow">
                   <iframe
                     className="w-full aspect-video"
@@ -76,13 +83,13 @@ const GallerySection: React.FC = () => {
                 </a>
               </div>
             ) : (
-              <div key={i} className="text-left">
+              <div key={i} className="text-left" data-aos="fade-up">
                 <div className="overflow-hidden border border-gray-200 shadow">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-[350px] object-fill"
+                      className="w-full h-[350px] object-fill transition-transform duration-300 transform hover:scale-105"
                       draggable="false"
                     />
                   </a>
