@@ -18,6 +18,7 @@ const filterLabels: { key: Category; label: string }[] = [
 
 const GallerySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const allItems: (PostItem | (ReelItem & { type?: string }))[] = [
     ...postItems,
@@ -62,13 +63,21 @@ const GallerySection: React.FC = () => {
         <div className="grid gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {filteredItems.map((item, i) =>
             "youtubeId" in item ? (
-              <div key={i} className="text-left" data-aos="fade-up">
+              <div
+                key={i}
+                className="text-left"
+                data-aos="fade-up"
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
                 <div className="overflow-hidden border border-gray-200 shadow-lg shadow-gray-500 rounded-md">
                   <iframe
                     className="w-full aspect-video"
-                    src={`https://www.youtube.com/embed/${item.youtubeId}`}
+                    src={`https://www.youtube.com/embed/${
+                      item.youtubeId
+                    }?autoplay=${hoveredIndex === i ? "1" : "0"}&mute=1`}
                     title={item.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="autoplay; encrypted-media"
                     allowFullScreen
                     draggable="false"
                   />
