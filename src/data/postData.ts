@@ -4,7 +4,7 @@ import cgi3 from "../assets/gallery/cgi3.png";
 import cgi4 from "../assets/gallery/cgi4.png";
 import static1 from "../assets/gallery/BigWig Static Post.png";
 import static2 from "../assets/gallery/BigWig Static Post (1).png";
-import static3 from "../assets/gallery/BigWig Static Post (2).png";
+import static3 from "../assets/gallery/Bigwig Static Post (2).png";
 import static4 from "../assets/gallery/BigWig Static Post (3).png";
 import static5 from "../assets/gallery/BigWig Static Post (4).png";
 import static6 from "../assets/gallery/BigWig Static Post (5).png";
