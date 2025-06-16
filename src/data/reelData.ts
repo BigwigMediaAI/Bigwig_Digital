@@ -6,153 +6,132 @@ export type ReelItem = {
 
 export const reelItems: ReelItem[] = [
   {
-    title: "Reel 1",
-    youtubeId: "qzLiAAk0oQY", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/qzLiAAk0oQY?si=yClXxvu6H7ifl4Ya",
+    title: "🌾 Bringing Agriculture to Life with CGI 🎥 ~ At BigWig AI",
+    youtubeId: "oSEKFvnfouE", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/oSEKFvnfouE?si=IRPU6BPiSIJ2LJ-l",
   },
   {
-    title: "Reel 2",
-    youtubeId: "cOm-VeQ_7m8", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/cOm-VeQ_7m8?si=B_pWW_Kpt2Z-dGEs",
+    title:
+      "Crafted with perfection. Presented with passion. 🎥🔥CGI magic by BigWig Digital 💻🎨",
+    youtubeId: "p39KAkRO4o0", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/p39KAkRO4o0?si=qJhILYPKuqSjHfA5",
   },
   {
-    title: "Reel 3",
-    youtubeId: "526SqyZ-aS8", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/526SqyZ-aS8?si=LMGYn09MPX1IKd-9",
+    title:
+      "A stunning CGI creation by BigWig Digital featuring timeless beauty & sparkling diamonds 💖👑",
+    youtubeId: "jfBsSL5reJc", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/jfBsSL5reJc?si=FZRlla4wCF5Bs-_L",
   },
   {
-    title: "Reel 4",
-    youtubeId: "-05c_YPV3B4", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/-05c_YPV3B4?si=Dled03wvV7CPLYq3",
+    title:
+      "💻📊 BigWig Digital is here to boost your brand, grow your audience & drive real results. 💥",
+    youtubeId: "yYyp6xkdcac", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/yYyp6xkdcac?si=LipVuqX1RPDA0boI",
   },
   {
-    title: "Reel 5",
-    youtubeId: "BuoCyQ5nBpY", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/BuoCyQ5nBpY?si=V6IB2CnKuJb9DA0W",
+    title: "🎥💥 Home Loan Approved in RECORD TIME!Tired of rejections? 😩",
+    youtubeId: "bf0Csf9ST0A", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/bf0Csf9ST0A?si=-BiYWU3TJ0vBwXm7",
   },
   {
-    title: "Reel 5",
-    youtubeId: "JMQoXnyhOW0", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/JMQoXnyhOW0?si=Btb9n2OIgscvys8a",
+    title:
+      "Your Dream Home, My Expertise! ✨📈💼 Specialised in getting you the BEST home loans.",
+    youtubeId: "ojVpHQSkZys", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/ojVpHQSkZys?si=oQNhoLUqxeZTHRtj",
   },
   {
-    title: "Reel 6",
-    youtubeId: "ed4seh2guUU", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/ed4seh2guUU?si=spJGV32RAm0388AS",
+    title:
+      "We turn clicks into clients🔥and idea into impact💥. Let Bigwig power your brand’s digital journey! 🌟",
+    youtubeId: "3V6sJ0Rpetk", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/3V6sJ0Rpetk?si=YpO8hWdIJFVsR75q",
   },
   {
-    title: "Reel 7",
-    youtubeId: "w6z_3-PsWSk", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/w6z_3-PsWSk?si=Gx78SeLAjXzJ8RvA",
+    title:
+      "We craft unique, results-driven strategies tailored for chocolate brands to grow 🍫🚀",
+    youtubeId: "og1tZQD_5FQ", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/og1tZQD_5FQ?si=rLcco7HEnj5lQ8rZ",
   },
   {
-    title: "Reel 8",
-    youtubeId: "tDAmxfq9Ea4", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/tDAmxfq9Ea4?si=UrItt9Ieunj3lhQm",
+    title: "Strategy is not just what we do, it’s who we are. 🚀",
+    youtubeId: "ddJNlLrorgY", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/ddJNlLrorgY?si=Pxa4CvC02qq8iPdC",
   },
   {
-    title: "Reel 9",
-    youtubeId: "6o1wBwz0S6o", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/6o1wBwz0S6o?si=a39sLyhnx4ULMEAc",
+    title: ":🥤✨ BigiWg Digital – Stirring Up Sweet Success Online 💡📲",
+    youtubeId: "MYjRc218v3A", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/MYjRc218v3A?si=4sU3vMiHTIktg1js",
   },
   {
-    title: "Reel 10",
-    youtubeId: "F8jGv-_V0jo", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/F8jGv-_V0jo?si=DK2e1cuWpHsBwOOi",
+    title:
+      "📲💥 BigiWg Digital – Masters of the Meta Ad Game 🎯From scroll to sale, we craft high-converting Meta.",
+    youtubeId: "QfoJkqUuq78", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/QfoJkqUuq78?si=knQerNw8SKpqoIPs",
   },
   {
-    title: "Reel 11",
-    youtubeId: "zx0P7WTEtTY", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/zx0P7WTEtTY?si=hkrK4NKpMWFG20t2",
+    title: "We don’t just market desserts we make them irresistible",
+    youtubeId: "9HmeefPiUlc", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/9HmeefPiUlc?si=dn-CgxXyNsc1SEyX",
   },
   {
-    title: "Reel 12",
-    youtubeId: "S_MsfrfP1RQ", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/S_MsfrfP1RQ?si=F9T6oTwZVIJOmWWn",
+    title:
+      "🎬✨ Made by BigiWig Digital– Your Brand's Creative Powerhouse 💡🚀",
+    youtubeId: "sNz0uP4iZyA", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/sNz0uP4iZyA?si=_8VjPWLncWzPrmgz",
   },
   {
-    title: "Reel 13",
-    youtubeId: "UBGtBKBqykA", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/UBGtBKBqykA?si=dTjxQIepH0GzV0yX",
+    title:
+      "Just like a great cup of coffee, your designs should be built to energize.☕💻",
+    youtubeId: "N4jQHIyM-9o", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/N4jQHIyM-9o?si=Nc2q91vdPYJ-V3_w",
   },
   {
-    title: "Reel 14",
-    youtubeId: "nItlyjylnkI", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/nItlyjylnkI?si=LCfbALENsiyIXjtJ",
+    title: "Ready to take your brand to the next level? 🚀",
+    youtubeId: "LqwN13cAFps", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/LqwN13cAFps?si=wzqWe60blZStm6l8",
   },
   {
-    title: "Reel 15",
-    youtubeId: "nItlyjylnkI", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/mOhDIAdJei4?si=S_TlzoluethsH3MG",
+    title:
+      "Bigwig Digital extends warm wishes to all on this auspicious occasion of Eid!",
+    youtubeId: "ACUldIwQAo4", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/ACUldIwQAo4?si=Exn_ty40wpGY_kvS",
   },
   {
-    title: "Reel 16",
-    youtubeId: "JqRlicsMfbI", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/JqRlicsMfbI?si=-69FwbrT1CC-Mhh3",
+    title:
+      "Unlock the Secrets of Digital Ad Management with BigWig Digital 🖥️🚀",
+    youtubeId: "PfG7a6_4-vo", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/PfG7a6_4-vo?si=8FYo8IOYKByMwmbq",
   },
   {
-    title: "Reel 17",
-    youtubeId: "OmjS46uimgw", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/OmjS46uimgw?si=um8acG0-l6hYdrwa",
+    title:
+      "Discover the story behind the strategy that drives clicks 🖱️, conversions 💰, and credibility ✅.",
+    youtubeId: "FuZ9KcIDGXI", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/FuZ9KcIDGXI?si=8bLNwL9QzH7LzKfb",
   },
   {
-    title: "Reel 18",
-    youtubeId: "1hvUZtDrTxE", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/1hvUZtDrTxE?si=RD4KZvpFs9y0kkQ7",
+    title:
+      "Unleash Your Business Potential 📈: All-in-One Digital Marketing Solutions",
+    youtubeId: "aKV5hqBixME", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/aKV5hqBixME?si=k2FTLgi840nfw8RS",
   },
   {
-    title: "Reel 19",
-    youtubeId: "BgxChyhFWj0", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/BgxChyhFWj0?si=w2pm7Mn31pKe7R5g",
+    title: "Unlocking exponential growth through powerful branding strategies.",
+    youtubeId: "LStgi0ve1Rg", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/LStgi0ve1Rg?si=Q2cXJGDBlECVQkQw",
   },
   {
-    title: "Reel 20",
-    youtubeId: "IveLCL2xK7w", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/IveLCL2xK7w?si=QgRHMAjWhIWv6xr2",
+    title:
+      "Transform your business with AI-powered digital ads from Bigwig Digital!",
+    youtubeId: "ujihz-tAQbo", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/ujihz-tAQbo?si=4hGn9oBRlOrBek-O",
   },
   {
-    title: "Reel 20",
-    youtubeId: "YObnOE8utHY", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/YObnOE8utHY?si=RsBkvT85ke3cD5un",
+    title: "🚁 Big Ideas Fly High!At Digital BigWig, we don’t just market",
+    youtubeId: "45iwcz5LndQ", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/45iwcz5LndQ?si=ELsXkfEzpfC1ZaQT",
   },
   {
-    title: "Reel 21",
-    youtubeId: "L9aQrdHPhqw", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/L9aQrdHPhqw?si=VTaNChiNN0YT376i",
-  },
-  {
-    title: "Reel 22",
-    youtubeId: "qf5zibZ8dUg", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/qf5zibZ8dUg?si=qC1lPwY9xI3LAK_c",
-  },
-  {
-    title: "Reel 23",
-    youtubeId: "geHjiz1M9fI", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/geHjiz1M9fI?si=zE9Sb53MlZWK-bhT",
-  },
-  {
-    title: "Reel 24",
-    youtubeId: "Q3XzWhc8Jcg", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/Q3XzWhc8Jcg?si=xmyGV7sABahJXdCs",
-  },
-  {
-    title: "Reel 25",
-    youtubeId: "WfRM7fzzFqc", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/WfRM7fzzFqc?si=XHxB34f9CNnJgHyp",
-  },
-  {
-    title: "Reel 26",
-    youtubeId: "oAJIKAZyQho", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/oAJIKAZyQho?si=LdFyuIhXq40xdma1",
-  },
-  {
-    title: "Reel 27",
-    youtubeId: "cOm-VeQ_7m8", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/cOm-VeQ_7m8?si=Wvph7uD6xclJBymZ",
-  },
-  {
-    title: "Reel 28",
-    youtubeId: "qzLiAAk0oQY", // ← extracted from the shorts URL
-    link: "https://youtube.com/shorts/qzLiAAk0oQY?si=doQlJTMqrWWWNqir",
+    title: "Collaborating with AI to drive business growth",
+    youtubeId: "moou2OWNz4w", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/moou2OWNz4w?si=9wTZd0aVJ3VYR6nl",
   },
 ];

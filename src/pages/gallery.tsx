@@ -63,7 +63,7 @@ const GallerySection: React.FC = () => {
           {filteredItems.map((item, i) =>
             "youtubeId" in item ? (
               <div key={i} className="text-left" data-aos="fade-up">
-                <div className="overflow-hidden border border-gray-200 shadow">
+                <div className="overflow-hidden border border-gray-200 shadow-lg shadow-gray-500 rounded-md">
                   <iframe
                     className="w-full aspect-video"
                     src={`https://www.youtube.com/embed/${item.youtubeId}`}
@@ -84,7 +84,7 @@ const GallerySection: React.FC = () => {
               </div>
             ) : (
               <div key={i} className="text-left" data-aos="fade-up">
-                <div className="overflow-hidden border border-gray-200 shadow">
+                <div className="overflow-hidden border border-gray-200 shadow-lg shadow-gray-500 rounded-md">
                   <a href={item.link} target="_blank" rel="noopener noreferrer">
                     <img
                       src={item.src}
