@@ -11,6 +11,7 @@ import PerformanceMarketing from "./pages/PerformanceMarketing";
 import ORM from "./pages/ORM";
 import WebDesign from "./pages/WebDevelopment";
 import GMB from "./pages/GMB";
+import GallerySection from "./pages/gallery";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           element={<WebDesign />}
         />
         <Route path="/google-my-business" element={<GMB />} />
+        <Route path="/gallery" element={<GallerySection />} />
       </Routes>
     </Router>
   );
