@@ -5,6 +5,12 @@ import { reelItems, ReelItem } from "../data/reelData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+} from "react-icons/fa";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos";
 
@@ -92,17 +98,42 @@ const GallerySection: React.FC = () => {
                 </a>
               </div>
             ) : (
-              <div key={i} className="text-left" data-aos="fade-up">
-                <div className="overflow-hidden border border-gray-200 shadow-lg shadow-gray-500 rounded-md">
-                  <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <div key={i} className="text-left relative" data-aos="fade-up">
+                <div className="overflow-hidden border border-gray-200 shadow-lg shadow-gray-500 rounded-md relative">
+                  <a target="_blank" rel="noopener noreferrer">
                     <img
                       src={item.src}
                       alt={item.alt}
-                      className="w-full h-[350px] object-fill transition-transform duration-300 transform hover:scale-105"
+                      className="w-full md:h-[350px] h-[450px] object-fill transition-transform duration-300 transform hover:scale-105"
                       draggable="false"
                     />
                   </a>
+
+                  {/* Social Media Icons Overlay */}
+                  <div className="absolute top-2 right-2 flex gap-2 z-10">
+                    {item.socials.map((social, index) => {
+                      const iconMap = {
+                        instagram: <FaInstagram className="text-pink-600" />,
+                        facebook: <FaFacebookF className="text-blue-600" />,
+                        twitter: <FaTwitter className="text-blue-400" />,
+                        linkedin: <FaLinkedinIn className="text-blue-700" />,
+                      };
+
+                      return (
+                        <a
+                          key={index}
+                          href={social.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-white p-1 rounded-full shadow-md hover:scale-110 transition-transform"
+                        >
+                          {iconMap[social.platform]}
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
+
                 <a
                   href={item.link}
                   target="_blank"

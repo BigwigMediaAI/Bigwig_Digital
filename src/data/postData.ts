@@ -11,90 +11,126 @@ import static3 from "../assets/gallery/Bigwig Static Post (2).png";
 import static4 from "../assets/gallery/BigWig Static Post (3).png";
 import static5 from "../assets/gallery/BigWig Static Post (4).png";
 import static6 from "../assets/gallery/BigWig Static Post (5).png";
+
+export type SocialPlatform = "facebook" | "twitter" | "linkedin" | "instagram";
+
 export type PostItem = {
   src: string;
   alt: string;
   link: string;
   type: "creative" | "ai" | "cgi";
+  socials: { platform: SocialPlatform; url: string }[];
 };
+
+const socialLinks = [
+  {
+    platform: "instagram",
+    url: "https://www.instagram.com/bigwigmediadigital",
+  },
+  {
+    platform: "facebook",
+    url: "https://www.facebook.com/people/Bigwig-Digital/61575340735142/",
+  },
+  {
+    platform: "twitter",
+    url: "https://x.com/bigwig_digital",
+  },
+  {
+    platform: "linkedin",
+    url: "https://www.linkedin.com/company/bigwig-digital/",
+  },
+] as const;
 
 export const postItems: PostItem[] = [
   {
     src: cgi1,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: cgi2,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "ai",
+    socials: [...socialLinks],
   },
   {
     src: cgi3,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "cgi",
+    socials: [...socialLinks],
   },
   {
     src: cgi4,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "cgi",
+    socials: [...socialLinks],
   },
   {
     src: cgi5,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "cgi",
+    socials: [...socialLinks],
   },
   {
     src: cgi6,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "cgi",
+    socials: [...socialLinks],
   },
   {
     src: cgi7,
     alt: "CGI Post",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    link: socialLinks[0].url,
     type: "cgi",
+    socials: [...socialLinks],
   },
   {
     src: static1,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: static2,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: static3,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: static4,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: static5,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
   {
     src: static6,
-    alt: "creative",
-    link: "https://www.instagram.com/bigwigmediadigital/?igsh=bWJ3dXN1cGxrbW5u#",
+    alt: "Creative",
+    link: socialLinks[0].url,
     type: "creative",
+    socials: [...socialLinks],
   },
 ];
