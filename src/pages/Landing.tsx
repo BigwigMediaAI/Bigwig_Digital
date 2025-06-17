@@ -19,6 +19,7 @@ import Partners from "../components/Partners";
 import Clients2 from "./client2";
 import LocationsSection from "../components/Location";
 import HowWeWork from "../components/HowWeWork";
+// import PopupForm from "../components/PopupForm";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -102,6 +103,7 @@ function Landing() {
           <ContactUs />
         </div>
       </div>
+      {/* <PopupForm /> */}
     </div>
   );
 }
