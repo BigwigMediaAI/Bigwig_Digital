@@ -6,6 +6,12 @@ export type ReelItem = {
 
 export const reelItems: ReelItem[] = [
   {
+    title:
+      "When Liliputians Become Masterchefs! 👨‍🍳🍛North India vs South India on a mini scale #shorts #aiads",
+    youtubeId: "nvl9wlw85L8", // ← extracted from the shorts URL
+    link: "https://youtube.com/shorts/nvl9wlw85L8?si=eYlSXAO1ZW2e48Mt",
+  },
+  {
     title: "🌾 Bringing Agriculture to Life with CGI 🎥 ~ At BigWig AI",
     youtubeId: "oSEKFvnfouE", // ← extracted from the shorts URL
     link: "https://youtube.com/shorts/oSEKFvnfouE?si=IRPU6BPiSIJ2LJ-l",
