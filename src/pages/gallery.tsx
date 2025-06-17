@@ -5,12 +5,8 @@ import { reelItems, ReelItem } from "../data/reelData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaTwitter,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos";
 
@@ -115,7 +111,7 @@ const GallerySection: React.FC = () => {
                       const iconMap = {
                         instagram: <FaInstagram className="text-pink-600" />,
                         facebook: <FaFacebookF className="text-blue-600" />,
-                        twitter: <FaTwitter className="text-blue-400" />,
+                        twitter: <FaXTwitter className="text-blue-400" />,
                         linkedin: <FaLinkedinIn className="text-blue-700" />,
                       };
 
