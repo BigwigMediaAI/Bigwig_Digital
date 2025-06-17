@@ -153,19 +153,17 @@ const Nav: React.FC = () => {
           </li>
 
           {/* Other Sections */}
-          {["about", "faq", "blog", "clients", "method", "Our-Work"].map(
-            (section) => (
-              <li key={section}>
-                <button
-                  className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300"
-                  onClick={() => handleScroll(section)}
-                >
-                  <span className="relative z-10 capitalize">{section}</span>
-                  <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
-                </button>
-              </li>
-            )
-          )}
+          {["about", "faq", "blog", "clients", "method"].map((section) => (
+            <li key={section}>
+              <button
+                className="relative overflow-hidden group rounded-lg px-3 py-2 hover:text-white transition-colors duration-300"
+                onClick={() => handleScroll(section)}
+              >
+                <span className="relative z-10 capitalize">{section}</span>
+                <span className="absolute inset-0 bg-[#1752B4] transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-in-out" />
+              </button>
+            </li>
+          ))}
 
           {/* Extra Links */}
           <li className="flex space-x-3 items-center">
