@@ -134,14 +134,14 @@ const GallerySection: React.FC = () => {
                   </div>
                 </div>
 
-                <a
+                {/* <a
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg font-semibold mt-4 inline-block hover:text-blue-600"
                 >
                   {item.alt}
-                </a>
+                </a> */}
               </div>
             )
           )}
