@@ -10,16 +10,14 @@ import { useState } from "react";
 import Blog from "../components/Blog";
 import ImageSlider from "../components/ImageSlider";
 import ContactUs from "../components/Contact";
-// import { FaRegMessage } from "react-icons/fa6";
-import WhatsAppButton from "../components/FloatingButton";
 import { IoMdClose } from "react-icons/io";
 import Stats from "../components/Stats";
 import { MessageCircle, Phone } from "lucide-react";
 import Partners from "../components/Partners";
-import Clients2 from "./client2";
 import LocationsSection from "../components/Location";
 import HowWeWork from "../components/HowWeWork";
-// import PopupForm from "../components/PopupForm";
+import ContactSidebar from "../components/ContactSidebar";
+import Client from "../components/Clients";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -38,7 +36,7 @@ function Landing() {
       <Hero />
       <Partners />
       <Stats />
-      <Clients2 />
+      <Client />
       <ScrollOverlappingSections />
       <FlipCard />
       <ImageSlider />
@@ -53,15 +51,8 @@ function Landing() {
       <Footer />
 
       {/* WhatsApp and Contact Icon - Hidden on Mobile */}
-      <div className="fixed bottom-0 right-10 flex-col items-center space-y-4 z-50 hidden md:flex">
-        {/* <button
-          onClick={openContactPanel}
-          className="bg-[#1752B4] text-white py-4 px-4 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-110"
-          title="Contact Us"
-        >
-          <FaRegMessage className="size-5" />
-        </button> */}
-        <WhatsAppButton />
+      <div className=" hidden md:flex">
+        <ContactSidebar />
       </div>
 
       {/* Mobile Bottom Buttons */}
@@ -103,7 +94,6 @@ function Landing() {
           <ContactUs />
         </div>
       </div>
-      {/* <PopupForm /> */}
     </div>
   );
 }

@@ -1,35 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
+import "../App.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const stats = [
-  {
-    value: 70,
-    label: "Crazy \n Digital Marketers",
-  },
-  {
-    value: 223,
-    label: "Happy\n Global Clients",
-  },
-  {
-    value: 8,
-    label: "Beautiful\n Years of Experience",
-  },
-  {
-    value: 6,
-    label: "Astonishing\n In-House AI Products",
-  },
-  {
-    value: 5,
-    label: "Stunning\n Worldwide Offices",
-  },
-  {
-    value: 10,
-    label: "Applaudable \nAwards",
-  },
+  { value: 70, label: "Crazy\nDigital Marketers" },
+  { value: 223, label: "Happy\nGlobal Clients" },
+  { value: 8, label: "Beautiful\nYears of Experience" },
+  { value: 6, label: "Astonishing\nIn-House AI Products" },
+  { value: 5, label: "Stunning\nWorldwide Offices" },
+  { value: 10, label: "Applaudable\nAwards" },
 ];
 
 const Stats: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [animatedValues, setAnimatedValues] = useState(stats.map(() => 0));
   const [inView, setInView] = useState(false);
 
@@ -38,7 +23,9 @@ const Stats: React.FC = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setInView(true);
-          setCurrentIndex(0); // Restart animation
+          setAnimatedValues(stats.map(() => 0));
+        } else {
+          setInView(false);
         }
       },
       { threshold: 0.3 }
@@ -49,18 +36,16 @@ const Stats: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (!inView) return;
-
-    const durations = [1500, 2000, 1800, 2200, 2500];
-    const steps = 50;
+    if (!inView || window.innerWidth < 768) return;
 
     stats.forEach((stat, index) => {
       let start = 0;
-      const stepValue = Math.ceil(stat.value / steps);
-      const duration = durations[index] / steps;
+      const steps = 60;
+      const increment = Math.ceil(stat.value / steps);
+      const duration = 1500 / steps;
 
       const interval = setInterval(() => {
-        start += stepValue;
+        start += increment;
         if (start >= stat.value) {
           start = stat.value;
           clearInterval(interval);
@@ -74,47 +59,60 @@ const Stats: React.FC = () => {
     });
   }, [inView]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % stats.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
-    <div ref={sectionRef} className="w-full md:py-4 ">
-      {/* Desktop View */}
-      <div className="hidden md:flex max-w-6xl mx-auto px-4 justify-center text-center">
-        {stats.map((stat, index) => (
-          <div key={index} className="w-1/5 p-4 flex flex-col items-center">
-            <h2 className="text-3xl font-bold text-[#1752B4] dark:text-white">
-              {animatedValues[index]}
-              {"+"}
-            </h2>
-            <p className="whitespace-pre-line text-sm text-white dark:text-gray-400 uppercase mt-2">
-              {stat.label}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      {/* Mobile View - Carousel */}
-      <div className="md:hidden flex justify-center items-center relative overflow-hidden w-full h-32 ">
-        <div
-          className="flex transition-transform ease-in-out duration-500"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
+    <div
+      ref={sectionRef}
+      className="relative bg-cover bg-center bg-no-repeat py-12"
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4">
+        {/* Desktop View */}
+        <div className="hidden md:flex justify-between text-center text-white">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="min-w-full flex flex-col items-center text-center p-4 text-white"
+              className="w-1/6 p-4 flex flex-col items-center backdrop-blur-sm"
             >
-              <h2 className="text-3xl font-bold text-[#1752B4]">
-                {stat.value + "+"}
+              <h2 className="text-4xl font-extrabold text-[var(--primary-color)]">
+                {animatedValues[index]}+
               </h2>
-              <p className="text-md text-white uppercase mt-2">{stat.label}</p>
+              <p className="whitespace-pre-line text-xs font-medium text-gray-200 uppercase mt-2">
+                {stat.label}
+              </p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile View with Slick Slider */}
+        <div className="md:hidden mt-4">
+          <Slider {...sliderSettings}>
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center px-6 text-center"
+              >
+                <div className="bg-white/10 backdrop-blur-md shadow-md rounded-xl p-6 w-72 mx-auto text-white">
+                  <h2 className="text-3xl font-bold text-[var(--primary-color)]">
+                    {stat.value}+
+                  </h2>
+                  <p className="mt-2 text-sm font-medium text-gray-100 uppercase whitespace-pre-line">
+                    {stat.label}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>

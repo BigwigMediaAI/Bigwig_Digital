@@ -82,7 +82,6 @@ const Hero: React.FC = () => {
             <span className="border-r-2 border-blue-300 animate-pulse ml-1"></span>
           </span>
         </h2>
-        <h2 className="text-sm md:text-lg italic mb-6">Powered by AI</h2>
       </div>
     </div>
   );

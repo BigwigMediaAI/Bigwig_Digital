@@ -2,90 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─────────────────────────────────── custom helpers you already had ── */
 .backface-hidden {
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
+
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
 .perspective {
   perspective: 1000px;
 }
+
 .transform-style-preserve-3d {
   transform-style: preserve-3d;
 }
-
-/* index.css */
-.slick-list {
-  overflow: visible;
-}
-/* Base styles for all slides */
-.slick-slide {
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
+.writing-vertical {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
 }
 
-/* Normal images: smaller, blurred, faded */
-.slick-slide img {
-  transform: scale(0.85);
-  opacity: 0.4;
-  filter: blur(2px);
-  transition: all 0.3s ease-in-out;
-  border-radius: 20px;
+.writing-vertical2 {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  line-height: 2.5;
+  text-align: center;
 }
 
-/* Center image: full size, bright, with unique shadow */
-.slick-center img {
-  transform: scale(1.1);
-  opacity: 1;
-  filter: blur(0);
-  z-index: 10;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* 💥 Custom strong shadow */
-  border-radius: 20px;
-}
-
-/* Base styles for all slides */
-.slick-slide {
-  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  justify-content: center;
-}
-
-/* Normal images: smaller, blurred, faded */
-.slick-slide img {
-  transform: scale(0.85);
-  opacity: 0.4;
-  filter: blur(2px);
-  transition: all 0.3s ease-in-out;
-  border-radius: 20px;
-}
-
-/* Center image: full size, bright, with unique shadow */
-.slick-center img {
-  transform: scale(1.1);
-  opacity: 1;
-  filter: blur(0);
-  z-index: 10;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* 💥 Custom strong shadow */
-  border-radius: 20px;
-}
-
-/* ───────────────────────────── depth‑of‑field effect ───────────────── */
-@layer utilities {
-  /* side slides: slightly smaller, blurred & dimmed */
-  .slick-slide img {
-    @apply scale-[0.85] opacity-40 blur-sm transition-all duration-300 ease-in-out;
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
   }
-
-  /* centre slide: larger, crisp, full opacity, on top */
-  .slick-center img {
-    @apply scale-110 opacity-100 blur-0;
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  .slick-center {
-    z-index: 10;
-  }
+.before\:bg-gradient-conic::before {
+  background: conic-gradient(from 0deg, #4e6cba);
+}
+
+.before\:animate-spin-border::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  animation: spinBorder 3s linear infinite;
 }

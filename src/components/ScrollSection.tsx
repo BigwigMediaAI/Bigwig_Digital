@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import social from "../assets/services/social2.mp4";
-import google_ad from "../assets/services/Google-My-Business.mp4";
+// import google_ad from "../assets/services/Google-My-Business.mp4";
 import seo from "../assets/services/seo1.mp4";
 import performance from "../assets/services/Performance Marketing-1.mp4";
 import web from "../assets/services/web-develop.mp4";
@@ -12,7 +12,6 @@ import {
   FaInstagram,
   FaTwitter,
   FaGoogle,
-  FaMapMarkerAlt,
   FaMobileAlt,
   FaShieldAlt,
   FaStar,
@@ -24,7 +23,6 @@ import {
   FaPalette,
   FaCode,
   FaLaptopCode,
-  FaBuilding,
   FaLinkedin,
   FaYahoo,
 } from "react-icons/fa"; // Example icons
@@ -89,7 +87,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
               </div>
 
               {/* Read More button */}
-              <a href={`${section.title}`}>
+              <a href={`/services/${section.title}`}>
                 <button className="mt-8 px-5 py-2 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transition duration-300">
                   Read More
                 </button>
@@ -132,7 +130,7 @@ const ScrollSections: React.FC = () => {
   const sections: Section[] = [
     {
       id: 1,
-      title: "social-media-management",
+      title: "social-media-optimization",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -251,7 +249,7 @@ const ScrollSections: React.FC = () => {
     },
     {
       id: 5,
-      title: "web-desing-and-app-developement",
+      title: "website-design-development",
       backgroundColor: "bg-neutral-950",
       content: (
         <>
@@ -278,33 +276,33 @@ const ScrollSections: React.FC = () => {
         <FaLaptopCode className="text-gray-600 text-4xl" />,
       ],
     },
-    {
-      id: 6,
-      title: "google-my-business",
-      backgroundColor: "bg-neutral-950",
-      content: (
-        <>
-          <h1 className="text-4xl font-bold text-white">Google My Business</h1>
-          <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
-            Elevate Your Local Presence with GMB
-          </div>
-          <p className="mt-4 text-lg text-white leading-relaxed text-justify">
-            Get your business locally & vocally noticed on Google search and
-            maps! With a strategic Google My Business profile, we'll help you
-            attract more local customers, build credibility, and keep your
-            audience engaged. From setup to optimization, we’ll ensure your
-            business shines brightly in your neighborhood and beyond.
-          </p>
-        </>
-      ),
-      image: google_ad,
-      icons: [
-        <FaGoogle className="text-red-500 text-4xl" />,
-        <FaMapMarkerAlt className="text-green-600 text-4xl" />,
-        <FaBuilding className="text-blue-500 text-4xl" />,
-        <FaStar className="text-yellow-400 text-4xl" />,
-      ],
-    },
+    // {
+    //   id: 6,
+    //   title: "google-my-business",
+    //   backgroundColor: "bg-neutral-950",
+    //   content: (
+    //     <>
+    //       <h1 className="text-4xl font-bold text-white">Google My Business</h1>
+    //       <div className="mt-2 inline-flex items-center justify-center py-1 rounded-full italic font-semibold text-white text-sm">
+    //         Elevate Your Local Presence with GMB
+    //       </div>
+    //       <p className="mt-4 text-lg text-white leading-relaxed text-justify">
+    //         Get your business locally & vocally noticed on Google search and
+    //         maps! With a strategic Google My Business profile, we'll help you
+    //         attract more local customers, build credibility, and keep your
+    //         audience engaged. From setup to optimization, we’ll ensure your
+    //         business shines brightly in your neighborhood and beyond.
+    //       </p>
+    //     </>
+    //   ),
+    //   image: google_ad,
+    //   icons: [
+    //     <FaGoogle className="text-red-500 text-4xl" />,
+    //     <FaMapMarkerAlt className="text-green-600 text-4xl" />,
+    //     <FaBuilding className="text-blue-500 text-4xl" />,
+    //     <FaStar className="text-yellow-400 text-4xl" />,
+    //   ],
+    // },
   ];
 
   return (

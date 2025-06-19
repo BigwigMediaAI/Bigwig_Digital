@@ -3,33 +3,15 @@ import {
   faFacebookF,
   faInstagram,
   faLinkedin,
+  faPinterest,
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/bigwig digital logo (11).png";
 import line2 from "../assets/line2.png";
-import { useLocation } from "react-router-dom";
 
 function Footer() {
-  const location = useLocation();
-  const handleScrollToSection = (sectionId: string) => {
-    if (location.pathname !== "/") {
-      // Navigate to landing page with hash
-      window.location.href = `/#${sectionId}`;
-    } else {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        const offset = 120;
-        const sectionTop =
-          section.getBoundingClientRect().top + window.scrollY - offset;
-
-        // Instantly jump to position (no smooth scroll)
-        window.scrollTo({ top: sectionTop, behavior: "auto" });
-      }
-    }
-  };
-
   return (
     <div className="relative">
       <img
@@ -92,15 +74,14 @@ function Footer() {
                 <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   {[
-                    { name: "About Us", id: "about" },
-                    { name: "FAQ", id: "faq" },
+                    { name: "Careers", id: "faq" },
                     { name: "Blogs", id: "blog" },
+                    { name: "FAQ", id: "faq" },
+                    { name: "T&C", id: "faq" },
+                    { name: "Privacy Policy", id: "faq" },
                   ].map((link) => (
                     <li key={link.id}>
-                      <button
-                        onClick={() => handleScrollToSection(link.id)}
-                        className="hover:text-blue-600 transition"
-                      >
+                      <button className="hover:text-blue-600 transition">
                         {link.name}
                       </button>
                     </li>
@@ -108,61 +89,25 @@ function Footer() {
                 </ul>
               </div>
 
-              {/* Resources */}
               <div>
-                <h3 className="text-lg font-semibold mb-3">Services</h3>
+                <h3 className="text-lg font-semibold mb-3">Industries</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>
-                    <a
-                      href="/search-engine-optimization"
-                      className="hover:text-blue-600"
-                    >
-                      Search Engine Optimization
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/performance-marketing"
-                      className="hover:text-blue-600"
-                    >
-                      Performance Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/online-reputation-management"
-                      className="hover:text-blue-600"
-                    >
-                      Online Reputation Management
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/web-desing-and-app-developement"
-                      className="hover:text-blue-600"
-                    >
-                      Web Design & App Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/google-my-business"
-                      className="hover:text-blue-600"
-                    >
-                      Google My Business
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/social-media-management"
-                      className="hover:text-blue-600"
-                    >
-                      Social Media Management
-                    </a>
-                  </li>
+                  {[
+                    { name: "Real Estate Industry" },
+                    { name: "Beauty" },
+                    { name: "Education" },
+                    { name: "Finance/Lending" },
+                    { name: "Healthcare" },
+                    { name: "Manufacturer" },
+                    { name: "Events" },
+                    { name: "Astrology" },
+                  ].map((link, index) => (
+                    <li key={index}>
+                      <button>{link.name}</button>
+                    </li>
+                  ))}
                 </ul>
               </div>
-
               {/* Contact Info */}
               <div>
                 <h3 className="text-lg font-semibold mb-3">Contact Info</h3>
@@ -193,22 +138,32 @@ function Footer() {
                 {
                   icon: faFacebookF,
                   href: "https://www.facebook.com/profile.php?id=61575340735142",
+                  color: "#1877F2",
                 },
                 {
                   icon: faInstagram,
                   href: "https://www.instagram.com/bigwigmediadigital/",
+                  color: "#E1306C",
                 },
                 {
                   icon: faYoutube,
                   href: "https://www.youtube.com/@BigwigDigital2024",
+                  color: "#FF0000",
                 },
                 {
                   icon: faXTwitter,
                   href: "https://x.com/bigwig_digital",
+                  color: "#000000",
                 },
                 {
                   icon: faLinkedin,
                   href: "https://www.linkedin.com/company/106698073/admin/dashboard/",
+                  color: "#0077B5",
+                },
+                {
+                  icon: faPinterest,
+                  href: "https://in.pinterest.com/bigwigmediadigital/",
+                  color: "#E60023",
                 },
               ].map((social, index) => (
                 <a
@@ -216,27 +171,18 @@ function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xl hover:text-blue-600 transition"
+                  className="text-xl transition duration-300"
+                  style={{ color: "#ffffff" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = social.color;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#ffffff";
+                  }}
                 >
                   <FontAwesomeIcon icon={social.icon} />
                 </a>
               ))}
-            </div>
-
-            {/* Footer Links */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <a
-                href="/privacy-policy"
-                className="hover:text-blue-600 transition"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms-of-use"
-                className="hover:text-blue-600 transition"
-              >
-                Terms of Service
-              </a>
             </div>
 
             {/* Copyright */}

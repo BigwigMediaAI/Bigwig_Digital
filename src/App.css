@@ -1,2 +1,4 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+:root {
+  --primary-color: #4e6cba;
+  --secondary-color: #d10b0b;
+}

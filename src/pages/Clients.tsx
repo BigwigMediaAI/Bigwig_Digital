@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Footer2 from "../components/Footer2";
-import Nav2 from "../components/Nav2";
 import "./Clients.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 const images = [
   "https://cdn.freebiesupply.com/logos/large/2x/jw-marriott-hotel-resorts-logo-svg-vector.svg",
@@ -106,9 +106,7 @@ function Clients() {
 
   return (
     <div className="bg-black">
-      <div className="mb-20">
-        <Nav2 />
-      </div>
+      <Nav />
 
       <div className="px-4 py-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
@@ -145,7 +143,7 @@ function Clients() {
           })}
         </div>
       </div>
-      <Footer2 />
+      <Footer />
     </div>
   );
 }

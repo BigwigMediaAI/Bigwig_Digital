@@ -5,13 +5,31 @@ import ContactPage from "./pages/Contact";
 import Clients from "./pages/Clients";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
-import SMM from "./pages/SMM";
-import Seo from "./pages/Seo";
-import PerformanceMarketing from "./pages/PerformanceMarketing";
-import ORM from "./pages/ORM";
-import WebDesign from "./pages/WebDevelopment";
-import GMB from "./pages/GMB";
+
+import Seo from "./pages/services/Seo";
+// import SMM from "./pages/SMM";
+// import PerformanceMarketing from "./pages/PerformanceMarketing";
+// import ORM from "./pages/ORM";
+// import WebDesign from "./pages/WebDevelopment";
+// import GMB from "./pages/GMB";
+import Services from "./pages/Services";
+import SocialMediaMarketing from "./pages/services/SocialMediaMarketing";
+import PerformanceMarketing from "./pages/services/PerformanceMarketing";
+import ContentMarketing from "./pages/services/ContentMarketing";
+import Website from "./pages/services/Website";
+import EmailMarketing from "./pages/services/EmailMarketing";
+import SocialMediaOptimization from "./pages/services/SocialMediaOptimization";
+import GraphicDesigning from "./pages/services/GraphicDesigning";
+import AiAds from "./pages/services/AiAds";
+import LandinPageOptimization from "./pages/services/LandinPageOptimization";
+import AffiliateMarketing from "./pages/services/AffiliateMarketing";
+import VideoShoot from "./pages/services/VideoShoot";
+import PublicRelation from "./pages/services/PublicRelation";
+import InfluencerMarketing from "./pages/services/InfluencerMarketing";
+import OnlineReputationManagement from "./pages/services/OnlineReputationManagement";
 import GallerySection from "./pages/gallery";
+import About from "./pages/About";
+import Blogs from "./pages/Blogs";
 
 export default function App() {
   return (
@@ -19,6 +37,55 @@ export default function App() {
       <Routes>
         {/* Route for Landing Page */}
         <Route path="/" element={<Landing />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/our-works" element={<GallerySection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/services/search-engine-optimization" element={<Seo />} />
+        <Route
+          path="/services/social-media-marketing"
+          element={<SocialMediaMarketing />}
+        />
+        <Route
+          path="/services/performance-marketing"
+          element={<PerformanceMarketing />}
+        />
+        <Route
+          path="/services/content-marketing"
+          element={<ContentMarketing />}
+        />
+        <Route
+          path="/services/website-design-development"
+          element={<Website />}
+        />
+        <Route path="/services/email-marketing" element={<EmailMarketing />} />
+        <Route
+          path="/services/social-media-optimization"
+          element={<SocialMediaOptimization />}
+        />
+        <Route
+          path="/services/graphic-designing"
+          element={<GraphicDesigning />}
+        />
+        <Route path="/services/ai-cgi-marketing" element={<AiAds />} />
+        <Route
+          path="/services/landing-page-optimization"
+          element={<LandinPageOptimization />}
+        />
+        <Route
+          path="/services/affiliate-marketing"
+          element={<AffiliateMarketing />}
+        />
+        <Route path="/services/video-shoot" element={<VideoShoot />} />
+        <Route path="/services/public-relations" element={<PublicRelation />} />
+        <Route
+          path="/services/influencer-marketing"
+          element={<InfluencerMarketing />}
+        />
+        <Route
+          path="/services/online-reputation-management"
+          element={<OnlineReputationManagement />}
+        />
 
         {/* Route for Team Page */}
         <Route path="/team" element={<Team />} />
@@ -26,7 +93,7 @@ export default function App() {
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
-        <Route path="/social-media-management" element={<SMM />} />
+        {/* <Route path="/social-media-management" element={<SMM />} />
         <Route path="/search-engine-optimization" element={<Seo />} />
         <Route
           path="/performance-marketing"
@@ -37,8 +104,7 @@ export default function App() {
           path="/web-desing-and-app-developement"
           element={<WebDesign />}
         />
-        <Route path="/google-my-business" element={<GMB />} />
-        <Route path="/Our-Work" element={<GallerySection />} />
+        <Route path="/google-my-business" element={<GMB />} /> */}
       </Routes>
     </Router>
   );

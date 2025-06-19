@@ -4,8 +4,8 @@ import "react-phone-number-input/style.css";
 import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
-import Footer2 from "../components/Footer2";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -261,7 +261,7 @@ export default function ContactPage() {
           ></iframe>
         </div>
       </div>
-      <Footer2 />
+      <Footer />
     </div>
   );
 }

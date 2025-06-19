@@ -12,7 +12,7 @@ type Category = "all" | "creative" | "ai" | "cgi" | "videos" | "websites";
 
 const filterLabels: { key: Category; label: string }[] = [
   { key: "all", label: "ALL" },
-  { key: "creative", label: "CREATIVE" },
+  { key: "creative", label: "CREATIVES" },
   { key: "ai", label: "AI" },
   { key: "cgi", label: "CGI" },
   { key: "videos", label: "REELS" },
