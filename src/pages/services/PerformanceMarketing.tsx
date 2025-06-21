@@ -136,7 +136,7 @@ function PerformanceMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Top PPC Company in India</title>
+        <title>Top Performance Marketing Company in India</title>
       </Helmet>
       <Nav />
       <section
@@ -149,7 +149,7 @@ function PerformanceMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Top PPC Company in India
+              Top Performance Marketing Company in India
             </h1>
 
             <p
