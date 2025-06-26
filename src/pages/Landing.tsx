@@ -18,7 +18,7 @@ import LocationsSection from "../components/Location";
 import HowWeWork from "../components/HowWeWork";
 import ContactSidebar from "../components/ContactSidebar";
 import Client from "../components/Clients";
-import PopupForm from "../components/PopupForm";
+// import PopupForm from "../components/PopupForm";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
@@ -49,7 +49,7 @@ function Landing() {
 
       <FAQ />
       <LocationsSection />
-      <PopupForm />
+      {/* <PopupForm /> */}
 
       <Footer />
 
