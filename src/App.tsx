@@ -30,8 +30,15 @@ import OnlineReputationManagement from "./pages/services/OnlineReputationManagem
 import GallerySection from "./pages/gallery";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
+import { useEffect } from "react";
+import Clarity from "@microsoft/clarity";
 
 export default function App() {
+  useEffect(() => {
+    if (import.meta.env.PROD) {
+      Clarity.init("s5isgj2moe"); // <-- Replace with your actual Clarity Project ID
+    }
+  }, []);
   return (
     <Router>
       <Routes>
