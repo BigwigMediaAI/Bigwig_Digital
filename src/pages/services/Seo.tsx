@@ -3,6 +3,7 @@ import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import { TypeAnimation } from "react-type-animation";
 import hero from "../../assets/Services hero/SEO HOME PAGE.jpg";
+import seo from "../../assets/services/3.jpg";
 import Footer from "../../components/Footer";
 import {
   BarChart2,
@@ -45,7 +46,7 @@ function Seo() {
   return (
     <div>
       <Helmet>
-        <title>Best SEO Services Company in Delhi NCR</title>
+        <title>Best SEO Company in Delhi NCR</title>
       </Helmet>
       <Nav />
       <section
@@ -58,7 +59,7 @@ function Seo() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Best SEO Services Company in Delhi NCR
+              Best SEO Company in Delhi NCR
             </h1>
 
             <p
@@ -124,7 +125,7 @@ function Seo() {
       </section>
 
       <section className="bg-white dark:bg-black py-12 px-6 md:px-12">
-        <div className="w-5/6 mx-auto">
+        <div className="w-11/12 md:w-5/6 mx-auto">
           {/* Heading */}
           <div className="mb-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
@@ -160,126 +161,60 @@ function Seo() {
               </p>
             </div>
 
-            {/* Right stats with icons */}
-            <div className="grid sm:grid-cols-3 gap-6">
-              {stats.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-100 dark:bg-zinc-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
-                >
-                  <div className="mb-4">{item.icon}</div>
-                  <p className="text-gray-800 dark:text-gray-100 font-medium text-sm">
-                    {item.text}
-                  </p>
-                </div>
-              ))}
+            {/* Right image */}
+            <div className="w-full">
+              <img
+                src={seo}
+                alt="Best SEO Company in Delhi NCR"
+                className="w-full h-[60vh] rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white  py-12 px-4">
-        <div className="w-5/6 mx-auto space-y-10">
-          {/* Heading */}
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-              Drive Organic Traffic with the Best SEO Company in India
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mx-auto text-justify">
-              We are a <strong>Top SEO Agency in Delhi</strong>, offering
-              companies the greatest SEO solutions. BigWig Digital has more than
-              10 years of extensive expertise and has assisted numerous
-              companies in Delhi, India, and other countries in achieving their
-              online marketing objectives and improving their search engine
-              rankings. managing more than 10,000 campaigns with success and
-              keeping a 95% client retention rate.
-            </p>
-          </div>
+      <div className="w-11/12 md:w-5/6 mx-auto flex flex-col md:flex-row items-center gap-8 py-12">
+        {/* Left Content */}
+        <div className="md:w-1/2 space-y-4 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
+            Drive Organic Traffic with the Best SEO Company in India
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
+            We are a{" "}
+            <strong>
+              <a href="https://www.bigwigdigital.in/">
+                Top SEO Agency in Delhi
+              </a>
+            </strong>
+            , offering companies the greatest SEO solutions. BigWig Digital has
+            more than 10 years of extensive expertise and has assisted numerous
+            companies in Delhi, India, and other countries in achieving their
+            online marketing objectives and improving their search engine
+            rankings. Managing more than 10,000 campaigns with success and
+            keeping a 95% client retention rate.
+          </p>
+        </div>
 
-          <div className="space-y-5 text-gray-700 dark:text-gray-300">
-            <h3 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
-              Trusted SEO Company In Delhi, India with 100% Results
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <p className="text-lg text-gray-600 dark:text-gray-300 mx-auto text-justify">
-                Making a website aesthetically pleasing is one thing, but making
-                it a lead-generating tool is quite another. Get in touch with us
-                for our reasonably priced SEO services in India; we are one of
-                the <strong>Best SEO Companies in Delhi</strong>. We are able to
-                raise your website's visibility and ranking. We use a methodical
-                and planned approach to make sure your website ranks highly for
-                the targeted keywords.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mx-auto text-justify">
-                BigWig Digital, the <strong>Best SEO Company in Delhi</strong>,
-                India, is well-versed in how to get your company to rank highly
-                in Google, Bing, and Yahoo searches. We employ cutting-edge
-                internet marketing techniques to enhance your business's
-                reputation. To increase your visibility, we employ a variety of
-                sophisticated link-building strategies, such as press releases,
-                blogging, article submission, SEO content development, and more.
-              </p>
-            </div>
-          </div>
-
-          <div className="space-y-5 text-gray-700 dark:text-gray-300">
-            <h3 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
-              Advanced SEO Strategies For Organic Search Results
-            </h3>
-
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-10">
-              {/* Text Content - 2/3 width on md+ screens */}
-              <div className="md:col-span-2 space-y-5">
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
-                  Since we have been experts in the field for so many years, SEO
-                  is ingrained in <strong>BigWig Digital</strong>. We provide
-                  the <strong>Best SEO Service in Delhi</strong>, with results
-                  that are beyond your expectations. As one of the{" "}
-                  <strong>Best SEO Companies in India</strong>, we use excellent
-                  tactics that meet Google's algorithm requirements and help you
-                  immediately see organic SEO results. Don't keep your doubts to
-                  yourself; instead, let's engage in small talk and continue the
-                  conversation.
-                </p>
-
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
-                  Developing a stunning and expert website that enables you to
-                  sell your goods and services globally is the crucial first
-                  step in launching your online business. Creating a website is
-                  just the first step; making sure your clients can find it is a
-                  completely different task. An SEO-friendly website is
-                  necessary to achieve this. We provide our clients with{" "}
-                  <strong>SEO service at affordable prices.</strong>
-                </p>
-                <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
-                  Our SEO staff is fully equipped with practical knowledge and
-                  skills to optimize your website for search engines. We have
-                  established a solid reputation as a{" "}
-                  <strong>Delhi Digital Marketing Company</strong> since 2015.
+        {/* Right stats with icons */}
+        <div className="md:w-1/2">
+          <div className="grid sm:grid-cols-3 gap-6">
+            {stats.map((item, i) => (
+              <div
+                key={i}
+                className="bg-gray-100 dark:bg-zinc-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
+              >
+                <div className="mb-4">{item.icon}</div>
+                <p className="text-gray-800 dark:text-gray-100 font-medium text-sm">
+                  {item.text}
                 </p>
               </div>
-
-              {/* Highlight Box - 1/3 width */}
-              <div className="bg-[var(--primary-color)] text-white p-8 rounded-2xl shadow-2xl space-y-6">
-                <h3 className="text-2xl font-bold">
-                  Why Choose BigWig Digital?
-                </h3>
-                <ul className="space-y-3 list-disc list-inside text-base">
-                  <li>10+ Years of SEO Expertise</li>
-                  <li>10,000+ Campaigns Managed</li>
-                  <li>95% Client Retention Rate</li>
-                  <li>Affordable SEO Pricing</li>
-                  <li>Cutting-edge Link Building</li>
-                  <li>100% Transparency & Reporting</li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="bg-white dark:bg-black py-12 px-4">
-        <div className="w-5/6 mx-auto space-y-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
             All in One SEO Services Under One Roof
           </h2>

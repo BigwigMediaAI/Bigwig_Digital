@@ -30,15 +30,12 @@ import OnlineReputationManagement from "./pages/services/OnlineReputationManagem
 import GallerySection from "./pages/gallery";
 import About from "./pages/About";
 import Blogs from "./pages/Blogs";
-import { useEffect } from "react";
-import Clarity from "@microsoft/clarity";
+import AdminLayout from "./pages/admin/AdminLayout";
+import AdminBlog from "./pages/admin/AdminBlogs";
+import BlogDetails from "./pages/BlogDetails";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
-  useEffect(() => {
-    if (import.meta.env.PROD) {
-      Clarity.init("s5isgj2moe"); // <-- Replace with your actual Clarity Project ID
-    }
-  }, []);
   return (
     <Router>
       <Routes>
@@ -48,6 +45,7 @@ export default function App() {
         <Route path="/our-works" element={<GallerySection />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:slug" element={<BlogDetails />} />
         <Route path="/services/search-engine-optimization" element={<Seo />} />
         <Route
           path="/services/social-media-marketing"
@@ -100,6 +98,7 @@ export default function App() {
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="*" element={<NotFound />} />
         {/* <Route path="/social-media-management" element={<SMM />} />
         <Route path="/search-engine-optimization" element={<Seo />} />
         <Route
@@ -112,6 +111,9 @@ export default function App() {
           element={<WebDesign />}
         />
         <Route path="/google-my-business" element={<GMB />} /> */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminBlog />} />
+        </Route>
       </Routes>
     </Router>
   );

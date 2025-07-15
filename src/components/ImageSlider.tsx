@@ -147,6 +147,7 @@ export default function ImageSlider() {
             </div>
             <div>
               <p className="font-bold text-lg text-gray-100">Rated 4.8/5</p>
+              <p className="text-gray-400 text-sm">250+ Google Reviews</p>
             </div>
           </div>
           <p className="text-gray-400 mt-4">

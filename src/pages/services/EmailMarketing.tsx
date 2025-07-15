@@ -154,8 +154,8 @@ function EmailMarketing() {
         </div>
       </section>
 
-      <section className="bg-white  py-12 font-raleway">
-        <div className="w-5/6 mx-auto space-y-5 text-center">
+      <section className="bg-white  py-12 ">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-5 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Power Your Brand with Email Marketing That Works
           </h2>
@@ -169,7 +169,12 @@ function EmailMarketing() {
 
           <div className="border text-gray-800 p-6 rounded-2xl text-lg font-medium">
             Whether you're a startup, a growing D2C brand, or an enterprise
-            business, or from any country our email marketing services in India
+            business, or from any country our{" "}
+            <span className="italic">
+              <a href="https://www.bigwigdigital.in/">
+                Email Marketing Services in India{" "}
+              </a>
+            </span>
             are crafted to help you deliver strategically, sell more, advertise
             more and build relationships that actually stays.
           </div>
@@ -226,7 +231,7 @@ function EmailMarketing() {
         </div>
       </section>
 
-      <section className="py-12 w-5/6 mx-auto  bg-white">
+      <section className="py-12 w-11/12 md:w-5/6 mx-auto  bg-white">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">
           Our Email Marketing Services
         </h2>
@@ -268,20 +273,25 @@ function EmailMarketing() {
 
       <section className="bg-white text-gray-800 ">
         {/* 1. Hero / Intro Section */}
-        <div className="py-12  text-center w-5/6 mx-auto space-y-6">
+        <div className="py-12  text-center w-11/12 md:w-5/6 mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Why Brands Trust Email Marketing Services in India
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            Brands across industries are increasingly relying on email marketing
-            services in India for one simple reason, it works. With high ROI,
+            Brands across industries are increasingly relying on Email Marketing
+            Services in India for one simple reason, it works. With high ROI,
             direct reach, and measurable results, email remains one of the most
             effective digital marketing tools.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300">
-            At <strong>BigWig Digital</strong>, a trusted email marketing agency
-            in Delhi, we build meaningful relationships through strategic,
-            personalized, and conversion-focused email campaigns.
+            At <strong>BigWig Digital</strong>, a trusted{" "}
+            <strong>
+              <a href="https://www.bigwigdigital.in/">
+                Email Marketing Agency in Delhi
+              </a>
+            </strong>
+            , we build meaningful relationships through strategic, personalized,
+            and conversion-focused email campaigns.
           </p>
         </div>
 
@@ -417,25 +427,27 @@ function EmailMarketing() {
       <OurProcess />
       <WhyBigwig />
 
-      <div className="bg-[var(--primary-color)] text-white py-16 px-6 md:px-20 text-center space-y-6">
-        {/* Headline */}
-        <h3 className="text-3xl md:text-4xl font-bold">
-          Ready to Make Every Email Count?
-        </h3>
+      <div className="bg-[var(--primary-color)] text-white py-12 text-center ">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-6">
+          {/* Headline */}
+          <h3 className="text-3xl md:text-4xl font-bold">
+            Ready to Make Every Email Count?
+          </h3>
 
-        {/* Main Paragraph */}
-        <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-          If you're looking for a reliable email marketing agency in Delhi,
-          BigWig Digital brings the creativity, strategy, and technology
-          together to deliver results. We help you send smarter emails that your
-          audience actually wants to read, and act on.
-        </p>
+          {/* Main Paragraph */}
+          <p className="max-w-3xl mx-auto text-lg leading-relaxed">
+            If you're looking for a reliable email marketing agency in Delhi,
+            BigWig Digital brings the creativity, strategy, and technology
+            together to deliver results. We help you send smarter emails that
+            your audience actually wants to read, and act on.
+          </p>
 
-        {/* Closing Line */}
-        <p className="max-w-2xl mx-auto text-lg font-semibold">
-          Let’s turn your subscribers into customers and customers into loyal
-          fans.
-        </p>
+          {/* Closing Line */}
+          <p className="max-w-2xl mx-auto text-lg font-semibold">
+            Let’s turn your subscribers into customers and customers into loyal
+            fans.
+          </p>
+        </div>
       </div>
 
       <Footer />

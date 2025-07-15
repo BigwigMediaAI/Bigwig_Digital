@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import hero from "../../assets/Services hero/PPC-1.jpg";
+import ppc from "../../assets/services/7.jpg";
 // import ppc from "../../assets/Services hero/PPC.jpg";
 import { Helmet } from "react-helmet";
 import Slider from "react-slick";
@@ -136,7 +137,7 @@ function PerformanceMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Top Performance Marketing Company in India</title>
+        <title>Top PPC Company in India</title>
       </Helmet>
       <Nav />
       <section
@@ -149,7 +150,7 @@ function PerformanceMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Top Performance Marketing Company in India
+              Top PPC Company in India
             </h1>
 
             <p
@@ -214,35 +215,54 @@ function PerformanceMarketing() {
       </section>
 
       <section className="bg-white text-black dark:text-white py-12">
-        <div className="w-5/6 mx-auto space-y-20">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-20">
           {/* Intro */}
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-              We are Delhi NCR's Top PPC Company
-            </h2>
-            <p className="text-lg mx-auto leading-relaxed text-justify md:text-start">
-              We are Delhi NCR's top PPC company, having been tried and tested.
-              Our PPC specialists constantly work to keep you one step ahead of
-              your rivals by offering top-notch PPC services. With complete
-              transparency, select cost-effective PPC plans specifically
-              designed for Google Ads services, such as Banner Ads, Search Ads,
-              App Installation Ads, YouTube Ads, Lead Generation Ads, Shopping
-              Ads, Campaign Quality Score Impro vement & Modification, Landing
-              Page Design, etc.
-            </p>
-            <p className="text-lg mx-auto leading-relaxed text-justify md:text-start">
-              We are a team of extremely driven, committed, and skilled
-              businesspeople with years of expertise planning and carrying out
-              digital marketing campaigns for a range of businesses and niches.
-              The success of our clientele is our motto.
-            </p>
-            <p className="text-lg  mx-auto leading-relaxed text-justify md:text-start">
-              We firmly think that success comes from smart work that makes a
-              significant difference rather than just hard work. For this
-              reason, we constantly advise our clients to concentrate on their
-              strengths while we take care of their digital marketing
-              requirements.
-            </p>
+
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Left Content */}
+            <div className="space-y-6 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
+                Top PPC Company in Delhi, India
+              </h2>
+              <p className="text-lg leading-relaxed text-justify md:text-left">
+                We are{" "}
+                <strong>
+                  <a href="https://www.bigwigdigital.in/">
+                    {" "}
+                    Delhi NCR's top PPC company
+                  </a>
+                </strong>
+                , having been tried and tested. Our PPC specialists constantly
+                work to keep you one step ahead of your rivals by offering
+                top-notch PPC services. With complete transparency, select
+                cost-effective PPC plans specifically designed for Google Ads
+                services, such as Banner Ads, Search Ads, App Installation Ads,
+                YouTube Ads, Lead Generation Ads, Shopping Ads, Campaign Quality
+                Score Improvement & Modification, Landing Page Design, etc.
+              </p>
+              <p className="text-lg leading-relaxed text-justify md:text-left">
+                We are a team of extremely driven, committed, and skilled
+                businesspeople with years of expertise planning and carrying out
+                digital marketing campaigns for a range of businesses and
+                niches. The success of our clientele is our motto.
+              </p>
+              <p className="text-lg leading-relaxed text-justify md:text-left">
+                We firmly think that success comes from smart work that makes a
+                significant difference rather than just hard work. For this
+                reason, we constantly advise our clients to concentrate on their
+                strengths while we take care of their digital marketing
+                requirements.
+              </p>
+            </div>
+
+            {/* Right Image */}
+            <div>
+              <img
+                src={ppc}
+                alt="Top PPC Company in India"
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
+            </div>
           </div>
 
           {/* Why Choose Us */}
@@ -342,7 +362,7 @@ function PerformanceMarketing() {
       </section>
 
       <section className="bg-gray py-12">
-        <div className="w-5/6 mx-auto">
+        <div className="w-11/12 md:w-5/6 mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-[var(--primary-color)]">
             Benefits of PPC Services for Your Business
           </h2>
@@ -384,7 +404,7 @@ function PerformanceMarketing() {
       <OurProcess />
       <WhyBigwig />
       <section className="py-12 bg-white text-black">
-        <div className="w-5/6 mx-auto space-y-10">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-10">
           <h2 className="text-3xl font-bold text-center text-[var(--primary-color)]">
             How is PPC Service Helpful for New Business?
           </h2>

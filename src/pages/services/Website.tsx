@@ -4,6 +4,7 @@ import Nav from "../../components/Nav";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import hero from "../../assets/Services hero/website.jpg";
+import web from "../../assets/services/1.jpg";
 import {
   BarChart3,
   Code2,
@@ -153,13 +154,13 @@ function Website() {
       </section>
 
       <section className="bg-white dark:bg-black py-12 px-4">
-        <div className="w-11/12 md:w-5/6 mx-auto space-y-8">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-semibold text-center text-[var(--primary-color)] mb-6">
             Best Web Development Company in India to Build Your Online Presence
           </h2>
 
-          {/* Grid Layout */}
+          {/* Two-column layout */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Left Text Block */}
             <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
@@ -167,37 +168,52 @@ function Website() {
                 Words like <strong>“web design”</strong> and{" "}
                 <strong>“web development”</strong> might sound overwhelming, and
                 that’s completely okay! Not everyone is an expert in creating
-                professional websites — that’s where{" "}
-                <span className="text-[var(--primary-color)] font-semibold">
-                  BigWig Digital
-                </span>{" "}
-                steps in.
+                professional websites — that’s where BigWig Digital steps in.
               </p>
               <p>
-                As a reputable web design company in India, we’re here to guide,
-                support, and help you build a powerful online presence. With
-                years of practical experience and a results-driven mindset, we
-                are recognized as one of the top web development companies in
-                Delhi.
+                As a reputable{" "}
+                <strong>
+                  <a href="https://www.bigwigdigital.in/">
+                    web design company in India
+                  </a>
+                </strong>
+                , we’re here to guide, support, and help you build a powerful
+                online presence. With years of practical experience and a
+                results-driven mindset, we are recognized as one of the{" "}
+                <strong>
+                  <a href="https://www.bigwigdigital.in/">
+                    {" "}
+                    top web development companies in Delhi.{" "}
+                  </a>
+                </strong>
               </p>
             </div>
 
-            {/* Right Highlight Box */}
-            <div className="bg-[var(--primary-color)] text-white p-8 md:p-10 rounded-2xl shadow-2xl space-y-6">
-              <h3 className="text-2xl font-bold mb-4">Why Clients Choose Us</h3>
-              <ul className="space-y-4 list-disc text-base">
-                <li>High-quality, mobile-responsive websites.</li>
-                <li>Cost-effective and easy-to-manage web solutions.</li>
-                <li>Attractive, conversion-focused landing pages.</li>
-                <li>SEO-friendly website structures.</li>
-                <li>More than 900 successful projects delivered.</li>
-              </ul>
+            {/* Right Image Block */}
+            <div>
+              <img
+                src={web}
+                alt="Best Web Development Company in India"
+                className="w-full h-[50vh] rounded-xl shadow-lg"
+              />
             </div>
+          </div>
+
+          {/* Highlight Box Below */}
+          <div className="bg-[var(--primary-color)] text-white p-8 md:p-10 rounded-2xl shadow-2xl space-y-6">
+            <h3 className="text-2xl font-bold mb-4">Why Clients Choose Us</h3>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 list-disc list-inside text-base">
+              <li>High-quality, mobile-responsive websites.</li>
+              <li>Cost-effective and easy-to-manage web solutions.</li>
+              <li>Attractive, conversion-focused landing pages.</li>
+              <li>SEO-friendly website structures.</li>
+              <li>More than 900 successful projects delivered.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="py-12 mx-auto w-5/6 ">
+      <section className="py-12 mx-auto w-11/12 md:w-5/6 ">
         {/* Mobile View: Slider */}
         <div className="block lg:hidden">
           <Slider {...settings}>
@@ -260,7 +276,7 @@ function Website() {
       <WhyBigwig />
 
       <section className="bg-white text-black  py-12 px-4">
-        <div className="w-5/6 mx-auto md:text-center text-justify">
+        <div className="w-11/12 md:w-5/6 mx-auto md:text-center text-justify">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight text-[var(--primary-color)] text-center">
             Let's Build Your Digital Future Together
           </h2>

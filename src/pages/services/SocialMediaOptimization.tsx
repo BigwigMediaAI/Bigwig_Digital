@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Nav from "../../components/Nav";
 import hero from "../../assets/Services hero/SMO.jpg";
+import smo from "../../assets/services/4.jpg";
 import { TypeAnimation } from "react-type-animation";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
@@ -152,7 +153,7 @@ function SocialMediaOptimization() {
         </div>
       </section>
 
-      <div className="w-5/6 mx-auto py-12 text-gray-900 space-y-10">
+      <div className="w-11/12 md:w-5/6 mx-auto py-12 text-gray-900 space-y-10">
         {/* Section 1 - Full Width */}
         <div className="text-center md:text-left space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
@@ -162,9 +163,15 @@ function SocialMediaOptimization() {
           <p className="text-lg text-gray-700  mx-auto md:mx-0">
             Your social media profiles are more than just digital pages, they're
             your brand’s voice, vibe, and visibility. At BigWig Digital, a
-            leading SMO agency in Delhi, we help businesses grow organically
-            across platforms like Instagram, Facebook, LinkedIn, Twitter, and
-            more with strategic Social Media Optimization services.
+            leading{" "}
+            <strong>
+              <a href="https://www.bigwigdigital.in/">
+                Social Media Optimization agency in Delhi
+              </a>
+            </strong>
+            , we help businesses grow organically across platforms like
+            Instagram, Facebook, LinkedIn, Twitter, and more with strategic
+            Social Media Optimization services.
           </p>
         </div>
 
@@ -191,10 +198,7 @@ function SocialMediaOptimization() {
               brand makes a lasting impression by keeping your profiles
               consistent, discoverable, and audience-friendly.
             </p>
-          </div>
 
-          {/* Right */}
-          <div className="space-y-4">
             <h3 className="text-xl font-semibold text-[var(--primary-color)]">
               Optimized Profiles = Searchable Brands
             </h3>
@@ -205,10 +209,19 @@ function SocialMediaOptimization() {
               it’s about being noticed, followed, and remembered.
             </p>
           </div>
+
+          {/* Right */}
+          <div>
+            <img
+              src={smo}
+              alt="Social Media Optimization Services in Delhi"
+              className="w-full h-[40vh] rounded-xl shadow-lg"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="w-5/6 mx-auto py-12 space-y-20 text-gray-900">
+      <div className="w-11/12 md:w-5/6 mx-auto py-12 space-y-20 text-gray-900">
         {/* Section: Our Social Media Optimization Services */}
         <div className="space-y-10">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
@@ -348,7 +361,7 @@ function SocialMediaOptimization() {
       <WhyBigwig />
 
       {/* Final Call-to-Action */}
-      <div className=" py-12 px-4">
+      <div className=" py-12 ">
         <div className="w-5/6 mx-auto bg-[var(--primary-color)]/10 border border-[var(--primary-color)] rounded-xl p-6 md:p-8 space-y-4 text-center">
           <h4 className="text-xl font-semibold text-[var(--primary-color)]">
             Let’s Optimize Your Social Presence

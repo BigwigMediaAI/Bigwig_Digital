@@ -5,6 +5,7 @@ import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import { Helmet } from "react-helmet";
 import Hero from "../../assets/Services hero/Graphic Design-3.jpg";
+import design from "../../assets/services/9.jpg";
 
 function GraphicDesigning() {
   return (
@@ -96,8 +97,8 @@ function GraphicDesigning() {
           </div>
         </div>
       </section>
-      <section className="bg-white py-12 px-4">
-        <div className="w-5/6 mx-auto space-y-12">
+      <section className="bg-white py-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-2xl md:text-4xl md:font-bold font-semibold text-[var(--primary-color)]">
               A Creative Graphic Design Agency In Delhi, NCR
@@ -109,7 +110,12 @@ function GraphicDesigning() {
               enterprises, and in order to transform their concepts into
               eye-catching visual experiences, they want a graphic design firm
               that is very imaginative, committed, and hardworking. It has
-              established itself as one of Delhi's top graphic design firms
+              established itself as one of{" "}
+              <strong>
+                <a href="https://www.bigwigdigital.in/">
+                  Delhi's top graphic design firms
+                </a>
+              </strong>{" "}
               thanks to Creative Orion. Whether you are from a local Delhi
               business or the fashion sector, or you are a start-up or
               established brand, we offer graphic design services to everyone.
@@ -123,52 +129,72 @@ function GraphicDesigning() {
               the maxim that "great design leads to great businesses," our team
               of expert graphic designers provides top-notch design support for
               all of your needs, including packaging, adverts, logos, and more.
-              As a graphic design company in Delhi, we offer the best possible
-              design services by utilizing the newest, most advanced software,
-              the creative abilities of our designers, and our knowledge of
-              every industry with essential resources. BigWig Digital provides
-              web design services to customers in India, the United Arab
-              Emirates, New Zealand, and Australia.
+              As a{" "}
+              <span className="italic">
+                <a href="https://www.bigwigdigital.in/">
+                  Graphic Design Company in Delhi
+                </a>
+              </span>{" "}
+              , we offer the best possible design services by utilizing the
+              newest, most advanced software, the creative abilities of our
+              designers, and our knowledge of every industry with essential
+              resources. BigWig Digital provides web design services to
+              customers in India, the United Arab Emirates, New Zealand, and
+              Australia.
             </p>
 
             {/* New Replaced Third Paragraph as Icon List */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-5 text-left">
-              {[
-                {
-                  icon: "🧩",
-                  title: "Complete Design Solutions for Every Industry",
-                  description:
-                    "From startups to established enterprises, we offer a wide range of graphic design services tailored to suit all business verticals.",
-                },
-                {
-                  icon: "💡",
-                  title: "Creative Experts with Proven Experience",
-                  description:
-                    "Our seasoned design professionals understand what works best for your brand and create visuals that leave a lasting impression.",
-                },
-                {
-                  icon: "🎯",
-                  title: "Impactful Designs That Drive Results",
-                  description:
-                    "We craft eye-catching, functional designs that help you communicate effectively with your audience and promote your offerings globally.",
-                },
-                {
-                  icon: "🛠",
-                  title: "Latest Tools, Limitless Innovation",
-                  description:
-                    "Using cutting-edge graphic design tools and techniques, our passionate team delivers high-quality, trend-forward designs every time.",
-                },
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-4 items-start">
-                  <div className="text-3xl">{item.icon}</div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-800">
-                      {item.title}
-                    </h4>
-                    <p className="text-sm text-gray-600">{item.description}</p>
+            <div className="grid md:grid-cols-2 gap-10 items-center py-10">
+              {/* Left: Features Grid */}
+              <div className="grid grid-cols-1 gap-6 text-left">
+                {[
+                  {
+                    icon: "🧩",
+                    title: "Complete Design Solutions for Every Industry",
+                    description:
+                      "From startups to established enterprises, we offer a wide range of graphic design services tailored to suit all business verticals.",
+                  },
+                  {
+                    icon: "💡",
+                    title: "Creative Experts with Proven Experience",
+                    description:
+                      "Our seasoned design professionals understand what works best for your brand and create visuals that leave a lasting impression.",
+                  },
+                  {
+                    icon: "🎯",
+                    title: "Impactful Designs That Drive Results",
+                    description:
+                      "We craft eye-catching, functional designs that help you communicate effectively with your audience and promote your offerings globally.",
+                  },
+                  {
+                    icon: "🛠",
+                    title: "Latest Tools, Limitless Innovation",
+                    description:
+                      "Using cutting-edge graphic design tools and techniques, our passionate team delivers high-quality, trend-forward designs every time.",
+                  },
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4 items-start">
+                    <div className="text-3xl">{item.icon}</div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-800">
+                        {item.title}
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Right: Image */}
+              <div>
+                <img
+                  src={design}
+                  alt="The Best Graphic Design Agency in Delhi"
+                  className="w-full h-[60vh] rounded-xl shadow-lg"
+                />
+              </div>
             </div>
           </div>
 
@@ -228,18 +254,22 @@ function GraphicDesigning() {
               in achieving exceptional brand and commercial visibility. The best
               and most well-known type of advertising is branding, and our
               design makes a strong statement. Any kind of design can be created
-              and curated by BigWig Digital, a top graphic design firm in Delhi
-              NCR, India, the United Arab Emirates, New Zealand, and Australia.
-              All you have to do is present us with your idea, and we will do
-              everything in our power to meet your expectations by providing
-              unmatched graphic design services in a predetermined amount of
-              time.
+              and curated by BigWig Digital, A{" "}
+              <strong>
+                <a href="https://www.bigwigdigital.in/">
+                  Top Graphic Design Firm in Delhi NCR, India
+                </a>
+              </strong>
+              , United Arab Emirates, New Zealand, and Australia. All you have
+              to do is present us with your idea, and we will do everything in
+              our power to meet your expectations by providing unmatched graphic
+              design services in a predetermined amount of time.
             </p>
           </div>
         </div>
       </section>
-      <section className="bg-white py-12 px-4 md:px-10">
-        <div className="w-5/6 mx-auto">
+      <section className="bg-white py-12 ">
+        <div className="w-11/12 md:w-5/6 mx-auto">
           <div className="flex justify-center">
             <h2 className="text-2xl md:text-4xl md:font-bold font-semibold text-[var(--primary-color)] mb-6 text-center max-w-3xl">
               Why Is Professional Graphic Design Essential for Your Business?

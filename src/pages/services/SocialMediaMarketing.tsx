@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import Nav from "../../components/Nav";
 import { TypeAnimation } from "react-type-animation";
 import hero from "../../assets/Services hero/Social Media Marketing-2.jpg";
+import smm from "../../assets/services/5.jpg";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import Footer from "../../components/Footer";
@@ -123,14 +124,14 @@ function SocialMediaMarketing() {
         </div>
       </section>
 
-      <section className="py-12 px-4 space-y-10 text-black dark:text-white">
+      <section className="py-12 space-y-10 text-black dark:text-white">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
           Social Media Marketing Agency in Delhi
         </h2>
 
         {/* Two-column Layout */}
-        <div className="w-5/6 grid md:grid-cols-2 gap-10 items-start mx-auto">
+        <div className="w-11/12 md:w-5/6 mx-auto grid md:grid-cols-2 gap-10 items-start">
           {/* Left Content */}
           <div className="space-y-6 text-md leading-relaxed">
             <p>
@@ -142,25 +143,48 @@ function SocialMediaMarketing() {
             </p>
 
             <p>
-              At BigWig Digital, we go beyond likes and followers, we deliver
-              performance-driven social media ad campaigns designed to get your
-              brand seen, clicked, and remembered. As a trusted social media
-              marketing agency in Delhi, we specialize in creating
-              high-converting paid campaigns across today’s most powerful
-              platforms.
+              <strong>At BigWig Digital</strong>, we go beyond likes and
+              followers, we deliver performance-driven social media ad campaigns
+              designed to get your brand seen, clicked, and remembered. As a
+              trusted{" "}
+              <strong>
+                {" "}
+                <a href="https://www.bigwigdigital.in/">
+                  social media marketing agency in Delhi
+                </a>
+              </strong>
+              , we specialize in creating high-converting paid campaigns across
+              today’s most powerful platforms.
             </p>
 
             <p>
               Whether your goal is brand awareness, lead generation, website
               traffic, app installs, or video views, our expert team crafts
-              data-backed ad strategies that bring measurable results.If you’re
-              looking for expert social media marketing services in India,
-              BigWig Digital is your go-to partner for growth-focused ad
+              data-backed ad strategies that bring measurable results. If you’re
+              looking for expert{" "}
+              <strong>
+                <a href="https://www.bigwigdigital.in/">
+                  {" "}
+                  social media marketing services in India
+                </a>
+              </strong>
+              , BigWig Digital is your go-to partner for growth-focused ad
               solutions.
             </p>
           </div>
 
-          {/* Right Side Box with List */}
+          {/* Right Image */}
+          <div>
+            <img
+              src={smm}
+              alt="Social Media Marketing Agency in Delhi"
+              className="w-full h-[60vh] rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+
+        {/* Box goes below */}
+        <div className="w-11/12 md:w-5/6 mx-auto">
           <div className="bg-[var(--primary-color)] text-white p-6 md:p-8 rounded-xl shadow space-y-4">
             <h3 className="text-2xl font-semibold">
               Why Paid Social Media Ads Matter More Than Ever
@@ -180,7 +204,6 @@ function SocialMediaMarketing() {
               </li>
               <li>
                 To get the most out of every rupee you spend, our results-driven
-                social media marketing agency in India combines audience
                 segmentation, ad creatives, copywriting, analytics, and A/B
                 testing.
               </li>
@@ -189,13 +212,13 @@ function SocialMediaMarketing() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white  text-black ">
+      <section className="py-12 bg-white  text-black ">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">
           Our Paid Social Media Advertising Services
         </h2>
 
-        <div className="w-5/6 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+        <div className="w-11/12 md:w-5/6 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
           {[
             {
               title: "Meta Ads",
@@ -241,7 +264,7 @@ function SocialMediaMarketing() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="w-5/6 mx-auto py-12 space-y-10 px-4">
+      <section className="w-11/12 md:w-5/6 mx-auto py-12 space-y-10">
         <div className="space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Why Choose BigWig Digital for Social Media Advertising?

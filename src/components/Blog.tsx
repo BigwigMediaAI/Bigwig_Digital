@@ -1,130 +1,99 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-type BlogPost = {
+interface BlogPost {
   _id: string;
   title: string;
-  content: string;
-  excerpt: string;
-  image: string;
-  author: string;
-  datePublished: string;
   slug: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  coverImage: string;
   tags: string[];
-  metaDescription: string;
-};
+  datePublished: string;
+  lastUpdated: string;
+}
 
-const Blog = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.hash) {
-      // Delay to ensure DOM is rendered
-      setTimeout(() => {
-        const id = location.hash.replace("#", "");
-        const el = document.getElementById(id);
-        if (el) {
-          const offset = 80;
-          const sectionTop =
-            el.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top: sectionTop, behavior: "auto" });
-        }
-      }, 100); // delay ensures it's mounted
-    }
-  }, [location]);
+const Blogs = () => {
+  const [blogs, setBlogs] = useState<BlogPost[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    AOS.init({
-      duration: 1200,
-      once: false,
-      mirror: false,
-      easing: "ease-in-out",
-    });
-
-    AOS.refresh(); // Ensures animations re-initialize correctly
-  }, []);
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchBlogPosts = async () => {
+    const fetchBlogs = async () => {
       try {
-        const response = await axios.get(
-          `https://bigwigaibackend.onrender.com/api/v1/blog/viewblog`
+        const res = await fetch(
+          "https://bigwigdigitalbackend.onrender.com/viewblog"
         );
-        const sortedPosts = response.data.sort(
-          (a: BlogPost, b: BlogPost) =>
-            new Date(b.datePublished).getTime() -
-            new Date(a.datePublished).getTime()
-        );
-        setBlogPosts(sortedPosts);
-        setLoading(false);
+        const data = await res.json();
+
+        const sorted = data
+          .sort(
+            (a: BlogPost, b: BlogPost) =>
+              new Date(b.datePublished).getTime() -
+              new Date(a.datePublished).getTime()
+          )
+          .slice(0, 4);
+
+        setBlogs(sorted);
       } catch (error) {
-        setError("Failed to fetch blog posts");
-        setLoading(false);
+        console.error("Error fetching blogs:", error);
       }
     };
 
-    fetchBlogPosts();
+    fetchBlogs();
   }, []);
 
   const handlePostClick = (slug: string) => {
-    window.location.href = `https://bigwigmedia.ai/blog/${slug}`;
+    navigate(`/blogs/${slug}`);
   };
-
-  const handleViewAllClick = () => {
-    window.location.href = `https://bigwigmedia.ai/blog`;
-  };
-
-  if (loading)
-    return <div className="text-center text-gray-500">Loading...</div>;
-  if (error) return <div className="text-center text-red-500">{error}</div>;
 
   return (
-    <div id="blog" className="w-11/12 mx-auto px-4 mb-10 py-4">
-      <h1 className="text-5xl font-bold text-white text-center mb-4">
-        Our Trending Blogs
-      </h1>
-      <p className="text-center text-white text-md md:text-xl mb-8">
-        Boost content creation and enhance productivity with{" "}
-        <span className="font-bold">BigwigDigital.</span>
-      </p>
-
-      {/* Cards Grid */}
-      <div className="grid gap-6 grid-cols-2 md:grid-cols-4">
-        {blogPosts.slice(0, 4).map((post) => (
-          <div
-            key={post._id}
-            data-aos="zoom-in"
-            onClick={() => handlePostClick(post.slug)}
-            className="relative bg-white h-[200px] md:h-[300px] rounded-lg overflow-hidden cursor-pointer shadow-lg transform transition-transform duration-300 hover:-rotate-y-6"
-          >
-            <img
-              src={post.image}
-              alt={post.title}
-              className="w-full h-full object-cover hover:scale-110"
-              draggable="false"
-            />
-            <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3">
-              <h2 className="text-sm md:text-lg font-semibold">{post.title}</h2>
-              <p className="text-xs md:text-sm">by {post.author}</p>
-            </div>
+    <div className="bg-black text-white font-raleway font-light py-16">
+      <section className="w-[90%] mx-auto">
+        {blogs.length === 0 ? (
+          <p className="text-center text-gray-400">
+            No blog posts available at the moment.
+          </p>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {blogs.map((post) => (
+              <div
+                key={post._id}
+                className="cursor-pointer relative rounded-lg p-[1.5px] hover:shadow-[0_0_10px_var(--primary-color)] transition"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, #111, var(--primary-color))",
+                }}
+                onClick={() => handlePostClick(post.slug)}
+              >
+                <div className="bg-black rounded-lg h-[340px] flex flex-col overflow-hidden text-left">
+                  <img
+                    src={post.coverImage}
+                    alt={`Cover image for ${post.title}`}
+                    className="w-full h-[160px] object-cover rounded-t-lg"
+                  />
+                  <div className="p-4 flex flex-col flex-grow justify-between">
+                    <div>
+                      <h3 className="text-sm font-semibold text-white mb-1 line-clamp-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-xs text-gray-400 mb-2 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                    <p className="text-xs text-gray-500 italic">
+                      By {post.author} •{" "}
+                      {new Date(post.datePublished).toLocaleDateString()}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
-      <button
-        onClick={handleViewAllClick}
-        className="mt-10 block mx-auto px-6 py-3 bg-blue-700 text-white rounded-lg hover:bg-blue-600 text-sm md:text-base"
-      >
-        View All Blogs
-      </button>
+        )}
+      </section>
     </div>
   );
 };
 
-export default Blog;
+export default Blogs;
