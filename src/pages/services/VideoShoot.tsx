@@ -7,6 +7,7 @@ import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
 import Footer from "../../components/Footer";
 import Slider from "react-slick";
+import ContactForm from "../../components/ContactForm";
 
 const services = [
   {
@@ -112,37 +113,7 @@ function VideoShoot() {
           </div>
 
           {/* Right Form - 1/3 */}
-          <div className="w-full md:w-1/3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg p-6 space-y-4">
-            <h3 className="text-xl font-bold text-white">Get in Touch</h3>
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full px-4 py-2 rounded border border-white/30 bg-transparent text-white placeholder-white/70"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-2 rounded border border-white/30 bg-transparent text-white placeholder-white/70"
-              />
-              <input
-                type="tel"
-                placeholder="Phone"
-                className="w-full px-4 py-2 rounded border border-white/30 bg-transparent text-white placeholder-white/70"
-              />
-              <textarea
-                rows={4}
-                placeholder="Message"
-                className="w-full px-4 py-2 rounded border border-white/30 bg-transparent text-white placeholder-white/70"
-              ></textarea>
-              <button
-                type="submit"
-                className="w-full bg-[var(--primary-color)] text-white py-2 rounded font-semibold hover:bg-opacity-90 transition"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+          <ContactForm />
         </div>
       </section>
 
