@@ -34,6 +34,7 @@ import AdminLayout from "./pages/admin/AdminLayout";
 import AdminBlog from "./pages/admin/AdminBlogs";
 import BlogDetails from "./pages/BlogDetails";
 import NotFound from "./pages/NotFound";
+import Career from "./pages/Career";
 
 export default function App() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/our-works" element={<GallerySection />} />
         <Route path="/about" element={<About />} />
+        <Route path="/Career" element={<Career />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:slug" element={<BlogDetails />} />
         <Route path="/services/search-engine-optimization" element={<Seo />} />
