@@ -35,11 +35,11 @@ import AdminBlog from "./pages/admin/AdminBlogs";
 import BlogDetails from "./pages/BlogDetails";
 import NotFound from "./pages/NotFound";
 import Career from "./pages/Career";
-import CategoryBlogs from "./pages/CategoryBlog";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         {/* Route for Landing Page */}
         <Route path="/" element={<Landing />} />
@@ -47,6 +47,7 @@ export default function App() {
         <Route path="/our-works" element={<GallerySection />} />
         <Route path="/about" element={<About />} />
         <Route path="/Career" element={<Career />} />
+        <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:slug" element={<BlogDetails />} />
         <Route

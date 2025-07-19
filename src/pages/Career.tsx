@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
+import { useNavigate } from "react-router-dom";
+import cover_img from "../assets/ABC (1).svg";
 
 const benefits = [
   {
@@ -21,17 +24,6 @@ const benefits = [
   { title: "Fair Compensation", desc: "We value your talent", icon: "💰" },
 ];
 
-const openings = [
-  {
-    role: "SEO Executive",
-    location: "Delhi NCR",
-    type: "Full-time",
-    mode: "Hybrid",
-    desc: "We're looking for someone who eats, sleeps, and breathes rankings. If that’s you, apply now!",
-  },
-  // Duplicate or more roles can be added here
-];
-
 const process = [
   { title: "Submit your resume", icon: "📄" },
   { title: "Screening", desc: "Telephonic discussion", icon: "📞" },
@@ -40,21 +32,49 @@ const process = [
   { title: "Join Us", desc: "Welcome aboard!", icon: "🎉" },
 ];
 
+interface JobOpening {
+  _id: string;
+  title: string;
+  location: string;
+  jd: string;
+  jobType: string;
+  workMode: string;
+}
+
 const Career = () => {
+  const [jobs, setJobs] = useState<JobOpening[]>([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    fetch("https://bigwigdigitalbackend.onrender.com/api/jobs")
+      .then((res) => res.json())
+      .then((data) => {
+        setJobs(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error fetching jobs:", err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div>
       <Nav />
       <div className="bg-white text-black dark:bg-neutral-900 dark:text-white">
         {/* Hero */}
-        <section
-          className="relative bg-cover bg-center h-[300px] md:h-[400px]"
-          style={{ backgroundImage: "url('/your-hero-image.jpg')" }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center p-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-2">
+        <section className="relative h-[300px] md:h-[400px] overflow-hidden">
+          <img
+            src={cover_img}
+            alt="Hiring Cover"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-center p-4 z-10">
+            <h1 className="text-4xl md:text-5xl font-bold mb-2 text-white">
               We’re Hiring!
             </h1>
-            <p className="text-lg md:text-xl mb-4">
+            <p className="text-lg md:text-xl mb-4 text-white">
               Build the Digital Future With Us
             </p>
             <button className="bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition">
@@ -77,29 +97,40 @@ const Career = () => {
               ))}
             </div>
           </section>
+
           {/* Current Openings */}
           <section className="py-12 px-6 text-center bg-gray-100 dark:bg-neutral-800">
             <h2 className="text-3xl font-bold mb-10">Current Openings</h2>
-            <div className="grid gap-6 md:grid-cols-3">
-              {openings.map((job, index) => (
-                <div
-                  key={index}
-                  className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-md border relative"
-                >
-                  <h4 className="text-xl font-bold mb-3">{job.role}</h4>
-                  <p className="text-sm mb-2">
-                    📍 {job.location} | 🕒 {job.type} | 🌐 {job.mode}
-                  </p>
-                  <p className="text-sm mb-4">{job.desc}</p>
-                  <button className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-300">
-                    Apply Now
-                  </button>
-                  <div className="absolute top-2 left-2 text-2xl">“</div>
-                  <div className="absolute bottom-2 right-2 text-2xl">”</div>
-                </div>
-              ))}
-            </div>
+
+            {loading ? (
+              <p>Loading jobs...</p>
+            ) : jobs.length === 0 ? (
+              <p>No job openings right now. Check back soon!</p>
+            ) : (
+              <div className="grid gap-6 md:grid-cols-3">
+                {jobs.map((job) => (
+                  <div
+                    key={job._id}
+                    className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-md border text-left"
+                  >
+                    <h4 className="text-xl font-bold mb-2">{job.title}</h4>
+                    <p className="text-sm mb-1">📍 {job.location}</p>
+                    <p className="text-sm mb-1">🧾 {job.jobType}</p>
+                    <p className="text-sm mb-1">💼 {job.workMode}</p>
+                    <p className="text-sm mb-4">{job.jd}</p>
+
+                    <button
+                      className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-300"
+                      onClick={() => navigate(`/job/${job._id}`)}
+                    >
+                      Apply Now
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </section>
+
           {/* Hiring Process */}
           <section className="py-12 px-6 text-center">
             <h2 className="text-3xl font-bold mb-10">Our Hiring Process</h2>

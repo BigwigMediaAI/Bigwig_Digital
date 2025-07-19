@@ -10,6 +10,7 @@ import {
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/bigwig digital logo (11).png";
 import line2 from "../assets/line2.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -74,16 +75,19 @@ function Footer() {
                 <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
                 <ul className="space-y-2 text-sm">
                   {[
-                    { name: "Careers", id: "faq" },
-                    { name: "Blogs", id: "blog" },
-                    { name: "FAQ", id: "faq" },
-                    { name: "T&C", id: "faq" },
-                    { name: "Privacy Policy", id: "faq" },
+                    { name: "Careers", path: "/career" },
+                    { name: "Blogs", path: "/blogs" },
+                    { name: "FAQ", path: "/faq" },
+                    { name: "T&C", path: "/terms" },
+                    { name: "Privacy Policy", path: "/privacy-policy" },
                   ].map((link) => (
-                    <li key={link.id}>
-                      <button className="hover:text-blue-600 transition">
+                    <li key={link.path}>
+                      <Link
+                        to={link.path}
+                        className="hover:text-blue-600 transition"
+                      >
                         {link.name}
-                      </button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
