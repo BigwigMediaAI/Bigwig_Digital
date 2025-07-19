@@ -1,9 +1,10 @@
 import { Edit, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import AddBlog from "../../components/AddBlogs";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "../../index.css";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 interface BlogPost {
   _id: string;
@@ -15,34 +16,35 @@ interface BlogPost {
   slug: string;
   coverImage: string;
   tags?: string;
+  category: string;
 }
 
-const toolbarOptions = [
-  ["bold", "italic", "underline", "strike"],
-  [{ color: [] }, { background: [] }],
-  ["blockquote"],
-  [{ list: "ordered" }, { list: "bullet" }],
-  [{ header: [1, 2, 3, 4, 5, 6, false] }],
-  [{ align: [] }],
-  ["link"],
-];
+// const toolbarOptions = [
+//   ["bold", "italic", "underline", "strike"],
+//   [{ color: [] }, { background: [] }],
+//   ["blockquote"],
+//   [{ list: "ordered" }, { list: "bullet" }],
+//   [{ header: [1, 2, 3, 4, 5, 6, false] }],
+//   [{ align: [] }],
+//   ["link"],
+// ];
 
-const API_BASE = "https://bigwigdigitalbackend.onrender.com";
+// const API_BASE = "https://bigwigdigitalbackend.onrender.com";
 
 const AdminBlog = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingBlog, setEditingBlog] = useState<BlogPost | null>(null);
-  const [showContentEditor, setShowContentEditor] = useState(false);
-  const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
-  const [editorContent, setEditorContent] = useState("");
-  const [saving, setSaving] = useState(false);
+  // const [showContentEditor, setShowContentEditor] = useState(false);
+  // const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
+  // const [editorContent, setEditorContent] = useState("");
+  // const [saving, setSaving] = useState(false);
 
   const fetchBlogs = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`${API_BASE}/viewblog`);
+      const res = await fetch(`${baseURL}/viewblog`);
       const data = await res.json();
       setBlogs(data);
     } catch (error) {
@@ -60,7 +62,7 @@ const AdminBlog = () => {
       return;
 
     try {
-      const res = await fetch(`${API_BASE}/${slug}`, {
+      const res = await fetch(`${baseURL}/${slug}`, {
         method: "DELETE",
       });
       const json = await res.json();
@@ -113,19 +115,20 @@ const AdminBlog = () => {
             <table className="w-full table-fixed border-collapse border border-gray-700 text-sm sm:text-base">
               <thead className="bg-[#1e1e1e] text-left">
                 <tr>
-                  <th className="px-2 py-2 border-b border-gray-700 w-36 truncate">
+                  <th className="px-2 py-2 border-b border-gray-700 w-32 truncate">
                     Title
                   </th>
-                  <th className="px-2 py-2 border-b border-gray-700 w-40 truncate">
-                    Excerpt
+
+                  <th className="px-2 py-2 border-b border-gray-700 w-32 truncate">
+                    Category
                   </th>
                   <th className="px-2 py-2 border-b border-gray-700 w-48 truncate">
                     Content
                   </th>
-                  <th className="px-2 py-2 border-b border-gray-700 w-24 truncate">
+                  <th className="px-2 py-2 border-b border-gray-700 w-20 truncate">
                     Author
                   </th>
-                  <th className="px-2 py-2 border-b border-gray-700 w-28 truncate">
+                  <th className="px-2 py-2 border-b border-gray-700 w-20 truncate">
                     Published
                   </th>
                   <th className="px-2 py-2 border-b border-gray-700 w-24 truncate">
@@ -142,16 +145,17 @@ const AdminBlog = () => {
                     <td className="px-2 py-2 truncate whitespace-nowrap">
                       {blog.title}
                     </td>
+
                     <td className="px-2 py-2 truncate whitespace-nowrap">
-                      {blog.excerpt}
+                      {blog.category}
                     </td>
-                    <td className="px-2 py-2 text-white truncate whitespace-nowrap cursor-pointer">
+                    <td className="px-2 py-2 text-white truncate whitespace-nowrap">
                       <div
-                        onClick={() => {
-                          setSelectedBlog(blog);
-                          setEditorContent(blog.content);
-                          setShowContentEditor(true);
-                        }}
+                        // onClick={() => {
+                        //   setSelectedBlog(blog);
+                        //   setEditorContent(blog.content);
+                        //   setShowContentEditor(true);
+                        // }}
                         dangerouslySetInnerHTML={{
                           __html:
                             blog.content.length > 150
@@ -197,7 +201,7 @@ const AdminBlog = () => {
         />
       )}
 
-      {showContentEditor && (
+      {/* {showContentEditor && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center overflow-auto">
           <div className="relative bg-white text-black w-full max-w-3xl mx-4 my-12 p-6 rounded shadow">
             <h3 className="text-lg font-semibold mb-4">Edit Blog Content</h3>
@@ -263,7 +267,7 @@ const AdminBlog = () => {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-const API_BASE = "https://bigwigdigitalbackend.onrender.com";
+// const API_BASE = "https://bigwigdigitalbackend.onrender.com";
 
 interface BlogPost {
   _id?: string;
@@ -11,7 +14,27 @@ interface BlogPost {
   author: string;
   tags?: string;
   coverImage?: string;
+  category: string;
 }
+
+const categoryOptions = [
+  "Search Engine Optimization",
+  "Social Media Marketing",
+  "Performance Marketing",
+  "Content Marketing",
+  "Website Designing & Development",
+  "Email Marketing",
+  "Social Media Optimization",
+  "Graphic Designing",
+  "AI and CGI Marketing",
+  "Landing Page Optimization",
+  "Affiliate Marketing",
+  "Video Shoot",
+  "Public Relations",
+  "Influencer Marketing",
+  "Online Reputation Management",
+  "Digital Marketing",
+];
 
 const AddBlog = ({
   onClose,
@@ -23,17 +46,16 @@ const AddBlog = ({
   existingBlog?: BlogPost | null;
 }) => {
   const [formData, setFormData] = useState({
-    title: existingBlog?.title || "",
-    slug: existingBlog?.slug || "",
-    excerpt: existingBlog?.excerpt || "",
-    content: existingBlog?.content || "",
-    prompt: "",
-    author: existingBlog?.author || "",
-    tags: existingBlog?.tags || "",
+    title: "",
+    slug: "",
+    excerpt: "",
+    content: "",
+    author: "",
+    tags: "",
     coverImage: null as File | null,
+    category: "",
   });
 
-  const [useAI, setUseAI] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
@@ -43,21 +65,30 @@ const AddBlog = ({
         slug: existingBlog.slug,
         excerpt: existingBlog.excerpt,
         content: existingBlog.content,
-        prompt: "",
         author: existingBlog.author,
-        tags: existingBlog?.tags || "",
-        coverImage: null,
+        tags: existingBlog.tags || "",
+        coverImage: null, // reset on load
+        category: existingBlog.category || "",
       });
-      setUseAI(false);
     }
   }, [existingBlog]);
+
+  const toolbarOptions = [
+    ["bold", "italic", "underline", "strike"],
+    [{ color: [] }, { background: [] }],
+    ["blockquote"],
+    [{ list: "ordered" }, { list: "bullet" }],
+    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    [{ align: [] }],
+    ["link", "image"],
+  ];
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
 
-    if (name === "title") {
+    if (name === "title" && !existingBlog) {
       const autoSlug = value
         .toLowerCase()
         .replace(/[^a-z0-9\s]/g, "")
@@ -67,7 +98,7 @@ const AddBlog = ({
       setFormData((prev) => ({
         ...prev,
         title: value,
-        slug: existingBlog ? prev.slug : autoSlug,
+        slug: autoSlug,
       }));
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
@@ -75,7 +106,7 @@ const AddBlog = ({
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
+    if (e.target.files && e.target.files.length > 0) {
       setFormData((prev) => ({ ...prev, coverImage: e.target.files![0] }));
     }
   };
@@ -84,48 +115,38 @@ const AddBlog = ({
     e.preventDefault();
     setSubmitting(true);
 
-    const blogData = new FormData();
-    blogData.append("title", formData.title);
-    blogData.append("slug", formData.slug);
-    blogData.append("excerpt", formData.excerpt);
-    blogData.append("author", formData.author);
-    blogData.append("tags", formData.tags);
-
-    if (useAI) {
-      blogData.append("prompt", formData.prompt);
-    } else {
-      blogData.append("content", formData.content);
-    }
-
-    if (formData.coverImage) {
-      blogData.append("coverImage", formData.coverImage);
-    }
-
     try {
-      const method = existingBlog ? "PUT" : "POST";
-      const endpoint = existingBlog
-        ? `${API_BASE}/${existingBlog.slug}`
-        : `${API_BASE}/add`;
+      const blogData = new FormData();
+      blogData.append("title", formData.title);
+      blogData.append("slug", formData.slug);
+      blogData.append("excerpt", formData.excerpt);
+      blogData.append("content", formData.content);
+      blogData.append("author", formData.author);
+      blogData.append("tags", formData.tags);
+      blogData.append("category", formData.category);
+      if (formData.coverImage) {
+        blogData.append("coverImage", formData.coverImage);
+      }
 
-      const res = await fetch(endpoint, {
-        method,
-        body: blogData,
-      });
+      const res = await fetch(
+        existingBlog ? `${baseURL}/${existingBlog.slug}` : `${baseURL}/add`,
+        {
+          method: existingBlog ? "PUT" : "POST",
+          body: blogData,
+        }
+      );
 
       const data = await res.json();
       if (res.ok) {
-        alert(
-          existingBlog ? "Blog updated successfully" : "Blog added successfully"
-        );
+        alert(existingBlog ? "Blog updated" : "Blog added");
         onSuccess();
         onClose();
       } else {
-        alert(
-          data.error || `Failed to ${existingBlog ? "update" : "add"} blog`
-        );
+        alert(data.error || "Something went wrong");
       }
     } catch (err) {
-      alert(`Error ${existingBlog ? "updating" : "adding"} blog`);
+      alert("Network or server error");
+      console.error(err);
     } finally {
       setSubmitting(false);
     }
@@ -137,7 +158,11 @@ const AddBlog = ({
         <h2 className="text-2xl font-bold mb-4">
           {existingBlog ? "Edit Blog" : "Add New Blog"}
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4"
+          encType="multipart/form-data"
+        >
           <input
             type="text"
             name="title"
@@ -166,45 +191,37 @@ const AddBlog = ({
             required
           />
 
-          {/* AI toggle */}
-          <div className="flex items-center gap-4">
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={!useAI}
-                onChange={() => setUseAI(false)}
-              />
-              Write Content Manually
-            </label>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                checked={useAI}
-                onChange={() => setUseAI(true)}
-              />
-              Generate Using AI
-            </label>
-          </div>
+          <select
+            name="category"
+            className="w-full p-2 border"
+            value={formData.category}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, category: e.target.value }))
+            }
+            required
+          >
+            <option value="">Select Category</option>
+            {categoryOptions.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </select>
 
-          {!useAI ? (
-            <textarea
-              name="content"
-              placeholder="Content (HTML supported)"
-              className="w-full p-2 border h-32"
-              value={formData.content}
-              onChange={handleChange}
-              required
-            />
-          ) : (
-            <textarea
-              name="prompt"
-              placeholder="Enter prompt to generate blog content"
-              className="w-full p-2 border h-32"
-              value={formData.prompt}
-              onChange={handleChange}
-              required
-            />
-          )}
+          <div>
+            <label className="block font-medium mb-2">Blog Content</label>
+            <div className="border rounded overflow-hidden">
+              <ReactQuill
+                theme="snow"
+                value={formData.content}
+                onChange={(value) =>
+                  setFormData((prev) => ({ ...prev, content: value }))
+                }
+                modules={{ toolbar: toolbarOptions }}
+                className="react-quill-editor"
+              />
+            </div>
+          </div>
 
           <input
             type="text"
@@ -243,8 +260,8 @@ const AddBlog = ({
               type="submit"
               className={`px-4 py-2 text-white rounded ${
                 submitting
-                  ? "bg-[var(--primary-color)] cursor-not-allowed"
-                  : "bg-[var(--primary-color)] hover:opacity-90"
+                  ? "bg-gray-500 cursor-not-allowed"
+                  : "bg-blue-600 hover:bg-blue-700"
               }`}
               disabled={submitting}
             >

@@ -51,3 +51,18 @@
   border-radius: inherit;
   animation: spinBorder 3s linear infinite;
 }
+
+.react-quill-editor {
+  height: 250px; /* or whatever you prefer */
+  display: flex;
+  flex-direction: column;
+}
+
+.react-quill-editor .ql-toolbar {
+  flex-shrink: 0;
+}
+
+.react-quill-editor .ql-container {
+  flex: 1;
+  overflow-y: auto;
+}

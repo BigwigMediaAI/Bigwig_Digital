@@ -35,6 +35,7 @@ import AdminBlog from "./pages/admin/AdminBlogs";
 import BlogDetails from "./pages/BlogDetails";
 import NotFound from "./pages/NotFound";
 import Career from "./pages/Career";
+import CategoryBlogs from "./pages/CategoryBlog";
 
 export default function App() {
   return (
@@ -48,6 +49,10 @@ export default function App() {
         <Route path="/Career" element={<Career />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:slug" element={<BlogDetails />} />
+        <Route
+          path="/blogs/category/:categoryName"
+          element={<CategoryBlogs />}
+        />
         <Route path="/services/search-engine-optimization" element={<Seo />} />
         <Route
           path="/services/social-media-marketing"
