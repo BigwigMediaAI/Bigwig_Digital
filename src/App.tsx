@@ -35,6 +35,9 @@ import AdminBlog from "./pages/admin/AdminBlogs";
 import BlogDetails from "./pages/BlogDetails";
 import NotFound from "./pages/NotFound";
 import Career from "./pages/Career";
+import JobDetails from "./pages/JobDetails";
+import CategoryBlogs from "./pages/CategoryBlog";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
