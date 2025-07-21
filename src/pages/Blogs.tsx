@@ -112,7 +112,7 @@ function Blogs() {
                 <div
                   key={blog._id}
                   onClick={() => navigate(`/blogs/${blog.slug}`)}
-                  className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                  className="bg-white  rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
                 >
                   <img
                     src={blog.coverImage}
@@ -121,10 +121,10 @@ function Blogs() {
                   />
                   <div className="p-4">
                     <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">
+                    <p className="text-sm text-gray-600  mb-1">
                       {new Date(blog.datePublished).toLocaleDateString()}
                     </p>
-                    <p className="text-sm text-gray-800 dark:text-gray-300">
+                    <p className="text-sm text-gray-800 ">
                       By <strong>{blog.author}</strong>
                     </p>
                   </div>
@@ -157,7 +157,7 @@ function Blogs() {
 
         {/* Right: Sticky Categories */}
         <div className="w-64 hidden md:block sticky top-24 self-start">
-          <div className="bg-gray-100 dark:bg-gray-900 p-4 rounded shadow">
+          <div className="bg-gray-100  p-4 rounded shadow">
             <h3 className="text-lg font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">
               {categories.map((cat, idx) => (

@@ -41,6 +41,7 @@ const BlogDetails = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [relatedBlogs, setRelatedBlogs] = useState<BlogType[]>([]);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -55,6 +56,16 @@ const BlogDetails = () => {
           setError("Blog not found");
         } else {
           setBlog(found);
+
+          // Set related blogs based on same category, excluding current blog
+          const related = blogList
+            .filter(
+              (b) =>
+                b.slug !== slug &&
+                b.category?.toLowerCase() === found.category?.toLowerCase()
+            )
+            .slice(0, 4); // Limit to 4 blogs
+          setRelatedBlogs(related);
         }
       } catch (err) {
         console.error(err);
@@ -74,7 +85,7 @@ const BlogDetails = () => {
   if (!blog) return null;
 
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white min-h-screen">
+    <div className="bg-white text-black  min-h-screen">
       <Helmet>
         <title>{blog.title}</title>
       </Helmet>
@@ -97,14 +108,14 @@ const BlogDetails = () => {
           />
 
           <div
-            className="prose prose-lg dark:prose-invert max-w-none mb-6"
+            className="prose prose-lg  max-w-none mb-6"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
         </div>
 
         {/* Categories Sidebar */}
         <div className="w-full lg:w-1/3">
-          <div className="sticky top-28 bg-white dark:bg-[var(--bg-color1)] border dark:border-gray-700 p-4 rounded-lg shadow">
+          <div className="sticky top-28 bg-white  border  p-4 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Blog Categories</h2>
             <ul className="space-y-2">
               {categories.map((cat, idx) => (
@@ -126,6 +137,35 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
+
+      {relatedBlogs.length > 0 && (
+        <div className="w-11/12 md:w-5/6 mx-auto my-10">
+          <h2 className="text-2xl font-semibold mb-4">Related Blogs</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {relatedBlogs.map((relBlog) => (
+              <div
+                key={relBlog.slug}
+                className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition cursor-pointer"
+                onClick={() => navigate(`/blogs/${relBlog.slug}`)}
+              >
+                <img
+                  src={relBlog.coverImage}
+                  alt={relBlog.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-2">
+                    {relBlog.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 ">
+                    {new Date(relBlog.datePublished).toLocaleDateString()}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>

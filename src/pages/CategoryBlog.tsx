@@ -169,7 +169,7 @@ function CategoryBlogs() {
         </div>
 
         {/* Right: Category List */}
-        <div className="lg:w-64 bg-gray-100 dark:bg-gray-900 p-4 rounded-sm shrink-0 h-fit lg:sticky top-28">
+        <div className="lg:w-64 bg-gray-100  p-4 rounded-sm shrink-0 h-fit lg:sticky top-28">
           <h2 className="text-xl font-semibold mb-4">Categories</h2>
           <ul className="space-y-2">
             {categories.map((cat, idx) => {

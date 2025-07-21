@@ -1,4 +1,4 @@
-import { Edit, Trash2 } from "lucide-react";
+import { Code, Edit, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import AddBlog from "../../components/AddBlogs";
 // import ReactQuill from "react-quill";
@@ -36,10 +36,9 @@ const AdminBlog = () => {
   const [loading, setLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingBlog, setEditingBlog] = useState<BlogPost | null>(null);
-  // const [showContentEditor, setShowContentEditor] = useState(false);
-  // const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null);
-  // const [editorContent, setEditorContent] = useState("");
-  // const [saving, setSaving] = useState(false);
+  const [showHtmlEditor, setShowHtmlEditor] = useState(false);
+  const [htmlContent, setHtmlContent] = useState("");
+  const [editingSlug, setEditingSlug] = useState<string | null>(null);
 
   const fetchBlogs = async () => {
     setLoading(true);
@@ -149,18 +148,11 @@ const AdminBlog = () => {
                     <td className="px-2 py-2 truncate whitespace-nowrap">
                       {blog.category}
                     </td>
-                    <td className="px-2 py-2 text-white truncate whitespace-nowrap">
+                    <td className="px-2 py-2 text-white">
                       <div
-                        // onClick={() => {
-                        //   setSelectedBlog(blog);
-                        //   setEditorContent(blog.content);
-                        //   setShowContentEditor(true);
-                        // }}
+                        className="max-h-[100px] overflow-hidden text-ellipsis relative"
                         dangerouslySetInnerHTML={{
-                          __html:
-                            blog.content.length > 150
-                              ? blog.content.slice(0, 140) + "..."
-                              : blog.content,
+                          __html: blog.content,
                         }}
                       />
                     </td>
@@ -184,6 +176,16 @@ const AdminBlog = () => {
                       >
                         <Trash2 size={16} />
                       </button>
+                      <button
+                        onClick={() => {
+                          setHtmlContent(blog.content);
+                          setEditingSlug(blog.slug);
+                          setShowHtmlEditor(true);
+                        }}
+                        className="text-yellow-500 hover:text-yellow-600"
+                      >
+                        <Code size={16} />
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -199,6 +201,58 @@ const AdminBlog = () => {
           onSuccess={fetchBlogs}
           existingBlog={editingBlog} // Pass blog if editing
         />
+      )}
+
+      {showHtmlEditor && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
+          <div className="bg-white text-black rounded-lg p-6 w-full max-w-3xl shadow-xl relative">
+            <h2 className="text-xl font-bold mb-4">Edit Blog HTML</h2>
+
+            <textarea
+              value={htmlContent}
+              onChange={(e) => setHtmlContent(e.target.value)}
+              className="w-full h-64 p-3 border border-gray-300 rounded resize-none font-mono text-sm"
+            />
+
+            <div className="flex justify-end gap-2 mt-4">
+              <button
+                onClick={() => {
+                  setShowHtmlEditor(false);
+                  setHtmlContent("");
+                  setEditingSlug(null);
+                }}
+                className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={async () => {
+                  if (!editingSlug) return;
+                  try {
+                    const res = await fetch(`${baseURL}/${editingSlug}`, {
+                      method: "PUT",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ content: htmlContent }),
+                    });
+
+                    if (!res.ok) throw new Error("Failed to update content");
+                    alert("Blog updated successfully");
+                    setShowHtmlEditor(false);
+                    setHtmlContent("");
+                    setEditingSlug(null);
+                    fetchBlogs();
+                  } catch (err) {
+                    alert("Failed to save changes");
+                    console.error(err);
+                  }
+                }}
+                className="bg-[var(--primary-color)] text-white px-4 py-2 rounded hover:opacity-90"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* {showContentEditor && (
