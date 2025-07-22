@@ -108,7 +108,7 @@ const BlogDetails = () => {
           />
 
           <div
-            className="prose prose-lg  max-w-none mb-6"
+            className="prose prose-md  max-w-none mb-6"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
         </div>
