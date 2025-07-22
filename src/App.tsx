@@ -38,6 +38,7 @@ import Career from "./pages/Career";
 import JobDetails from "./pages/JobDetails";
 import CategoryBlogs from "./pages/CategoryBlog";
 import ScrollToTop from "./components/ScrollToTop";
+import FAQ from "./pages/Faq";
 
 export default function App() {
   return (
@@ -108,6 +109,7 @@ export default function App() {
         <Route path="/clients" element={<Clients />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="*" element={<NotFound />} />
         {/* <Route path="/social-media-management" element={<SMM />} />

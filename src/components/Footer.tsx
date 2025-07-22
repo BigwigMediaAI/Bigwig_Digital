@@ -95,7 +95,7 @@ function Footer() {
 
               <div>
                 <h3 className="text-lg font-semibold mb-3">Industries</h3>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm ">
                   {[
                     { name: "Real Estate Industry" },
                     { name: "Beauty" },
@@ -107,7 +107,7 @@ function Footer() {
                     { name: "Astrology" },
                   ].map((link, index) => (
                     <li key={index}>
-                      <button>{link.name}</button>
+                      <p>{link.name}</p>
                     </li>
                   ))}
                 </ul>
