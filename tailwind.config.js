@@ -8,7 +8,7 @@ export default {
     extend: {},
     animation: {
       scroll: "scroll 10s linear infinite",
-    }
+    },
   },
   keyframes: {
     scroll: {
@@ -16,5 +16,5 @@ export default {
       "100%": { transform: "translateX(-100%)" },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
