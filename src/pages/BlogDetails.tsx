@@ -79,7 +79,18 @@ const BlogDetails = () => {
     }
   }, [slug]);
 
-  if (loading) return <div className="pt-40 text-center">Loading...</div>;
+  if (loading)
+    return (
+      <div className="flex flex-col justify-center items-center min-h-screen bg-white">
+        <div
+          className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"
+          role="status"
+          aria-label="Loading"
+        ></div>
+        <p className="text-gray-600 text-lg">Loading blog content...</p>
+      </div>
+    );
+
   if (error)
     return <div className="pt-40 text-center text-red-600">{error}</div>;
   if (!blog) return null;

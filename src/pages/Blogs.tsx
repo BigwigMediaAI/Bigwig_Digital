@@ -40,12 +40,15 @@ function Blogs() {
   const [filteredBlogs, setFilteredBlogs] = useState<BlogPost[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [loading, setLoading] = useState(true);
+
   const blogsPerPage = 6;
 
   const { categoryName } = useParams();
   const navigate = useNavigate();
 
   const fetchBlogs = async () => {
+    setLoading(true);
     try {
       let res;
       if (categoryName) {
@@ -62,6 +65,8 @@ function Blogs() {
       console.error("Failed to fetch blogs", err);
       setBlogs([]);
       setFilteredBlogs([]);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -115,34 +120,47 @@ function Blogs() {
           </div>
 
           {/* Blog Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {currentBlogs.length > 0 ? (
-              currentBlogs.map((blog) => (
-                <div
-                  key={blog._id}
-                  onClick={() => navigate(`/blogs/${blog.slug}`)}
-                  className="bg-white  rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
-                >
-                  <img
-                    src={blog.coverImage}
-                    alt={blog.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
-                    <p className="text-sm text-gray-600  mb-1">
-                      {new Date(blog.datePublished).toLocaleDateString()}
-                    </p>
-                    <p className="text-sm text-gray-800 ">
-                      By <strong>{blog.author}</strong>
-                    </p>
+          {loading ? (
+            <div className="flex flex-col justify-center items-center min-h-screen bg-white">
+              <div
+                className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-2"
+                role="status"
+                aria-label="Loading"
+              ></div>
+              <p className="text-gray-600 text-lg">Loading blog content...</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {currentBlogs.length > 0 ? (
+                currentBlogs.map((blog) => (
+                  <div
+                    key={blog._id}
+                    onClick={() => navigate(`/blogs/${blog.slug}`)}
+                    className="bg-white  rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                  >
+                    <img
+                      src={blog.coverImage}
+                      alt={blog.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4">
+                      <h2 className="text-xl font-semibold mb-2">
+                        {blog.title}
+                      </h2>
+                      <p className="text-sm text-gray-600  mb-1">
+                        {new Date(blog.datePublished).toLocaleDateString()}
+                      </p>
+                      <p className="text-sm text-gray-800 ">
+                        By <strong>{blog.author}</strong>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))
-            ) : (
-              <p className="text-center col-span-3">No blogs found.</p>
-            )}
-          </div>
+                ))
+              ) : (
+                <p className="text-center col-span-3">No blogs found.</p>
+              )}
+            </div>
+          )}
 
           {/* Pagination */}
           {totalPages > 1 && (
