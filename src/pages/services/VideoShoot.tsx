@@ -57,7 +57,15 @@ function VideoShoot() {
   return (
     <div>
       <Helmet>
-        <title>Video Shoot Services in Delhi</title>
+        <title>Professional Video Shoot Services</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/video-shoot"
+        />
+        <meta
+          name="description"
+          content="Engage your audience with high-quality, brand-driven video production and storytelling."
+        />
       </Helmet>
       <Nav />
       <section

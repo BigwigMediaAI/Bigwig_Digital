@@ -33,7 +33,15 @@ function SocialMediaMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Top SMM Company in India</title>
+        <title>Social Media Marketing Experts</title>
+        <meta
+          name="description"
+          content="Drive engagement & growth with targeted social media marketing strategies tailored for your brand."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/social-media-marketing"
+        />
       </Helmet>
       <Nav />
       <section

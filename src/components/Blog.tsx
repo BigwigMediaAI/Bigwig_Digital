@@ -49,6 +49,9 @@ const Blogs = () => {
 
   return (
     <div className="bg-black text-white font-raleway font-light py-16">
+      <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
+        Our Blogs
+      </h1>
       <section className="w-[90%] mx-auto">
         {blogs.length === 0 ? (
           <p className="text-center text-gray-400">

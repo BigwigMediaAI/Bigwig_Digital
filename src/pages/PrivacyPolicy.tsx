@@ -1,150 +1,163 @@
+import { Helmet } from "react-helmet";
 import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="pt-24 md:pt-32 bg-black min-h-screen text-white">
+    <div className="pt-36 md:pt-36 bg-white min-h-screen text-black">
       <div>
         <Nav2 />
+        <Helmet>
+          <title>Privacy Policy</title>
+          <meta
+            name="description"
+            content="Learn how BigWig Digital collects, uses, and protects your data."
+          />
+          <link
+            rel="canonical"
+            href="https://www.bigwigdigital.in/privacy-policy"
+          />
+        </Helmet>
       </div>
-      <div className="bg-black text-white pb-10 px-4 sm:px-8 max-w-5xl mx-auto">
+      <div className=" pb-10 px-4 sm:px-8 max-w-5xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-6">
-          🔐 Privacy Policy
+          Privacy Policy
         </h1>
         <p className="text-center text-sm text-gray-500 mb-10">
-          Last Modified: April 19, 2025
+          Last Modified: July 23, 2025
         </p>
 
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            What Information Do We Collect?
-          </h2>
           <p>
-            We collect information from you when you register on our site or
-            fill out a form. When ordering or registering, you may be asked to
-            enter your name or e-mail address. You may, however, visit our site
-            anonymously.
+            At <b>Bigwig Media Digital</b>., we are dedicated to safeguarding
+            and securing the privacy of our visitors. This Privacy Policy
+            explains what happens to any personal data that you provide to us,
+            or that we collect from you simultaneously you visit our site. We do
+            update this Policy from regularly so please do review this Policy on
+            regular basis. <b>Information We Collect</b> In operating and
+            managing our website we may capture and utilize the following data
+            about you:
           </p>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            What Do We Use Your Information For?
-          </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>To personalize your experience</li>
-            <li>To improve our website based on your feedback</li>
-            <li>To improve customer service and support</li>
             <li>
-              To process transactions — your information will not be sold or
-              shared without your consent, except for the purpose of delivering
-              a purchased product or service.
+              Details about your use of our website including details of your
+              visits such as pages viewed and the resources that you access.
+              Such information should be about traffic data, location data and
+              other communication data.
             </li>
             <li>
-              To send periodic emails related to your order, company news,
-              updates, or promotions. You can unsubscribe at any time using the
-              link in our emails.
+              Information provided willingly by you. For example, when you
+              register for information or purchase of a service.
             </li>
             <li>
-              To administer a contest, promotion, survey, or other site feature
+              Information that you provide when you interact with us by any
+              means.
             </li>
           </ul>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            How Do We Protect Your Information?
-          </h2>
           <p>
-            We implement a variety of security measures to maintain the safety
-            of your personal information when you access your account or submit
-            data.
+            Use of Your Information, we use the information that we collect from
+            you to provide our services based on given information. In addition
+            to this we may use the information for one or more of the following
+            purposes:
           </p>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Do We Use Cookies?</h2>
-          <p>No, we do not use cookies.</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              To provide information to you, on your request, relating to our
+              services.
+            </li>
+            <li>
+              To provide information about other relating services that may be
+              of interest to you. Such additional information will only be
+              provided when you have consented to receive such information.
+            </li>
+            <li>
+              To inform you about any changes to our website and services.
+            </li>
+            <li>
+              To improve our website and customer experience to enable us to
+              personalize your experience while visiting our website.
+            </li>
+            <li>
+              If you have previously purchased any service from us, we may
+              provide to you details of similar service, or other services, that
+              you may be interested in.
+            </li>
+            <li>
+              To administer a contest, promotion, survey or other site features.
+            </li>
+          </ul>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            Do We Disclose Any Information to Outside Parties?
-          </h2>
           <p>
-            We do not sell, trade, or otherwise transfer your personally
-            identifiable information to outside parties. This excludes trusted
-            third parties who assist in operating our website or servicing you,
-            provided they agree to keep this information confidential. We may
-            release your info to comply with the law, enforce site policies, or
-            protect ours or others’ rights, property, or safety. Non-personally
-            identifiable visitor info may be shared for marketing or
-            advertising.
+            Your information, whether public or private, will not be sold,
+            exchanged, transferred, or given to any other person or community
+            for any reason whatsoever, without your consent, other than for the
+            purpose of delivering the purchased service.
+            <b>Storing Your Personal Data</b> Unfortunately, the sending of
+            information via the internet is not totally secure but, on some
+            occasion, such information can be intercepted. We cannot guarantee
+            the security of data that you choose to send us electronically,
+            sending such kind of information is entirely at your own risk. Once
+            we receive your data, we make sure to implement appropriate
+            safeguards to store it securely. <b>Use of Cookies</b> Cookies
+            provide information regarding the computer used by a visitor. We may
+            use cookies to gather information about your computer in order to
+            assist us in improving our website. We may gather information about
+            your general internet use by using the cookie. Where used, these
+            cookies are downloaded to your computer and stored on the computer’s
+            hard drive. Such information will not identify you personally. It is
+            statistical data. This statistical data does not identify any
+            personal details whatsoever You can adjust the settings on your
+            computer to decline any cookies if you wish. This can easily be done
+            by activating the reject cookies setting on your computer. Our
+            advertisers may also use cookies, over which we have no control.
+            Such cookies (if used) would be downloaded once you click on
+            advertisements on our website. <b>Disclosing Your Information</b>,
+            we will not disclose your personal information to any other party
+            other than in accordance with this Privacy Policy and in the
+            circumstances detailed below:
           </p>
         </section>
-
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Third-Party Links</h2>
-          <p>
-            Occasionally, we may include or offer third-party products or
-            services on our website. These sites have separate privacy policies,
-            and we hold no responsibility for their content or activities.
-            However, we aim to protect the integrity of our site and welcome
-            feedback.
-          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              In the event that we sell any or all of our business to the buyer.
+            </li>
+            <li>
+              Where we are legally required by law to disclose your personal
+              information.
+            </li>
+            <li>To further fraud protection and reduce the risk of fraud.</li>
+          </ul>
         </section>
-
         <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            Online Privacy Policy Only
-          </h2>
           <p>
-            This privacy policy applies only to information collected through
-            our website, not offline.
-          </p>
-        </section>
-
-        <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">Your Consent</h2>
-          <p>By using our site, you consent to our privacy policy.</p>
-        </section>
-
-        <section className="mb-6">
-          <h2 className="text-xl font-semibold mb-2">
-            Changes to Our Privacy Policy
-          </h2>
-          <p>
-            If we make changes to our privacy policy, we will post them on this
-            page.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold mb-2">Contacting Us</h2>
-          <p>
-            If you have any questions regarding this privacy policy, you may
-            contact us at:
-          </p>
-          <address className="mt-2 not-italic">
-            Plot # 2 <br />
-            Sanjay Nagar, Gulabi Bagh, <br />
-            Delhi 110007, <br />
-            Email:
-            <a
-              href="mailto:vipul@bigwigmedia.in"
-              className="text-blue-600 hover:underline"
-            >
+            <b>Third Party Links</b> On occasion, we include links to third
+            parties on this website. Where we provide a link, it does not mean
+            that we endorse or approve that site’s policy towards visitor
+            privacy. You should review their privacy policy before sending them
+            any personal data. <b>Online Privacy Policy Only</b> This online
+            privacy policy applies only to information collected through our
+            website and not to information collected offline.
+            <b>Your Consent</b> By using our website, you consent to our privacy
+            policy <b>Contacting Us</b> Please do not hesitate to contact us
+            regarding any matter relating to this Privacy Policy at:
+            www.bigwigdigital.in Bigwig Media Digital, Plot No – 2, Sanjay
+            Nagar, Gulabi Bagh, Delhi – 110007,{" "}
+            <a href="mailto:vipul@bigwigmedia.in" className="text-blue-600">
               vipul@bigwigmedia.in
             </a>
-            <br />
-            Website:
-            <a
-              href="https://www.bigwigdigital.in"
-              className="text-blue-600 hover:underline"
-            >
-              www.bigwigdigital.in
-            </a>
-          </address>
+          </p>
         </section>
       </div>
       <Footer2 />

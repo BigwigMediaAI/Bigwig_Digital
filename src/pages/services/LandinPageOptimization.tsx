@@ -86,7 +86,15 @@ function LandinPageOptimization() {
   return (
     <div>
       <Helmet>
-        <title>Landing Page Optimization Services in Delhi</title>
+        <title>Landing Page Optimization Experts</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/landing-page-optimization"
+        />
+        <meta
+          name="description"
+          content="Optimize your landing pages for better conversions, faster load times, and improved UX."
+        />
       </Helmet>
       <Nav />
       <section

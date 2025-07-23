@@ -58,7 +58,15 @@ function InfluencerMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Influencer Marketing Services in Delhi</title>
+        <title>Influencer Marketing Solutions</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/influencer-marketing"
+        />
+        <meta
+          name="description"
+          content="Connect with influencers who align with your brand to drive real engagement and sales."
+        />
       </Helmet>
       <Nav />
       <section

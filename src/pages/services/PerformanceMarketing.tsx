@@ -138,7 +138,15 @@ function PerformanceMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Top PPC Company in India</title>
+        <title>ROI-Driven Performance Marketing</title>
+        <meta
+          name="description"
+          content="Maximize your ROI with data-driven performance marketing services tailored for your business goals."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/performance-marketing"
+        />
       </Helmet>
       <Nav />
       <section

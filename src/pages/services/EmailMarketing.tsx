@@ -61,7 +61,15 @@ function EmailMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Email Marketing Service in India</title>
+        <title>Result-Driven Email Marketing</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/email-marketing"
+        />
+        <meta
+          name="description"
+          content="Reach your audience with customized email campaigns that drive conversions and brand loyalty."
+        />
       </Helmet>
       <Nav />
       <section

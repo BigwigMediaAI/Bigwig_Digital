@@ -47,7 +47,15 @@ function Seo() {
   return (
     <div>
       <Helmet>
-        <title>Best SEO Company in Delhi NCR</title>
+        <title>SEO Services for Higher Ranking</title>
+        <meta
+          name="description"
+          content="Boost your online visibility and rank higher on search engines with our expert SEO services."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/search-engine-optimization"
+        />
       </Helmet>
       <Nav />
       <section

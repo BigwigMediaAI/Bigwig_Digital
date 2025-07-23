@@ -16,6 +16,7 @@ import smm from "../assets/services/SMM.png";
 import smo from "../assets/services/SMO.png";
 import video from "../assets/services/Video Shoots.png";
 import website from "../assets/services/Website Development.png";
+import { Helmet } from "react-helmet";
 
 const services = [
   {
@@ -158,7 +159,14 @@ function Services() {
   return (
     <div className="min-h-screen bg-white text-black font-raleway">
       <Nav />
-
+      <Helmet>
+        <title>Full Digital Marketing Services</title>
+        <meta
+          name="description"
+          content="Explore our full suite of digital marketing services customized for businesses of all sizes."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/services" />
+      </Helmet>
       {/* Mobile View */}
       <div className="md:hidden px-4 py-8">
         <h2 className="text-3xl font-bold text-center mb-6">
@@ -206,7 +214,7 @@ function Services() {
 
         {/* Scrollable list of service titles */}
         <div className="w-1/4">
-          <div className="sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-hidden hover:overflow-y-auto pr-2 border-r border-gray-700 pr-6">
+          <div className="sticky top-24 max-h-[calc(100vh-6rem)] overflow-y-hidden hover:overflow-y-auto border-r border-gray-700 pr-6">
             <div className="space-y-4">
               {services.map((service, index) => (
                 <div

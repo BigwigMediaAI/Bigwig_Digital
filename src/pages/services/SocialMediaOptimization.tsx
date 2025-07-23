@@ -59,7 +59,15 @@ function SocialMediaOptimization() {
   return (
     <div>
       <Helmet>
-        <title>Social Media Optimization Services in Delhi</title>
+        <title>Social Media Optimization (SMO)</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/social-media-optimization"
+        />
+        <meta
+          name="description"
+          content="Improve your social visibility and engagement with strategic SMO services tailored to your brand."
+        />
       </Helmet>
       <Nav />
       <section

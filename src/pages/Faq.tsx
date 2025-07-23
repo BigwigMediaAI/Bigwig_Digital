@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react"; // Optional: install lucide-react icons
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const faqData = [
   {
@@ -120,6 +121,14 @@ const FAQ = () => {
   return (
     <div>
       <Nav />
+      <Helmet>
+        <title>FAQs - BigWig Digital</title>
+        <meta
+          name="description"
+          content="Have questions? Check out our FAQ section for quick answers to common queries."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/faq" />{" "}
+      </Helmet>
       <div className="md:w-5/6 w-11/12 mx-auto py-16 px-6">
         <h1 className="text-center text-3xl font-serif font-semibold mb-5">
           FAQ

@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useNavigate } from "react-router-dom";
 import cover_img from "../assets/ABC (1).svg";
+import { Helmet } from "react-helmet";
 
 const benefits = [
   {
@@ -62,6 +63,14 @@ const Career = () => {
   return (
     <div>
       <Nav />
+      <Helmet>
+        <title>Careers at BigWig Digital</title>
+        <meta
+          name="description"
+          content="Join our team of digital innovators and build a rewarding career in marketing and tech."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/career" />
+      </Helmet>
       <div className="bg-white text-black dark:bg-neutral-900 dark:text-white">
         {/* Hero */}
         <section className="relative h-[300px] md:h-[400px] overflow-hidden">

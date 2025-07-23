@@ -52,7 +52,15 @@ function OnlineReputationManagement() {
   return (
     <div>
       <Helmet>
-        <title>Online Reputation Management Services in Delhi</title>
+        <title>Online Reputation Management</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/online-reputation-management"
+        />
+        <meta
+          name="description"
+          content="Monitor, manage, and enhance your brand's online image with strategic ORM services."
+        />
       </Helmet>
       <Nav />
       <section

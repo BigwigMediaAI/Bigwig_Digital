@@ -3,6 +3,7 @@ import axios from "axios";
 import Nav from "../components/Nav";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 interface BlogPost {
   _id: string;
@@ -91,6 +92,14 @@ function Blogs() {
   return (
     <div className="min-h-screen bg-white text-black">
       <Nav />
+      <Helmet>
+        <title>BigWig Digital Blog</title>
+        <meta
+          name="description"
+          content="Explore insights, strategies, and trends in digital marketing through our expert-written blogs."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/blogs" />{" "}
+      </Helmet>
       <div className="w-11/12 md:w-5/6 mx-auto py-8 flex gap-6">
         {/* Left: Scrollable Blogs */}
         <div className="flex-1 h-[calc(100vh-120px)] overflow-y-auto pr-4">

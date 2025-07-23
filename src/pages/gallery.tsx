@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos" | "websites";
 
@@ -41,6 +42,14 @@ const GallerySection: React.FC = () => {
   return (
     <div className="w-full text-black bg-white">
       <Nav />
+      <Helmet>
+        <title>Our Work</title>
+        <meta
+          name="description"
+          content="View our portfolio to see how we’ve helped businesses achieve digital success across industries."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/our-works" />{" "}
+      </Helmet>
       <section className="py-5 max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-4">
           <span className="text-[#4E6CBA]">Our</span>{" "}

@@ -12,9 +12,15 @@ function GraphicDesigning() {
   return (
     <div>
       <Helmet>
-        <title>
-          Transform Your Ideas With The Best Graphic Design Agency in Delhi
-        </title>
+        <title>Professional Graphic Designing</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/graphic-designing"
+        />
+        <meta
+          name="description"
+          content="Stand out with unique, creative, and impactful graphic design solutions for digital and print."
+        />
       </Helmet>
       <Nav />
       <section

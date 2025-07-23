@@ -99,9 +99,15 @@ function ContentMarketing() {
   return (
     <div>
       <Helmet>
-        <title>
-          Content Marketing Services in Delhi That Speak for Your Brand
-        </title>
+        <title>Creative Content Marketing Agency</title>
+        <meta
+          name="description"
+          content="Grow organically with impactful content marketing strategies that attract, engage, and convert."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/content-marketing"
+        />
       </Helmet>
       <Nav />
       <section

@@ -76,7 +76,15 @@ function Website() {
     <div>
       <Nav />
       <Helmet>
-        <title>Best Website Designing & Development Company in Delhi NCR</title>
+        <title>Website Design & Development</title>
+        <meta
+          name="description"
+          content="Build user-friendly and high-converting websites with our expert design and development team."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/website-design-development"
+        />
       </Helmet>
 
       <section

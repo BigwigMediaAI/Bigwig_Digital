@@ -1,9 +1,18 @@
+import { Helmet } from "react-helmet";
 import Nav from "../components/Nav";
 
 function About() {
   return (
     <div className="bg-white dark:bg-[var(--bg-color1)] text-gray-800 dark:text-white">
       <Nav />
+      <Helmet>
+        <title>About BigWig Digital</title>
+        <meta
+          name="description"
+          content="Learn about BigWig Digital, our mission, team, and approach to delivering digital success."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/about" />{" "}
+      </Helmet>
       <div className="max-w-5xl mx-auto px-6 py-12">
         {/* About Us */}
         <section className="mb-12">
@@ -11,60 +20,24 @@ function About() {
             About Us
           </h1>
           <p className="mb-4">
-            Bigwig Media Digital is a 360° digital marketing company dedicated
-            to transforming brands into industry leaders. With over 8 years of
-            experience, we’ve been consistently helping businesses grow, engage
-            audiences, and stay ahead in the digital landscape.
-          </p>
-          <p className="mb-2">
-            With a data-driven approach, creative mindset and relevant
-            strategies we specialize in:
-          </p>
-          <ul className="list-disc ml-6 space-y-1 mb-4">
-            <li>
-              Search Engine Optimisation
-              <ul className="list-[square] ml-5">
-                <li>Local SEO</li>
-                <li>On-Page SEO</li>
-                <li>Off-Page SEO</li>
-                <li>Technical SEO</li>
-                <li>App Store Optimisation (ASO)</li>
-                <li>Answer Engine Optimisation (AEO)</li>
-                <li>Generative Engine Optimisation (GEO)</li>
-                <li>E-Commerce</li>
-              </ul>
-            </li>
-            <li>
-              Social Media Marketing
-              <ul className="list-[square] ml-5">
-                <li>Meta Ads</li>
-                <li>TikTok Ads</li>
-                <li>Twitter Ads</li>
-                <li>LinkedIn Ads</li>
-                <li>Snapchat Ads</li>
-                <li>Pinterest</li>
-                <li>YouTube Ads</li>
-              </ul>
-            </li>
-            <li>Performance Marketing (Google Ads)</li>
-            <li>Content Creation</li>
-            <li>Brand Strategy</li>
-            <li>E-mail Marketing</li>
-            <li>Graphic Design</li>
-            <li>AI & CGI Ads</li>
-            <li>Landing Page Optimization</li>
-            <li>Affiliate Marketing</li>
-            <li>Video Shoot</li>
-            <li>Public Relations (PR)</li>
-            <li>Influencer Marketing</li>
-            <li>Online Reputation Management (ORM)</li>
-          </ul>
-          <p>
-            Whether you're a startup looking to make an impression or an
-            established business aiming to scale, our team delivers measurable
-            results that drive growth, engage audiences, and ROI. At Bigwig, we
-            don’t just market, we build digital experiences that connect,
-            convert, and create impact.
+            Based in New Delhi, India, we are a thriving digital media agency.
+            Experienced and diligent social bees who live and breathe digital
+            make up our team. Algorithm changes on Google, YouTube, Instagram,
+            Facebook, and Twitter? Don't worry,, we know about it as soon as
+            it's released. We provide a rich digital experience for our clients
+            by fusing our years of experience in developing integrated social
+            solutions with creative output. We believe that we conduct research,
+            produce, and strive to provide our clients with the best solutions
+            for all of their issues. The goal of Bigwig Media Digital, a 360°
+            digital marketing firm, is to turn brands into market leaders. With
+            more than eight years of expertise, we have continuously assisted
+            companies in expanding, interacting with customers, and maintaining
+            their competitive edge in the digital market. Our team produces
+            quantifiable outcomes that stimulate growth, engage audiences, and
+            return on investment, regardless of whether you're a startup trying
+            to make an impression or an established company hoping to grow.
+            Bigwig creates digital experiences that engage, convert, and have an
+            impact we Don't just market.
           </p>
         </section>
 
@@ -85,7 +58,7 @@ function About() {
               and growth potential.
             </li>
             <li>
-              <strong>Expert Team, Real Results:</strong> Our team of seasoned
+              <strong>Expert Team, Real Results:</strong>Our team of seasoned
               marketers, dynamic creatives, and analysts combine deep industry
               knowledge with cutting-edge tools to deliver measurable outcomes.
             </li>
@@ -113,12 +86,17 @@ function About() {
             What We Do
           </h2>
           <p>
-            At Bigwig Digital, we help brands grow, engage audiences, and
-            convert in the digital world. From SEO and social media to paid ads,
-            content creation, and web strategy — we craft data-driven campaigns
-            and strategies that deliver real, live results. Whether you're
-            building your brand or boosting sales, we deliver smart digital
-            solutions tailored to your goals.
+            We are working with clients from India, U.A.E. New Zealand,
+            Australia etc across verticals like ecommerce, technology, retail
+            and events across verticals like ecommerce, technology, retail and
+            events. At Bigwig Digital, we help brands grow, engage audiences,
+            and convert in the digital world. From SEO and social media to paid
+            ads, content creation, and web strategy — we craft data-driven
+            campaigns and strategies that deliver real, live results. Whether
+            you're building your brand or boosting sales, we deliver smart
+            digital solutions tailored to your goals. We are hungry for
+            creativity and passionate about driving results. Our clients below
+            can attest to our efforts!
           </p>
         </section>
 
@@ -150,7 +128,7 @@ function About() {
             deliver meaningful impact, build strong digital foundations, and be
             a trusted partner for every brand we work with.
           </p>
-          <p className="mt-6 italic text-right">
+          {/* <p className="mt-6 italic text-right">
             Thank you for being a part of our journey.
             <br />
             <strong>
@@ -160,7 +138,7 @@ function About() {
               <br />
               Founder, Bigwig Digital
             </strong>
-          </p>
+          </p> */}
         </section>
       </div>
     </div>

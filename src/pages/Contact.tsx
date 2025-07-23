@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -87,7 +88,14 @@ export default function ContactPage() {
   return (
     <div className=" bg-black min-h-screen text-white">
       <Nav />
-
+      <Helmet>
+        <title>Contact BigWig Digital</title>
+        <meta
+          name="description"
+          content="Get in touch with BigWig Digital for your next big digital marketing transformation."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/contact" />{" "}
+      </Helmet>
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-8  text-white">
         <div className="pt-4">
           <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>

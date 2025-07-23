@@ -98,7 +98,15 @@ function PublicRelation() {
   return (
     <div>
       <Helmet>
-        <title>Public Relations Services in Delhi</title>
+        <title>Public Relations Services</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/public-relations"
+        />
+        <meta
+          name="description"
+          content="Build your brand reputation with strategic PR solutions that deliver lasting media exposure."
+        />
       </Helmet>
       <Nav />
       <section

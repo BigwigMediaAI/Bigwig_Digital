@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { Helmet } from "react-helmet";
 
 const images = [
   "https://cdn.freebiesupply.com/logos/large/2x/jw-marriott-hotel-resorts-logo-svg-vector.svg",
@@ -107,7 +108,14 @@ function Clients() {
   return (
     <div className="bg-black">
       <Nav />
-
+      <Helmet>
+        <title>Our Clients</title>
+        <meta
+          name="description"
+          content="Discover the brands and businesses we’ve proudly partnered with for digital transformation."
+        />
+        <link rel="canonical" href="https://www.bigwigdigital.in/clients" />
+      </Helmet>
       <div className="px-4 py-8 max-w-6xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
           {images.map((img, index) => {

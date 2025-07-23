@@ -108,7 +108,15 @@ function AffiliateMarketing() {
   return (
     <div>
       <Helmet>
-        <title>Affiliate Marketing Services in Delhi</title>
+        <title>Affiliate Marketing Management</title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/affiliate-marketing"
+        />
+        <meta
+          name="description"
+          content="Grow your business through powerful affiliate partnerships and expert campaign tracking."
+        />
       </Helmet>
       <Nav />
       <section

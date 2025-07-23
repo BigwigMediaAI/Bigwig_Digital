@@ -20,7 +20,15 @@ function AiAds() {
   return (
     <div>
       <Helmet>
-        <title>CGI Advertising Company in India</title>
+        <title>AI & CGI Marketing Solutions</title>
+        <meta
+          name="description"
+          content="Leverage next-gen AI and CGI marketing tools for immersive, futuristic brand experiences."
+        />
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/services/ai-cgi-marketing"
+        />
       </Helmet>
       <Nav />
       <section
