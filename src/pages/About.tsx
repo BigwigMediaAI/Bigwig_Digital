@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Nav from "../components/Nav";
+import ceo from "../assets/ceo.png";
 
 function About() {
   return (
@@ -101,44 +102,45 @@ function About() {
         </section>
 
         {/* Founder’s Message */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4 text-[var(--primary-color)]">
-            From the Founder’s Desk
-          </h2>
-          <p>
-            <strong>Vipul Dutta, Founder – Bigwig Digital</strong>
-          </p>
-          <p className="mt-2">
-            At Bigwig Digital, our purpose has always been well-defined: to
-            empower brands in navigating the ever-evolving digital landscape
-            with confidence, creativity, and measurable results.
-          </p>
-          <p className="mt-2">
-            When I started this journey over a decade ago, digital marketing was
-            still finding its place. Today, it’s at the core of how brands
-            engage with their audience, and we take pride in being part of that
-            transformation.
-          </p>
-          <p className="mt-4">
-            Bigwig Digital isn’t just a company — it’s a team of passionate
-            thinkers, creators, and strategists who believe in turning bold
-            ideas into real business growth. We don’t chase trends; we create
-            solutions that last, rooted in data, creativity, and purpose. As we
-            continue to grow and evolve, our commitment remains the same: to
-            deliver meaningful impact, build strong digital foundations, and be
-            a trusted partner for every brand we work with.
-          </p>
-          {/* <p className="mt-6 italic text-right">
-            Thank you for being a part of our journey.
-            <br />
-            <strong>
-              Warm regards,
-              <br />
-              Vipul Dutta
-              <br />
-              Founder, Bigwig Digital
-            </strong>
-          </p> */}
+        <section className="flex flex-col md:flex-row items-start gap-6 md:gap-10 my-10">
+          {/* CEO Image - Left */}
+          <div className="w-full md:w-1/3">
+            <img
+              src={ceo}
+              alt="Vipul Dutta - Founder of Bigwig Digital"
+              className="w-full h-auto rounded-xl shadow-lg object-cover"
+            />
+          </div>
+
+          {/* Text Content - Right */}
+          <div className="w-full md:w-2/3">
+            <h2 className="text-2xl font-semibold mb-4 text-[var(--primary-color)]">
+              From the Founder’s Desk
+            </h2>
+            <p>
+              <strong>Vipul Dutta, Founder – Bigwig Digital</strong>
+            </p>
+            <p className="mt-2">
+              At Bigwig Digital, our purpose has always been well-defined: to
+              empower brands in navigating the ever-evolving digital landscape
+              with confidence, creativity, and measurable results.
+            </p>
+            <p className="mt-2">
+              When I started this journey over a decade ago, digital marketing
+              was still finding its place. Today, it’s at the core of how brands
+              engage with their audience, and we take pride in being part of
+              that transformation.
+            </p>
+            <p className="mt-4">
+              Bigwig Digital isn’t just a company — it’s a team of passionate
+              thinkers, creators, and strategists who believe in turning bold
+              ideas into real business growth. We don’t chase trends; we create
+              solutions that last, rooted in data, creativity, and purpose. As
+              we continue to grow and evolve, our commitment remains the same:
+              to deliver meaningful impact, build strong digital foundations,
+              and be a trusted partner for every brand we work with.
+            </p>
+          </div>
         </section>
       </div>
     </div>
