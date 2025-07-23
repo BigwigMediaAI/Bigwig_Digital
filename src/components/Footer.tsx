@@ -78,7 +78,7 @@ function Footer() {
                     { name: "Careers", path: "/career" },
                     { name: "Blogs", path: "/blogs" },
                     { name: "FAQ", path: "/faq" },
-                    { name: "T&C", path: "/terms" },
+                    { name: "T&C", path: "/terms-and-condition" },
                     { name: "Privacy Policy", path: "/privacy-policy" },
                   ].map((link) => (
                     <li key={link.path}>

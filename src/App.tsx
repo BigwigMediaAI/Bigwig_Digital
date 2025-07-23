@@ -110,7 +110,7 @@ export default function App() {
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/faq" element={<FAQ />} />
-        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/terms-and-condition" element={<TermsOfUse />} />
         <Route path="*" element={<NotFound />} />
         {/* <Route path="/social-media-management" element={<SMM />} />
         <Route path="/search-engine-optimization" element={<Seo />} />

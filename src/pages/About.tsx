@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import Nav from "../components/Nav";
 import ceo from "../assets/ceo.png";
+import Footer from "../components/Footer";
 
 function About() {
   return (
@@ -66,7 +67,7 @@ function About() {
             <li>
               <strong>Transparent Reporting:</strong> You’ll always know where
               your budget is getting spent. We provide clear, actionable reports
-              and insights — no shoptalk, just results.
+              and insights no shoptalk, just results.
             </li>
             <li>
               <strong>Creative Meets Strategy:</strong> We execute bold ideas
@@ -92,7 +93,7 @@ function About() {
             and events across verticals like ecommerce, technology, retail and
             events. At Bigwig Digital, we help brands grow, engage audiences,
             and convert in the digital world. From SEO and social media to paid
-            ads, content creation, and web strategy — we craft data-driven
+            ads, content creation, and web strategy we craft data-driven
             campaigns and strategies that deliver real, live results. Whether
             you're building your brand or boosting sales, we deliver smart
             digital solutions tailored to your goals. We are hungry for
@@ -104,7 +105,7 @@ function About() {
         {/* Founder’s Message */}
         <section className="flex flex-col md:flex-row items-start gap-6 md:gap-10 my-10">
           {/* CEO Image - Left */}
-          <div className="w-full md:w-1/3">
+          <div className="w-full md:w-1/3 mt-12">
             <img
               src={ceo}
               alt="Vipul Dutta - Founder of Bigwig Digital"
@@ -143,6 +144,7 @@ function About() {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
-import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
+import Footer from "../components/Footer";
 
 export default function TermsOfUse() {
   return (
@@ -129,7 +129,7 @@ export default function TermsOfUse() {
           </ul>
         </section>
       </div>
-      <Footer2 />
+      <Footer />
     </div>
   );
 }
