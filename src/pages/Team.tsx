@@ -1,5 +1,5 @@
 import React from "react";
-import ceo from "../assets/ceo.jpg";
+import ceo from "../assets/ceo.png";
 import Footer2 from "../components/Footer2";
 import Nav2 from "../components/Nav2";
 
