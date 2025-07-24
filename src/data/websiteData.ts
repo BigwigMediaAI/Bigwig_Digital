@@ -12,13 +12,13 @@ export const websiteItems: WebsiteItem[] = [
   {
     title: "Granth Dream Homes",
     image: granth,
-    url: "https://granth-beta.vercel.app/",
+    url: "",
     type: "websites",
   },
   {
     title: "Close Friends Traders",
     image: cft,
-    url: "https://trading-two-kappa.vercel.app/",
+    url: "",
     type: "websites",
   },
   // Add more sites as needed
