@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet";
-import Nav2 from "../components/Nav2";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 export default function PrivacyPolicy() {
   return (
     <div className="pt-36 md:pt-36 bg-white min-h-screen text-black">
       <div>
-        <Nav2 />
+        <Nav />
         <Helmet>
           <title>Privacy Policy</title>
           <meta

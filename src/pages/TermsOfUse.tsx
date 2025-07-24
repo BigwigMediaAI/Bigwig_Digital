@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet";
-import Nav2 from "../components/Nav2";
 import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 export default function TermsOfUse() {
   return (
     <div className="pt-24 md:pt-32 bg-white min-h-screen text-black">
-      <Nav2 />
+      <Nav />
       <Helmet>
         <title>Terms & Conditions</title>
         <meta
