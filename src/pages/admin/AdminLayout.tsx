@@ -1,14 +1,23 @@
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Outlet, Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import logo from "../../assets/bigwig digital logo (11).png";
 import { NotebookPen } from "lucide-react";
 
 const AdminLayout = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [{ icon: <NotebookPen />, label: "Blogs", to: "/admin" }];
+
+  // ✅ Redirect if not logged in
+  useEffect(() => {
+    const isLoggedIn = sessionStorage.getItem("login") === "true";
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [navigate]);
 
   return (
     <div className="h-screen flex flex-col lg:flex-row overflow-hidden bg-black text-white font-raleway relative">
@@ -78,27 +87,6 @@ const AdminLayout = () => {
       <main className="flex-1 lg:ml-64 overflow-y-auto p-4 sm:p-6 pb-20 lg:pb-6 h-full">
         <Outlet />
       </main>
-
-      {/* Mobile Bottom Navigation (optional, you can remove this if using top menu) */}
-      {/* <nav className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#111] border-t border-[#222] flex justify-around items-center h-14 z-40">
-        {navItems.map(({ icon, label, to }) => {
-          const isActive = location.pathname === to;
-          return (
-            <Link
-              key={to}
-              to={to}
-              className={`flex flex-col items-center justify-center flex-1 text-xs ${
-                isActive
-                  ? "text-[var(--primary-color)] font-semibold"
-                  : "text-gray-400 hover:text-[var(--primary-color)]"
-              }`}
-            >
-              <div className="text-lg">{icon}</div>
-              <span className="mt-0.5">{label}</span>
-            </Link>
-          );
-        })}
-      </nav> */}
     </div>
   );
 };
