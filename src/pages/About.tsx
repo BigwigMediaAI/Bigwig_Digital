@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 function About() {
   return (
-    <div className="bg-white dark:bg-[var(--bg-color1)] text-gray-800 dark:text-white">
+    <div className="bg-white  text-gray-800 ">
       <Nav />
       <Helmet>
         <title>About BigWig Digital</title>

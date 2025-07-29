@@ -139,7 +139,7 @@ function EmailMarketing() {
             Power Your Brand with Email Marketing That Works
           </h2>
 
-          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700  max-w-3xl mx-auto">
             Want to stand out and make it to your customer’s inbox, not their
             spam folder?
             <br />
@@ -163,25 +163,25 @@ function EmailMarketing() {
               Why Email Marketing Still Wins
             </h3>
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4 text-left">
-              <div className="p-6 rounded-2xl bg-gray-100 dark:bg-gray-900 hover:shadow-xl transition">
+              <div className="p-6 rounded-2xl bg-gray-100  hover:shadow-xl transition">
                 <Mail className="text-[var(--primary-color)] mb-4" size={32} />
                 <h4 className="font-bold text-lg text-[var(--primary-color)]">
                   Direct & Personal
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 ">
                   Engage your audience in conversation, don’t just broadcast.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-gray-100 dark:bg-gray-900 hover:shadow-xl transition">
+              <div className="p-6 rounded-2xl bg-gray-100  hover:shadow-xl transition">
                 <Inbox className="text-[var(--primary-color)] mb-4" size={32} />
                 <h4 className="font-bold text-lg text-[var(--primary-color)]">
                   Cost-Effective
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 ">
                   High ROI, low spend, especially when compared to paid ads.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-gray-100 dark:bg-gray-900 hover:shadow-xl transition">
+              <div className="p-6 rounded-2xl bg-gray-100  hover:shadow-xl transition">
                 <Rocket
                   className="text-[var(--primary-color)] mb-4"
                   size={32}
@@ -189,11 +189,11 @@ function EmailMarketing() {
                 <h4 className="font-bold text-lg text-[var(--primary-color)]">
                   Automated & Scalable
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 ">
                   Set it, personalize it, and scale it effortlessly.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-gray-100 dark:bg-gray-900 hover:shadow-xl transition">
+              <div className="p-6 rounded-2xl bg-gray-100  hover:shadow-xl transition">
                 <BarChart4
                   className="text-[var(--primary-color)] mb-4"
                   size={32}
@@ -201,7 +201,7 @@ function EmailMarketing() {
                 <h4 className="font-bold text-lg text-[var(--primary-color)]">
                   Measurable
                 </h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 ">
                   Track performance in real time. Optimize what works.
                 </p>
               </div>
@@ -220,14 +220,12 @@ function EmailMarketing() {
             {services.map((item, index) => (
               <div
                 key={index}
-                className="border-l-4 border-[var(--primary-color)] bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-sm hover:shadow-md transition"
+                className="border-l-4 border-[var(--primary-color)] bg-gray-100  p-6 rounded-lg shadow-sm hover:shadow-md transition"
               >
                 <h3 className="text-xl font-semibold mb-2 text-[var(--primary-color)]">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
-                  {item.description}
-                </p>
+                <p className="text-sm text-gray-700 ">{item.description}</p>
               </div>
             ))}
           </div>
@@ -237,11 +235,9 @@ function EmailMarketing() {
             <Slider {...settings}>
               {services.map((item, index) => (
                 <div key={index} className="px-2 w-5/6">
-                  <div className="border-l-4 border-[var(--primary-color)] bg-gray-100 dark:bg-gray-900 p-6 rounded-lg shadow-sm mb-4">
+                  <div className="border-l-4 border-[var(--primary-color)] bg-gray-100  p-6 rounded-lg shadow-sm mb-4">
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-gray-700 dark:text-gray-300">
-                      {item.description}
-                    </p>
+                    <p className="text-sm text-gray-700 ">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -256,13 +252,13 @@ function EmailMarketing() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Why Brands Trust Email Marketing Services in India
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-lg text-gray-700 ">
             Brands across industries are increasingly relying on Email Marketing
             Services in India for one simple reason, it works. With high ROI,
             direct reach, and measurable results, email remains one of the most
             effective digital marketing tools.
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300">
+          <p className="text-lg text-gray-700 ">
             At <strong>BigWig Digital</strong>, a trusted{" "}
             <strong>
               <a href="https://www.bigwigdigital.in/">

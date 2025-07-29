@@ -2,7 +2,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import logo from "../../assets/bigwig digital logo (11).png";
-import { Briefcase, Gauge, NotebookPen, User } from "lucide-react";
+import { Briefcase, FileText, Gauge, NotebookPen, User } from "lucide-react";
 
 const AdminLayout = () => {
   const location = useLocation();
@@ -17,6 +17,11 @@ const AdminLayout = () => {
       icon: <Briefcase />,
       label: "Job Application",
       to: "/admin/job-application",
+    },
+    {
+      icon: <FileText />,
+      label: "Job Vaccancy",
+      to: "/admin/jobs",
     },
   ];
 

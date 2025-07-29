@@ -43,6 +43,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/admin/Dashboard";
 import AdminLead from "./pages/admin/AdminLead";
 import JobApplication from "./pages/admin/JobApplication";
+import AddJobs from "./pages/admin/AddJobs";
 
 export default function App() {
   return (
@@ -134,6 +135,7 @@ export default function App() {
           <Route path="blogs" element={<AdminBlog />} />
           <Route path="leads" element={<AdminLead />} />
           <Route path="job-application" element={<JobApplication />} />
+          <Route path="jobs" element={<AddJobs />} />
         </Route>
       </Routes>
     </Router>

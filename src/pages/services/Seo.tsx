@@ -103,7 +103,7 @@ function Seo() {
         </div>
       </section>
 
-      <section className="bg-white dark:bg-black py-12 px-6 md:px-12">
+      <section className="bg-white  py-12 px-6 md:px-12">
         <div className="w-11/12 md:w-5/6 mx-auto">
           {/* Heading */}
           <div className="mb-10 text-center">
@@ -116,7 +116,7 @@ function Seo() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Left content */}
             <div className="space-y-6">
-              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700  text-lg leading-relaxed">
                 Many people mistakenly believe that SEO is merely a business
                 etiquette. The process of increasing a website's or online
                 content's visibility in search engine results pages (SERPs),
@@ -126,14 +126,14 @@ function Seo() {
                 strategy focuses on four important areas:
               </p>
 
-              <ul className="list-[upper-roman] pl-6 space-y-2 text-gray-800 dark:text-gray-200">
+              <ul className="list-[upper-roman] pl-6 space-y-2 text-gray-800 ">
                 <li>Analysis of Keywords</li>
                 <li>Establishing Backlinks</li>
                 <li>Production of Content</li>
                 <li>Upkeep of technical systems</li>
               </ul>
 
-              <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-700  text-lg leading-relaxed">
                 These elements form the foundation of the approaches used by
                 different <strong>SEO agencies</strong>, regardless of the kind
                 of SEO.
@@ -158,7 +158,7 @@ function Seo() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Drive Organic Traffic with the Best SEO Company in India
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
+          <p className="text-lg text-gray-600  text-justify">
             We are a{" "}
             <strong>
               <a href="https://www.bigwigdigital.in/">
@@ -180,10 +180,10 @@ function Seo() {
             {stats.map((item, i) => (
               <div
                 key={i}
-                className="bg-gray-100 dark:bg-zinc-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
+                className="bg-gray-100  rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
               >
                 <div className="mb-4">{item.icon}</div>
-                <p className="text-gray-800 dark:text-gray-100 font-medium text-sm">
+                <p className="text-gray-800  font-medium text-sm">
                   {item.text}
                 </p>
               </div>
@@ -192,7 +192,7 @@ function Seo() {
         </div>
       </div>
 
-      <section className="bg-white dark:bg-black py-12 px-4">
+      <section className="bg-white  py-12 px-4">
         <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
             All in One SEO Services Under One Roof
@@ -264,12 +264,12 @@ function Seo() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="relative pl-6 border-l-4 border-[var(--primary-color)] bg-gray-100 dark:bg-zinc-900 p-6 rounded-xl shadow-md"
+                className="relative pl-6 border-l-4 border-[var(--primary-color)] bg-gray-100  p-6 rounded-xl shadow-md"
               >
                 <h3 className="text-xl font-semibold text-[var(--primary-color)] mb-3">
                   {item.title}
                 </h3>
-                <ul className="list-disc  space-y-2 text-gray-700 dark:text-gray-300 text-base">
+                <ul className="list-disc  space-y-2 text-gray-700  text-base">
                   {item.points.map((point, i) => (
                     <li key={i}>{point}</li>
                   ))}

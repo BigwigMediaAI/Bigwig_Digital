@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 import { FaPhoneAlt, FaBook } from "react-icons/fa";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ResponsiveContainer,
+} from "recharts";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -8,37 +17,48 @@ const GRADIENTS = [
   "from-sky-500 via-blue-500 to-indigo-600",
 ];
 
+interface LeadStat {
+  date: string;
+  count: number;
+}
+
 const Dashboard = () => {
   const [counts, setCounts] = useState({
     leads: 0,
-
     blogs: 0,
     jobApplications: 0,
   });
+
+  const [leadGraphData, setLeadGraphData] = useState<LeadStat[]>([]);
 
   useEffect(() => {
     Promise.all([
       fetch(`${baseURL}/api/lead/all`).then((r) => r.json()),
       fetch(`${baseURL}/viewblog`).then((r) => r.json()),
       fetch(`${baseURL}/api/jobs/all`).then((r) => r.json()),
-    ]).then(([leads, blogs, jobApplications]: unknown[]) => {
-      setCounts({
-        leads: (leads as any[]).length,
+      fetch(`${baseURL}/api/lead/last10days`).then((r) => r.json()),
+    ])
+      .then(([leads, blogs, jobApplications, leadStats]) => {
+        setCounts({
+          leads: Array.isArray(leads) ? leads.length : 0,
+          blogs: Array.isArray(blogs) ? blogs.length : 0,
+          jobApplications: Array.isArray(jobApplications)
+            ? jobApplications.length
+            : 0,
+        });
 
-        blogs: (blogs as any[]).length,
-        jobApplications: (jobApplications as any[]).length,
+        if (Array.isArray(leadStats)) {
+          setLeadGraphData(leadStats);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading dashboard data:", error);
       });
-    });
   }, []);
 
   const cards = [
     { title: "Leads", icon: <FaPhoneAlt />, count: counts.leads },
-
-    {
-      title: "Blogs Data",
-      icon: <FaBook />,
-      count: counts.blogs,
-    },
+    { title: "Blogs Data", icon: <FaBook />, count: counts.blogs },
     {
       title: "Job Application Data",
       icon: <FaBook />,
@@ -47,10 +67,10 @@ const Dashboard = () => {
   ];
 
   return (
-    <section className="px-4 py-8 space-y-8">
+    <section className="px-4 py-8 space-y-10">
       <h2 className="text-2xl font-bold text-center">Admin Dashboard</h2>
 
-      {/* 3-column flex wrap layout */}
+      {/* Cards */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 justify-items-center">
         {cards.map((card, idx) => (
           <StatCard
@@ -59,6 +79,31 @@ const Dashboard = () => {
             gradient={GRADIENTS[idx % GRADIENTS.length]}
           />
         ))}
+      </div>
+
+      {/* Leads Graph */}
+      <div className="bg-white p-6 rounded-xl shadow-md w-full max-w-5xl mx-auto">
+        <h3 className="text-xl font-semibold mb-4 text-center text-gray-800">
+          Leads in Last 10 Days
+        </h3>
+        {leadGraphData.length > 0 ? (
+          <ResponsiveContainer width="100%" height={300}>
+            <LineChart data={leadGraphData}>
+              <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+              <XAxis dataKey="date" />
+              <YAxis allowDecimals={false} />
+              <Tooltip />
+              <Line
+                type="monotone"
+                dataKey="count"
+                stroke="#6366f1"
+                strokeWidth={3}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        ) : (
+          <p className="text-center text-gray-500">No data to display.</p>
+        )}
       </div>
     </section>
   );

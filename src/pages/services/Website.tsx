@@ -132,7 +132,7 @@ function Website() {
         </div>
       </section>
 
-      <section className="bg-white dark:bg-black py-12 px-4">
+      <section className="bg-white  py-12 px-4">
         <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-semibold text-center text-[var(--primary-color)] mb-6">
@@ -142,7 +142,7 @@ function Website() {
           {/* Two-column layout */}
           <div className="grid md:grid-cols-2 gap-10 items-center">
             {/* Left Text Block */}
-            <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+            <div className="space-y-6 text-gray-700  text-lg leading-relaxed">
               <p>
                 Words like <strong>“web design”</strong> and{" "}
                 <strong>“web development”</strong> might sound overwhelming, and
@@ -214,7 +214,7 @@ function Website() {
                   </h3>
 
                   {/* Content */}
-                  <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+                  <p className="text-gray-700  text-sm md:text-base leading-relaxed text-justify">
                     {section.content}
                   </p>
                 </div>
@@ -231,9 +231,9 @@ function Website() {
               className="group relative overflow-hidden rounded-2xl p-[2px] transition-all duration-300 h-full"
             >
               {/* Content */}
-              <div className="relative z-10 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 shadow-lg bg-white dark:bg-gray-900 space-y-4 h-full flex flex-col justify-between min-h-[360px]">
+              <div className="relative z-10 border border-gray-200  rounded-2xl p-6 shadow-lg bg-white  space-y-4 h-full flex flex-col justify-between min-h-[360px]">
                 <div className="flex justify-center">
-                  <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-full shadow">
+                  <div className="bg-gray-100  p-4 rounded-full shadow">
                     {section.icon}
                   </div>
                 </div>
@@ -242,7 +242,7 @@ function Website() {
                   {section.title}
                 </h3>
 
-                <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed text-justify">
+                <p className="text-gray-700  text-sm md:text-base leading-relaxed text-justify">
                   {section.content}
                 </p>
               </div>

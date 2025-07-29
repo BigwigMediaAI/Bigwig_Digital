@@ -71,7 +71,7 @@ const Career = () => {
         />
         <link rel="canonical" href="https://www.bigwigdigital.in/career" />
       </Helmet>
-      <div className="bg-white text-black dark:bg-neutral-900 dark:text-white">
+      <div className="bg-white text-black ">
         {/* Hero */}
         <section className="relative h-[300px] md:h-[400px] overflow-hidden">
           <img
@@ -108,7 +108,7 @@ const Career = () => {
           </section>
 
           {/* Current Openings */}
-          <section className="py-12 px-6 text-center bg-gray-100 dark:bg-neutral-800">
+          <section className="py-12 px-6 text-center bg-gray-100 ">
             <h2 className="text-3xl font-bold mb-10">Current Openings</h2>
 
             {loading ? (
@@ -120,7 +120,7 @@ const Career = () => {
                 {jobs.map((job) => (
                   <div
                     key={job._id}
-                    className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-md border text-left"
+                    className="bg-white  p-6 rounded-xl shadow-md border text-left"
                   >
                     <h4 className="text-xl font-bold mb-2">{job.title}</h4>
                     <p className="text-sm mb-1">📍 {job.location}</p>
@@ -129,7 +129,7 @@ const Career = () => {
                     <p className="text-sm mb-4">{job.jd}</p>
 
                     <button
-                      className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-300"
+                      className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 "
                       onClick={() => navigate(`/job/${job._id}`)}
                     >
                       Apply Now

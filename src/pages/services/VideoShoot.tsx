@@ -135,7 +135,7 @@ function VideoShoot() {
                 In today’s digital world, video is no longer just content, it’s
                 communication.
               </h2>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="text-lg leading-relaxed text-gray-700 ">
                 At <strong>BigWig Digital</strong>, we help brands turn their
                 ideas into high-quality, engaging video content that grabs
                 attention and delivers results. From promotional videos and
@@ -149,7 +149,7 @@ function VideoShoot() {
                 </strong>{" "}
                 tailored to your goals.
               </p>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
+              <p className="text-lg leading-relaxed text-gray-700 ">
                 We blend creativity, storytelling, and strategy to create videos
                 that don’t just look good — they convert. Whether you're a
                 startup launching your first product or an established brand

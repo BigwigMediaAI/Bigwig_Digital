@@ -193,7 +193,7 @@ function PerformanceMarketing() {
         </div>
       </section>
 
-      <section className="bg-white text-black dark:text-white py-12">
+      <section className="bg-white text-black  py-12">
         <div className="w-11/12 md:w-5/6 mx-auto space-y-20">
           {/* Intro */}
 
@@ -255,13 +255,11 @@ function PerformanceMarketing() {
               <Slider {...featureSettings}>
                 {features.map((item, i) => (
                   <div key={i}>
-                    <div className="bg-white dark:bg-neutral-800 border-l-4 border-[var(--primary-color)] p-6 rounded-xl shadow">
+                    <div className="bg-white  border-l-4 border-[var(--primary-color)] p-6 rounded-xl shadow">
                       <h4 className="text-lg font-semibold mb-2 text-[var(--primary-color)]">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-gray-700 dark:text-gray-300">
-                        {item.text}
-                      </p>
+                      <p className="text-sm text-gray-700 ">{item.text}</p>
                     </div>
                   </div>
                 ))}
@@ -273,14 +271,12 @@ function PerformanceMarketing() {
               {features.map((item, i) => (
                 <div
                   key={i}
-                  className="bg-white dark:bg-neutral-800 border-l-4 border-[var(--primary-color)] p-6 rounded-xl shadow"
+                  className="bg-white  border-l-4 border-[var(--primary-color)] p-6 rounded-xl shadow"
                 >
                   <h4 className="text-lg font-semibold mb-2 text-[var(--primary-color)]">
                     {item.title}
                   </h4>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">
-                    {item.text}
-                  </p>
+                  <p className="text-sm text-gray-700 ">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -313,7 +309,7 @@ function PerformanceMarketing() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center text-black dark:text-white">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center text-black ">
               {[
                 { icon: <FaSearchDollar />, label: "Search Advertising" },
                 {
@@ -327,7 +323,7 @@ function PerformanceMarketing() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center gap-2 p-6 border border-gray-200 dark:border-neutral-700 shadow-md rounded-xl bg-white dark:bg-neutral-800"
+                  className="flex flex-col items-center gap-2 p-6 border border-gray-200  shadow-md rounded-xl bg-white "
                 >
                   <div className="text-[var(--primary-color)] text-3xl">
                     {item.icon}
@@ -354,7 +350,7 @@ function PerformanceMarketing() {
                     <h3 className="text-lg font-semibold mb-2 text-[var(--primary-color)]">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    <p className="text-gray-700  text-sm leading-relaxed">
                       {benefit.content}
                     </p>
                   </div>
@@ -372,7 +368,7 @@ function PerformanceMarketing() {
                 <h3 className="text-lg font-semibold mb-2 text-[var(--primary-color)]">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-700  text-sm leading-relaxed">
                   {benefit.content}
                 </p>
               </div>

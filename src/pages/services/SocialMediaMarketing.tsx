@@ -103,7 +103,7 @@ function SocialMediaMarketing() {
         </div>
       </section>
 
-      <section className="py-12 space-y-10 text-black dark:text-white">
+      <section className="py-12 space-y-10 text-black ">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
           Social Media Marketing Agency in Delhi
@@ -234,9 +234,7 @@ function SocialMediaMarketing() {
                 </h4>
                 <div className="text-2xl">{icons[item.title]}</div>
               </div>
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                {item.text}
-              </p>
+              <p className="text-sm text-gray-700 ">{item.text}</p>
             </div>
           ))}
         </div>
@@ -248,13 +246,13 @@ function SocialMediaMarketing() {
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
             Why Choose BigWig Digital for Social Media Advertising?
           </h2>
-          <p className="text-lg text-gray-800 dark:text-gray-200 leading-relaxed">
+          <p className="text-lg text-gray-800  leading-relaxed">
             We’re not just another agency boosting your posts. We’re a team of
             paid social experts with experience across industries, platforms,
             and ad formats. Here's what makes us different:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2 text-gray-800 dark:text-gray-200 text-base md:text-lg">
+          <ul className="list-disc pl-6 space-y-2 text-gray-800  text-base md:text-lg">
             <li>
               <span className="text-[var(--primary-color)]">
                 Platform-Specific Expertise:

@@ -216,7 +216,7 @@ function AiAds() {
             ].map((benefit, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center text-center bg-white dark:bg-[#2a2a2a] rounded-xl shadow p-6 hover:shadow-lg transition"
+                className="flex flex-col items-center text-center bg-white  rounded-xl shadow p-6 hover:shadow-lg transition"
               >
                 <div className="text-4xl text-[var(--primary-color)] mb-4">
                   {benefit.icon}
@@ -226,7 +226,7 @@ function AiAds() {
             ))}
           </div>
 
-          <p className="text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300  mx-auto">
+          <p className="text-lg leading-relaxed text-center text-gray-700   mx-auto">
             Selecting the best CGI advertising agency in India is a difficult
             task, but with the help of this guide's wit and insight, you'll be
             well on your way to advertising success. You may identify the ideal
