@@ -183,7 +183,6 @@ const AdminBlog = () => {
                         className="text-blue-600 hover:text-blue-700"
                       >
                         <Edit size={16} />
-                        {/* abc */}
                       </button>
                       <button
                         onClick={() => handleDelete(blog.slug)}
