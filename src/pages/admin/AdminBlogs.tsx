@@ -1,7 +1,6 @@
 import { Code, Edit, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import AddBlog from "../../components/AddBlogs";
-// import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import "../../index.css";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
@@ -19,18 +18,6 @@ interface BlogPost {
   category: string;
 }
 
-// const toolbarOptions = [
-//   ["bold", "italic", "underline", "strike"],
-//   [{ color: [] }, { background: [] }],
-//   ["blockquote"],
-//   [{ list: "ordered" }, { list: "bullet" }],
-//   [{ header: [1, 2, 3, 4, 5, 6, false] }],
-//   [{ align: [] }],
-//   ["link"],
-// ];
-
-// const API_BASE = "https://bigwigdigitalbackend.onrender.com";
-
 const AdminBlog = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,6 +26,9 @@ const AdminBlog = () => {
   const [showHtmlEditor, setShowHtmlEditor] = useState(false);
   const [htmlContent, setHtmlContent] = useState("");
   const [editingSlug, setEditingSlug] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 15;
 
   const fetchBlogs = async () => {
     setLoading(true);
@@ -89,6 +79,18 @@ const AdminBlog = () => {
     setEditingBlog(null);
   };
 
+  const filteredBlogs = blogs.filter((b) =>
+    [b.title, b.category, b.author].some((field) =>
+      field.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  );
+
+  const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
+  const paginatedBlogs = filteredBlogs.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
   return (
     <div className="h-screen bg-black text-white font-raleway flex flex-col p-4">
       <div className="flex justify-between items-center sticky top-0 z-20 bg-black p-4 border-b border-gray-700">
@@ -96,7 +98,7 @@ const AdminBlog = () => {
         <button
           className="text-white bg-[var(--primary-color)] px-4 py-2 rounded"
           onClick={() => {
-            setEditingBlog(null); // ensure it's a new blog
+            setEditingBlog(null);
             setShowAddModal(true);
           }}
         >
@@ -104,10 +106,26 @@ const AdminBlog = () => {
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto mt-4">
+      <div className="mb-4 mt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <input
+          type="text"
+          placeholder="Search by title, category, or author..."
+          value={searchQuery}
+          onChange={(e) => {
+            setSearchQuery(e.target.value);
+            setCurrentPage(1);
+          }}
+          className="w-full sm:w-1/2 px-4 py-2 rounded bg-[#1e1e1e] border border-gray-600 text-white text-sm"
+        />
+        <p className="text-gray-400 text-sm">
+          Showing page {currentPage} of {totalPages || 1}
+        </p>
+      </div>
+
+      <div className="flex-1 overflow-y-auto">
         {loading ? (
           <p>Loading...</p>
-        ) : blogs.length === 0 ? (
+        ) : filteredBlogs.length === 0 ? (
           <p className="text-gray-400">No blog posts found.</p>
         ) : (
           <div className="overflow-x-auto">
@@ -117,7 +135,6 @@ const AdminBlog = () => {
                   <th className="px-2 py-2 border-b border-gray-700 w-32 truncate">
                     Title
                   </th>
-
                   <th className="px-2 py-2 border-b border-gray-700 w-32 truncate">
                     Category
                   </th>
@@ -136,7 +153,7 @@ const AdminBlog = () => {
                 </tr>
               </thead>
               <tbody>
-                {blogs.map((blog) => (
+                {paginatedBlogs.map((blog) => (
                   <tr
                     key={blog._id}
                     className="even:bg-[#111] hover:bg-[#222] transition duration-200"
@@ -144,19 +161,15 @@ const AdminBlog = () => {
                     <td className="px-2 py-2 truncate whitespace-nowrap">
                       {blog.title}
                     </td>
-
                     <td className="px-2 py-2 truncate whitespace-nowrap">
                       {blog.category}
                     </td>
                     <td className="px-2 py-2 text-white">
                       <div
                         className="max-h-[100px] overflow-hidden text-ellipsis relative"
-                        dangerouslySetInnerHTML={{
-                          __html: blog.content,
-                        }}
+                        dangerouslySetInnerHTML={{ __html: blog.content }}
                       />
                     </td>
-
                     <td className="px-2 py-2 truncate whitespace-nowrap">
                       {blog.author}
                     </td>
@@ -191,6 +204,44 @@ const AdminBlog = () => {
                 ))}
               </tbody>
             </table>
+
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 mt-6 text-sm text-white">
+                <button
+                  onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+                  className="px-3 py-1 rounded bg-gray-700 hover:bg-gray-600"
+                  disabled={currentPage === 1}
+                >
+                  Prev
+                </button>
+
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (num) => (
+                    <button
+                      key={num}
+                      onClick={() => setCurrentPage(num)}
+                      className={`px-3 py-1 rounded ${
+                        num === currentPage
+                          ? "bg-[var(--primary-color)] text-white"
+                          : "bg-gray-700 hover:bg-gray-600"
+                      }`}
+                    >
+                      {num}
+                    </button>
+                  )
+                )}
+
+                <button
+                  onClick={() =>
+                    setCurrentPage((p) => Math.min(p + 1, totalPages))
+                  }
+                  className="px-3 py-1 rounded bg-gray-700 hover:bg-gray-600"
+                  disabled={currentPage === totalPages}
+                >
+                  Next
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>
@@ -199,7 +250,7 @@ const AdminBlog = () => {
         <AddBlog
           onClose={handleModalClose}
           onSuccess={fetchBlogs}
-          existingBlog={editingBlog} // Pass blog if editing
+          existingBlog={editingBlog}
         />
       )}
 
@@ -207,13 +258,11 @@ const AdminBlog = () => {
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center">
           <div className="bg-white text-black rounded-lg p-6 w-full max-w-3xl shadow-xl relative">
             <h2 className="text-xl font-bold mb-4">Edit Blog HTML</h2>
-
             <textarea
               value={htmlContent}
               onChange={(e) => setHtmlContent(e.target.value)}
               className="w-full h-64 p-3 border border-gray-300 rounded resize-none font-mono text-sm"
             />
-
             <div className="flex justify-end gap-2 mt-4">
               <button
                 onClick={() => {
@@ -254,74 +303,6 @@ const AdminBlog = () => {
           </div>
         </div>
       )}
-
-      {/* {showContentEditor && (
-        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center overflow-auto">
-          <div className="relative bg-white text-black w-full max-w-3xl mx-4 my-12 p-6 rounded shadow">
-            <h3 className="text-lg font-semibold mb-4">Edit Blog Content</h3>
-
-            <ReactQuill
-              value={editorContent}
-              onChange={setEditorContent}
-              theme="snow"
-              className="mb-4 h-64 overflow-y-auto"
-              modules={{ toolbar: toolbarOptions }}
-            />
-
-            <div className="flex justify-end gap-3 mt-4">
-              <button
-                onClick={() => setShowContentEditor(false)}
-                className="px-4 py-2 bg-gray-300 rounded"
-              >
-                Cancel
-              </button>
-              <button
-                disabled={saving}
-                onClick={async () => {
-                  if (!selectedBlog) return;
-
-                  setSaving(true);
-                  try {
-                    const res = await fetch(
-                      `https://bigwigdigitalbackend.onrender.com/${selectedBlog.slug}`,
-                      {
-                        method: "PUT",
-                        headers: {
-                          "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                          content: editorContent,
-                        }),
-                      }
-                    );
-
-                    if (!res.ok)
-                      throw new Error("Failed to update blog content");
-
-                    alert("Blog content updated successfully!");
-                    setShowContentEditor(false);
-                    fetchBlogs();
-                  } catch (error) {
-                    console.error(error);
-                    alert(
-                      "An error occurred while updating the blog. Please try again."
-                    );
-                  } finally {
-                    setSaving(false);
-                  }
-                }}
-                className={`px-4 py-1 text-sm rounded text-white ${
-                  saving
-                    ? "bg-[var(--primary-color)] cursor-not-allowed"
-                    : "bg-[var(--primary-color)] hover:opacity-80"
-                }`}
-              >
-                {saving ? "Saving..." : "Save Changes"}
-              </button>
-            </div>
-          </div>
-        </div>
-      )} */}
     </div>
   );
 };

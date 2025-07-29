@@ -40,6 +40,9 @@ import CategoryBlogs from "./pages/CategoryBlog";
 import ScrollToTop from "./components/ScrollToTop";
 import FAQ from "./pages/Faq";
 import Login from "./pages/Login";
+import Dashboard from "./pages/admin/Dashboard";
+import AdminLead from "./pages/admin/AdminLead";
+import JobApplication from "./pages/admin/JobApplication";
 
 export default function App() {
   return (
@@ -127,7 +130,10 @@ export default function App() {
         />
         <Route path="/google-my-business" element={<GMB />} /> */}
         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<AdminBlog />} />
+          <Route index element={<Dashboard />} />
+          <Route path="blogs" element={<AdminBlog />} />
+          <Route path="leads" element={<AdminLead />} />
+          <Route path="job-application" element={<JobApplication />} />
         </Route>
       </Routes>
     </Router>

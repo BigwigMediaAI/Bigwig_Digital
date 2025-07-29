@@ -6,7 +6,6 @@ import { useLocation } from "react-router-dom";
 
 const images = [
   "https://riverfront.vercel.app/assets/Logo%20for%20riverfront%20-CAIVvev0.png",
-  "https://www.eventfaqs.com/Uploads/Jobs/Organization/cineyug-logo-black1.jpg",
   "https://i1.sndcdn.com/avatars-zrGoOnkGJPMFqycp-NUkwhg-t1080x1080.jpg",
   "https://aylesforddubai.com/wp-content/uploads/2024/11/aylesford.svg",
   "https://www.shoutlo.com/assets/images/merchant_images/merchant-133212-5c65208474154.jpg",
@@ -25,6 +24,7 @@ const images = [
   "https://www.cablewirefair.com/wp-content/uploads/2024/08/99-electrical-world.png",
   "https://pngimg.com/d/bitcoin_PNG36.png",
   "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/CARE_Logo_Orange.png/384px-CARE_Logo_Orange.png",
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/GAIL.svg/2560px-GAIL.svg.png",
 ];
 
 function Client() {

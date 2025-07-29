@@ -2,14 +2,23 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import logo from "../../assets/bigwig digital logo (11).png";
-import { NotebookPen } from "lucide-react";
+import { Briefcase, Gauge, NotebookPen, User } from "lucide-react";
 
 const AdminLayout = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = [{ icon: <NotebookPen />, label: "Blogs", to: "/admin" }];
+  const navItems = [
+    { icon: <Gauge />, label: "Dashboard", to: "/admin" },
+    { icon: <NotebookPen />, label: "Blogs", to: "/admin/blogs" },
+    { icon: <User />, label: "Leads", to: "/admin/leads" },
+    {
+      icon: <Briefcase />,
+      label: "Job Application",
+      to: "/admin/job-application",
+    },
+  ];
 
   // ✅ Redirect if not logged in
   useEffect(() => {
