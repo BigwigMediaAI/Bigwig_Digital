@@ -4,6 +4,7 @@ import AddBlog from "../../components/AddBlogs";
 import "react-quill/dist/quill.snow.css";
 import "../../index.css";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
+import { formatHtml } from "../../utils/formatHtml";
 
 interface BlogPost {
   _id: string;
@@ -190,8 +191,9 @@ const AdminBlog = () => {
                         <Trash2 size={16} />
                       </button>
                       <button
-                        onClick={() => {
-                          setHtmlContent(blog.content);
+                        onClick={async () => {
+                          const formatted = formatHtml(blog.content);
+                          setHtmlContent(await formatted);
                           setEditingSlug(blog.slug);
                           setShowHtmlEditor(true);
                         }}
