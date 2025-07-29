@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../../index.css";
+import { FaTrash, FaEdit } from "react-icons/fa";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -7,10 +8,10 @@ const initialForm = {
   title: "",
   location: "",
   jd: "",
-  responsibilities: "",
-  requirements: "",
-  jobType: "",
-  workMode: "",
+  responsibilities: [] as string[],
+  requirements: [] as string[],
+  jobType: "Full-time",
+  workMode: "Office",
 };
 
 const AddJobs = () => {
@@ -31,7 +32,13 @@ const AddJobs = () => {
   }, []);
 
   const handleInputChange = (e: any) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === "responsibilities" || name === "requirements") {
+      setForm({ ...form, [name]: value.split("\n").filter(Boolean) });
+    } else {
+      setForm({ ...form, [name]: value });
+    }
   };
 
   const openPopup = (job = initialForm, id = "", editing = false) => {
@@ -69,56 +76,77 @@ const AddJobs = () => {
   };
 
   const handleDelete = async (id: string) => {
-    const confirm = window.confirm("Delete this job?");
-    if (!confirm) return;
-
+    if (!confirm("Delete this job?")) return;
     const res = await fetch(`${baseURL}/api/jobs/${id}`, { method: "DELETE" });
     if (res.ok) fetchJobs();
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-raleway flex flex-col p-4">
+    <div className="min-h-screen bg-black text-white font-raleway p-6">
       <div className="flex justify-between items-center sticky top-0 z-20 bg-black p-4 border-b border-gray-700">
         <h1 className="text-2xl sm:text-3xl font-bold">Manage Job Vacancies</h1>
         <button
           onClick={() => openPopup()}
-          className="text-white bg-[var(--primary-color)] px-4 py-2 rounded"
+          className="text-white bg-[var(--primary-color)] px-4 py-2 rounded hover:bg-opacity-90"
         >
           New Job Post
         </button>
       </div>
 
       {/* Job List */}
-      <div className="mt-6 grid gap-4">
-        {jobs.map((job: any) => (
-          <div
-            key={job._id}
-            className="bg-gray-800 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center"
-          >
-            <div>
+      {jobs.length === 0 ? (
+        <div className="text-center text-gray-400 mt-10 text-lg">
+          No job vacancies found.
+        </div>
+      ) : (
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {jobs.map((job: any) => (
+            <div
+              key={job._id}
+              className="bg-gray-800 p-6 rounded-lg shadow-md relative group"
+            >
+              <div className="absolute top-4 right-4 flex gap-2 transition">
+                <button
+                  onClick={() => openPopup(job, job._id, true)}
+                  className="text-blue-400 hover:text-blue-500"
+                >
+                  <FaEdit />
+                </button>
+                <button
+                  onClick={() => handleDelete(job._id)}
+                  className="text-red-400 hover:text-red-500"
+                >
+                  <FaTrash />
+                </button>
+              </div>
+
               <h3 className="text-xl font-semibold">{job.title}</h3>
-              <p className="text-sm text-gray-400">{job.location}</p>
-              <p className="text-sm mt-1">
+              <p className="text-sm text-gray-400 mb-1">{job.location}</p>
+              <p className="text-sm text-gray-300 mb-2">
                 {job.jobType} • {job.workMode}
               </p>
+
+              <div className="text-sm text-gray-300 mb-2">
+                <strong>Responsibilities:</strong>
+                <ul className="list-disc list-inside pl-2 mt-1">
+                  {job.responsibilities.map((r: string, i: number) => (
+                    <li key={i}>{r}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="text-sm text-gray-300">
+                <strong>Requirements:</strong>
+                <ul className="list-disc list-inside pl-2 mt-1">
+                  {job.requirements.map((r: string, i: number) => (
+                    <li key={i}>{r}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="flex gap-3 mt-3 sm:mt-0">
-              <button
-                onClick={() => openPopup(job, job._id, true)}
-                className="px-4 py-1 rounded bg-blue-600 hover:bg-blue-700"
-              >
-                Edit
-              </button>
-              <button
-                onClick={() => handleDelete(job._id)}
-                className="px-4 py-1 rounded bg-red-600 hover:bg-red-700"
-              >
-                Delete
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
 
       {/* Popup Modal */}
       {isPopupOpen && (
@@ -145,37 +173,45 @@ const AddJobs = () => {
                 placeholder="Location"
                 className="p-2 border rounded"
               />
-              <input
-                type="text"
+              <select
                 name="jobType"
                 value={form.jobType}
                 onChange={handleInputChange}
-                placeholder="Job Type (e.g. Full-time)"
                 className="p-2 border rounded"
-              />
-              <input
-                type="text"
+              >
+                <option value="">Select Job Type</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+                <option value="Internship">Internship</option>
+                <option value="Freelance">Freelance</option>
+              </select>
+              <select
                 name="workMode"
                 value={form.workMode}
                 onChange={handleInputChange}
-                placeholder="Work Mode (e.g. Remote)"
                 className="p-2 border rounded"
-              />
+              >
+                <option value="">Select Work Mode</option>
+                <option value="Office">Office</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Remote">Remote</option>
+              </select>
               <textarea
                 name="responsibilities"
-                value={form.responsibilities}
+                value={form.responsibilities.join("\n")}
                 onChange={handleInputChange}
-                placeholder="Responsibilities"
+                placeholder="Responsibilities (one per line)"
                 className="p-2 border rounded col-span-2"
-                rows={2}
+                rows={3}
               />
               <textarea
                 name="requirements"
-                value={form.requirements}
+                value={form.requirements.join("\n")}
                 onChange={handleInputChange}
-                placeholder="Requirements"
+                placeholder="Requirements (one per line)"
                 className="p-2 border rounded col-span-2"
-                rows={2}
+                rows={3}
               />
               <textarea
                 name="jd"
@@ -183,7 +219,7 @@ const AddJobs = () => {
                 onChange={handleInputChange}
                 placeholder="Job Description"
                 className="p-2 border rounded col-span-2"
-                rows={3}
+                rows={4}
               />
             </div>
 
