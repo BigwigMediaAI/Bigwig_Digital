@@ -1,4 +1,4 @@
-import { Code, Edit, Trash2 } from "lucide-react";
+import { Code, Edit, ImageIcon, Trash2 } from "lucide-react";
 import { useEffect, useState } from "react";
 import AddBlog from "../../components/AddBlogs";
 import "react-quill/dist/quill.snow.css";
@@ -22,6 +22,9 @@ interface BlogPost {
 const AdminBlog = () => {
   const [blogs, setBlogs] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+
   const [showAddModal, setShowAddModal] = useState(false);
   const [editingBlog, setEditingBlog] = useState<BlogPost | null>(null);
   const [showHtmlEditor, setShowHtmlEditor] = useState(false);
@@ -37,6 +40,7 @@ const AdminBlog = () => {
       const res = await fetch(`${baseURL}/viewblog`);
       const data = await res.json();
       setBlogs(data);
+      console.log(data);
     } catch (error) {
       console.error("Failed to fetch blogs", error);
     }
@@ -64,6 +68,37 @@ const AdminBlog = () => {
       }
     } catch (error) {
       alert("Error deleting blog post");
+    }
+  };
+
+  const handleUpdateImage = async () => {
+    if (!selectedImage) return;
+
+    setLoading(true);
+
+    const formData = new FormData();
+    formData.append("coverImage", selectedImage);
+
+    try {
+      const res = await fetch(`${baseURL}/${editingSlug}/image`, {
+        method: "PATCH",
+        body: formData,
+        // ❗ Don't set Content-Type manually for FormData, fetch handles it
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to update image");
+      }
+
+      alert("Image updated successfully!");
+      setShowImageModal(false);
+      setSelectedImage(null);
+      fetchBlogs(); // Refresh the blog list
+    } catch (err) {
+      console.error(err);
+      alert("Failed to update image");
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -201,6 +236,15 @@ const AdminBlog = () => {
                       >
                         <Code size={16} />
                       </button>
+                      <button
+                        onClick={() => {
+                          setEditingSlug(blog.slug); // Store slug of the blog to update
+                          setShowImageModal(true); // Show modal
+                        }}
+                        className="text-purple-600 hover:text-purple-700"
+                      >
+                        <ImageIcon size={16} />
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -300,6 +344,43 @@ const AdminBlog = () => {
                 className="bg-[var(--primary-color)] text-white px-4 py-2 rounded hover:opacity-90"
               >
                 Save
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showImageModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white text-black p-6 rounded-lg shadow-lg w-96">
+            <h2 className="text-lg font-bold mb-4">Update Cover Image</h2>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => {
+                if (e.target.files && e.target.files.length > 0) {
+                  setSelectedImage(e.target.files[0]);
+                }
+              }}
+              className="mb-4"
+            />
+
+            <div className="flex justify-end space-x-2">
+              <button
+                onClick={() => setShowImageModal(false)}
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                disabled={loading}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleUpdateImage}
+                className={`px-4 py-2 text-white rounded ${
+                  loading ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"
+                }`}
+                disabled={loading}
+              >
+                {loading ? "Updating..." : "Update"}
               </button>
             </div>
           </div>
