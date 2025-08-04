@@ -42,7 +42,7 @@ function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const blogsPerPage = 6;
+  const blogsPerPage = 9;
 
   const { categoryName } = useParams();
   const navigate = useNavigate();

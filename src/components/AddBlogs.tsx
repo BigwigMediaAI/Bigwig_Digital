@@ -54,6 +54,7 @@ const AddBlog = ({
     tags: "",
     coverImage: null as File | null,
     category: "",
+    schemaMarkup: [""], // initialize with one field
   });
 
   const [submitting, setSubmitting] = useState(false);
@@ -67,8 +68,12 @@ const AddBlog = ({
         content: existingBlog.content,
         author: existingBlog.author,
         tags: existingBlog.tags || "",
-        coverImage: null, // reset on load
+        coverImage: null,
         category: existingBlog.category || "",
+        schemaMarkup:
+          (existingBlog as any).schemaMarkup?.length > 0
+            ? (existingBlog as any).schemaMarkup
+            : [""],
       });
     }
   }, [existingBlog]);
@@ -127,6 +132,9 @@ const AddBlog = ({
       if (formData.coverImage) {
         blogData.append("coverImage", formData.coverImage);
       }
+      formData.schemaMarkup.forEach((schema) => {
+        blogData.append("schemaMarkup", schema);
+      });
 
       const res = await fetch(
         existingBlog ? `${baseURL}/${existingBlog.slug}` : `${baseURL}/add`,
@@ -247,6 +255,53 @@ const AddBlog = ({
             onChange={handleImageChange}
             required={!existingBlog}
           />
+          <div>
+            <label className="block font-medium mb-2">
+              Schema Markup (JSON-LD)
+            </label>
+            {formData.schemaMarkup.map((markup, index) => (
+              <textarea
+                key={index}
+                value={markup}
+                onChange={(e) => {
+                  const updated = [...formData.schemaMarkup];
+                  updated[index] = e.target.value;
+                  setFormData((prev) => ({ ...prev, schemaMarkup: updated }));
+                }}
+                placeholder={`Schema Markup ${index + 1}`}
+                rows={3}
+                className="w-full p-2 border mb-2"
+              />
+            ))}
+            <div className="flex gap-4">
+              <button
+                type="button"
+                className="px-3 py-1 bg-green-600 text-white rounded"
+                onClick={() =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    schemaMarkup: [...prev.schemaMarkup, ""],
+                  }))
+                }
+              >
+                + Add Schema
+              </button>
+              {formData.schemaMarkup.length > 1 && (
+                <button
+                  type="button"
+                  className="px-3 py-1 bg-red-500 text-white rounded"
+                  onClick={() =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      schemaMarkup: prev.schemaMarkup.slice(0, -1),
+                    }))
+                  }
+                >
+                  – Remove Last
+                </button>
+              )}
+            </div>
+          </div>
 
           <div className="flex justify-end gap-4">
             <button
@@ -270,8 +325,8 @@ const AddBlog = ({
                   ? "Updating..."
                   : "Adding..."
                 : existingBlog
-                ? "Update"
-                : "Submit"}
+                  ? "Update"
+                  : "Submit"}
             </button>
           </div>
         </form>

@@ -14,6 +14,7 @@ interface BlogType {
   content: string;
   slug: string;
   category?: string;
+  schemaMarkup?: string[]; // support array of JSON-LD strings
 }
 
 const categories = [
@@ -100,6 +101,15 @@ const BlogDetails = () => {
       <Helmet>
         <title>{blog.title}</title>
       </Helmet>
+      {/* ✅ Schema Markup */}
+      {Array.isArray(blog.schemaMarkup) &&
+        blog.schemaMarkup.map((markup, idx) => (
+          <script
+            key={idx}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: markup }}
+          />
+        ))}
 
       <Navbar />
 
