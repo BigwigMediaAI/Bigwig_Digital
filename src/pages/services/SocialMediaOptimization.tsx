@@ -80,8 +80,7 @@ function SocialMediaOptimization() {
           {/* Left Content - 2/3 */}
           <div className="w-full md:w-2/3 text-white space-y-6 pr-0 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Social Media Optimization Services in Delhi That Build Brand
-              Presence
+              Social Media Optimization Services That Build Brand Presence
             </h1>
 
             <p
@@ -141,16 +140,14 @@ function SocialMediaOptimization() {
           </h2>
           <p className="text-lg text-gray-700  mx-auto md:mx-0">
             Your social media profiles are more than just digital pages, they're
-            your brand’s voice, vibe, and visibility. At BigWig Digital, a
-            leading{" "}
+            your brand’s voice, vibe, and visibility. At
             <strong>
-              <a href="https://www.bigwigdigital.in/">
-                Social Media Optimization agency in Delhi
-              </a>
+              <a href="https://www.bigwigdigital.in/"> BigWig Digital </a>
             </strong>
-            , we help businesses grow organically across platforms like
-            Instagram, Facebook, LinkedIn, Twitter, and more with strategic
-            Social Media Optimization services.
+            , a leading Social Media Optimization agency , we help businesses
+            grow organically across platforms like Instagram, Facebook,
+            LinkedIn, Twitter, and more with strategic Social Media Optimization
+            services.
           </p>
         </div>
 
@@ -159,8 +156,8 @@ function SocialMediaOptimization() {
           <p className="text-lg text-gray-800 font-medium">
             We don’t just post, we create, optimize, engage, and build
             communities. If you're looking to establish authority, connect with
-            your audience, and grow consistently online, our SMO services in
-            India are built just for you.
+            your audience, and grow consistently online, our SMO services are
+            built just for you.
           </p>
         </div>
 
@@ -193,7 +190,7 @@ function SocialMediaOptimization() {
           <div>
             <img
               src={smo}
-              alt="Social Media Optimization Services in Delhi"
+              alt="Social Media Optimization Services "
               className="w-full h-[40vh] rounded-xl shadow-lg"
             />
           </div>
@@ -347,8 +344,8 @@ function SocialMediaOptimization() {
           </h4>
           <p className="text-gray-800 max-w-3xl mx-auto">
             Looking for consistent growth and real engagement without running
-            ads 24/7? Our Social Media Optimization services in Delhi help you
-            stay active, attractive, and algorithm-friendly across all major
+            ads 24/7? Our Social Media Optimization services help you stay
+            active, attractive, and algorithm-friendly across all major
             platforms.
           </p>
           <p className="text-gray-800 font-medium">

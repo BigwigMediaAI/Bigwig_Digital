@@ -73,8 +73,8 @@ function OnlineReputationManagement() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Online Reputation Management Services in Delhi to Safeguard Your
-              Brand Image
+              Online Reputation Management Services to Safeguard Your Brand
+              Image
             </h1>
 
             <p
@@ -132,10 +132,14 @@ function OnlineReputationManagement() {
                 Your brand's most significant asset in this digital age is its
                 online reputation. One negative review or outdated article can
                 cost you trust, traffic, and conversions. At{" "}
-                <strong>BigWig Digital</strong>, we offer reliable and strategic
-                ORM services in Delhi to help individuals, professionals, and
-                brands monitor, manage, and improve their online presence across
-                platforms.
+                <strong>
+                  <a href="https://www.bigwigmediadigital.com/">
+                    BigWig Digital
+                  </a>
+                </strong>
+                , we offer reliable and strategic ORM services to help
+                individuals, professionals, and brands monitor, manage, and
+                improve their online presence across platforms.
               </p>
               <p className="text-lg leading-relaxed">
                 People search before they engage. What shows up on Google,
@@ -151,7 +155,7 @@ function OnlineReputationManagement() {
             <div>
               <img
                 src={orm}
-                alt="Online Reputation Management Services in Delhi"
+                alt="Online Reputation Management Services"
                 className="w-full h-[60vh] rounded-xl shadow-md object-cover"
               />
             </div>
@@ -248,14 +252,9 @@ function OnlineReputationManagement() {
               <p className="text-gray-700 text-sm leading-relaxed">
                 From small businesses to enterprise brands, our ORM services are
                 tailored to handle both proactive brand building and reactive
-                damage control. As a dependable{" "}
-                <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    ORM Agency in Delhi,
-                  </a>
-                </strong>{" "}
-                we combine deep digital expertise with powerful tools to
-                monitor, repair, and enhance your digital reputation.
+                damage control. As a dependable ORM Agency we combine deep
+                digital expertise with powerful tools to monitor, repair, and
+                enhance your digital reputation.
               </p>
             </div>
 
@@ -270,15 +269,12 @@ function OnlineReputationManagement() {
                 digital presence builds the kind of trust that attracts
                 investors, partners, and top talent. Whether you're applying for
                 a government tender, pitching to clients, or entering new
-                markets, your online image can influence major decisions. At
-                BigWig Digital, we help you shape a digital narrative that
-                supports growth and opens doors to new opportunities. As a
-                professional{" "}
+                markets, your online image can influence major decisions. At{" "}
                 <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    ORM Agency in India,
-                  </a>
+                  <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
                 </strong>{" "}
+                , we help you shape a digital narrative that supports growth and
+                opens doors to new opportunities. As a professional ORM Agency
                 we ensure your reputation works as an asset, not a liability.
               </p>
             </div>
@@ -292,12 +288,12 @@ function OnlineReputationManagement() {
                 You cannot control what people say, but you can control how your
                 brand responds and what surfaces first. From search engine
                 results to social mentions, every touchpoint influences your
-                customer’s perception. By partnering with a leading ORM agency
-                in Delhi, you gain the tools and strategy to lead the
-                conversation. BigWig Digital helps you respond with purpose,
-                build authority, and maintain consistent brand messaging across
-                all platforms. A strong reputation today ensures customer
-                loyalty and business resilience tomorrow.
+                customer’s perception. By partnering with a leading ORM agency ,
+                you gain the tools and strategy to lead the conversation. BigWig
+                Digital helps you respond with purpose, build authority, and
+                maintain consistent brand messaging across all platforms. A
+                strong reputation today ensures customer loyalty and business
+                resilience tomorrow.
               </p>
             </div>
 
@@ -307,13 +303,15 @@ function OnlineReputationManagement() {
                 Why BigWig for ORM Services
               </h3>
               <p className="text-gray-700 text-sm leading-relaxed">
-                BigWig Digital understands the fast-paced nature of digital
-                perception. We use proven strategies to build and protect your
-                online reputation across platforms. As a growing ORM agency in
-                India, we believe in transparency, consistent monitoring, and
-                results that show in search rankings and sentiment shifts. With
-                us, your brand earns more than just visibility. It earns
-                credibility.
+                <strong>
+                  <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
+                </strong>{" "}
+                understands the fast-paced nature of digital perception. We use
+                proven strategies to build and protect your online reputation
+                across platforms. As a growing ORM agency , we believe in
+                transparency, consistent monitoring, and results that show in
+                search rankings and sentiment shifts. With us, your brand earns
+                more than just visibility. It earns credibility.
               </p>
             </div>
           </div>

@@ -119,8 +119,8 @@ function PublicRelation() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Powerful Public Relations Services in Delhi to Build Trust,
-              Visibility, and Influence
+              Powerful Public Relations Services to Build Trust, Visibility, and
+              Influence
             </h1>
 
             <p
@@ -173,16 +173,13 @@ function PublicRelation() {
             <p className="text-gray-700">
               In today’s fast-paced digital environment, perception is
               everything. At{" "}
-              <span className="font-semibold">BigWig Digital</span>, we help you
-              control the narrative with high-impact{" "}
-              <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  {" "}
-                  Public Relation Services in Delhi
-                </a>
-              </strong>{" "}
-              that position your brand where it matters most, in front of the
-              right people, at the right time.
+              <span className="font-semibold">
+                {" "}
+                <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
+              </span>
+              , we help you control the narrative with high-impact Public
+              Relation Services that position your brand where it matters most,
+              in front of the right people, at the right time.
             </p>
             <p className="text-gray-700">
               Whether you’re a startup making your debut, a brand handling a
@@ -193,9 +190,9 @@ function PublicRelation() {
             <p className="text-gray-700">
               We go beyond press releases and mentions. Our approach is
               strategic and focused on reputation, relevance, and reach . As a
-              trusted public relation agency in Delhi, we bridge the gap between
-              your brand and the media, influencers, and industry leaders who
-              shape public opinion.
+              trusted public relation agency, we bridge the gap between your
+              brand and the media, influencers, and industry leaders who shape
+              public opinion.
             </p>
           </div>
 
@@ -203,7 +200,7 @@ function PublicRelation() {
           <div className="md:w-1/2">
             <img
               src={publicRelation}
-              alt="Public Relations Services in Delhi"
+              alt="Public Relations Services"
               className="w-full h-[50vh] rounded-lg object-cover"
             />
           </div>
@@ -226,11 +223,17 @@ function PublicRelation() {
               opportunities and crisis communication with confidence.
             </p>
             <p className="text-gray-700">
-              As a leading public relation agency in India,{" "}
-              <strong>BigWig Digital</strong> helps brands create consistent
-              media exposure, strengthen stakeholder confidence, and build a
-              public image that aligns with your mission. When done right, PR
-              doesn’t just create buzz, it builds belief.
+              As a leading public relation agency ,{" "}
+              <strong>
+                <a href="https://www.bigwigmediadigital.com/">
+                  {" "}
+                  BigWig Digital
+                </a>
+              </strong>{" "}
+              helps brands create consistent media exposure, strengthen
+              stakeholder confidence, and build a public image that aligns with
+              your mission. When done right, PR doesn’t just create buzz, it
+              builds belief.
             </p>
           </div>
 
@@ -252,10 +255,10 @@ function PublicRelation() {
             <p className="text-gray-700">
               Our PR efforts are geared toward long-term growth, giving your
               brand visibility that lasts far beyond campaign timelines. As a
-              performance-focused public relation agency in India, we don’t just
-              chase features. We craft strategies that align your business
-              objectives with content that connects, media that matters, and
-              messages that move people.
+              performance-focused public relation agency, we don’t just chase
+              features. We craft strategies that align your business objectives
+              with content that connects, media that matters, and messages that
+              move people.
             </p>
           </div>
         </div>
@@ -321,7 +324,7 @@ function PublicRelation() {
               truly integrated{" "}
               <span className="italic">
                 <a href="https://www.bigwigdigital.in/">
-                  Public Relation Agency in Delhi
+                  Public Relation Agency
                 </a>
               </span>{" "}
               that understands the full picture of brand growth.
@@ -337,8 +340,8 @@ function PublicRelation() {
               Every industry speaks a different language, and we know how to
               translate your story for the media that matters. From tech
               startups and D2C brands to education, finance, lifestyle, and
-              wellness, our public relation services in India are designed to
-              meet your industry’s unique communication needs.
+              wellness, our public relation services are designed to meet your
+              industry’s unique communication needs.
             </p>
             <p className="text-gray-700">
               Whether you're looking to launch a product, handle reputation
@@ -399,11 +402,17 @@ function PublicRelation() {
             </h2>
             <p className="text-gray-700 leading-relaxed">
               With a sharp understanding of both traditional media and digital
-              platforms, <strong>BigWig Digital</strong> offers a well-rounded,
-              modern PR approach. As a trusted public relation agency in Delhi,
-              we focus on meaningful placements, long-term reputation building,
-              and storytelling that resonates. Our group makes sure that people
-              remember your brand, not simply see it.
+              platforms,
+              <strong>
+                <a href="https://www.bigwigmediadigital.com/">
+                  {" "}
+                  BigWig Digital
+                </a>
+              </strong>{" "}
+              offers a well-rounded, modern PR approach. As a trusted public
+              relation agency , we focus on meaningful placements, long-term
+              reputation building, and storytelling that resonates. Our group
+              makes sure that people remember your brand, not simply see it.
             </p>
           </div>
 
@@ -423,9 +432,13 @@ function PublicRelation() {
               If you're a startup looking for investor confidence, a tech
               company entering new regions, or a lifestyle brand building
               emotional connection, PR becomes your voice in a noisy market.{" "}
-              <strong>BigWig Digital</strong> provides public relation services
-              in Delhi and across India tailored to your size, sector, and stage
-              of growth.
+              <strong>
+                <a href="https://www.bigwigmediadigital.com/">
+                  BigWig Digital
+                </a>{" "}
+              </strong>{" "}
+              provides public relation services and across tailored to your
+              size, sector, and stage of growth.
             </p>
           </div>
         </div>

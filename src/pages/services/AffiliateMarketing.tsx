@@ -129,8 +129,8 @@ function AffiliateMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Performance-Driven Affiliate Marketing Services in Delhi to Grow
-              Your Business
+              Performance-Driven Affiliate Marketing Services to Grow Your
+              Business
             </h1>
 
             <p
@@ -196,15 +196,15 @@ function AffiliateMarketing() {
                 Affiliate marketing is one of the most powerful and
                 budget-friendly ways to scale your business online. At{" "}
                 <strong>BigWig Digital</strong>, a performance-focused affiliate
-                marketing agency in Delhi, we help brands build strategic
-                affiliate programs that generate consistent sales, leads, and
-                visibility without the upfront advertising costs.
+                marketing agency all over the world, we help brands build
+                strategic affiliate programs that generate consistent sales,
+                leads, and visibility without the upfront advertising costs.
               </p>
               <p className="text-gray-800 text-lg leading-relaxed">
                 Whether you’re a startup launching your first product or an
                 established eCommerce brand looking to expand, our customized
-                affiliate marketing services in India are designed to deliver
-                results that matter.
+                affiliate marketing services are designed to deliver results
+                that matter.
               </p>
               <p className="text-gray-800 text-lg leading-relaxed">
                 By partnering with the right affiliates and influencers, you can
@@ -228,10 +228,9 @@ function AffiliateMarketing() {
               </p>
               <p className="text-gray-700">
                 This approach reduces risk and aligns your marketing budget with
-                actual performance. As a trusted affiliate marketing agency in
-                India, BigWig Digital helps you create a profitable, scalable
-                affiliate model that works alongside your existing marketing
-                channels.
+                actual performance. As a trusted affiliate marketing agency,
+                BigWig Digital helps you create a profitable, scalable affiliate
+                model that works alongside your existing marketing channels.
               </p>
               <p className="text-gray-700">
                 Whether your goal is lead generation, product sales, or app
@@ -285,7 +284,7 @@ function AffiliateMarketing() {
                   <strong>
                     <a href="https://www.bigwigdigital.in/">
                       {" "}
-                      Affiliate Marketing Services in Delhi
+                      Affiliate Marketing Services
                     </a>
                   </strong>{" "}
                   are built on personalization.
@@ -308,7 +307,7 @@ function AffiliateMarketing() {
               <div>
                 <img
                   src={affiliate}
-                  alt="Affiliate Marketing Services in Delhi"
+                  alt="Affiliate Marketing Services"
                   className="w-full h-[60vh] rounded-xl shadow-lg"
                 />
               </div>
@@ -326,7 +325,7 @@ function AffiliateMarketing() {
               <span className="italic">
                 <a href="https://www.bigwigdigital.in/">
                   {" "}
-                  A Top Affiliate Marketing Company in Delhi,
+                  A Top Affiliate Marketing Company over the world,
                 </a>
               </span>{" "}
               we use real-time tracking tools, smart campaign planning, and deep
@@ -407,11 +406,10 @@ function AffiliateMarketing() {
           </h2>
           <p className="text-gray-200 max-w-3xl mx-auto">
             Whether you want to start an affiliate program from scratch or scale
-            an existing one, our{" "}
-            <strong>affiliate marketing services in India</strong> are tailored
-            to deliver consistent, trackable growth. We work across industries,
-            platforms, and campaign types to help you get the most from every
-            partnership.
+            an existing one, our <strong>affiliate marketing services </strong>{" "}
+            are tailored to deliver consistent, trackable growth. We work across
+            industries, platforms, and campaign types to help you get the most
+            from every partnership.
           </p>
         </div>
       </div>

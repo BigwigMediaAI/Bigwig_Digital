@@ -85,7 +85,7 @@ const ppcBenefits = [
 
 const features = [
   {
-    title: "Top PPC Services Provider in Delhi",
+    title: "Top PPC Services Provider",
     text: "With Google Ads-certified experts, BigWig Digital is a top PPC provider that serves customers worldwide.",
   },
   {
@@ -98,7 +98,7 @@ const features = [
   },
   {
     title: "Affordable PPC Campaigns That Deliver Results",
-    text: "Our digital marketing services are at competitive prices while maintaining high quality, unlike many other agencies in Delhi.",
+    text: "Our digital marketing services are at competitive prices while maintaining high quality, unlike many other agencies",
   },
   {
     title: "Guaranteed Top Search Placement",
@@ -159,7 +159,7 @@ function PerformanceMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Top PPC Company in India
+              Top PPC Company
             </h1>
 
             <p
@@ -201,23 +201,20 @@ function PerformanceMarketing() {
             {/* Left Content */}
             <div className="space-y-6 text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-                Top PPC Company in Delhi, India
+                Top PPC Company
               </h2>
               <p className="text-lg leading-relaxed text-justify md:text-left">
-                We are{" "}
+                At{" "}
                 <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    {" "}
-                    Delhi NCR's top PPC company
-                  </a>
+                  <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
                 </strong>
-                , having been tried and tested. Our PPC specialists constantly
-                work to keep you one step ahead of your rivals by offering
-                top-notch PPC services. With complete transparency, select
-                cost-effective PPC plans specifically designed for Google Ads
-                services, such as Banner Ads, Search Ads, App Installation Ads,
-                YouTube Ads, Lead Generation Ads, Shopping Ads, Campaign Quality
-                Score Improvement & Modification, Landing Page Design, etc.
+                , we take pride in being a top PPC company known for delivering
+                proven results. Our dedicated PPC experts help you stay ahead of
+                the competition by offering high-performance, transparent, and
+                cost-effective PPC services tailored for Google Ads. These
+                include Search Ads, Banner Ads, YouTube Ads, App Installation
+                Ads, Shopping Ads, Lead Generation Ads, Campaign Quality Score
+                Optimization, and Landing Page Design.
               </p>
               <p className="text-lg leading-relaxed text-justify md:text-left">
                 We are a team of extremely driven, committed, and skilled
@@ -238,7 +235,7 @@ function PerformanceMarketing() {
             <div>
               <img
                 src={ppc}
-                alt="Top PPC Company in India"
+                alt="Top PPC Company"
                 className="w-full h-auto rounded-xl shadow-lg"
               />
             </div>
@@ -398,8 +395,8 @@ function PerformanceMarketing() {
             <p>
               The PPC sector is quite competitive. Managing many specialized
               components is part of PPC. These focus elements can be obtained by
-              downgrading a dedicated PPC company in Delhi for PPC management
-              and organization work promotion.
+              downgrading a dedicated PPC company for PPC management and
+              organization work promotion.
             </p>
           </div>
         </div>

@@ -23,7 +23,7 @@ const sections = [
     icon: <BarChart3 className="text-[var(--primary-color)]" size={36} />,
     title: "We Focus on Your Growth, Not Just Websites",
     content:
-      "At BigWig Digital, we’re not just about making websites, we’re about building digital success stories. Whether it's digital marketing, website designing, or full-scale development, we ensure every service we deliver is backed by excellence, expertise, and a promise of measurable outcomes. Our dedication has made us the preferred web development partner for many satisfied clients across Delhi and India.",
+      "At BigWig Digital, we’re not just about making websites, we’re about building digital success stories. Whether it’s digital marketing, website design, or full-scale development, every service we deliver is rooted in excellence, backed by expertise, and focused on measurable outcomes. Our commitment to quality has made us a trusted web development partner for businesses across industries and regions.",
   },
   {
     icon: <Code2 className="text-[var(--primary-color)]" size={36} />,
@@ -53,9 +53,9 @@ const sections = [
   },
   {
     icon: <ShieldCheck className="text-[var(--primary-color)]" size={36} />,
-    title: "Trusted by Brands Across India and Beyond",
+    title: "Trusted by Brands Worldwide",
     content:
-      "From startups to established businesses, we’ve delivered over 900 successful web projects to clients across Delhi, Gurugram, and other parts of India. Whether it's a portal for a pharmaceutical brand, a hospital website, or an educational platform, we have the experience to deliver exactly what your business needs.",
+      "From startups to established businesses, we’ve delivered over 900 successful web projects to clients across diverse industries and geographies. Whether it's a portal for a pharmaceutical brand, a hospital website, or an educational platform, we have the experience to deliver exactly what your business needs.",
   },
 ];
 
@@ -97,7 +97,7 @@ function Website() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Best Website Designing & Development Company in Delhi NCR
+              Best Website Designing & Development Company NCR
             </h1>
 
             <p
@@ -117,8 +117,8 @@ function Website() {
             </p>
 
             <p className="text-base md:text-lg max-w-md text-white/90">
-              We are the Best website development company in India/UAE offering
-              different Online Website Designing & Development services.
+              We are the Best website development company offering different
+              Online Website Designing & Development services.
             </p>
             <a href="/contact">
               <button className="mt-4 px-6 py-3 bg-[var(--primary-color)] text-white rounded-full font-semibold hover:bg-opacity-80 transition">
@@ -136,7 +136,7 @@ function Website() {
         <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-semibold text-center text-[var(--primary-color)] mb-6">
-            Best Web Development Company in India to Build Your Online Presence
+            Best Web Development Company to Build Your Online Presence
           </h2>
 
           {/* Two-column layout */}
@@ -150,21 +150,14 @@ function Website() {
                 professional websites — that’s where BigWig Digital steps in.
               </p>
               <p>
-                As a reputable{" "}
                 <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    web design company in India
-                  </a>
-                </strong>
-                , we’re here to guide, support, and help you build a powerful
-                online presence. With years of practical experience and a
-                results-driven mindset, we are recognized as one of the{" "}
-                <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    {" "}
-                    top web development companies in Delhi.{" "}
-                  </a>
-                </strong>
+                  <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
+                </strong>{" "}
+                is your trusted partner for web design and development. With a
+                strong track record and a results-oriented approach, we help
+                businesses establish a powerful online presence. Backed by years
+                of hands-on experience, we’ve earned recognition as one of the
+                leading web design and development companies.
               </p>
             </div>
 
@@ -172,7 +165,7 @@ function Website() {
             <div>
               <img
                 src={web}
-                alt="Best Web Development Company in India"
+                alt="Best Web Development Company "
                 className="w-full h-[50vh] rounded-xl shadow-lg"
               />
             </div>
@@ -260,8 +253,8 @@ function Website() {
             Let's Build Your Digital Future Together
           </h2>
           <p className="text-lg md:text-xl mb-6 max-w-3xl mx-auto">
-            Looking for a website development company in India that understands
-            your goals?
+            Looking for a website development company that understands your
+            goals?
             <br className="hidden md:block" />
             <span className="font-semibold text-[var(--primary-color)]">
               BigWig Digital

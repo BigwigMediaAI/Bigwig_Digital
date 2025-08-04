@@ -120,7 +120,7 @@ function ContentMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Content Marketing Services in Delhi That Speak for Your Brand
+              Best Content Marketing Services That Speak for Your Brand
             </h1>
 
             <p
@@ -161,7 +161,7 @@ function ContentMarketing() {
             {/* Left Content */}
             <div className="space-y-6 text-center md:text-left">
               <h2 className="text-2xl md:text-4xl md:font-bold font-semibold text-[var(--primary-color)]">
-                India’s Top Content Marketing Company Creating Content That Cuts
+                World’s Top Content Marketing Company Creating Content That Cuts
                 Through the Noise.
               </h2>
               <p className="text-lg text-gray-600 text-justify md:text-left">
@@ -169,7 +169,7 @@ function ContentMarketing() {
                 is no longer optional in today's digital-first society. We as{" "}
                 <strong>
                   <a href="https://www.bigwigdigital.in/">
-                    Delhi's leading content marketing firm
+                    Leading Content Marketing Firm
                   </a>
                 </strong>
                 , BigWig Digital, do more than just create content. We create
@@ -185,8 +185,8 @@ function ContentMarketing() {
               </p>
               <p className="text-lg text-gray-600 text-justify md:text-left">
                 You've come to the perfect spot if you're searching for
-                strategic content marketing services in India that combine
-                conversion, clarity, and creativity.
+                strategic content marketing services that combine conversion,
+                clarity, and creativity.
               </p>
             </div>
 
@@ -194,7 +194,7 @@ function ContentMarketing() {
             <div>
               <img
                 src={content}
-                alt="Content Marketing Services in Delhi"
+                alt="Content Marketing Services in all over the world"
                 className="w-full h-[70vh] rounded-xl shadow-lg"
               />
             </div>
@@ -220,7 +220,7 @@ function ContentMarketing() {
             With our experience as a reliable{" "}
             <strong>
               <a href="https://www.bigwigdigital.in/">
-                content marketing company in India
+                content marketing company all over the world
               </a>
             </strong>
             , we understand that effective content needs to do three things:
@@ -306,13 +306,13 @@ function ContentMarketing() {
 
       <section className="bg-[var(--primary-color)]/5  rounded-xl w-11/12 md:w-5/6 mx-auto py-12">
         <h3 className="text-2xl md:text-3xl md:font-bold font-semibold text-[var(--primary-color)] mb-4 text-center md:text-left">
-          What Makes BigWig Digital a Top Content Marketing Agency in Delhi?
+          What Makes BigWig Digital a Top Content Marketing Agency ?
         </h3>
 
         <p className="text-base text-gray-700 mb-8 text-justify">
           We’re not just a content writing team, we’re strategic content
           partners. At BigWig Digital, we combine the power of words with the
-          science of digital marketing. Here’s why brands across India trust us
+          science of digital marketing. Here’s why brands across world trust us
         </p>
 
         {/* Mobile Slider */}
@@ -394,14 +394,13 @@ function ContentMarketing() {
               Let BigWig Digital help you stand out with content that’s
               strategic, scalable, and search-ready. <br />
               <br />
-              Whether you're a startup in Delhi or a national brand in India,
-              our{" "}
+              Whether you're a growing startup or an established brand, our{" "}
               <strong>
                 <a href="https://www.bigwigdigital.in/">
                   content marketing services
                 </a>
               </strong>{" "}
-              are designed to fuel your growth one word at a time.
+              are designed to fuel your growth one word at a time.
             </p>
           </div>
         </div>

@@ -79,8 +79,8 @@ function InfluencerMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Influencer Marketing Services in Delhi That Connect Brands with
-              Real Audiences
+              Influencer Marketing Services That Connect Brands with Real
+              Audiences
             </h1>
 
             <p
@@ -137,17 +137,15 @@ function InfluencerMarketing() {
               In today’s attention-driven world, people trust people—not just
               ads. That’s where influencer marketing steps in as one of the most
               powerful and authentic brand-building tools. At{" "}
-              <strong>BigWig Digital</strong>, we help you harness the power of
-              voices your audience already trusts. Our customized{" "}
               <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  {" "}
-                  Influencer Marketing Services in Delhi
-                </a>
-              </strong>{" "}
-              connect your brand with the right content creators, storytellers,
-              and digital personalities to expand your reach, boost credibility,
-              and drive real engagement.
+                <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
+              </strong>
+              , we help you harness the power of voices your audience already
+              trusts. Our customized{" "}
+              <strong>Influencer Marketing Services</strong> connect your brand
+              with the right content creators, storytellers, and digital
+              personalities to expand your reach, boost credibility, and drive
+              real engagement.
             </p>
             <p className="text-gray-700 text-base leading-relaxed">
               Whether you're targeting Gen Z on Instagram, professionals on
@@ -162,7 +160,7 @@ function InfluencerMarketing() {
           <div className="md:w-1/2">
             <img
               src={influencer}
-              alt="Influencer Marketing Services in Delhi"
+              alt="Influencer Marketing Services"
               className="w-full h-[60vh] rounded-lg object-cover"
             />
           </div>
@@ -188,9 +186,9 @@ function InfluencerMarketing() {
               Our approach to influencer marketing goes beyond vanity metrics.
               We focus on strategic partnerships that bring you high-intent
               traffic, quality leads, and increased brand awareness. As a
-              trusted influencer marketing agency in Delhi, we ensure that each
-              campaign is thoughtfully designed to deliver both visibility and
-              measurable ROI.
+              trusted influencer marketing agency, we ensure that each campaign
+              is thoughtfully designed to deliver both visibility and measurable
+              ROI.
             </p>
           </div>
 
@@ -208,11 +206,14 @@ function InfluencerMarketing() {
             </p>
             <p className="text-gray-700 text-base leading-relaxed">
               We believe in pairing the right story with the right voice. As an
-              influencer marketing agency in India,{" "}
-              <strong>BigWig Digital</strong> ensures your brand narrative is
-              told by creators who not only align with your values but genuinely
-              influence your target audience. This creates content that doesn't
-              just engage but inspires action.
+              influencer marketing agency{" "}
+              <strong>
+                <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
+              </strong>{" "}
+              ensures your brand narrative is told by creators who not only
+              align with your values but genuinely influence your target
+              audience. This creates content that doesn't just engage but
+              inspires action.
             </p>
           </div>
         </div>
@@ -263,24 +264,22 @@ function InfluencerMarketing() {
               Influencer Campaigns That Balance Creativity and Strategy
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              At <strong>BigWig Digital</strong>, we view every influencer
-              collaboration as a strategic blend of content and connection. It’s
-              not just about high follower counts, but about working with
-              creators whose voice, tone, and audience align with your brand
-              identity.
+              At{" "}
+              <strong>
+                <a href="https://www.bigwigdigital.in/">BigWig Digital </a>
+              </strong>
+              , we view every influencer collaboration as a strategic blend of
+              content and connection. It’s not just about high follower counts,
+              but about working with creators whose voice, tone, and audience
+              align with your brand identity.
             </p>
             <p className="text-gray-700 leading-relaxed">
               We help you build campaigns that feel natural, spark conversation,
               and inspire action. Each piece of content is crafted to engage
               authentically while staying true to your marketing goals. As a
-              trusted{" "}
-              <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  Influencer Marketing Agency in India,
-                </a>
-              </strong>{" "}
-              we understand how to deliver influencer content that performs
-              without feeling like an advertisement.
+              trusted <strong>Influencer Marketing Agency</strong> we understand
+              how to deliver influencer content that performs without feeling
+              like an advertisement.
             </p>
           </div>
 
@@ -293,8 +292,8 @@ function InfluencerMarketing() {
               Big corporations with enormous expenditures are no longer the only
               ones doing influencer marketing. Whether you're a startup
               launching your first campaign or an established business looking
-              to grow your online reach, our influencer marketing services in
-              Delhi can be tailored to meet your unique needs.
+              to grow your online reach, our influencer marketing services can
+              be tailored to meet your unique needs.
             </p>
             <p className="text-gray-700 leading-relaxed">
               We identify the right mix of creators based on engagement,
@@ -340,8 +339,8 @@ function InfluencerMarketing() {
             </p>
             <p className="mt-4 text-base leading-relaxed">
               That’s why brands looking for dependable influencer marketing
-              services in India choose BigWig to drive awareness and conversions
-              through the power of influence.
+              services choose BigWig to drive awareness and conversions through
+              the power of influence.
             </p>
           </div>
         </div>

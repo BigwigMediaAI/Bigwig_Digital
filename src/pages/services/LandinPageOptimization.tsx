@@ -107,8 +107,7 @@ function LandinPageOptimization() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Landing Page Optimization Services in Delhi That Maximize
-              Conversions
+              Landing Page Optimization Services That Maximize Conversions
             </h1>
 
             <p
@@ -167,13 +166,13 @@ function LandinPageOptimization() {
                 opportunity.
               </h2>
               <p className="text-lg text-gray-700">
-                At BigWig Digital, we offer performance-driven{" "}
+                At{" "}
                 <strong>
                   <a href="https://www.bigwigdigital.in/">
-                    {" "}
-                    Landing Page Optimization Services in Delhi{" "}
-                  </a>
+                    BigWig Digital
+                  </a>{" "}
                 </strong>
+                , we offer performance-driven Landing Page Optimization Services
                 tailored to turn your visitors into customers. Whether your
                 audience arrives via paid ads, SEO, or social media campaigns,
                 your landing page plays a make-or-break role in their
@@ -184,7 +183,7 @@ function LandinPageOptimization() {
             <div className="relative rounded-3xl shadow-lg flex items-center justify-center">
               <img
                 src={landing}
-                alt="Landing Page Optimization Services in Delhi"
+                alt="Landing Page Optimization Services"
                 className="w-full h-[40vh] rounded-xl shadow-lg"
               />
             </div>
@@ -247,13 +246,7 @@ function LandinPageOptimization() {
               <p className="text-gray-700">
                 Our team understands what makes a user stay, scroll, and submit.
                 Through strategic layout, focused messaging, and data-driven
-                content improvements, our{" "}
-                <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    {" "}
-                    Landing Page Optimization Services in India
-                  </a>
-                </strong>{" "}
+                content improvements, our Landing Page Optimization Services
                 help you reduce bounce rates, increase form submissions, and
                 lower your cost per acquisition across platforms.
               </p>
@@ -443,7 +436,7 @@ function LandinPageOptimization() {
           </h2>
           <p className="text-gray-200 max-w-3xl mx-auto">
             As a results-focused{" "}
-            <strong>landing page optimization agency in Delhi</strong>, we bring
+            <strong>landing page optimization agency </strong>, we bring
             together performance design, digital psychology, and marketing
             expertise. With a sharp focus on conversions, we help you squeeze
             the most out of every marketing rupee you spend.

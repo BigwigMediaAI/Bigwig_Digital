@@ -82,7 +82,7 @@ function EmailMarketing() {
           {/* Left Content - 2/3 */}
           <div className="w-full md:w-2/3 text-white space-y-6 pr-0 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Proven Email Marketing services in India
+              Proven Email Marketing services
             </h1>
 
             <p
@@ -149,11 +149,7 @@ function EmailMarketing() {
           <div className="border text-gray-800 p-6 rounded-2xl text-lg font-medium">
             Whether you're a startup, a growing D2C brand, or an enterprise
             business, or from any country our{" "}
-            <span className="italic">
-              <a href="https://www.bigwigdigital.in/">
-                Email Marketing Services in India{" "}
-              </a>
-            </span>
+            <span className="italic">Email Marketing Services </span>
             are crafted to help you deliver strategically, sell more, advertise
             more and build relationships that actually stays.
           </div>
@@ -250,23 +246,23 @@ function EmailMarketing() {
         {/* 1. Hero / Intro Section */}
         <div className="py-12  text-center w-11/12 md:w-5/6 mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-            Why Brands Trust Email Marketing Services in India
+            Why Brands Trust Email Marketing Services
           </h2>
           <p className="text-lg text-gray-700 ">
             Brands across industries are increasingly relying on Email Marketing
-            Services in India for one simple reason, it works. With high ROI,
-            direct reach, and measurable results, email remains one of the most
+            Services for one simple reason, it works. With high ROI, direct
+            reach, and measurable results, email remains one of the most
             effective digital marketing tools.
           </p>
           <p className="text-lg text-gray-700 ">
-            At <strong>BigWig Digital</strong>, a trusted{" "}
+            At{" "}
             <strong>
-              <a href="https://www.bigwigdigital.in/">
-                Email Marketing Agency in Delhi
-              </a>
+              {" "}
+              <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
             </strong>
-            , we build meaningful relationships through strategic, personalized,
-            and conversion-focused email campaigns.
+            , a trusted Email Marketing Agency , we build meaningful
+            relationships through strategic, personalized, and
+            conversion-focused email campaigns.
           </p>
         </div>
 
@@ -274,12 +270,12 @@ function EmailMarketing() {
         <div className=" w-5/6 mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
             <h3 className="text-3xl text-[var(--primary-color)] font-semibold">
-              Work With a Smart Email Marketing Agency in India
+              Work With a Smart Email Marketing Agency
             </h3>
             <p>
               We’re not just about emails, we’re driving results. A
-              professional, dedicated, and experienced email marketing agency in
-              India like ours gives you:
+              professional, dedicated, and experienced email marketing agency
+              like ours gives you:
             </p>
             <ul className="list-disc list-inside space-y-2 text-md">
               <li>Hands-free campaign management systems.</li>
@@ -291,7 +287,7 @@ function EmailMarketing() {
           <div>
             <img
               src={image}
-              alt="Email Marketing Service in India"
+              alt="Email Marketing Service in "
               className="w-full md:w-[50%] mb-10 mx-auto"
             />
           </div>
@@ -308,19 +304,19 @@ function EmailMarketing() {
               <p className="text-lg leading-relaxed">
                 For startups and small businesses, building brand recognition
                 and customer trust is crucial. That’s where a professional email
-                marketing service in India becomes a game-changer. With
-                personalized email campaigns, your business can connect directly
-                with your target audience, share updates, promote offers, and
-                guide leads through the buying journey — all while keeping
-                marketing costs low.
+                marketing service becomes a game-changer. With personalized
+                email campaigns, your business can connect directly with your
+                target audience, share updates, promote offers, and guide leads
+                through the buying journey — all while keeping marketing costs
+                low.
               </p>
               <p className="text-lg leading-relaxed">
-                At BigWig Digital, a trusted email marketing agency in Delhi, we
-                help new businesses launch impactful campaigns that drive
-                engagement, build credibility, and boost early conversions.
-                Whether you're growing your list or nurturing your first set of
-                leads, our email marketing services in Delhi are designed to
-                support consistent, scalable growth from day one.
+                At BigWig Digital, a trusted email marketing agency, we help new
+                businesses launch impactful campaigns that drive engagement,
+                build credibility, and boost early conversions. Whether you're
+                growing your list or nurturing your first set of leads, our
+                email marketing services are designed to support consistent,
+                scalable growth from day one.
               </p>
             </div>
 
@@ -365,14 +361,14 @@ function EmailMarketing() {
         <div className="bg-white w-5/6 mx-auto text-[var(--primary-color)] py-12  text-center space-y-4">
           {/* Heading */}
           <h3 className="text-3xl font-bold">
-            Based in Delhi? We’ve Got You Covered
+            Wherever You Are, We’ve Got You Covered{" "}
           </h3>
 
           {/* Paragraph */}
           <p className=" text-gray-700 mx-auto text-lg">
-            As a ranking and leading email marketing agency in Delhi, we know
-            what the local market requires and how to strategically deliver. Our
-            team specializes in:
+            As a ranking and leading email marketing agency, we know what the
+            local market requires and how to strategically deliver. Our team
+            specializes in:
           </p>
 
           {/* Bullet Points in Boxes */}
@@ -380,7 +376,7 @@ function EmailMarketing() {
             {[
               "Hyper-local targeting audience.",
               "Industry-specific campaigns.",
-              "B2B & B2C strategies for Delhi’s unique business market.",
+              "B2B & B2C strategies for  unique business market.",
               "Bulk campaigns to automation suites, ready to deploy.",
             ].map((point, i) => (
               <div
@@ -395,7 +391,7 @@ function EmailMarketing() {
           {/* Optional Highlighted Footer Message */}
           <p className="max-w-3xl mx-auto text-lg font-semibold mt-4">
             If you're looking for tailored and genuine email marketing services
-            in Delhi, we’ve got you covered.
+            Wherever You Are, We’ve Got You Covered{" "}
           </p>
         </div>
       </section>
@@ -411,10 +407,10 @@ function EmailMarketing() {
 
           {/* Main Paragraph */}
           <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-            If you're looking for a reliable email marketing agency in Delhi,
-            BigWig Digital brings the creativity, strategy, and technology
-            together to deliver results. We help you send smarter emails that
-            your audience actually wants to read, and act on.
+            If you're looking for a reliable email marketing agency, BigWig
+            Digital brings the creativity, strategy, and technology together to
+            deliver results. We help you send smarter emails that your audience
+            actually wants to read, and act on.
           </p>
 
           {/* Closing Line */}

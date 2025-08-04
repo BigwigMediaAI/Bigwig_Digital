@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos" | "websites";
 
@@ -48,7 +49,10 @@ const GallerySection: React.FC = () => {
           name="description"
           content="View our portfolio to see how we’ve helped businesses achieve digital success across industries."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/our-works" />{" "}
+        <link
+          rel="canonical"
+          href="https://www.bigwigdigital.in/our-works"
+        />{" "}
       </Helmet>
       <section className="py-5 max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-4">
@@ -82,18 +86,18 @@ const GallerySection: React.FC = () => {
                 className="border border-gray-200 shadow-lg rounded-lg overflow-hidden"
                 data-aos="fade-up"
               >
-                <a
+                {/* <a
                   href={(item as WebsiteItem).url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
-                >
-                  <img
-                    src={(item as WebsiteItem).image}
-                    alt={(item as WebsiteItem).title}
-                    className="w-full h-auto max-h-[500px] object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </a>
+                > */}
+                <img
+                  src={(item as WebsiteItem).image}
+                  alt={(item as WebsiteItem).title}
+                  className="w-full h-auto max-h-[500px] object-cover transition-transform duration-300 hover:scale-105"
+                />
+                {/* </a> */}
                 <h3 className="text-lg sm:text-xl font-semibold px-4 py-3 text-center sm:text-left">
                   {(item as WebsiteItem).title}
                 </h3>
@@ -138,17 +142,17 @@ const GallerySection: React.FC = () => {
                   className="border border-gray-200 shadow-lg rounded-lg overflow-hidden"
                   data-aos="fade-up"
                 >
-                  <a
+                  {/* <a
                     href={(item as WebsiteItem).url}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
-                    <img
-                      src={(item as WebsiteItem).image}
-                      alt={(item as WebsiteItem).title}
-                      className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105 "
-                    />
-                  </a>
+                  > */}
+                  <img
+                    src={(item as WebsiteItem).image}
+                    alt={(item as WebsiteItem).title}
+                    className="w-full h-[400px] object-cover transition-transform duration-300 hover:scale-105 "
+                  />
+                  {/* </a> */}
                   <h3 className="text-xl font-semibold px-4 py-2">
                     {(item as WebsiteItem).title}
                   </h3>
@@ -200,6 +204,7 @@ const GallerySection: React.FC = () => {
           </div>
         )}
       </section>
+      <Footer />
     </div>
   );
 };

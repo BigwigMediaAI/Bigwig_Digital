@@ -78,7 +78,7 @@ function VideoShoot() {
           {/* Left Content - 2/3 */}
           <div className="w-full md:w-2/3 text-white space-y-6 pr-0 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Professional Video Shoot Services in Delhi That Elevate Your Brand
+              Professional Video Shoot Services That Elevate Your Brand
             </h1>
 
             <p
@@ -136,18 +136,15 @@ function VideoShoot() {
                 communication.
               </h2>
               <p className="text-lg leading-relaxed text-gray-700 ">
-                At <strong>BigWig Digital</strong>, we help brands turn their
-                ideas into high-quality, engaging video content that grabs
-                attention and delivers results. From promotional videos and
-                social media reels to brand stories and product demos, we offer
-                end-to-end{" "}
+                At{" "}
                 <strong>
-                  <a href="https://www.bigwigdigital.in/">
-                    {" "}
-                    Video Shoot Services in Delhi
-                  </a>
-                </strong>{" "}
-                tailored to your goals.
+                  <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
+                </strong>
+                , we help brands turn their ideas into high-quality, engaging
+                video content that grabs attention and delivers results. From
+                promotional videos and social media reels to brand stories and
+                product demos, we offer end-to-end{" "}
+                <strong>Video Shoot Services</strong> tailored to your goals.
               </p>
               <p className="text-lg leading-relaxed text-gray-700 ">
                 We blend creativity, storytelling, and strategy to create videos
@@ -162,7 +159,7 @@ function VideoShoot() {
             <div>
               <img
                 src={videoshoot} // Replace with your actual image
-                alt="Video Shoot Services in Delhi"
+                alt="Video Shoot Services "
                 className="w-full h-[60vh] rounded-xl shadow-lg object-cover"
               />
             </div>
@@ -273,7 +270,7 @@ function VideoShoot() {
         {/* Heading + Intro */}
         <div className="w-11/12 md:w-5/6 mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-            Why Choose BigWig Digital for Video Shoot Services in Delhi?
+            Why Choose BigWig Digital for Video Shoot Services ?
           </h2>
           <p className="text-lg leading-relaxed">
             We’re not just videographers, we’re digital marketers who understand
@@ -339,16 +336,13 @@ function VideoShoot() {
 
           {/* Main Paragraph */}
           <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-            If you’re looking for professional, impactful{" "}
+            If you’re looking for professional, impactful Video Shoot Services ,
             <span className="italic">
-              <a href="https://www.bigwigdigital.in/">
-                {" "}
-                Video Shoot Services in Delhi
-              </a>
-            </span>
-            , BigWig Digital is your creative partner. We help you bring your
-            ideas to life on screen, connect with your audience emotionally, and
-            convert views into value.
+              <a href="https://www.bigwigdigital.in/">BigWig Digital</a>
+            </span>{" "}
+            is your creative partner. We help you bring your ideas to life on
+            screen, connect with your audience emotionally, and convert views
+            into value.
           </p>
 
           {/* Closing Line */}

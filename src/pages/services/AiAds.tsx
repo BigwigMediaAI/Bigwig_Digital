@@ -41,7 +41,7 @@ function AiAds() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              CGI Advertising Company in India
+              CGI Advertising Company all over the world
             </h1>
 
             <p
@@ -89,7 +89,7 @@ function AiAds() {
       <section className="py-12 bg-white  text-[#1a1a1a] ">
         <div className="w-11/12 md:w-5/6 mx-auto space-y-6">
           <h2 className="text-3xl md:text-4xl text-center font-bold text-[var(--primary-color)]">
-            India's Leading CGI Advertising Agency
+            Leading CGI Advertising Agency
           </h2>
           <p className="text-lg leading-relaxed text-center">
             Our specialty at <strong>BigWig Digital</strong> is developing
@@ -114,12 +114,14 @@ function AiAds() {
               viewers' interest and strengthen brand loyalty by fusing
               cutting-edge technology with artistic flare. Our shared tradition
               of telling stories and our commitment to technological innovation
-              allow us to create outstanding visual storytelling in Delhi.
+              allow us to create outstanding visual storytelling .
             </p>
             <p className="text-lg leading-relaxed">
               With their eye-catching, captivating campaigns,{" "}
               <strong>
-                <a href="https://www.bigwigdigital.in/">CGI ads in India </a>
+                <a href="https://www.bigwigdigital.in/">
+                  CGI ads all over the world{" "}
+                </a>
               </strong>
               are revolutionizing digital marketing. By utilizing the limitless
               possibilities of digital creation, brands are embracing CGI ads to
@@ -132,7 +134,7 @@ function AiAds() {
           <div className="w-full h-[300px] md:h-[400px] rounded-xl overflow-hidden shadow-lg">
             <img
               src={ai} // Replace with your image path
-              alt="CGI Advertising Company in India"
+              alt="CGI Advertising Company all over the world"
               className="w-full h-full object-cover"
             />
           </div>
@@ -227,10 +229,10 @@ function AiAds() {
           </div>
 
           <p className="text-lg leading-relaxed text-center text-gray-700   mx-auto">
-            Selecting the best CGI advertising agency in India is a difficult
-            task, but with the help of this guide's wit and insight, you'll be
-            well on your way to advertising success. You may identify the ideal
-            partner to realize your brand's story in breathtaking
+            Selecting the best CGI advertising agency all over the world is a
+            difficult task, but with the help of this guide's wit and insight,
+            you'll be well on your way to advertising success. You may identify
+            the ideal partner to realize your brand's story in breathtaking
             computer-generated imagery by taking into account elements like
             portfolio diversity, industry experience, technology and innovation,
             client testimonials, communication and collaboration, and budget

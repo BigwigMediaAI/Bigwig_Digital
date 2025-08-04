@@ -54,7 +54,7 @@ function SocialMediaMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Social Media Marketing Services in Delhi That Drive Real ROI
+              Social Media Marketing Services That Drive Real ROI
             </h1>
 
             <p
@@ -106,7 +106,7 @@ function SocialMediaMarketing() {
       <section className="py-12 space-y-10 text-black ">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
-          Social Media Marketing Agency in Delhi
+          Social Media Marketing Agency
         </h2>
 
         {/* Two-column Layout */}
@@ -114,41 +114,36 @@ function SocialMediaMarketing() {
           {/* Left Content */}
           <div className="space-y-6 text-md leading-relaxed">
             <p>
-              Looking for a social media marketing agency in Delhi that
-              understands performance marketing? At BigWig Digital, we deliver
-              paid ad campaigns that actually convert, not just drive traffic.
-              We’re here to help you grow, scale, and stand out, across every
-              major social media platform.
+              Looking for a social media marketing agency that understands
+              performance marketing? At BigWig Digital, we deliver paid ad
+              campaigns that actually convert, not just drive traffic. We’re
+              here to help you grow, scale, and stand out, across every major
+              social media platform.
             </p>
 
             <p>
-              <strong>At BigWig Digital</strong>, we go beyond likes and
-              followers, we deliver performance-driven social media ad campaigns
-              designed to get your brand seen, clicked, and remembered. As a
-              trusted{" "}
+              At
               <strong>
                 {" "}
-                <a href="https://www.bigwigdigital.in/">
-                  social media marketing agency in Delhi
-                </a>
+                <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
               </strong>
-              , we specialize in creating high-converting paid campaigns across
-              today’s most powerful platforms.
+              , we go beyond likes and followers, we deliver performance-driven
+              social media ad campaigns designed to get your brand seen,
+              clicked, and remembered. As a trusted{" "}
+              <strong>social media marketing agency</strong>, we specialize in
+              creating high-converting paid campaigns across today’s most
+              powerful platforms.
             </p>
 
             <p>
               Whether your goal is brand awareness, lead generation, website
               traffic, app installs, or video views, our expert team crafts
               data-backed ad strategies that bring measurable results. If you’re
-              looking for expert{" "}
+              looking for expert social media marketing services ,{" "}
               <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  {" "}
-                  social media marketing services in India
-                </a>
-              </strong>
-              , BigWig Digital is your go-to partner for growth-focused ad
-              solutions.
+                <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
+              </strong>{" "}
+              is your go-to partner for growth-focused ad solutions.
             </p>
           </div>
 
@@ -156,7 +151,7 @@ function SocialMediaMarketing() {
           <div>
             <img
               src={smm}
-              alt="Social Media Marketing Agency in Delhi"
+              alt="Social Media Marketing Agency "
               className="w-full h-[60vh] rounded-xl shadow-lg"
             />
           </div>

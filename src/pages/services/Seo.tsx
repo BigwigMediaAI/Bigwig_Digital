@@ -68,7 +68,7 @@ function Seo() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Best SEO Company in Delhi NCR
+              Best SEO Company
             </h1>
 
             <p
@@ -144,7 +144,7 @@ function Seo() {
             <div className="w-full">
               <img
                 src={seo}
-                alt="Best SEO Company in Delhi NCR"
+                alt="Best SEO Company"
                 className="w-full h-[60vh] rounded-xl shadow-lg"
               />
             </div>
@@ -156,21 +156,20 @@ function Seo() {
         {/* Left Content */}
         <div className="md:w-1/2 space-y-4 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-            Drive Organic Traffic with the Best SEO Company in India
+            Drive Organic Traffic with the Best SEO Company in all over the
+            world
           </h2>
           <p className="text-lg text-gray-600  text-justify">
-            We are a{" "}
+            We are a Top SEO Agency, offering companies the greatest SEO
+            solutions.{" "}
             <strong>
-              <a href="https://www.bigwigdigital.in/">
-                Top SEO Agency in Delhi
-              </a>
-            </strong>
-            , offering companies the greatest SEO solutions. BigWig Digital has
-            more than 10 years of extensive expertise and has assisted numerous
-            companies in Delhi, India, and other countries in achieving their
-            online marketing objectives and improving their search engine
-            rankings. Managing more than 10,000 campaigns with success and
-            keeping a 95% client retention rate.
+              <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
+            </strong>{" "}
+            has more than 10 years of extensive expertise and has assisted
+            numerous companies, all over the world in achieving their online
+            marketing objectives and improving their search engine rankings.
+            Managing more than 10,000 campaigns with success and keeping a 95%
+            client retention rate.
           </p>
         </div>
 

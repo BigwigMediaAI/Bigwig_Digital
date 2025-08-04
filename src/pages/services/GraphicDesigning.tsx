@@ -33,7 +33,7 @@ function GraphicDesigning() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Transform Your Ideas With The Best Graphic Design Agency in Delhi
+              Transform Your Ideas With The Best Graphic Design Agency
             </h1>
 
             <p
@@ -78,46 +78,40 @@ function GraphicDesigning() {
         <div className="w-11/12 md:w-5/6 mx-auto space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-2xl md:text-4xl md:font-bold font-semibold text-[var(--primary-color)]">
-              A Creative Graphic Design Agency In Delhi, NCR
+              A Creative Graphic Design Agency, NCR
             </h2>
 
             <p className="text-lg text-gray-600 text-justify py-5">
-              At BigWig Digital, we believe in the potency of using images and
-              graphics to express stories. Delhi is home to many vibrant
-              enterprises, and in order to transform their concepts into
-              eye-catching visual experiences, they want a graphic design firm
-              that is very imaginative, committed, and hardworking. It has
-              established itself as one of{" "}
+              At
               <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  Delhi's top graphic design firms
-                </a>
+                <a href="https://www.bigwigdigital.in/"> BigWig Digital </a>
               </strong>{" "}
-              thanks to Creative Orion. Whether you are from a local Delhi
-              business or the fashion sector, or you are a start-up or
-              established brand, we offer graphic design services to everyone.
-              All sectors can benefit from our highly innovative and customized
-              solutions.
+              we believe in the potency of using images and graphics to express
+              stories. home to many vibrant enterprises, and in order to
+              transform their concepts into eye-catching visual experiences,
+              they want a graphic design firm that is very imaginative,
+              committed, and hardworking. It has established itself as one of{" "}
+              World's top graphic design firms thanks to Creative Orion. Whether
+              you are from a local business or the fashion sector, or you are a
+              start-up or established brand, we offer graphic design services to
+              everyone. All sectors can benefit from our highly innovative and
+              customized solutions.
             </p>
 
             <p className="text-lg text-gray-600 text-justify py-5">
-              BigWig Digital's graphics department provides 360° graphic design
-              support to help you advance your business endeavors. Adhering to
-              the maxim that "great design leads to great businesses," our team
-              of expert graphic designers provides top-notch design support for
-              all of your needs, including packaging, adverts, logos, and more.
-              As a{" "}
               <span className="italic">
-                <a href="https://www.bigwigdigital.in/">
-                  Graphic Design Company in Delhi
-                </a>
+                <a href="https://www.bigwigdigital.in/">BigWig Digital's</a>
               </span>{" "}
-              , we offer the best possible design services by utilizing the
-              newest, most advanced software, the creative abilities of our
-              designers, and our knowledge of every industry with essential
-              resources. BigWig Digital provides web design services to
-              customers in India, the United Arab Emirates, New Zealand, and
-              Australia.
+              graphics department provides 360° graphic design support to help
+              you advance your business endeavors. Adhering to the maxim that
+              "great design leads to great businesses," our team of expert
+              graphic designers provides top-notch design support for all of
+              your needs, including packaging, adverts, logos, and more. As a{" "}
+              Graphic Design Company , we offer the best possible design
+              services by utilizing the newest, most advanced software, the
+              creative abilities of our designers, and our knowledge of every
+              industry with essential resources. BigWig Digital provides web
+              design services to customers all over the world.
             </p>
 
             {/* New Replaced Third Paragraph as Icon List */}
@@ -168,7 +162,7 @@ function GraphicDesigning() {
               <div>
                 <img
                   src={design}
-                  alt="The Best Graphic Design Agency in Delhi"
+                  alt="The Best Graphic Design Agency"
                   className="w-full h-[60vh] rounded-xl shadow-lg"
                 />
               </div>
@@ -183,10 +177,10 @@ function GraphicDesigning() {
 
             <p className="text-lg text-gray-600 text-justify">
               <strong>Creative Visual Impact:</strong> BigWig Digital, the
-              leading graphic design company in Delhi, India, delivers visually
-              compelling designs using text, symbols, logos, colors, and images
-              to create instant impact. Our work helps clients effectively
-              promote their brands, products, and services.
+              leading graphic design company, delivers visually compelling
+              designs using text, symbols, logos, colors, and images to create
+              instant impact. Our work helps clients effectively promote their
+              brands, products, and services.
             </p>
 
             <p className="text-lg text-gray-600 text-justify">
@@ -231,16 +225,15 @@ function GraphicDesigning() {
               in achieving exceptional brand and commercial visibility. The best
               and most well-known type of advertising is branding, and our
               design makes a strong statement. Any kind of design can be created
-              and curated by BigWig Digital, A{" "}
+              and curated by
               <strong>
-                <a href="https://www.bigwigdigital.in/">
-                  Top Graphic Design Firm in Delhi NCR, India
-                </a>
+                <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
               </strong>
-              , United Arab Emirates, New Zealand, and Australia. All you have
-              to do is present us with your idea, and we will do everything in
-              our power to meet your expectations by providing unmatched graphic
-              design services in a predetermined amount of time.
+              , A Top Graphic Design Firm , United Arab Emirates, New Zealand,
+              and Australia. All you have to do is present us with your idea,
+              and we will do everything in our power to meet your expectations
+              by providing unmatched graphic design services in a predetermined
+              amount of time.
             </p>
           </div>
         </div>
@@ -260,9 +253,9 @@ function GraphicDesigning() {
             constant attention and investment, just like your health.
             <br />
             <br />
-            People may be drawn to them by graphics. By investing in a Delhi
-            graphic design agency, you can use our superior design services to
-            immediately create a well-known and reliable brand.
+            People may be drawn to them by graphics. By investing graphic design
+            agency, you can use our superior design services to immediately
+            create a well-known and reliable brand.
           </p>
 
           {/* Grid Boxes */}
@@ -288,8 +281,8 @@ function GraphicDesigning() {
               </h4>
               <p className="text-sm md:text-base text-justify text-gray-700">
                 A strong brand identity is built through consistent and creative
-                design. Thankfully, our talented graphic designers in Delhi are
-                prepared to use their exceptional abilities to increase brand
+                design. Thankfully, our talented graphic designers are prepared
+                to use their exceptional abilities to increase brand
                 recognition.
               </p>
             </div>
@@ -313,9 +306,9 @@ function GraphicDesigning() {
                 Boosts Engagement and Conversions
               </h4>
               <p className="text-sm md:text-base text-justify text-gray-700">
-                Our Delhi graphic design firm uses visuals to highlight
-                interactions and conversions, ensuring that it draws in more
-                customers and boosts sales.
+                Our graphic design firm uses visuals to highlight interactions
+                and conversions, ensuring that it draws in more customers and
+                boosts sales.
               </p>
             </div>
           </div>
