@@ -30,14 +30,21 @@ export default function PrivacyPolicy() {
 
           <section className="mb-6">
             <p>
-              At <b>Bigwig Media Digital</b>., we are dedicated to safeguarding
-              and securing the privacy of our visitors. This Privacy Policy
-              explains what happens to any personal data that you provide to us,
-              or that we collect from you simultaneously you visit our site. We
-              do update this Policy from regularly so please do review this
-              Policy on regular basis. <b>Information We Collect</b> In
-              operating and managing our website we may capture and utilize the
-              following data about you:
+              At Welcome to the website of{" "}
+              <strong>
+                {" "}
+                <a href="https://www.bigwigmediadigital.com/">
+                  BigWig Media Digital
+                </a>
+              </strong>
+              . By accessing or ., we are dedicated to safeguarding and securing
+              the privacy of our visitors. This Privacy Policy explains what
+              happens to any personal data that you provide to us, or that we
+              collect from you simultaneously you visit our site. We do update
+              this Policy from regularly so please do review this Policy on
+              regular basis. <b>Information We Collect</b> In operating and
+              managing our website we may capture and utilize the following data
+              about you:
             </p>
           </section>
 

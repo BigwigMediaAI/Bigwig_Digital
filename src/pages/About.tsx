@@ -122,9 +122,13 @@ function About() {
               <strong>Vipul Dutta, Founder – Bigwig Digital</strong>
             </p>
             <p className="mt-2">
-              At Bigwig Digital, our purpose has always been well-defined: to
-              empower brands in navigating the ever-evolving digital landscape
-              with confidence, creativity, and measurable results.
+              At{" "}
+              <strong>
+                <a href="https://www.bigwigmediadigital.com/">Bigwig Digital</a>
+              </strong>
+              , our purpose has always been well-defined: to empower brands in
+              navigating the ever-evolving digital landscape with confidence,
+              creativity, and measurable results.
             </p>
             <p className="mt-2">
               When I started this journey over a decade ago, digital marketing

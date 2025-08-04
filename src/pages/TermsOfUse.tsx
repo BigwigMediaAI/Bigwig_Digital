@@ -24,10 +24,17 @@ export default function TermsOfUse() {
             Terms and Conditions of Use and Employing Bigwig Media Digital
           </h1>
           <p className="mb-6">
-            Welcome to the website of Bigwig Media Digital. By accessing or
-            using our website or services, you agree to comply with and be bound
-            by the following terms and conditions. Please read them carefully.
-            If you do not agree, do not use the site or services.
+            Welcome to the website of{" "}
+            <strong>
+              {" "}
+              <a href="https://www.bigwigmediadigital.com/">
+                BigWig Media Digital
+              </a>
+            </strong>
+            . By accessing or using our website or services, you agree to comply
+            with and be bound by the following terms and conditions. Please read
+            them carefully. If you do not agree, do not use the site or
+            services.
           </p>
           <section className="mb-6">
             <ul className="list-disc pl-6 space-y-2">

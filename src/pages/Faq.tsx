@@ -9,8 +9,7 @@ const faqData = [
   {
     question:
       "Who can benefit from BigWig Digital’s digital marketing services?",
-    answer:
-      "BigWig Digital’s digital marketing services are perfect for startups, small businesses, and growing brands looking to increase online visibility, leads, and conversions through expert strategies.",
+    answer: `<strong> <a href="https://www.bigwigmediadigital.com/" class="text-blue-600  font-medium">BigWig Digital</a></strong>’s digital marketing services are perfect for startups, small businesses, and growing brands looking to increase online visibility, leads, and conversions through expert strategies.`,
   },
   {
     question: "Do you offer digital marketing services outside India?",
@@ -150,7 +149,10 @@ const FAQ = () => {
                 />
               </div>
               {openIndex === index && (
-                <p className="mt-2 text-gray-700 text-sm">A: {item.answer}</p>
+                <p
+                  className="mt-2 text-gray-700 text-sm"
+                  dangerouslySetInnerHTML={{ __html: `A: ${item.answer}` }}
+                ></p>
               )}
             </div>
           ))}
