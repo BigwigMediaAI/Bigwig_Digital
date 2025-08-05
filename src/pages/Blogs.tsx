@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
+import Fuse from "fuse.js";
 
 interface BlogPost {
   _id: string;
@@ -42,8 +43,7 @@ function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const blogsPerPage = 9;
-
+  const blogsPerPage = 6;
   const { categoryName } = useParams();
   const navigate = useNavigate();
 
@@ -60,7 +60,7 @@ function Blogs() {
       }
       setBlogs(res.data);
       setFilteredBlogs(res.data);
-      setCurrentPage(1); // Reset to page 1 on new data
+      setCurrentPage(1);
     } catch (err) {
       console.error("Failed to fetch blogs", err);
       setBlogs([]);
@@ -78,13 +78,12 @@ function Blogs() {
     if (searchTerm.trim() === "") {
       setFilteredBlogs(blogs);
     } else {
-      const lower = searchTerm.toLowerCase();
-      const filtered = blogs.filter(
-        (blog) =>
-          blog.title.toLowerCase().includes(lower) ||
-          blog.author.toLowerCase().includes(lower)
-      );
-      setFilteredBlogs(filtered);
+      const fuse = new Fuse(blogs, {
+        keys: ["title", "author"],
+        threshold: 0.4,
+      });
+      const results = fuse.search(searchTerm).map((res) => res.item);
+      setFilteredBlogs(results);
       setCurrentPage(1);
     }
   }, [searchTerm, blogs]);
@@ -103,8 +102,9 @@ function Blogs() {
           name="description"
           content="Explore insights, strategies, and trends in digital marketing through our expert-written blogs."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/blogs" />{" "}
+        <link rel="canonical" href="https://www.bigwigdigital.in/blogs" />
       </Helmet>
+
       <div className="w-11/12 md:w-5/6 mx-auto py-8 flex gap-6">
         {/* Left: Scrollable Blogs */}
         <div className="flex-1 h-[calc(100vh-120px)] overflow-y-auto pr-4">
@@ -136,7 +136,7 @@ function Blogs() {
                   <div
                     key={blog._id}
                     onClick={() => navigate(`/blogs/${blog.slug}`)}
-                    className="bg-white  rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                    className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
                   >
                     <img
                       src={blog.coverImage}
@@ -147,10 +147,10 @@ function Blogs() {
                       <h2 className="text-xl font-semibold mb-2">
                         {blog.title}
                       </h2>
-                      <p className="text-sm text-gray-600  mb-1">
+                      <p className="text-sm text-gray-600 mb-1">
                         {new Date(blog.datePublished).toLocaleDateString()}
                       </p>
-                      <p className="text-sm text-gray-800 ">
+                      <p className="text-sm text-gray-800">
                         By <strong>{blog.author}</strong>
                       </p>
                     </div>
@@ -184,7 +184,7 @@ function Blogs() {
 
         {/* Right: Sticky Categories */}
         <div className="w-64 hidden md:block sticky top-24 self-start">
-          <div className="bg-gray-100  p-4 rounded shadow">
+          <div className="bg-gray-100 p-4 rounded shadow">
             <h3 className="text-lg font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">
               {categories.map((cat, idx) => (

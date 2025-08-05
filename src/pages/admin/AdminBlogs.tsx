@@ -5,6 +5,7 @@ import "react-quill/dist/quill.snow.css";
 import "../../index.css";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 import { formatHtml } from "../../utils/formatHtml";
+import Fuse from "fuse.js";
 
 interface BlogPost {
   _id: string;
@@ -115,11 +116,16 @@ const AdminBlog = () => {
     setEditingBlog(null);
   };
 
-  const filteredBlogs = blogs.filter((b) =>
-    [b.title, b.category, b.author].some((field) =>
-      field.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+  const fuse = new Fuse(blogs, {
+    keys: ["title", "category", "author"],
+    threshold: 0.3,
+    ignoreLocation: true,
+  });
+
+  const filteredBlogs =
+    searchQuery.trim() === ""
+      ? blogs
+      : fuse.search(searchQuery).map((result) => result.item);
 
   const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
   const paginatedBlogs = filteredBlogs.slice(
