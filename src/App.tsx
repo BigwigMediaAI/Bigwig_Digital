@@ -44,6 +44,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import AdminLead from "./pages/admin/AdminLead";
 import JobApplication from "./pages/admin/JobApplication";
 import AddJobs from "./pages/admin/AddJobs";
+import AnalyticsDashboard from "./pages/AnalyticsDashboard";
 
 export default function App() {
   return (
@@ -112,6 +113,7 @@ export default function App() {
         {/* Route for Team Page */}
         <Route path="/team" element={<Team />} />
         <Route path="/clients" element={<Clients />} />
+        <Route path="/AnalyticsDashboard" element={<AnalyticsDashboard />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/faq" element={<FAQ />} />
