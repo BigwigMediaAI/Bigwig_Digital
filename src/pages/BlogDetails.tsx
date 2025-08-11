@@ -8,6 +8,7 @@ const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 interface BlogType {
   title: string;
+  excerpt: string;
   coverImage: string;
   author: string;
   datePublished: string;
@@ -53,6 +54,7 @@ const BlogDetails = () => {
         const blogList: BlogType[] = res.data;
 
         const found = blogList.find((b) => b.slug === slug);
+        console.log(found);
         if (!found) {
           setError("Blog not found");
         } else {
@@ -100,6 +102,14 @@ const BlogDetails = () => {
     <div className="bg-white text-black  min-h-screen">
       <Helmet>
         <title>{blog.title}</title>
+        <meta
+          name={blog.excerpt}
+          content="Explore insights, strategies, and trends in digital marketing through our expert-written blogs."
+        />
+        <link
+          rel="canonical"
+          href={`https://www.bigwigdigital.in/blogs/${blog.slug}`}
+        />
       </Helmet>
       {/* ✅ Schema Markup */}
       {Array.isArray(blog.schemaMarkup) &&

@@ -3,7 +3,7 @@ import axios from "axios";
 import Nav from "../components/Nav";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Fuse from "fuse.js";
 
 interface BlogPost {
@@ -43,7 +43,7 @@ function Blogs() {
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
 
-  const blogsPerPage = 6;
+  const blogsPerPage = 9;
   const { categoryName } = useParams();
   const navigate = useNavigate();
 
@@ -107,7 +107,7 @@ function Blogs() {
 
       <div className="w-11/12 md:w-5/6 mx-auto py-8 flex gap-6">
         {/* Left: Scrollable Blogs */}
-        <div className="flex-1 h-[calc(100vh-120px)] overflow-y-auto pr-4">
+        <div className="flex-1 h-[calc(100vh-120px)] overflow-y-auto no-scrollbar pr-4">
           {/* Search Input */}
           <div className="mb-4">
             <input
