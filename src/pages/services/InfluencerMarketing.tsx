@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/Influencer marketing.jpg";
 import influencer from "../../assets/services/15.jpg";
 import OurProcess from "../../components/OurProcess";
@@ -61,7 +61,7 @@ function InfluencerMarketing() {
         <title>Influencer Marketing Solutions</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/influencer-marketing"
+          href="https://www.bigwigmediadigital.com/services/influencer-marketing"
         />
         <meta
           name="description"

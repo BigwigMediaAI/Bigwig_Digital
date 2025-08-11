@@ -6,7 +6,7 @@ import WhyBigwig from "../../components/WhyBigwig";
 import hero from "../../assets/Services hero/PPC-1.jpg";
 import ppc from "../../assets/services/7.jpg";
 // import ppc from "../../assets/Services hero/PPC.jpg";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -145,7 +145,7 @@ function PerformanceMarketing() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/performance-marketing"
+          href="https://www.bigwigmediadigital.com/services/performance-marketing"
         />
       </Helmet>
       <Nav />

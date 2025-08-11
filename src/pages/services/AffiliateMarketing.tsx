@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/affiliate marketing.jpg";
 import affiliate from "../../assets/services/12.jpg";
 import OurProcess from "../../components/OurProcess";
@@ -111,7 +111,7 @@ function AffiliateMarketing() {
         <title>Affiliate Marketing Management</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/affiliate-marketing"
+          href="https://www.bigwigmediadigital.com/services/affiliate-marketing"
         />
         <meta
           name="description"

@@ -102,7 +102,7 @@ function Blogs() {
           name="description"
           content="Explore insights, strategies, and trends in digital marketing through our expert-written blogs."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/blogs" />
+        <link rel="canonical" href="https://www.bigwigmediadigital.com/blogs" />
       </Helmet>
 
       <div className="w-11/12 md:w-5/6 mx-auto py-8 flex gap-6">

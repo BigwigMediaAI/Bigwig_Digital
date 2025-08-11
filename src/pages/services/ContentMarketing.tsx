@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Hero from "../../assets/Services hero/Content Marketing-1.jpg";
 import content from "../../assets/services/8.jpg";
 import Slider from "react-slick";
@@ -106,7 +106,7 @@ function ContentMarketing() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/content-marketing"
+          href="https://www.bigwigmediadigital.com/services/content-marketing"
         />
       </Helmet>
       <Nav />

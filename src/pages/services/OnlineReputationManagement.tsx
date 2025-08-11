@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/online reputation management.jpg";
 import orm from "../../assets/services/16.jpg";
 import OurProcess from "../../components/OurProcess";
@@ -55,7 +55,7 @@ function OnlineReputationManagement() {
         <title>Online Reputation Management</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/online-reputation-management"
+          href="https://www.bigwigmediadigital.com/services/online-reputation-management"
         />
         <meta
           name="description"

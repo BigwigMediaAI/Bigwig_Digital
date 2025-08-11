@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 
 type Category = "all" | "creative" | "ai" | "cgi" | "videos" | "websites";
@@ -51,7 +51,7 @@ const GallerySection: React.FC = () => {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/our-works"
+          href="https://www.bigwigmediadigital.com/our-works"
         />{" "}
       </Helmet>
       <section className="py-5 max-w-7xl mx-auto px-4">

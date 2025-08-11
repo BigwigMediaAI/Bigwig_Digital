@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav";
 import { TypeAnimation } from "react-type-animation";
 import hero from "../../assets/Services hero/Social Media Marketing-2.jpg";
@@ -40,7 +40,7 @@ function SocialMediaMarketing() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/social-media-marketing"
+          href="https://www.bigwigmediadigital.com/services/social-media-marketing"
         />
       </Helmet>
       <Nav />

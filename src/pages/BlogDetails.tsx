@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Nav";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
 interface BlogType {
@@ -108,7 +108,7 @@ const BlogDetails = () => {
         />
         <link
           rel="canonical"
-          href={`https://www.bigwigdigital.in/blogs/${blog.slug}`}
+          href={`https://www.bigwigmediadigital.com/blogs/${blog.slug}`}
         />
       </Helmet>
       {/* ✅ Schema Markup */}

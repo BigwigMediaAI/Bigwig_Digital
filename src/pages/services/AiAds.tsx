@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/AI And CGI Ads.jpg";
 import ai from "../../assets/services/10.jpg";
 import {
@@ -27,7 +27,7 @@ function AiAds() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/ai-cgi-marketing"
+          href="https://www.bigwigmediadigital.com/services/ai-cgi-marketing"
         />
       </Helmet>
       <Nav />

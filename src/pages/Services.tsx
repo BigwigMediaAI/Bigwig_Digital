@@ -16,7 +16,7 @@ import smm from "../assets/services/SMM.png";
 import smo from "../assets/services/SMO.png";
 import video from "../assets/services/Video Shoots.png";
 import website from "../assets/services/Website Development.png";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const services = [
   {
@@ -165,7 +165,10 @@ function Services() {
           name="description"
           content="Explore our full suite of digital marketing services customized for businesses of all sizes."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/services" />
+        <link
+          rel="canonical"
+          href="https://www.bigwigmediadigital.com/services"
+        />
       </Helmet>
       {/* Mobile View */}
       <div className="md:hidden px-4 py-8">

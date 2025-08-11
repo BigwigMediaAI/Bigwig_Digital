@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/Public relation.jpg";
 import publicRelation from "../../assets/services/14.jpg";
 import OurProcess from "../../components/OurProcess";
@@ -101,7 +101,7 @@ function PublicRelation() {
         <title>Public Relations Services</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/public-relations"
+          href="https://www.bigwigmediadigital.com/services/public-relations"
         />
         <meta
           name="description"

@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import { useNavigate } from "react-router-dom";
 import cover_img from "../assets/ABC (1).svg";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const benefits = [
   {
@@ -69,7 +69,10 @@ const Career = () => {
           name="description"
           content="Join our team of digital innovators and build a rewarding career in marketing and tech."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/career" />
+        <link
+          rel="canonical"
+          href="https://www.bigwigmediadigital.com/career"
+        />
       </Helmet>
       <div className="bg-white text-black ">
         {/* Hero */}

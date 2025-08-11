@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/Video Shot.jpg";
 import videoshoot from "../../assets/services/13.jpg";
 import OurProcess from "../../components/OurProcess";
@@ -60,7 +60,7 @@ function VideoShoot() {
         <title>Professional Video Shoot Services</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/video-shoot"
+          href="https://www.bigwigmediadigital.com/services/video-shoot"
         />
         <meta
           name="description"

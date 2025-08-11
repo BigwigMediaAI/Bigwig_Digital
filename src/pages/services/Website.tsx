@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import Slider from "react-slick";
 import "../../index.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ContactForm from "../../components/ContactForm";
 
 const sections = [
@@ -83,7 +83,7 @@ function Website() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/website-design-development"
+          href="https://www.bigwigmediadigital.com/services/website-design-development"
         />
       </Helmet>
 

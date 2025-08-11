@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/Email Marketing-2.jpg";
 import image from "../../assets/Services hero/Email Marketing.jpg";
 
@@ -64,7 +64,7 @@ function EmailMarketing() {
         <title>Result-Driven Email Marketing</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/email-marketing"
+          href="https://www.bigwigmediadigital.com/services/email-marketing"
         />
         <meta
           name="description"

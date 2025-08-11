@@ -1,6 +1,6 @@
 import { TypeAnimation } from "react-type-animation";
 import Nav from "../../components/Nav";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import hero from "../../assets/Services hero/Landing Page.jpg";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
@@ -89,7 +89,7 @@ function LandinPageOptimization() {
         <title>Landing Page Optimization Experts</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/landing-page-optimization"
+          href="https://www.bigwigmediadigital.com/services/landing-page-optimization"
         />
         <meta
           name="description"

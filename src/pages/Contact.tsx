@@ -6,7 +6,7 @@ import { Mail, MessageSquareText, Phone } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -113,7 +113,10 @@ export default function ContactPage() {
           name="description"
           content="Get in touch with BigWig Digital for your next big digital marketing transformation."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/contact" />
+        <link
+          rel="canonical"
+          href="https://www.bigwigmediadigital.com/contact"
+        />
       </Helmet>
 
       {/* Locations */}

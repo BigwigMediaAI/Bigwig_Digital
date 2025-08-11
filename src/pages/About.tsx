@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Nav from "../components/Nav";
 import ceo from "../assets/ceo.png";
 import Footer from "../components/Footer";
@@ -13,7 +13,10 @@ function About() {
           name="description"
           content="Learn about BigWig Digital, our mission, team, and approach to delivering digital success."
         />
-        <link rel="canonical" href="https://www.bigwigdigital.in/about" />{" "}
+        <link
+          rel="canonical"
+          href="https://www.bigwigmediadigital.com/about"
+        />{" "}
       </Helmet>
       <div className="max-w-5xl mx-auto px-6 py-12">
         {/* About Us */}

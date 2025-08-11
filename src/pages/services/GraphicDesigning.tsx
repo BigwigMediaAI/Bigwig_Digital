@@ -3,7 +3,7 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import OurProcess from "../../components/OurProcess";
 import WhyBigwig from "../../components/WhyBigwig";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Hero from "../../assets/Services hero/Graphic Design-3.jpg";
 import design from "../../assets/services/9.jpg";
 import ContactForm from "../../components/ContactForm";
@@ -15,7 +15,7 @@ function GraphicDesigning() {
         <title>Professional Graphic Designing</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/graphic-designing"
+          href="https://www.bigwigmediadigital.com/services/graphic-designing"
         />
         <meta
           name="description"

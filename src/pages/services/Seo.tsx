@@ -13,7 +13,7 @@ import {
   LineChart,
   Smartphone,
 } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ContactForm from "../../components/ContactForm";
 
 const stats = [
@@ -54,7 +54,7 @@ function Seo() {
         />
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/search-engine-optimization"
+          href="https://www.bigwigmediadigital.com/services/search-engine-optimization"
         />
       </Helmet>
       <Nav />

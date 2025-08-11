@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
@@ -15,7 +15,7 @@ export default function TermsOfUse() {
           />
           <link
             rel="canonical"
-            href="https://www.bigwigdigital.in/terms-and-condition"
+            href="https://www.bigwigmediadigital.com/terms-and-condition"
           />
         </Helmet>
 

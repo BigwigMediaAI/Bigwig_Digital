@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Nav from "../../components/Nav";
 import hero from "../../assets/Services hero/SMO.jpg";
 import smo from "../../assets/services/4.jpg";
@@ -62,7 +62,7 @@ function SocialMediaOptimization() {
         <title>Social Media Optimization (SMO)</title>
         <link
           rel="canonical"
-          href="https://www.bigwigdigital.in/services/social-media-optimization"
+          href="https://www.bigwigmediadigital.com/services/social-media-optimization"
         />
         <meta
           name="description"
