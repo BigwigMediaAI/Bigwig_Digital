@@ -148,7 +148,7 @@ function VideoShoot() {
               </p>
               <p className="text-lg leading-relaxed text-gray-700 ">
                 We blend creativity, storytelling, and strategy to create videos
-                that don’t just look good — they convert. Whether you're a
+                that don’t just look good , they convert. Whether you're a
                 startup launching your first product or an established brand
                 looking to scale visually, we craft video content that tells
                 your story and supports your growth.
@@ -291,7 +291,7 @@ function VideoShoot() {
             },
             {
               title: "Script to Screen Solutions",
-              desc: "We handle the full process, ideation, scripting, shooting, editing, and delivery — so you can focus on what matters.",
+              desc: "We handle the full process, ideation, scripting, shooting, editing, and delivery , so you can focus on what matters.",
             },
             {
               title: "Latest Equipment & Techniques",

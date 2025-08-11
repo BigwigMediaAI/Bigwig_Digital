@@ -16,7 +16,7 @@ const workFlowData = [
     title: "We Attend",
     image: understanding,
     content:
-      "Every good story starts with 'We were just talking…' Well, we listen. Your ideas, concerns, and caffeine intake levels—everything. We’re basically the therapists of the business world, minus the couch and with a lot more coffee.",
+      "Every good story starts with 'We were just talking…' Well, we listen. Your ideas, concerns, and caffeine intake levels,everything. We’re basically the therapists of the business world, minus the couch and with a lot more coffee.",
   },
   {
     id: "we_probe",
@@ -30,42 +30,42 @@ const workFlowData = [
     title: "We Breakthrough",
     image: implementation,
     content:
-      "Boom! That’s the sound of barriers breaking and breakthroughs happening. We don’t just think outside the box—we recycle the box, throw a party, and build a rocket with the leftover cardboard.",
+      "Boom! That’s the sound of barriers breaking and breakthroughs happening. We don’t just think outside the box,we recycle the box, throw a party, and build a rocket with the leftover cardboard.",
   },
   {
     id: "We_Present",
     title: "We Present",
     image: maintenance,
     content:
-      "Now comes the show-and-tell. Except we don't show stick figures—we show magic. We bring the big guns: shiny presentations, genius ideas, and a slight addiction to overdelivering. We came, we conquered, we clicked ‘Present.’",
+      "Now comes the show-and-tell. Except we don't show stick figures,we show magic. We bring the big guns: shiny presentations, genius ideas, and a slight addiction to overdelivering. We came, we conquered, we clicked ‘Present.’",
   },
   {
     id: "You_choose",
     title: "You Choose",
     image: chooseYou,
     content:
-      "Here’s the plot twist—you’re in charge. Like the captain of the ship, or the final judge on a reality show. We bring the ideas, you bring the nod (or dramatic pause), and together we make history. Or at least a really cool project.",
+      "Here’s the plot twist,you’re in charge. Like the captain of the ship, or the final judge on a reality show. We bring the ideas, you bring the nod (or dramatic pause), and together we make history. Or at least a really cool project.",
   },
   {
     id: "We_Execute",
     title: "We Execute",
     image: Rocket,
     content:
-      "This is where the cape comes on. We fly into action like caffeinated superheroes. Websites? Apps? Campaigns? You name it—we build it, launch it, and probably high-five each other afterward.",
+      "This is where the cape comes on. We fly into action like caffeinated superheroes. Websites? Apps? Campaigns? You name it,we build it, launch it, and probably high-five each other afterward.",
   },
   {
     id: "We_Analyze",
     title: "We Analyze and Optimize",
     image: analysis,
     content:
-      "Done? Ha, not yet. We zoom in like CSI experts—checking what worked, what didn’t, and who forgot to put a semicolon. If Plan A fails, don’t worry—we’ve got plans B through Z, and one involving pizza. Just in case.",
+      "Done? Ha, not yet. We zoom in like CSI experts,checking what worked, what didn’t, and who forgot to put a semicolon. If Plan A fails, don’t worry,we’ve got plans B through Z, and one involving pizza. Just in case.",
   },
   {
     id: "We_retain",
     title: "We Retain",
     image: support,
     content:
-      "You thought we were done? Plot twist! We stick around like glitter—helpful, sparkly, and impossible to get rid of. We support, strategize, and occasionally send memes. It’s not a goodbye, it’s a ‘What’s next?’",
+      "You thought we were done? Plot twist! We stick around like glitter,helpful, sparkly, and impossible to get rid of. We support, strategize, and occasionally send memes. It’s not a goodbye, it’s a ‘What’s next?’",
   },
 ];
 

@@ -56,7 +56,7 @@ function PerformanceMarketing() {
             <ul className="list-disc list-inside space-y-3 py-4 leading-relaxed">
               <li>
                 <strong>Pay for Results</strong> – Only spend when users take
-                action—clicks, leads, or conversions.
+                action,clicks, leads, or conversions.
               </li>
               <li>
                 <strong>Trackable ROI</strong> – Real-time insights on campaign

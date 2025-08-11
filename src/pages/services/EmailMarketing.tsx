@@ -307,7 +307,7 @@ function EmailMarketing() {
                 marketing service becomes a game-changer. With personalized
                 email campaigns, your business can connect directly with your
                 target audience, share updates, promote offers, and guide leads
-                through the buying journey — all while keeping marketing costs
+                through the buying journey, all while keeping marketing costs
                 low.
               </p>
               <p className="text-lg leading-relaxed">

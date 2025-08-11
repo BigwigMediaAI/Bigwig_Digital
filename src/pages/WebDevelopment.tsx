@@ -29,7 +29,7 @@ function WebDesign() {
           </h1>
           <p className="text-sm md:text-xl italic font-medium max-w-3xl">
             Elevate your digital presence with sleek websites and powerful
-            mobile apps — designed to impress, built to perform.
+            mobile apps , designed to impress, built to perform.
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ function WebDesign() {
           <p className="text-base md:text-lg leading-relaxed mx-auto text-center p-6">
             From pixel-perfect web design to feature-rich apps, Bigwig Digital
             is your trusted partner for digital excellence. Let's build
-            something amazing together — contact us today to get started.
+            something amazing together , contact us today to get started.
           </p>
         </section>
       </main>

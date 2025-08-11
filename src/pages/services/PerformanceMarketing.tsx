@@ -39,7 +39,7 @@ const ppcBenefits = [
   {
     title: "Targeted Audience",
     content:
-      "Because Pay Per Click advertisements target consumers who are looking for particular brands or products—like cuisine, travel, astrology, and more—one can maintain control over the audience type. Selecting a target audience based on age, time zone, geography, and offers raises awareness of the product or services to increase the amount of people who are interested in it.",
+      "Because Pay Per Click advertisements target consumers who are looking for particular brands or products,like cuisine, travel, astrology, and more,one can maintain control over the audience type. Selecting a target audience based on age, time zone, geography, and offers raises awareness of the product or services to increase the amount of people who are interested in it.",
   },
   {
     title: "Brand Recognition",
