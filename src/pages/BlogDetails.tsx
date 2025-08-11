@@ -102,10 +102,7 @@ const BlogDetails = () => {
     <div className="bg-white text-black  min-h-screen">
       <Helmet>
         <title>{blog.title}</title>
-        <meta
-          name={blog.excerpt}
-          content="Explore insights, strategies, and trends in digital marketing through our expert-written blogs."
-        />
+        <meta name="description" content={blog.excerpt} />
         <link
           rel="canonical"
           href={`https://www.bigwigmediadigital.com/blogs/${blog.slug}`}
