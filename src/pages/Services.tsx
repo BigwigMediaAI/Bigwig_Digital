@@ -133,7 +133,7 @@ const services = [
   },
   {
     title: "Online Reputation Management",
-    heading: "Your online image matters—protect it!",
+    heading: "Your online image matters,protect it!",
     content:
       "We monitor, manage, and improve your digital reputation across platforms.",
     path: "/services/online-reputation-management",

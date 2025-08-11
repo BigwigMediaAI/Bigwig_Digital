@@ -137,7 +137,7 @@ function About() {
               that transformation.
             </p>
             <p className="mt-4">
-              Bigwig Digital isn’t just a company — it’s a team of passionate
+              Bigwig Digital isn’t just a company , it’s a team of passionate
               thinkers, creators, and strategists who believe in turning bold
               ideas into real business growth. We don’t chase trends; we create
               solutions that last, rooted in data, creativity, and purpose. As

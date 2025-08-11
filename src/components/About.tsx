@@ -46,12 +46,12 @@ const AboutUs = () => {
     {
       title: "Driven by Innovation and Fueled by Passion",
       content:
-        "We’re like rocket fuel for your brand—minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in Dubai, India, Australia, New Zealand.",
+        "We’re like rocket fuel for your brand,minus the explosion. With powerful storytelling and creative spark, we help your business soar. It’s no wonder we’re trusted as one of the best digital marketing agencies in Dubai, India, Australia, New Zealand.",
     },
     {
       title: "Strong Communication is the Foundation of Success.",
       content:
-        "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent—sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises—just smooth progress, solid results, and the frequent virtual high-five!",
+        "We believe clear communication is the backbone of every great partnership. That’s why we keep things transparent,sharing updates, hitting deadlines, and keeping you in the loop at every step. No last-minute surprises,just smooth progress, solid results, and the frequent virtual high-five!",
     },
     {
       title: "Higher Return on Investment",
@@ -61,7 +61,7 @@ const AboutUs = () => {
     {
       title: "One Stop Shop - All Services in One Place",
       content:
-        "From building your website to putting it on the digital map—we’ve got it all covered. As a leading digital marketing agency in India, Dubai & Australasia, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
+        "From building your website to putting it on the digital map,we’ve got it all covered. As a leading digital marketing agency in India, Dubai & Australasia, we offer end-to-end services including web development, CMS, e-commerce, mobile apps, SEO, SEM, and SMO. One team, all the tools you need.",
     },
   ];
 
@@ -92,7 +92,7 @@ const AboutUs = () => {
         >
           In a fast-changing digital world, first impressions are everything. As
           a top digital marketing agency in India, we blend creativity with
-          strategy—crafting stunning websites while using SEO, Google Ads, and
+          strategy,crafting stunning websites while using SEO, Google Ads, and
           Facebook Marketing to boost both perception and conversions. Here’s
           why working with us maximizes your ROI:
         </div>

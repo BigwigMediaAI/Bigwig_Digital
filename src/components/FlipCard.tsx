@@ -52,7 +52,7 @@ const FlipCard = () => {
       solution: "Influencer Marketing",
       title: "Amplify Your Brand’s Story with Voices Everyone Trusts",
       description:
-        "From strategy to stardom, we’ll pair you with influencers who make waves—and results that’ll make you say, ‘Is this real life?’",
+        "From strategy to stardom, we’ll pair you with influencers who make waves,and results that’ll make you say, ‘Is this real life?’",
       bgColor: "bg-neutral-950",
       icon: <FaBullhorn className="text-4xl text-purple-600" />,
     },
@@ -61,7 +61,7 @@ const FlipCard = () => {
       solution: "Live Coverage",
       title: "Teleporting Your Audience to the Heart of Every Event",
       description:
-        "From concerts to conferences, we’ll bring the action to life—no FOMO, just unforgettable moments straight to their screens.",
+        "From concerts to conferences, we’ll bring the action to life,no FOMO, just unforgettable moments straight to their screens.",
       bgColor: "bg-neutral-950",
       icon: <FaBroadcastTower className="text-4xl text-green-600" />,
     },
@@ -79,7 +79,7 @@ const FlipCard = () => {
       solution: "Video Shoots",
       title: "Capturing Your Brand’s Essence, One Frame at a Time",
       description:
-        "From brand stories to jaw-dropping visuals, our videos don’t just tell stories—they make audiences stop scrolling.",
+        "From brand stories to jaw-dropping visuals, our videos don’t just tell stories,they make audiences stop scrolling.",
       bgColor: "bg-neutral-950",
       icon: <FaVideo className="text-4xl text-teal-600" />,
     },
@@ -106,7 +106,7 @@ const FlipCard = () => {
       solution: "Affiliate Marketing",
       title: "Partnering Smartly to Multiply Your Reach!",
       description:
-        "Think of us as your brand’s ultimate matchmaker—pairing you up with affiliates who will shout your praises from the rooftops (or at least their websites). We’ll help you create a win-win partnership so smooth, even Cupid would be jealous. Cha-ching for everyone involved!",
+        "Think of us as your brand’s ultimate matchmaker,pairing you up with affiliates who will shout your praises from the rooftops (or at least their websites). We’ll help you create a win-win partnership so smooth, even Cupid would be jealous. Cha-ching for everyone involved!",
       bgColor: "bg-neutral-950",
       icon: <SiGooglemarketingplatform className="text-4xl text-red-400" />,
     },

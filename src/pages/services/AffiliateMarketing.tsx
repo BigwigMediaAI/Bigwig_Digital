@@ -29,7 +29,7 @@ import ContactForm from "../../components/ContactForm";
 const benefits = [
   {
     title: "Performance-Based ROI",
-    desc: "You only pay when you get a result — a sale, lead, or sign-up. That’s what makes affiliate marketing so efficient.",
+    desc: "You only pay when you get a result , a sale, lead, or sign-up. That’s what makes affiliate marketing so efficient.",
     icon: <FaChartLine className="text-3xl text-blue-600" />,
   },
   {
@@ -54,7 +54,7 @@ const benefits = [
   },
   {
     title: "Easily Trackable Performance",
-    desc: "With transparent dashboards, you can track every click, conversion, and commission — in real time.",
+    desc: "With transparent dashboards, you can track every click, conversion, and commission , in real time.",
     icon: <FaClipboardCheck className="text-3xl text-yellow-600" />,
   },
   {
@@ -334,7 +334,7 @@ function AffiliateMarketing() {
             </p>
             <p className="text-lg max-w-4xl mx-auto">
               Our focus is always on driving qualified traffic, high intent
-              users, and measurable conversions — not vanity metrics.
+              users, and measurable conversions, not vanity metrics.
             </p>
           </div>
         </div>
@@ -348,7 +348,7 @@ function AffiliateMarketing() {
               Benefits of Affiliate Marketing Services
             </h2>
             <p className="text-gray-700 text-lg">
-              Affiliate marketing isn’t just cost-effective — it’s one of the
+              Affiliate marketing isn’t just cost-effective , it’s one of the
               smartest ways to scale your digital reach while paying only for
               actual results.
             </p>

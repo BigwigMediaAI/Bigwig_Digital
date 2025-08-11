@@ -422,7 +422,7 @@ function PublicRelation() {
               Who Should Invest in PR?
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              PR isn’t just for large corporations or public figures—it’s for
+              PR isn’t just for large corporations or public figures,it’s for
               any business ready to grow with intention. Whether you’re
               launching a new venture, entering a new market, expanding
               globally, or aiming for acquisition, a solid PR foundation

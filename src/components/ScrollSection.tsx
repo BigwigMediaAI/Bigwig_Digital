@@ -145,7 +145,7 @@ const ScrollSections: React.FC = () => {
           </div>
           <p className="mt-4 text-lg leading-relaxed text-justify text-white">
             Social media is like a party, and your brand needs to be the life of
-            it—not the awkward one in the corner...
+            it,not the awkward one in the corner...
           </p>
         </>
       ),
@@ -233,7 +233,7 @@ const ScrollSections: React.FC = () => {
             Building and Protecting Your Brand’s Online Reputation
           </div>
           <p className="mt-4 text-white text-lg leading-relaxed text-justify">
-            The internet never forgets, but don’t worry—we’ve got your back.
+            The internet never forgets, but don’t worry,we’ve got your back.
             With us on your team, your brand will look so good online that even
             your competitors might want to leave a five-star review!
           </p>

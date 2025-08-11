@@ -111,7 +111,7 @@ function GMB() {
         <section className="bg-black bg-opacity-70 rounded-xl shadow-md p-12 max-w-4xl mx-auto">
           <p className="text-xl leading-relaxed text-center">
             Our GMB experts ensure your business gets noticed where it matters
-            most—locally. Whether you run a salon, restaurant, clinic, or
+            most,locally. Whether you run a salon, restaurant, clinic, or
             service center, we’ll optimize your Google profile for maximum
             impact.
           </p>

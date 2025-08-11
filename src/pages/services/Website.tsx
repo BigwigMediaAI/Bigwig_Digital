@@ -147,7 +147,7 @@ function Website() {
                 Words like <strong>“web design”</strong> and{" "}
                 <strong>“web development”</strong> might sound overwhelming, and
                 that’s completely okay! Not everyone is an expert in creating
-                professional websites — that’s where BigWig Digital steps in.
+                professional websites , that’s where BigWig Digital steps in.
               </p>
               <p>
                 <strong>

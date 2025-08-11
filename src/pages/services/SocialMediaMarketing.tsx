@@ -88,7 +88,7 @@ function SocialMediaMarketing() {
             </p>
 
             <p className="text-base md:text-lg max-w-md text-white/90">
-              We’re here to help you grow, scale, and stand out—across every
+              We’re here to help you grow, scale, and stand out,across every
               major social media platform.
             </p>
             <a href="/contact">

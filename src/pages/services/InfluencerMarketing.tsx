@@ -29,7 +29,7 @@ const impactPoints = [
   },
   {
     title: "Create Reusable Content Assets",
-    desc: "Influencer-generated content is perfect for repurposing across ads, websites, emails, and more—extending your campaign’s lifespan and value.",
+    desc: "Influencer-generated content is perfect for repurposing across ads, websites, emails, and more,extending your campaign’s lifespan and value.",
   },
 ];
 
@@ -134,7 +134,7 @@ function InfluencerMarketing() {
               Influencer Marketing That Builds Real Trust
             </h2>
             <p className="text-gray-700 text-base leading-relaxed">
-              In today’s attention-driven world, people trust people—not just
+              In today’s attention-driven world, people trust people,not just
               ads. That’s where influencer marketing steps in as one of the most
               powerful and authentic brand-building tools. At{" "}
               <strong>
