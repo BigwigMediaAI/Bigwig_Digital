@@ -37,7 +37,7 @@ const Nav: React.FC = () => {
     },
     {
       icon: faYoutube,
-      href: "https://www.youtube.com/@BigwigDigital2024",
+      href: "https://www.youtube.com/@BigwigMediaDigital",
       color: "#FF0000",
     },
     {
