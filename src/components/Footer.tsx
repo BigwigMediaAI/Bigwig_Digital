@@ -70,6 +70,7 @@ function Footer() {
                     { name: "FAQ", path: "/faq" },
                     { name: "T&C", path: "/terms-and-condition" },
                     { name: "Privacy Policy", path: "/privacy-policy" },
+                    { name: "Sitemap", path: "/sitemap" },
                   ].map((link) => (
                     <li key={link.path}>
                       <Link

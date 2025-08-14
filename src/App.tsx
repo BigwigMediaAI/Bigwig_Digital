@@ -44,6 +44,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import AdminLead from "./pages/admin/AdminLead";
 import JobApplication from "./pages/admin/JobApplication";
 import AddJobs from "./pages/admin/AddJobs";
+import CategoriesSection from "./pages/Sitemap";
 
 export default function App() {
   return (
@@ -114,6 +115,7 @@ export default function App() {
         <Route path="/clients" element={<Clients />} />
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/sitemap" element={<CategoriesSection />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/terms-and-condition" element={<TermsOfUse />} />
         <Route path="/login" element={<Login />} />
