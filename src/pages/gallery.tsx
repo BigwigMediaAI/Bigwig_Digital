@@ -52,7 +52,7 @@ const GallerySection: React.FC = () => {
         <link
           rel="canonical"
           href="https://www.bigwigmediadigital.com/our-works"
-        />{" "}
+        />
       </Helmet>
       <section className="py-5 max-w-7xl mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-4">

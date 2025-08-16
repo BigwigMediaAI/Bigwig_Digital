@@ -126,10 +126,7 @@ const FAQ = () => {
           name="description"
           content="Have questions? Check out our FAQ section for quick answers to common queries."
         />
-        <link
-          rel="canonical"
-          href="https://www.bigwigmediadigital.com/faq"
-        />{" "}
+        <link rel="canonical" href="https://www.bigwigmediadigital.com/faq" />
       </Helmet>
       <div className="md:w-5/6 w-11/12 mx-auto py-16 px-6">
         <h1 className="text-center text-3xl font-serif font-semibold mb-5">
