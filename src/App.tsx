@@ -45,6 +45,7 @@ import AdminLead from "./pages/admin/AdminLead";
 import JobApplication from "./pages/admin/JobApplication";
 import AddJobs from "./pages/admin/AddJobs";
 import CategoriesSection from "./pages/Sitemap";
+import SeoServicesDubai from "./pages/seoDubai/SeoServicesDubai";
 
 export default function App() {
   return (
@@ -119,6 +120,10 @@ export default function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/terms-and-condition" element={<TermsOfUse />} />
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/digital-marketing-agency-dubai"
+          element={<SeoServicesDubai />}
+        />
         <Route path="*" element={<NotFound />} />
         {/* <Route path="/social-media-management" element={<SMM />} />
         <Route path="/search-engine-optimization" element={<Seo />} />

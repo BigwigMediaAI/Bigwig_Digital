@@ -71,6 +71,10 @@ function Footer() {
                     { name: "T&C", path: "/terms-and-condition" },
                     { name: "Privacy Policy", path: "/privacy-policy" },
                     { name: "Sitemap", path: "/sitemap" },
+                    {
+                      name: "Digital Marketing Agency In Dubai",
+                      path: "/digital-marketing-agency-dubai",
+                    },
                   ].map((link) => (
                     <li key={link.path}>
                       <Link
