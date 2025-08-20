@@ -48,21 +48,23 @@ const services = [
   },
   {
     title: "Social Media Marketing (SMM)",
-    subtitle: "Social Media Marketing Agency in Dubai That Drives Engagement",
+    subtitle:
+      "Social Media Marketing Agency in Dubai, UAE That Drives Engagement",
     desc: "Build brand awareness and drive conversions across Instagram, Facebook, LinkedIn, and TikTok.",
     icon: smm,
     link: "#",
   },
   {
     title: "Performance Marketing",
-    subtitle: "Data-Driven Performance Marketing in Dubai, UAE",
+    subtitle: "Data-Driven Performance Marketing in Agency in Dubai, UAE",
     desc: "ROI-focused ads, retargeting, and conversion campaigns that maximize every dirham spent.",
     icon: performance,
     link: "#",
   },
   {
     title: "Content Marketing",
-    subtitle: "Content Marketing That Builds Trust and Authority",
+    subtitle:
+      "Content Marketing Agency in Dubai, UAE That Builds Trust and Authority",
     desc: "Connect deeper with your audience through blogs, storytelling, and SEO-friendly content.",
     icon: content,
     link: "#",
@@ -83,7 +85,7 @@ const services = [
   },
   {
     title: "Social Media Optimization (SMO)",
-    subtitle: "Social Media Optimization Services in UAE",
+    subtitle: "Social Media Optimization Services in Dubai, UAE",
     desc: "Enhance profiles, posts, and engagement for a stronger brand presence.",
     icon: smo,
     link: "#",
@@ -104,7 +106,8 @@ const services = [
   },
   {
     title: "Landing Page Optimization",
-    subtitle: "Landing Page Optimization for Higher Conversions",
+    subtitle:
+      "Landing Page Optimization Agency in Dubai, UAE for Higher Conversions",
     desc: "Data-backed layouts, messaging, and CTAs that maximize leads & conversions.",
     icon: landing,
     link: "#",
@@ -139,7 +142,7 @@ const services = [
   },
   {
     title: "Online Reputation Management (ORM)",
-    subtitle: "Online Reputation Management in Dubai, UAE",
+    subtitle: "Online Reputation Management Agency in Dubai, UAE",
     desc: "Protect and enhance your brand with reviews, SEO presence & ORM strategies.",
     icon: orm,
     link: "#",
@@ -235,11 +238,12 @@ function SeoServicesDubai() {
             </h2>
             <p>
               BigWig Media Digital is a full-service, performance-led digital
-              marketing company in Dubai with roots in India. We’re dedicated to
-              helping businesses of all sizes achieve measurable growth in the
-              digital world. Our team blends creativity, technology, and
-              data-driven approaches to provide end-to-end solutions across SEO,
-              social media, content, and performance marketing.
+              marketing company in Dubai, UAE with roots in India. We’re
+              dedicated to helping businesses of all sizes achieve measurable
+              growth in the digital world. Our team blends creativity,
+              technology, and data-driven approaches to provide end-to-end
+              solutions across SEO, social media, content, and performance
+              marketing.
             </p>
             <p>
               Whether it’s a startup looking to build its identity or an
@@ -324,7 +328,7 @@ function SeoServicesDubai() {
               creativity, data, and technology
             </span>{" "}
             to craft strategies that deliver real results. With a presence in
-            both Dubai and India, we bring local expertise and a global
+            both UAE and India, we bring local expertise and a global
             perspective to every campaign.
           </p>
 

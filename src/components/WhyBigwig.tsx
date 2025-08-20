@@ -77,7 +77,7 @@ const sliderSettings = {
 const WhyBigwig: React.FC = () => (
   <section className="w-full bg-gray-100 py-12 px-4">
     <h2 className="text-center text-3xl md:text-4xl font-bold mb-12 text-[var(--primary-color)]">
-      Why&nbsp;BigWig Digital
+      Why&nbsp;BigWig Media Digital
     </h2>
 
     {/* Desktop Grid */}

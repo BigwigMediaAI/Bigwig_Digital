@@ -73,7 +73,7 @@ function Footer() {
                     { name: "Sitemap", path: "/sitemap" },
                     {
                       name: "Services In Dubai",
-                      path: "/services-in-dubai",
+                      path: "/digital-marketing-agency-dubai-uae",
                     },
                   ].map((link) => (
                     <li key={link.path}>
