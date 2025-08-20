@@ -41,7 +41,7 @@ import website from "../../assets/services/Website Development.png";
 const services = [
   {
     title: "Search Engine Optimization (SEO)",
-    subtitle: "Boost Your Rankings with Expert SEO Services in Dubai",
+    subtitle: "Boost Your Rankings with Expert SEO Services in Dubai, UAE",
     desc: "Secure top positions on search engines with proven strategies tailored for the UAE market.",
     icon: seo,
     link: "#",
@@ -55,7 +55,7 @@ const services = [
   },
   {
     title: "Performance Marketing",
-    subtitle: "Data-Driven Performance Marketing in Dubai",
+    subtitle: "Data-Driven Performance Marketing in Dubai, UAE",
     desc: "ROI-focused ads, retargeting, and conversion campaigns that maximize every dirham spent.",
     icon: performance,
     link: "#",
@@ -69,14 +69,14 @@ const services = [
   },
   {
     title: "Website Designing & Development",
-    subtitle: "Website Design & Development Company in Dubai",
+    subtitle: "Website Design & Development Company in Dubai, UAE",
     desc: "Stunning, mobile-friendly, SEO-ready websites built for conversions and growth.",
     icon: website,
     link: "#",
   },
   {
     title: "Email Marketing",
-    subtitle: "Targeted Email Marketing Campaigns in Dubai",
+    subtitle: "Targeted Email Marketing Campaigns in Dubai, UAE",
     desc: "Personalized campaigns with newsletters and automation for retention & conversions.",
     icon: email,
     link: "#",
@@ -90,7 +90,7 @@ const services = [
   },
   {
     title: "Graphic Designing",
-    subtitle: "Creative Graphic Design Agency in Dubai",
+    subtitle: "Creative Graphic Design Agency in Dubai, UAE",
     desc: "Logos, ad creatives, and visuals that ensure your brand identity stands out.",
     icon: graphic,
     link: "#",
@@ -111,14 +111,14 @@ const services = [
   },
   {
     title: "Affiliate Marketing",
-    subtitle: "Affiliate Marketing Solutions in Dubai",
+    subtitle: "Affiliate Marketing Solutions in Dubai, UAE",
     desc: "Expand reach with affiliates driving sales and traffic through cost-effective strategies.",
     icon: affiliate,
     link: "#",
   },
   {
     title: "Video Shoot & Production",
-    subtitle: "Professional Video Shoot Services in Dubai",
+    subtitle: "Professional Video Shoot Services in Dubai, UAE",
     desc: "Corporate films, ads, and reels crafted with high-quality storytelling visuals.",
     icon: video,
     link: "#",
@@ -132,7 +132,7 @@ const services = [
   },
   {
     title: "Influencer Marketing",
-    subtitle: "Influencer Marketing Agency in Dubai",
+    subtitle: "Influencer Marketing Agency in Dubai, UAE",
     desc: "Authentic collaborations with influencers to drive engagement & trust.",
     icon: influencer,
     link: "#",
@@ -202,22 +202,22 @@ function SeoServicesDubai() {
               <span className="text-[var(--primary-color)]">Business</span>
             </h2>
             <p>
-              At BigWig Digital, we believe every brand has the potential to
-              shine in the digital world, and our mission is to make that
+              At BigWig Media Digital, we believe every brand has the potential
+              to shine in the digital world, and our mission is to make that
               happen. Recognized as one of the{" "}
-              <strong>best digital marketing agencies in Dubai</strong>, we
+              <strong>best digital marketing agencies in Dubai, UAE</strong>, we
               deliver campaigns that truly make a difference.
             </p>
             <p>
               From startups to established companies, we design strategies that
               align with your unique goals. Our blend of data-driven insights
               and creative innovation ensures that your brand doesn’t just
-              compete — it grows stronger and achieves long-term impact.
+              compete , it grows stronger and achieves long-term impact.
             </p>
             <p>
-              With offices in Dubai and India, BigWig Digital combines global
-              expertise with local market understanding. Partner with us, and
-              experience why businesses trust us as their go-to{" "}
+              With offices in UAE and India, BigWig Media Digital combines
+              global expertise with local market understanding. Partner with us,
+              and experience why businesses trust us as their go-to{" "}
               <strong>digital marketing company in UAE.</strong>
             </p>
           </div>
@@ -234,7 +234,7 @@ function SeoServicesDubai() {
               <span className="absolute -bottom-2 left-0 w-16 h-1 bg-[var(--primary-color)]"></span>
             </h2>
             <p>
-              BigWig Digital is a full-service, performance-led digital
+              BigWig Media Digital is a full-service, performance-led digital
               marketing company in Dubai with roots in India. We’re dedicated to
               helping businesses of all sizes achieve measurable growth in the
               digital world. Our team blends creativity, technology, and
@@ -309,13 +309,16 @@ function SeoServicesDubai() {
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
             Why{" "}
-            <span className="text-[var(--primary-color)]">BigWig Digital</span>{" "}
+            <span className="text-[var(--primary-color)]">
+              BigWig Media Digital
+            </span>{" "}
             is a Trusted Digital Marketing Agency in Dubai, UAE
           </h2>
 
           {/* Paragraphs */}
           <p className="text-gray-700 text-lg leading-relaxed">
-            At BigWig Digital, we go beyond conventional marketing by blending
+            At BigWig Media Digital, we go beyond conventional marketing by
+            blending
             <span className="font-medium">
               {" "}
               creativity, data, and technology
@@ -327,8 +330,8 @@ function SeoServicesDubai() {
 
           <p className="text-gray-700 text-lg leading-relaxed">
             Our team has successfully partnered with businesses across
-            industries— from lifestyle and hospitality to tech and
-            e-commerce—helping them boost visibility, engagement, and revenue
+            industries, from lifestyle and hospitality to tech and
+            e-commerce,helping them boost visibility, engagement, and revenue
             through innovative digital solutions.
           </p>
 
