@@ -3,128 +3,145 @@ import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import bannerImage from "../../assets/dubai.jpg";
 import transfrom from "../../assets/Dubai/transformBuisness.jpg";
-import {
-  Search,
-  Share2,
-  BarChart3,
-  FileText,
-  Layout,
-  Mail,
-  Instagram,
-  Image,
-  Brain,
-  MousePointerClick,
-  Users,
-  Video,
-  Megaphone,
-  UserCheck,
-  ShieldCheck,
-} from "lucide-react";
+// import {
+//   Search,
+//   Share2,
+//   BarChart3,
+//   FileText,
+//   Layout,
+//   Mail,
+//   Instagram,
+//   Image,
+//   Brain,
+//   MousePointerClick,
+//   Users,
+//   Video,
+//   Megaphone,
+//   UserCheck,
+//   ShieldCheck,
+// } from "lucide-react";
+import OurProcess from "../../components/OurProcess";
+import WhyBigwig from "../../components/WhyBigwig";
+import seo from "../../assets/services/SEO.png";
+import affiliate from "../../assets/services/Affiliate Marketing.png";
+import ai from "../../assets/services/AI and CGI.png";
+import content from "../../assets/services/Content Marketing.png";
+import email from "../../assets/services/Email Marketing.png";
+import graphic from "../../assets/services/Graphic Desining.png";
+import influencer from "../../assets/services/Influencer Marketing.png";
+import landing from "../../assets/services/Landing Page Optimization.png";
+import orm from "../../assets/services/ORM.png";
+import performance from "../../assets/services/Performance Marketing.png";
+import publicRelation from "../../assets/services/Public Relations.png";
+import smm from "../../assets/services/SMM.png";
+import smo from "../../assets/services/SMO.png";
+import video from "../../assets/services/Video Shoots.png";
+import website from "../../assets/services/Website Development.png";
 
 const services = [
   {
     title: "Search Engine Optimization (SEO)",
     subtitle: "Boost Your Rankings with Expert SEO Services in Dubai",
     desc: "Secure top positions on search engines with proven strategies tailored for the UAE market.",
-    icon: Search,
+    icon: seo,
     link: "#",
   },
   {
     title: "Social Media Marketing (SMM)",
     subtitle: "Social Media Marketing Agency in Dubai That Drives Engagement",
     desc: "Build brand awareness and drive conversions across Instagram, Facebook, LinkedIn, and TikTok.",
-    icon: Share2,
+    icon: smm,
     link: "#",
   },
   {
     title: "Performance Marketing",
     subtitle: "Data-Driven Performance Marketing in Dubai",
     desc: "ROI-focused ads, retargeting, and conversion campaigns that maximize every dirham spent.",
-    icon: BarChart3,
+    icon: performance,
     link: "#",
   },
   {
     title: "Content Marketing",
     subtitle: "Content Marketing That Builds Trust and Authority",
     desc: "Connect deeper with your audience through blogs, storytelling, and SEO-friendly content.",
-    icon: FileText,
+    icon: content,
     link: "#",
   },
   {
     title: "Website Designing & Development",
     subtitle: "Website Design & Development Company in Dubai",
     desc: "Stunning, mobile-friendly, SEO-ready websites built for conversions and growth.",
-    icon: Layout,
+    icon: website,
     link: "#",
   },
   {
     title: "Email Marketing",
     subtitle: "Targeted Email Marketing Campaigns in Dubai",
     desc: "Personalized campaigns with newsletters and automation for retention & conversions.",
-    icon: Mail,
+    icon: email,
     link: "#",
   },
   {
     title: "Social Media Optimization (SMO)",
     subtitle: "Social Media Optimization Services in UAE",
     desc: "Enhance profiles, posts, and engagement for a stronger brand presence.",
-    icon: Instagram,
+    icon: smo,
     link: "#",
   },
   {
     title: "Graphic Designing",
     subtitle: "Creative Graphic Design Agency in Dubai",
     desc: "Logos, ad creatives, and visuals that ensure your brand identity stands out.",
-    icon: Image,
+    icon: graphic,
     link: "#",
   },
   {
     title: "AI and CGI Marketing",
     subtitle: "AI & CGI Marketing Agency in Dubai, UAE",
     desc: "Next-gen marketing with AI personalization and hyper-realistic CGI ads.",
-    icon: Brain,
+    icon: ai,
     link: "#",
   },
   {
     title: "Landing Page Optimization",
     subtitle: "Landing Page Optimization for Higher Conversions",
     desc: "Data-backed layouts, messaging, and CTAs that maximize leads & conversions.",
-    icon: MousePointerClick,
+    icon: landing,
     link: "#",
   },
   {
     title: "Affiliate Marketing",
     subtitle: "Affiliate Marketing Solutions in Dubai",
     desc: "Expand reach with affiliates driving sales and traffic through cost-effective strategies.",
-    icon: Users,
+    icon: affiliate,
     link: "#",
   },
   {
     title: "Video Shoot & Production",
     subtitle: "Professional Video Shoot Services in Dubai",
     desc: "Corporate films, ads, and reels crafted with high-quality storytelling visuals.",
-    icon: Video,
+    icon: video,
     link: "#",
   },
   {
     title: "Public Relations (PR)",
     subtitle: "Public Relations Agency in Dubai for Brand Credibility",
     desc: "Press releases, media coverage, and strategies to boost brand reputation.",
-    icon: Megaphone,
+    icon: publicRelation,
     link: "#",
   },
   {
     title: "Influencer Marketing",
     subtitle: "Influencer Marketing Agency in Dubai",
     desc: "Authentic collaborations with influencers to drive engagement & trust.",
-    icon: UserCheck,
+    icon: influencer,
     link: "#",
   },
   {
     title: "Online Reputation Management (ORM)",
     subtitle: "Online Reputation Management in Dubai, UAE",
     desc: "Protect and enhance your brand with reviews, SEO presence & ORM strategies.",
-    icon: ShieldCheck,
+    icon: orm,
     link: "#",
   },
 ];
@@ -260,7 +277,7 @@ function SeoServicesDubai() {
               {/* Icon + Subtitle (Flex) */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[var(--primary-color)]/10 text-[var(--primary-color)]">
-                  <service.icon size={26} />
+                  <img src={service.icon} alt={service.title} />
                 </div>
                 <h4 className="text-sm text-[var(--primary-color)] font-medium">
                   {service.subtitle}
@@ -324,6 +341,8 @@ function SeoServicesDubai() {
           </p>
         </div>
       </section>
+      <OurProcess />
+      <WhyBigwig />
 
       <Footer />
     </div>
