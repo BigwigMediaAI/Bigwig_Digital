@@ -72,8 +72,8 @@ function Footer() {
                     { name: "Privacy Policy", path: "/privacy-policy" },
                     { name: "Sitemap", path: "/sitemap" },
                     {
-                      name: "Digital Marketing Agency In Dubai",
-                      path: "/digital-marketing-agency-dubai",
+                      name: "Services In Dubai",
+                      path: "/services-in-dubai",
                     },
                   ].map((link) => (
                     <li key={link.path}>

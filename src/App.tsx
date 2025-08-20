@@ -120,10 +120,7 @@ export default function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/terms-and-condition" element={<TermsOfUse />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/digital-marketing-agency-dubai"
-          element={<SeoServicesDubai />}
-        />
+        <Route path="/services-in-dubai" element={<SeoServicesDubai />} />
         <Route path="*" element={<NotFound />} />
         {/* <Route path="/social-media-management" element={<SMM />} />
         <Route path="/search-engine-optimization" element={<Seo />} />
