@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "../components/Nav";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
 import Fuse from "fuse.js";
@@ -133,10 +133,10 @@ function Blogs() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentBlogs.length > 0 ? (
                 currentBlogs.map((blog) => (
-                  <div
+                  <Link
                     key={blog._id}
-                    onClick={() => navigate(`/blogs/${blog.slug}`)}
-                    className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                    to={`/blogs/${blog.slug}`}
+                    className="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
                   >
                     <img
                       src={blog.coverImage}
@@ -154,7 +154,7 @@ function Blogs() {
                         By <strong>{blog.author}</strong>
                       </p>
                     </div>
-                  </div>
+                  </Link>
                 ))
               ) : (
                 <p className="text-center col-span-3">No blogs found.</p>
