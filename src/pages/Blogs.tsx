@@ -183,7 +183,7 @@ function Blogs() {
         </div>
 
         {/* Right: Sticky Categories */}
-        <div className="w-64 hidden md:block sticky top-24 self-start">
+        <div className="w-64 hidden md:block sticky top-32 self-start">
           <div className="bg-gray-100 p-4 rounded shadow">
             <h3 className="text-lg font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">

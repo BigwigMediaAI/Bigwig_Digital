@@ -45,6 +45,20 @@ const BlogDetails = () => {
   const navigate = useNavigate();
   const [relatedBlogs, setRelatedBlogs] = useState<BlogType[]>([]);
 
+  const handleShare = () => {
+    if (navigator.share) {
+      navigator
+        .share({
+          title: blog?.title,
+          text: "Check out this blog I just read on BigWig Digital!",
+          url: window.location.href,
+        })
+        .catch((error) => console.log("Error sharing:", error));
+    } else {
+      alert("Sharing is not supported in your browser. Please copy the link.");
+    }
+  };
+
   useEffect(() => {
     const fetchBlog = async () => {
       setLoading(true);
@@ -136,14 +150,32 @@ const BlogDetails = () => {
           />
 
           <div
-            className="prose prose-md  max-w-none mb-6"
+            className="prose prose-md max-w-none mb-6"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
+
+          {/* ✅ Thank You Section */}
+          <div className="mt-10 p-6 bg-gray-100 rounded-lg shadow-md text-center">
+            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              🙏 Thank You for Reading!
+            </h2>
+            <p className="text-gray-600 mb-4">
+              We hope you found this blog helpful and engaging. If you enjoyed
+              it, feel free to share it with your friends or leave a comment
+              below.
+            </p>
+            <button
+              onClick={handleShare}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              Share this Blog
+            </button>
+          </div>
         </div>
 
         {/* Categories Sidebar */}
         <div className="w-full lg:w-1/3">
-          <div className="sticky top-28 bg-white  border  p-4 rounded-lg shadow">
+          <div className="sticky top-36 bg-white  border  p-4 rounded-lg shadow">
             <h2 className="text-xl font-semibold mb-4">Blog Categories</h2>
             <ul className="space-y-2">
               {categories.map((cat, idx) => (
