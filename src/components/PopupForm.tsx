@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 interface PopupFormProps {
   isOpen: boolean;
@@ -36,6 +38,9 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
     setOtp("");
     setStatusMessage("");
     setStep("form");
+  };
+  const handlePhoneChange = (value: string) => {
+    setFormData({ ...formData, phone: value });
   };
 
   const handleChange = (
@@ -124,26 +129,31 @@ const PopupForm: React.FC<PopupFormProps> = ({ isOpen, onClose }) => {
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] outline-none"
               required
             />
-            <div className="flex gap-3">
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email ID"
-                className="w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] outline-none"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Mobile No."
-                className="w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] outline-none"
-                required
-              />
-            </div>
+
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email ID"
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] outline-none"
+              required
+            />
+            <PhoneInput
+              country={"in"} // default India
+              value={formData.phone}
+              onChange={handlePhoneChange}
+              containerClass="w-full"
+              inputClass="!w-full py-6 px-2 text-base rounded-lg border focus:ring-2 focus:ring-[var(--primary-color)]"
+              buttonClass="p-2"
+              dropdownClass="custom-dropdown"
+              enableSearch={true}
+              inputProps={{
+                required: true,
+                name: "phone",
+              }}
+            />
+
             <textarea
               name="message"
               value={formData.message}
