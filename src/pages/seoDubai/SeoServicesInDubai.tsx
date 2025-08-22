@@ -119,9 +119,17 @@ function SeoServicesInDubai() {
           {/* Left Side - Text */}
           <div className="text-left space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-              SEO Services in Dubai, UAE – Boost Your Online Visibility with
-              BigWig Media Digital
+              Search Engine Optimization Services in Dubai, UAE
             </h1>
+            <h2 className="text-2xl font-semibold leading-tight">
+              Boost Visibility & Organic Growth
+            </h2>
+            <p className="text-lg">
+              With our expert SEO services in Dubai, UAE, we help your business
+              rank higher on search engines, attract qualified leads, and build
+              long-term online visibility through proven, ethical optimization
+              techniques.
+            </p>
           </div>
 
           {/* Right Side - Contact Form */}

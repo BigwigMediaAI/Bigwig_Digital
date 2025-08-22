@@ -93,8 +93,17 @@ function SmmServicesInDubai() {
           {/* Left Side - Text */}
           <div className="text-left space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-              Social Media Marketing Agency in Dubai, UAE
+              Social Media Marketing Services in Dubai, UAE
             </h1>
+            <h2 className="text-2xl font-semibold leading-tight">
+              Engage, Influence & Convert
+            </h2>
+            <p className="text-lg">
+              Our social media marketing services in Dubai, UAE empower brands
+              to connect with their audience, create impactful campaigns, and
+              drive meaningful engagement across platforms like Instagram,
+              Facebook, and LinkedIn.
+            </p>
           </div>
 
           {/* Right Side - Contact Form */}

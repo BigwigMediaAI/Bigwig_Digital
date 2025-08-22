@@ -152,8 +152,17 @@ function PpcServicesInDubai() {
           {/* Left Side - Text */}
           <div className="text-left space-y-6">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight">
-              Top PPC Company in Dubai, UAE
+              Performance Marketing Services in Dubai, UAE
             </h1>
+            <h2 className="text-2xl font-semibold leading-tight">
+              Data-Driven Strategies for Maximum ROI
+            </h2>
+            <p className="text-lg">
+              Our performance marketing services in Dubai, UAE help businesses
+              achieve measurable growth through targeted campaigns, real-time
+              tracking, and ROI-focused strategies that ensure every dirham
+              delivers results.
+            </p>
           </div>
 
           {/* Right Side - Contact Form */}
