@@ -54,14 +54,14 @@ const services = [
       "Social Media Marketing Agency in Dubai, UAE That Drives Engagement",
     desc: "Build brand awareness and drive conversions across Instagram, Facebook, LinkedIn, and TikTok.",
     icon: smm,
-    link: "#",
+    link: "/social-media-marketing-services-in-dubai-uae",
   },
   {
     title: "Performance Marketing",
     subtitle: "Data-Driven Performance Marketing in Agency in Dubai, UAE",
     desc: "ROI-focused ads, retargeting, and conversion campaigns that maximize every dirham spent.",
     icon: performance,
-    link: "#",
+    link: "/ppc-services-in-dubai-uae",
   },
   {
     title: "Content Marketing",
