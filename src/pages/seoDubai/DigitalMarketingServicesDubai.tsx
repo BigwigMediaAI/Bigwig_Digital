@@ -37,6 +37,8 @@ import smm from "../../assets/services/SMM.png";
 import smo from "../../assets/services/SMO.png";
 import video from "../../assets/services/Video Shoots.png";
 import website from "../../assets/services/Website Development.png";
+import { Helmet } from "react-helmet-async";
+import CTABanner from "../../components/CTABanner";
 
 const services = [
   {
@@ -44,7 +46,7 @@ const services = [
     subtitle: "Boost Your Rankings with Expert SEO Services in Dubai, UAE",
     desc: "Secure top positions on search engines with proven strategies tailored for the UAE market.",
     icon: seo,
-    link: "#",
+    link: "/seo-services-in-dubai-uae",
   },
   {
     title: "Social Media Marketing (SMM)",
@@ -152,6 +154,21 @@ const services = [
 function SeoServicesDubai() {
   return (
     <div className="bg-white text-black font-raleway">
+      <Helmet>
+        <title>
+          Digital Marketing Agency in Dubai, UAE | BigWig Media Digital
+        </title>
+        <link
+          rel="canonical"
+          href="https://www.bigwigmediadigital.com/digital-marketing-agency-dubai-uae"
+        />
+        <meta
+          name="description"
+          content="BigWig Digital is a leading digital marketing agency in Dubai, UAE. We specialize in SEO,
+social media, performance marketing, content, and web design to help brands grow online.
+"
+        />
+      </Helmet>
       <Nav />
 
       {/* Hero Section */}
@@ -191,7 +208,7 @@ function SeoServicesDubai() {
           <div className="relative">
             <img
               src={transfrom} // replace with your image
-              alt="Digital Marketing"
+              alt="Digital Marketing Agency in Dubai, UAE"
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />
             {/* Overlay Accent */}
@@ -350,7 +367,10 @@ function SeoServicesDubai() {
       </section>
       <OurProcess />
       <WhyBigwig />
-
+      <CTABanner
+        title="With BigWig Media Digital, your brand won’t just rank higher – it will dominate the Dubai digital market."
+        buttonText="Get Started Today"
+      />
       <Footer />
     </div>
   );

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import CaseCard from "../components/CaseCard";
@@ -6,7 +7,6 @@ import FlipCard from "../components/FlipCard";
 import ScrollOverlappingSections from "../components/ScrollSection";
 import AboutUs from "../components/About";
 import FAQ from "../components/Faq";
-import { useState } from "react";
 import Blog from "../components/Blog";
 import ImageSlider from "../components/ImageSlider";
 import ContactUs from "../components/Contact";
@@ -19,18 +19,22 @@ import HowWeWork from "../components/HowWeWork";
 import ContactSidebar from "../components/ContactSidebar";
 import Client from "../components/Clients";
 import PopupForm from "../components/PopupForm";
-// import PopupForm from "../components/PopupForm";
 
 function Landing() {
   const [isContactPanelOpen, setIsContactPanelOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const openContactPanel = () => {
-    setIsContactPanelOpen(true);
-  };
+  const openContactPanel = () => setIsContactPanelOpen(true);
+  const closeContactPanel = () => setIsContactPanelOpen(false);
 
-  const closeContactPanel = () => {
-    setIsContactPanelOpen(false);
-  };
+  // Auto open popup after 10 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsPopupOpen(true);
+    }, 10000); // 10 seconds
+
+    return () => clearTimeout(timer); // cleanup
+  }, []);
 
   return (
     <div className="bg-black">
@@ -45,17 +49,17 @@ function Landing() {
       <AboutUs />
       <CaseCard />
       <HowWeWork />
-
       <Blog />
-
       <FAQ />
       <LocationsSection />
-      <PopupForm />
+
+      {/* Popup Form */}
+      <PopupForm isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
       <Footer />
 
       {/* WhatsApp and Contact Icon - Hidden on Mobile */}
-      <div className=" hidden md:flex">
+      <div className="hidden md:flex">
         <ContactSidebar />
       </div>
 

@@ -156,9 +156,10 @@ const BlogDetails = () => {
 
           {/* ✅ Thank You Section */}
           <div className="mt-10 p-6 bg-gray-100 rounded-lg shadow-md text-center">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
-              🙏 Thank You for Reading!
+            <h2 className="text-2xl font-semibold text-gray-800 mb-3 gap-2">
+              Thank You for Reading! 😊
             </h2>
+
             <p className="text-gray-600 mb-4">
               We hope you found this blog helpful and engaging. If you enjoyed
               it, feel free to share it with your friends or leave a comment
