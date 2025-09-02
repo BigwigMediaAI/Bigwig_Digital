@@ -25,6 +25,8 @@ import {
 } from "react-icons/fa";
 import Slider from "react-slick";
 import ContactForm from "../../components/ContactForm";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const benefits = [
   {
@@ -49,7 +51,7 @@ const benefits = [
   },
   {
     title: "Improves SEO & Visibility",
-    desc: "Affiliate links from content creators and authority sites can indirectly improve your organic search presence.",
+    desc: "Affiliate links from content creators and authority sites can indirectly improve your organic search presence",
     icon: <FaSearch className="text-3xl text-purple-600" />,
   },
   {
@@ -92,7 +94,73 @@ const verticals = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Is affiliate marketing only for eCommerce?",
+    a: "Not at all. Affiliate marketing works across industries like SaaS, fintech, education, wellness, and lead generation. At BigWig Media Digital, we design strategies tailored to your niche and goals.",
+  },
+  {
+    q: "Why should I hire an affiliate marketing agency?",
+    a: (
+      <>
+        <p>
+          Managing affiliates requires time, tools, and expertise. A trusted
+          affiliate marketing agency in India like BigWig Digital helps you:
+        </p>
+        <ul className="list-disc list-inside mt-2 space-y-1">
+          <li>Save time and reduce costs with expert program management.</li>
+          <li>
+            Access a strong network of affiliates, influencers, and creators.
+          </li>
+          <li>
+            Get transparent reports, compliance checks, and ROI-driven
+            campaigns.
+          </li>
+        </ul>
+      </>
+    ),
+  },
+  {
+    q: "How does affiliate marketing actually work?",
+    a: "Affiliate marketing is a performance-based model where businesses pay affiliates only when they generate results – like sales, leads, or app installs. This makes it a low-risk, high-reward marketing channel.",
+  },
+  {
+    q: "What’s your pricing model?",
+    a: "We offer flexible pricing options, including a one-time setup fee with a monthly retainer or performance-based commissions. This ensures you only pay for measurable growth.",
+  },
+  {
+    q: "Can you manage affiliate programs on platforms like CJ, Impact, or PartnerStack?",
+    a: "Yes. Our team has experience managing and scaling programs on all major affiliate platforms.",
+  },
+  {
+    q: "How long before I see results?",
+    a: "Most clients see early traction within 30–45 days. By Month 2 onward, results typically become consistent as affiliate partnerships mature.",
+  },
+  {
+    q: "Will I get access to performance reports?",
+    a: "Absolutely. We provide real-time dashboards and detailed reports so you can track every click, conversion, and payout.",
+  },
+  {
+    q: "How can I maximize my ROI from affiliate marketing?",
+    a: (
+      <>
+        <p>
+          Maximizing ROI comes down to two things: quality traffic + strong
+          conversion rates. Our team helps you by:
+        </p>
+        <ul className="list-disc list-inside mt-2 space-y-1">
+          <li>Matching you with high-performing affiliates.</li>
+          <li>Optimizing your funnels and offers.</li>
+          <li>Ensuring campaigns run ethically and transparently.</li>
+        </ul>
+      </>
+    ),
+  },
+];
+
 function AffiliateMarketing() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -140,7 +208,9 @@ function AffiliateMarketing() {
                 letterSpacing: "0.5px",
               }}
             >
-              <span className="inline">We grow your brand with&nbsp;</span>
+              <span className="inline">
+                We grow your brand with commission-based mark
+              </span>
               <span className="inline-block whitespace-nowrap">
                 <TypeAnimation
                   sequence={[
@@ -230,7 +300,7 @@ function AffiliateMarketing() {
                 This approach reduces risk and aligns your marketing budget with
                 actual performance. As a trusted affiliate marketing agency,
                 BigWig Digital helps you create a profitable, scalable affiliate
-                model that works alongside your existing marketing channels.
+                model that works alongside your existing marketing channels
               </p>
               <p className="text-gray-700">
                 Whether your goal is lead generation, product sales, or app
@@ -321,7 +391,7 @@ function AffiliateMarketing() {
             </h3>
             <p className="text-lg  mx-auto">
               When you work with BigWig Digital, you're choosing an agency that
-              understands how to blend strategy with performance. As{" "}
+              understands how to blend strategy with performance. As
               <span className="italic">
                 <a href="https://www.bigwigdigital.in/">
                   {" "}
@@ -413,6 +483,154 @@ function AffiliateMarketing() {
           </p>
         </div>
       </div>
+      {/* Final Call-to-Action */}
+      <div className="py-12 bg-[var(--primary-color)]">
+        <div className="w-5/6 mx-auto rounded-xl p-6 md:p-8 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold text-white">
+            Ready to Build a Performance-Driven Partner Network?
+          </h2>
+          <p className="text-gray-200 max-w-3xl mx-auto">
+            Whether you want to start an affiliate program from scratch or scale
+            an existing one, our <strong>affiliate marketing services </strong>{" "}
+            are tailored to deliver consistent, trackable growth. We work across
+            industries, platforms, and campaign types to help you get the most
+            from every partnership.
+          </p>
+
+          {/* Let's Connect Button */}
+          <a href="/contact">
+            <button className="mt-6 px-8 py-3 bg-white text-[var(--primary-color)] font-semibold rounded-full shadow hover:bg-gray-100 transition">
+              Let’s Connect
+            </button>
+          </a>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <section className="bg-gray-50 py-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 rounded-lg shadow-sm bg-white"
+              >
+                <button
+                  className="flex justify-between items-center w-full p-4 text-left text-gray-900 font-medium focus:outline-none"
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                >
+                  <span>{item.q}</span>
+                  {openIndex === index ? (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                  )}
+                </button>
+
+                {openIndex === index && (
+                  <div className="p-4 pt-0 text-gray-700">{item.a}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Services Table Section */}
+      <section className="bg-white py-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
+            Our Other Services
+          </h2>
+
+          <div className="overflow-x-auto rounded-xl shadow-lg">
+            <table className="w-full border-collapse text-left">
+              <thead>
+                <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg">
+                  <th className="px-6 py-4 font-semibold">Service 1</th>
+                  <th className="px-6 py-4 font-semibold">Service 2</th>
+                  <th className="px-6 py-4 font-semibold">Service 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/seo">Search Engine Optimization</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/social-media-marketing">
+                      Social Media Marketing
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/performance-marketing">
+                      Performance Marketing
+                    </a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/content-marketing">Content Marketing</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/web-design">
+                      Website Designing & Development
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/email-marketing">Email Marketing</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/social-media-optimization">
+                      Social Media Optimization
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/graphic-designing">Graphic Designing</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/ai-marketing">AI and CGI Marketing</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/landing-page-optimization">
+                      Landing Page Optimization
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/video-shoot">Video Shoot</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/public-relations">Public Relations</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/influencer-marketing">
+                      Influencer Marketing
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/online-reputation-management">
+                      Online Reputation Management
+                    </a>
+                  </td>
+                  <td className="px-6 py-4"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
