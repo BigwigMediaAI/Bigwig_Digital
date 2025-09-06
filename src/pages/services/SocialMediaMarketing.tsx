@@ -15,6 +15,8 @@ import {
 } from "react-icons/fa6";
 import { FaSnapchatGhost } from "react-icons/fa";
 import ContactForm from "../../components/ContactForm";
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const icons: Record<string, JSX.Element> = {
   "Meta Ads": (
@@ -28,8 +30,32 @@ const icons: Record<string, JSX.Element> = {
   "Twitter (X) Ads": <FaXTwitter className="text-black" />,
   "YouTube Ads": <FaYoutube className="text-[#FF0000]" />,
 };
+const faqs = [
+  {
+    q: "Why is BigWig Media Digital considered one of the best social media marketing agencies in India?",
+    a: "At BigWig Media Digital, we combine creativity with data-driven strategies. Our team specializes in designing high-performing campaigns that not only boost brand visibility but also deliver measurable ROI. We focus on results, not vanity metrics.",
+  },
+  {
+    q: "Can small or local businesses also benefit from social media marketing?",
+    a: "Absolutely! Whether you run a retail shop, startup, clinic, or educational institute, our social media marketing services in India help you reach the right audience, build awareness, and generate more leads at affordable costs.",
+  },
+  {
+    q: " How long does it take to see results from social media marketing?",
+    a: "You can start seeing engagement like likes, shares, and comments within the first few weeks. For stronger results—such as lead generation, brand authority, and consistent conversions—it usually takes 2–3 months of strategic campaigns.",
+  },
+  {
+    q: "Do you manage paid ads on social media platforms?",
+    a: "Yes, we specialize in paid ad campaigns across Facebook, Instagram, YouTube, and LinkedIn. Our experts use advanced targeting techniques to maximize your ad budget and drive high-quality leads.",
+  },
+  {
+    q: "What services are included in your social media marketing packages?",
+    a: "Our social media marketing services in India include content creation, ad campaign management, audience targeting, influencer collaborations, community management, and detailed monthly performance reports.",
+  },
+];
 
 function SocialMediaMarketing() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <div>
       <Helmet>
@@ -54,7 +80,7 @@ function SocialMediaMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Social Media Marketing Services That Drive Real ROI
+              Social Media Marketing Services in India that drive real ROI
             </h1>
 
             <p
@@ -63,7 +89,7 @@ function SocialMediaMarketing() {
                 letterSpacing: "0.5px",
               }}
             >
-              <span className="inline"> Social ads that&nbsp;</span>
+              <span className="inline"> Social ads that Delhi</span>
               <span className="inline-block whitespace-nowrap">
                 <TypeAnimation
                   sequence={[
@@ -88,7 +114,7 @@ function SocialMediaMarketing() {
             </p>
 
             <p className="text-base md:text-lg max-w-md text-white/90">
-              We’re here to help you grow, scale, and stand out,across every
+              We’re here to help you grow, scale, and stand out, across every
               major social media platform.
             </p>
             <a href="/contact">
@@ -106,7 +132,7 @@ function SocialMediaMarketing() {
       <section className="py-12 space-y-10 text-black ">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
-          Social Media Marketing Agency
+          Social Media Marketing Agency in India
         </h2>
 
         {/* Two-column Layout */}
@@ -114,11 +140,14 @@ function SocialMediaMarketing() {
           {/* Left Content */}
           <div className="space-y-6 text-md leading-relaxed">
             <p>
-              Looking for a social media marketing agency that understands
-              performance marketing? At BigWig Digital, we deliver paid ad
-              campaigns that actually convert, not just drive traffic. We’re
-              here to help you grow, scale, and stand out, across every major
-              social media platform.
+              Social media marketing is the process of leveraging platforms like
+              Facebook, Instagram, LinkedIn, and YouTube to build brand
+              awareness, engage audiences, and generate measurable business
+              results. Looking for a social media marketing agency in India that
+              understands performance marketing? At BigWig Digital, we deliver
+              paid ad campaigns that actually convert, not just drive traffic.
+              We’re here to help you grow, scale, and stand out across every
+              major social media platform.
             </p>
 
             <p>
@@ -127,23 +156,19 @@ function SocialMediaMarketing() {
                 {" "}
                 <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
               </strong>
-              , we go beyond likes and followers, we deliver performance-driven
-              social media ad campaigns designed to get your brand seen,
-              clicked, and remembered. As a trusted{" "}
-              <strong>social media marketing agency</strong>, we specialize in
-              creating high-converting paid campaigns across today’s most
-              powerful platforms.
-            </p>
-
-            <p>
-              Whether your goal is brand awareness, lead generation, website
-              traffic, app installs, or video views, our expert team crafts
-              data-backed ad strategies that bring measurable results. If you’re
-              looking for expert social media marketing services ,{" "}
+              , we create performance-driven ad campaigns designed to get your
+              brand seen, clicked, and remembered. As a trusted social media
+              marketing agency in India, we specialize in high-converting paid
+              campaigns across today’s most powerful platforms. Whether your
+              goal is brand awareness, lead generation, website traffic, app
+              installs, or video views, our expert team crafts data-backed
+              strategies that deliver measurable growth. If you’re searching for
+              result-oriented <strong>social media marketing</strong> services
+              in India,{" "}
               <strong>
-                <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
+                <a href="https://www.bigwigdigital.in/">BigWig Media Digital</a>
               </strong>{" "}
-              is your go-to partner for growth-focused ad solutions.
+              is your go-to partner for scalable ad solutions.
             </p>
           </div>
 
@@ -161,8 +186,10 @@ function SocialMediaMarketing() {
         <div className="w-11/12 md:w-5/6 mx-auto">
           <div className="bg-[var(--primary-color)] text-white p-6 md:p-8 rounded-xl shadow space-y-4">
             <h3 className="text-2xl font-semibold">
-              Why Paid Social Media Ads Matter More Than Ever
+              Why Hiring a Social Media Marketing Agency in India is Essential
+              for Business Growth
             </h3>
+
             <ul className="list-disc space-y-3 text-base">
               <li>
                 Organic reach is insufficient in 2025. Paid advertisements give
@@ -183,13 +210,107 @@ function SocialMediaMarketing() {
               </li>
             </ul>
           </div>
+
+          {/* Intro above the table */}
+          <div className="mt-10 bg-[var(--primary-color)] border border-gray-700 rounded-xl p-6 space-y-2">
+            <h3 className="text-xl md:text-2xl font-semibold text-white">
+              Benefits of Hiring a Social Media Marketing Agency in India
+            </h3>
+            <p className="text-gray-300">
+              While many businesses consider building an in-house marketing
+              team, partnering with a social media marketing agency in India
+              often proves more effective and cost-efficient. The table below
+              highlights the key differences to help you make the right choice.
+            </p>
+          </div>
+
+          {/* ✅ Beautiful Comparison Table */}
+          <div className="mt-6  rounded-xl shadow-lg overflow-hidden">
+            <table className="min-w-full text-sm text-black">
+              <thead className="bg-gradient-to-r from-[#0a0f1d] to-[#0f172a] text-white">
+                <tr>
+                  <th className="px-6 py-3 text-left font-semibold">Factor</th>
+                  <th className="px-6 py-3 text-left font-semibold">
+                    In-House Marketing Team
+                  </th>
+                  <th className="px-6 py-3 text-left font-semibold">
+                    Social Media Marketing Agency in India
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-6 py-4 font-medium">Expertise</td>
+                  <td className="px-6 py-4">
+                    Limited to team’s knowledge and experience
+                  </td>
+                  <td className="px-6 py-4">
+                    Access to specialists with deep expertise across multiple
+                    platforms
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">Tools & Technology</td>
+                  <td className="px-6 py-4">
+                    Often rely on basic or free tools
+                  </td>
+                  <td className="px-6 py-4">
+                    Advanced paid tools for analytics, automation, and targeting
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">Scalability</td>
+                  <td className="px-6 py-4">
+                    Difficult to scale quickly without adding staff
+                  </td>
+                  <td className="px-6 py-4">
+                    Flexible and scalable campaigns as per business goals
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">Cost Efficiency</td>
+                  <td className="px-6 py-4">
+                    Higher long-term costs (salaries, training, tools)
+                  </td>
+                  <td className="px-6 py-4">
+                    More cost-effective with bundled services and expertise
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">
+                    Creativity & Innovation
+                  </td>
+                  <td className="px-6 py-4">May face creative limitations</td>
+                  <td className="px-6 py-4">
+                    Fresh, innovative strategies tailored to your brand
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">Time Management</td>
+                  <td className="px-6 py-4">Team may juggle multiple roles</td>
+                  <td className="px-6 py-4">
+                    Agency focuses solely on campaign success and ROI
+                  </td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 font-medium">
+                    Performance Tracking
+                  </td>
+                  <td className="px-6 py-4">Basic reporting and KPIs</td>
+                  <td className="px-6 py-4">
+                    Data-driven insights, A/B testing, and measurable results
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
       <section className="py-12 bg-white  text-black ">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)] mb-12">
-          Our Paid Social Media Advertising Services
+          our main social media advertising services in India
         </h2>
 
         <div className="w-11/12 md:w-5/6 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
@@ -239,12 +360,13 @@ function SocialMediaMarketing() {
       <section className="w-11/12 md:w-5/6 mx-auto py-12 space-y-10">
         <div className="space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-            Why Choose BigWig Digital for Social Media Advertising?
+            Why choose BigWig Media Digital for social media marketing in India
           </h2>
           <p className="text-lg text-gray-800  leading-relaxed">
-            We’re not just another agency boosting your posts. We’re a team of
-            paid social experts with experience across industries, platforms,
-            and ad formats. Here's what makes us different:
+            Choosing the right social media marketing agency in India can make
+            all the difference in your brand’s growth. At BigWig Media Digital,
+            we don’t just run campaigns—we craft data-driven strategies designed
+            for conversions and measurable ROI.
           </p>
 
           <ul className="list-disc pl-6 space-y-2 text-gray-800  text-base md:text-lg">
@@ -320,6 +442,131 @@ function SocialMediaMarketing() {
                 <span>{item}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* FAQ Section */}
+      <section className="bg-gray-50 py-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-10">
+          <h2 className="text-3xl md:text-3xl font-bold text-[var(--primary-color)] text-center">
+            Frequently Asked Questions (FAQs) – Social Media Marketing Agency in
+            India
+          </h2>
+
+          <div className="space-y-4">
+            {faqs.map((item, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 rounded-lg shadow-sm bg-white"
+              >
+                <button
+                  className="flex justify-between items-center w-full p-4 text-left text-gray-900 font-medium focus:outline-none"
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                >
+                  <span>{item.q}</span>
+                  {openIndex === index ? (
+                    <ChevronUp className="w-5 h-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                  )}
+                </button>
+
+                {openIndex === index && (
+                  <div className="p-4 pt-0 text-gray-700">{item.a}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Services Table Section */}
+      <section className="bg-white py-12">
+        <div className="w-11/12 md:w-5/6 mx-auto space-y-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)] text-center">
+            Our Other Services
+          </h2>
+
+          <div className="overflow-x-auto rounded-xl shadow-lg">
+            <table className="w-full border-collapse text-left">
+              <thead>
+                <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg">
+                  <th className="px-6 py-4 font-semibold">Service 1</th>
+                  <th className="px-6 py-4 font-semibold">Service 2</th>
+                  <th className="px-6 py-4 font-semibold">Service 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/seo">Search Engine Optimization</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/social-media-marketing">
+                      Social Media Marketing
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                    <a href="/services/performance-marketing">
+                      Performance Marketing
+                    </a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/content-marketing">Content Marketing</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/web-design">
+                      Website Designing & Development
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/email-marketing">Email Marketing</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/social-media-optimization">
+                      Social Media Optimization
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/graphic-designing">Graphic Designing</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/ai-marketing">AI and CGI Marketing</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/landing-page-optimization">
+                      Landing Page Optimization
+                    </a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/video-shoot">Video Shoot</a>
+                  </td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/public-relations">Public Relations</a>
+                  </td>
+                </tr>
+                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/influencer-marketing">
+                      Influencer Marketing
+                    </a>
+                  </td>
+                  <td className="px-6 py-4"></td>
+                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                    <a href="/services/online-reputation-management">
+                      Online Reputation Management
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
