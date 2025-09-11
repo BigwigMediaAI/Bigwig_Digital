@@ -136,7 +136,7 @@ function Seo() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Best SEO Company
+              Best SEO Company in India
             </h1>
 
             <p
@@ -157,7 +157,7 @@ function Seo() {
 
             <p className="text-base md:text-lg max-w-md text-white/90">
               We help businesses grow their online presence with tailored SEO
-              strategies. Connect with us and see the difference.
+              strategies in India. Connect with us and see the difference.
             </p>
             <a href="/contact">
               <button className="mt-4 px-6 py-3 bg-[var(--primary-color)] text-white rounded-full font-semibold hover:bg-opacity-80 transition">
@@ -212,7 +212,7 @@ function Seo() {
             <div className="w-full">
               <img
                 src={seo}
-                alt="Best SEO Company"
+                alt="Best SEO Company in India"
                 className="w-full h-[60vh] rounded-xl shadow-lg"
               />
             </div>
@@ -224,20 +224,18 @@ function Seo() {
         {/* Left Content */}
         <div className="md:w-1/2 space-y-4 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-            Drive Organic Traffic with the Best SEO Company in all over the
-            world
+            Drive Organic Traffic with the Best SEO Agency in India
           </h2>
           <p className="text-lg text-gray-600  text-justify">
-            We are a Top SEO Agency, offering companies the greatest SEO
-            solutions{" "}
-            <strong>
-              <a href="https://www.bigwigdigital.in/"> BigWig Digital</a>
-            </strong>{" "}
-            has more than 10 years of extensive expertise and has assisted
-            numerous companies, all over the world in achieving their online
-            marketing objectives and improving their search engine rankings.
-            Managing more than 10,000 campaigns with success and keeping a 95%
-            client retention rate.
+            <a href="https://www.bigwigmediadigital.com/">
+              <strong>BigWig Digital</strong>
+            </a>{" "}
+            is recognized as a leading SEO Agency in India, delivering powerful
+            and result-driven SEO solutions for businesses worldwide. With more
+            than 10 years of proven expertise, we have successfully managed over
+            10,000 SEO campaigns and helped global brands achieve higher search
+            engine rankings, organic visibility, and measurable growth. Our 95%
+            client retention rate reflects the trust and results we deliver.
           </p>
         </div>
 
@@ -264,7 +262,13 @@ function Seo() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
             All in One SEO Services Under One Roof
           </h2>
-
+          <p className="text-lg text-gray-600  text-justify">
+            As a trusted SEO Agency in India, we combine advanced SEO
+            strategies, in-depth keyword research, and white-hat techniques to
+            drive sustainable organic traffic, improve rankings, and boost ROI.
+            Whether you are a startup or an enterprise, our tailored SEO
+            services ensure your brand stays ahead of the competition.
+          </p>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Card Item */}
             {[
@@ -344,6 +348,70 @@ function Seo() {
               </div>
             ))}
           </div>
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
+            The Best SEO Agency for SEO Services in India and beyond!
+          </h3>
+          <p className="text-lg text-gray-600  text-justify">
+            Choosing the right partner for your digital growth is not just about
+            rankings - it’s about trust, transparency, and results. At BigWig
+            Media Digital, we redefine what it means to offer SEO services in
+            India by focusing on strategies that actually move the needle for
+            your business.
+          </p>
+          <h3 className="text-lg text-gray-600  text-justify">
+            Here’s what makes us different:
+          </h3>
+          <ul className="list-disc list-inside space-y-4 text-gray-700">
+            <li>
+              <strong>Tailored for You, Not Templates</strong> – We don’t
+              believe in one-size-fits-all SEO. Every business is unique, so our
+              strategies are customized to your goals, audience, and industry.
+            </li>
+
+            <li>
+              <strong>SEO That Builds Brands</strong> – Beyond keyword rankings,
+              our focus is on creating lasting visibility that strengthens your
+              brand identity online.
+            </li>
+
+            <li>
+              <strong>Balance of Local & Global SEO</strong> – Whether you want
+              to dominate your local market or expand internationally, our
+              expertise covers both.
+            </li>
+
+            <li>
+              <strong>Transparent Growth Tracking</strong> – No jargon, no
+              hidden metrics. You see real progress through clear reports and
+              measurable ROI.
+            </li>
+
+            <li>
+              <strong>Always Ahead of the Curve</strong> – With algorithm
+              updates and evolving trends, we ensure your SEO strategy is
+              future-proof and compliant with Google’s guidelines.
+            </li>
+
+            <li>
+              <strong>
+                BigWig Media Digital isn’t just another SEO company in India
+              </strong>{" "}
+              – We’re a growth partner. With us, you gain more than visibility;
+              you gain authority, engagement, and business impact that lasts.
+            </li>
+          </ul>
+          <p className="text-lg text-gray-600  text-justify">
+            BigWig Media Digital isn’t just another SEO company in India - we’re
+            a growth partner. With us, you gain more than visibility; you gain
+            authority, engagement, and business impact that lasts
+          </p>
+          <div className="flex justify-center">
+            <a href="/contact">
+              <button className="mt-8 px-6 py-3 bg-[var(--primary-color)]  text-white rounded-full font-semibold hover:bg-opacity-80 transition">
+                Let’s Connect
+              </button>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -395,87 +463,89 @@ function Seo() {
           </h2>
 
           <div className="overflow-x-auto rounded-xl shadow-lg">
-            <table className="w-full border-collapse text-left">
-              <thead>
-                <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg">
-                  <th className="px-6 py-4 font-semibold">Service 1</th>
-                  <th className="px-6 py-4 font-semibold">Service 2</th>
-                  <th className="px-6 py-4 font-semibold">Service 3</th>
-                </tr>
-              </thead>
+            <table className="w-full table-auto border border-gray-300 border-collapse text-center">
               <tbody>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
-                    <a href="/services/seo">Search Engine Optimization</a>
+                <tr className="">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/search-engine-optimization">
+                      Search Engine Optimization
+                    </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-marketing">
                       Social Media Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/performance-marketing">
                       Performance Marketing
                     </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/content-marketing">Content Marketing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/web-design">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/website-design-development">
                       Website Designing & Development
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/email-marketing">Email Marketing</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-optimization">
                       Social Media Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/graphic-designing">Graphic Designing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/ai-marketing">AI and CGI Marketing</a>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/ai-cgi-marketing">
+                      AI and CGI Marketing
+                    </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/landing-page-optimization">
                       Landing Page Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/video-shoot">Video Shoot</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/public-relations">Public Relations</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/influencer-marketing">
                       Influencer Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300"></td>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/online-reputation-management">
                       Online Reputation Management
                     </a>
                   </td>
-                  <td className="px-6 py-4"></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
       </section>
+
       <Footer />
     </div>
   );

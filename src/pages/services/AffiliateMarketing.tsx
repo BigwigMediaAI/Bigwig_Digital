@@ -31,37 +31,37 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const benefits = [
   {
     title: "Performance-Based ROI",
-    desc: "You only pay when you get a result , a sale, lead, or sign-up. That’s what makes affiliate marketing so efficient.",
+    desc: "Pay only for results - whether it’s a sale, lead, or sign-up - ensuring maximum efficiency.",
     icon: <FaChartLine className="text-3xl text-blue-600" />,
   },
   {
     title: "Low-Risk, High Reward",
-    desc: "With no upfront ad spend, affiliate marketing helps you grow without wasting budget on non-converting traffic.",
+    desc: "With no upfront ad spend, you grow without wasting budget on non-converting traffic.",
     icon: <FaShieldAlt className="text-3xl text-green-600" />,
   },
   {
     title: "Wider Market Reach",
-    desc: "Tap into new audiences via affiliates, influencers, and bloggers who already have earned audience trust.",
+    desc: "Leverage affiliates, influencers, and bloggers who already have a trusted audience.",
     icon: <FaGlobe className="text-3xl text-indigo-600" />,
   },
   {
     title: "Boosts Brand Credibility",
-    desc: "When real people promote your business, it builds third-party trust and authentic brand validation.",
+    desc: "Authentic promotions from real people build third-party trust and brand validation.",
     icon: <FaThumbsUp className="text-3xl text-pink-600" />,
   },
   {
     title: "Improves SEO & Visibility",
-    desc: "Affiliate links from content creators and authority sites can indirectly improve your organic search presence",
+    desc: "Affiliate links from authority sites indirectly support better organic rankings.",
     icon: <FaSearch className="text-3xl text-purple-600" />,
   },
   {
-    title: "Easily Trackable Performance",
-    desc: "With transparent dashboards, you can track every click, conversion, and commission , in real time.",
+    title: "Transparent Performance Tracking",
+    desc: "Real-time dashboards let you track every click, conversion, and payout.",
     icon: <FaClipboardCheck className="text-3xl text-yellow-600" />,
   },
   {
-    title: "Complements Other Campaigns",
-    desc: "Affiliate marketing strengthens your paid, SEO, email, and social efforts by adding external credibility.",
+    title: "Strengthens Other Campaigns",
+    desc: "Affiliate efforts complement SEO, paid ads, social media, and email marketing.",
     icon: <FaPuzzlePiece className="text-3xl text-red-600" />,
   },
 ];
@@ -197,8 +197,8 @@ function AffiliateMarketing() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:pr-8">
             <h1 className="text-3xl md:text-4xl font-semibold text-white leading-snug">
-              Performance-Driven Affiliate Marketing Services to Grow Your
-              Business
+              Performance-Driven Affiliate Marketing Services in India to Grow
+              Your Business
             </h1>
 
             <p
@@ -229,9 +229,9 @@ function AffiliateMarketing() {
             </p>
 
             <p className="text-base md:text-lg max-w-md text-white/90">
-              Turn partnerships into profits with affiliate marketing that
-              scales your business, strengthens your reach, and drives
-              measurable results.
+              Turn partnerships into profits with affiliate marketing services
+              in India that scales your business, strengthens your reach, and
+              drives measurable results.
             </p>
             <a href="/contact">
               <button className="mt-4 px-6 py-3 bg-[var(--primary-color)] text-white rounded-full font-semibold hover:bg-opacity-80 transition">
@@ -250,7 +250,7 @@ function AffiliateMarketing() {
           {/* Title + Intro */}
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-              Performance-Driven Affiliate Marketing Services
+              Performance-Driven Affiliate Marketing Services in India
             </h2>
             <p className="text-gray-700 text-lg max-w-3xl mx-auto">
               Power your brand’s growth with strategic, risk-free affiliate
@@ -264,24 +264,25 @@ function AffiliateMarketing() {
             <div className="space-y-6">
               <p className="text-gray-800 text-lg leading-relaxed">
                 Affiliate marketing is one of the most powerful and
-                budget-friendly ways to scale your business online. At{" "}
-                <strong>BigWig Digital</strong>, a performance-focused affiliate
-                marketing agency all over the world, we help brands build
-                strategic affiliate programs that generate consistent sales,
-                leads, and visibility without the upfront advertising costs.
+                budget-friendly ways to grow your business online. At{" "}
+                <strong>BigWig Media Digital</strong>, a performance-driven
+                affiliate marketing agency in India, we create strategic
+                affiliate programs that help brands generate consistent sales,
+                qualified leads, and greater visibility - without the heavy
+                upfront advertising costs.
               </p>
               <p className="text-gray-800 text-lg leading-relaxed">
                 Whether you’re a startup launching your first product or an
                 established eCommerce brand looking to expand, our customized
-                affiliate marketing services are designed to deliver results
-                that matter.
+                affiliate marketing services in India are designed to deliver
+                measurable results that truly matter.
               </p>
               <p className="text-gray-800 text-lg leading-relaxed">
-                By partnering with the right affiliates and influencers, you can
-                tap into new audiences, drive qualified traffic, and only pay
-                for actual performance. That means no wasted budget and maximum
-                ROI. With the right strategy, affiliate marketing becomes a
-                growth engine for your brand.
+                By partnering with trusted affiliates and influencers, you can
+                reach new audiences, drive high-quality traffic, and pay only
+                for actual performance. That means zero wasted ad spend and
+                maximum ROI. With the right affiliate strategy, your marketing
+                efforts turn into a sustainable growth engine for your brand.
               </p>
             </div>
 
@@ -293,18 +294,31 @@ function AffiliateMarketing() {
               <p className="text-gray-700">
                 Digital marketing is evolving rapidly, and paid ads are becoming
                 more expensive and competitive. Affiliate marketing offers a
-                smart alternative. Instead of paying for impressions or clicks,
-                you reward partners only when they bring in conversions.
+                smarter and more cost-effective alternative. Instead of paying
+                for impressions or clicks that may not convert, you only reward
+                affiliates when they bring in real results such as sales, leads,
+                or app installs.s.
               </p>
               <p className="text-gray-700">
-                This approach reduces risk and aligns your marketing budget with
-                actual performance. As a trusted affiliate marketing agency,
-                BigWig Digital helps you create a profitable, scalable affiliate
-                model that works alongside your existing marketing channels
+                This performance-based model reduces risk, ensures better ROI,
+                and aligns your marketing budget directly with business growth.
+                For businesses looking to scale without overspending, affiliate
+                marketing becomes a reliable and sustainable channel.
               </p>
               <p className="text-gray-700">
-                Whether your goal is lead generation, product sales, or app
-                installs, our affiliate partnerships are built to convert.
+                At BigWig Media Digital, a trusted affiliate marketing agency in
+                India, we specialize in building profitable and scalable
+                affiliate models tailored to your goals. Our strategies
+                integrate seamlessly with your existing marketing channels,
+                helping you expand reach, tap into new audiences, and generate
+                consistent conversions.
+              </p>
+              <p className="text-gray-700">
+                Whether your priority is lead generation, product sales, or app
+                installs, our carefully chosen affiliate partnerships are built
+                to deliver measurable outcomes. With the right approach,
+                affiliate marketing doesn’t just support your brand - it becomes
+                a long-term growth engine.
               </p>
             </div>
           </div>
@@ -316,7 +330,7 @@ function AffiliateMarketing() {
           {/* SECTION 1: Where Affiliate Works Best */}
           <div className="text-center space-y-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--primary-color)]">
-              Where Affiliate Marketing Works Best
+              Industries We Work With
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 text-left">
               {verticals.map((item, idx) => (
@@ -349,27 +363,52 @@ function AffiliateMarketing() {
                 </h3>
                 <p className="text-gray-700 text-lg">
                   Affiliate marketing is not a one-size-fits-all approach. Every
-                  brand has a different audience, product, and price point.
-                  That’s why our{" "}
-                  <strong>
-                    <a href="https://www.bigwigdigital.in/">
-                      {" "}
-                      Affiliate Marketing Services
-                    </a>
-                  </strong>{" "}
-                  are built on personalization.
+                  brand has a different audience, product, and price point -
+                  which is why our affiliate marketing services in India are
+                  built on personalization. At BigWig Media Digital, a trusted
+                  affiliate marketing agency in India, we design programs that
+                  fit your unique business needs while ensuring measurable
+                  growth.
                 </p>
                 <p className="text-gray-700 text-lg">
                   From identifying the right partners to tracking every
-                  conversion, we ensure full transparency and measurable growth
-                  at every stage.
+                  conversion, our process is transparent and performance-driven.
+                  We don’t just connect you with affiliates - we equip them with
+                  the right tools, insights, and strategies to promote your
+                  brand effectively.
                 </p>
                 <p className="text-gray-700 text-lg">
-                  We focus on building affiliate relationships that are
-                  long-term, trustworthy, and aligned with your business goals.
-                  You’ll never have to worry about shady promotions or
-                  low-quality traffic. Instead, we help your brand build
-                  reputation, reach, and revenue through trusted digital voices.
+                  Here’s how we ensure long-term success for your affiliate
+                  program:
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>Strategic Partner Selection</strong> – We connect
+                    you with affiliates who match your niche and audience.
+                  </li>
+                  <li>
+                    <strong>End-to-End Management</strong> – From campaign setup
+                    to tracking and payments, we handle it all.
+                  </li>
+                  <li>
+                    <strong>Data-Driven Insights</strong> – Detailed performance
+                    reports keep you in control.
+                  </li>
+                  <li>
+                    <strong>Trusted Relationships</strong> – We focus on quality
+                    affiliates who build brand reputation, not just traffic.
+                  </li>
+                  <li>
+                    <strong>Scalable Growth</strong> – As your program expands,
+                    we help you tap into new audiences globally.
+                  </li>
+                </ul>
+
+                <p className="text-gray-700 text-lg">
+                  With BigWig Media Digital, you’ll never have to worry about
+                  low-quality traffic or shady promotions. Instead, you gain a
+                  scalable affiliate model that strengthens your reputation,
+                  reach, and revenue through trusted digital voices.
                 </p>
               </div>
 
@@ -418,9 +457,10 @@ function AffiliateMarketing() {
               Benefits of Affiliate Marketing Services
             </h2>
             <p className="text-gray-700 text-lg">
-              Affiliate marketing isn’t just cost-effective , it’s one of the
+              Affiliate marketing isn’t just cost-effective - it’s one of the
               smartest ways to scale your digital reach while paying only for
-              actual results.
+              actual results. As a leading affiliate marketing agency in India,
+              BigWig Media Digital helps brands unlock these benefits:
             </p>
           </div>
 
@@ -475,11 +515,21 @@ function AffiliateMarketing() {
             Ready to Build a Performance-Driven Partner Network?
           </h2>
           <p className="text-gray-200 max-w-3xl mx-auto">
-            Whether you want to start an affiliate program from scratch or scale
-            an existing one, our <strong>affiliate marketing services </strong>{" "}
-            are tailored to deliver consistent, trackable growth. We work across
-            industries, platforms, and campaign types to help you get the most
+            Whether you want to launch a new affiliate program from the ground
+            up or scale an existing one, our tailored affiliate marketing
+            services in India are designed to deliver consistent and measurable
+            growth. At BigWig Media Digital, we work across multiple industries,
+            platforms, and campaign types to ensure you get the maximum value
             from every partnership.
+          </p>
+          <p className="text-gray-200 max-w-3xl mx-auto">
+            By choosing us as your affiliate marketing agency in India, you gain
+            access to a trusted partner network, transparent reporting, and
+            strategies that align with your long-term business goals.
+          </p>
+          <p className="text-gray-200 max-w-3xl mx-auto">
+            Let’s start building your affiliate program today - and turn
+            partnerships into a powerful growth engine for your brand.
           </p>
         </div>
       </div>
@@ -525,7 +575,7 @@ function AffiliateMarketing() {
                     setOpenIndex(openIndex === index ? null : index)
                   }
                 >
-                  <span>{item.q}</span>
+                  <h3>{item.q}</h3>
                   {openIndex === index ? (
                     <ChevronUp className="w-5 h-5 text-gray-500" />
                   ) : (
@@ -549,81 +599,82 @@ function AffiliateMarketing() {
           </h2>
 
           <div className="overflow-x-auto rounded-xl shadow-lg">
-            <table className="w-full border-collapse text-left">
-              <thead>
-                <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg">
-                  <th className="px-6 py-4 font-semibold">Service 1</th>
-                  <th className="px-6 py-4 font-semibold">Service 2</th>
-                  <th className="px-6 py-4 font-semibold">Service 3</th>
-                </tr>
-              </thead>
+            <table className="w-full table-auto border border-gray-300 border-collapse text-center">
               <tbody>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
-                    <a href="/services/seo">Search Engine Optimization</a>
+                <tr className="">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/search-engine-optimization">
+                      Search Engine Optimization
+                    </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-marketing">
                       Social Media Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/performance-marketing">
                       Performance Marketing
                     </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/content-marketing">Content Marketing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/web-design">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/website-design-development">
                       Website Designing & Development
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/email-marketing">Email Marketing</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-optimization">
                       Social Media Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/graphic-designing">Graphic Designing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/ai-marketing">AI and CGI Marketing</a>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/ai-cgi-marketing">
+                      AI and CGI Marketing
+                    </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/landing-page-optimization">
                       Landing Page Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/video-shoot">Video Shoot</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/public-relations">Public Relations</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/influencer-marketing">
                       Influencer Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300"></td>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/online-reputation-management">
                       Online Reputation Management
                     </a>
                   </td>
-                  <td className="px-6 py-4"></td>
                 </tr>
               </tbody>
             </table>

@@ -478,77 +478,78 @@ function PerformanceMarketing() {
           </h2>
 
           <div className="overflow-x-auto rounded-xl shadow-lg">
-            <table className="w-full border-collapse text-left">
-              <thead>
-                <tr className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-lg">
-                  <th className="px-6 py-4 font-semibold">Service 1</th>
-                  <th className="px-6 py-4 font-semibold">Service 2</th>
-                  <th className="px-6 py-4 font-semibold">Service 3</th>
-                </tr>
-              </thead>
+            <table className="w-full table-auto border border-gray-300 border-collapse text-center">
               <tbody>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
-                    <a href="/services/seo">Search Engine Optimization</a>
+                <tr className="">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/search-engine-optimization">
+                      Search Engine Optimization
+                    </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-marketing">
                       Social Media Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 font-medium hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600  hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/performance-marketing">
                       Performance Marketing
                     </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/content-marketing">Content Marketing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/web-design">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/website-design-development">
                       Website Designing & Development
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/email-marketing">Email Marketing</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/social-media-optimization">
                       Social Media Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/graphic-designing">Graphic Designing</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
-                    <a href="/services/ai-marketing">AI and CGI Marketing</a>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
+                    <a href="/services/ai-cgi-marketing">
+                      AI and CGI Marketing
+                    </a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/landing-page-optimization">
                       Landing Page Optimization
                     </a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/video-shoot">Video Shoot</a>
                   </td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/public-relations">Public Relations</a>
                   </td>
                 </tr>
-                <tr className="odd:bg-gray-50 even:bg-white hover:bg-indigo-50 transition">
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+
+                <tr>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/influencer-marketing">
                       Influencer Marketing
                     </a>
                   </td>
-                  <td className="px-6 py-4"></td>
-                  <td className="px-6 py-4 text-blue-600 hover:underline cursor-pointer">
+                  <td className="px-6 py-4 border border-gray-300"></td>
+                  <td className="px-6 py-4 border border-gray-300 text-blue-600 hover:underline cursor-pointer hover:bg-indigo-50 transition">
                     <a href="/services/online-reputation-management">
                       Online Reputation Management
                     </a>
