@@ -1,9 +1,10 @@
-import granth from "../assets/gallery/granth.png";
-import cft from "../assets/gallery/cft.png";
+import granth from "../../Assets/gallery/granth.png";
+import cft from "../../Assets/gallery/cft.png";
+import { StaticImageData } from "next/image";
 
 export type WebsiteItem = {
   title: string;
-  image: string;
+  image: string | StaticImageData;
   url: string;
   type: "websites";
 };

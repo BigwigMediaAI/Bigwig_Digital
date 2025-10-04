@@ -1,21 +1,22 @@
-import cgi1 from "../assets/gallery/cgi1.png";
-import cgi2 from "../assets/gallery/cgi2.png";
-import cgi3 from "../assets/gallery/cgi3.png";
-import cgi4 from "../assets/gallery/cgi4.png";
-import cgi5 from "../assets/gallery/ChatGPT Image Jun 3, 2025, 04_36_48 PM.png";
-import cgi6 from "../assets/gallery/ChatGPT Image Jun 3, 2025, 06_27_27 PM.png";
-import cgi7 from "../assets/gallery/ChatGPT Image May 31, 2025, 02_57_46 PM.png";
-import static1 from "../assets/gallery/BigWig Static Post.png";
-import static2 from "../assets/gallery/BigWig Static Post (1).png";
-import static3 from "../assets/gallery/Bigwig Static Post (2).png";
-import static4 from "../assets/gallery/BigWig Static Post (3).png";
-import static5 from "../assets/gallery/BigWig Static Post (4).png";
-import static6 from "../assets/gallery/BigWig Static Post (5).png";
+import cgi1 from "../../Assets/gallery/cgi1.png";
+import cgi2 from "../../Assets/gallery/cgi2.png";
+import cgi3 from "../../Assets/gallery/cgi3.png";
+import cgi4 from "../../Assets/gallery/cgi4.png";
+import cgi5 from "../../Assets/gallery/ChatGPT Image Jun 3, 2025, 04_36_48 PM.png";
+import cgi6 from "../../Assets/gallery/ChatGPT Image Jun 3, 2025, 06_27_27 PM.png";
+import cgi7 from "../../Assets/gallery/ChatGPT Image May 31, 2025, 02_57_46 PM.png";
+import static1 from "../../Assets/gallery/BigWig Static Post.png";
+import static2 from "../../Assets/gallery/BigWig Static Post (1).png";
+import static3 from "../../Assets/gallery/Bigwig Static Post (2).png";
+import static4 from "../../Assets/gallery/BigWig Static Post (3).png";
+import static5 from "../../Assets/gallery/BigWig Static Post (4).png";
+import static6 from "../../Assets/gallery/BigWig Static Post (5).png";
+import { StaticImageData } from "next/image";
 
 export type SocialPlatform = "facebook" | "twitter" | "linkedin" | "instagram";
 
 export type PostItem = {
-  src: string;
+  src: string | StaticImageData; // <-- accept both
   alt: string;
   link: string;
   type: "creative" | "ai" | "cgi";
