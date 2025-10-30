@@ -308,7 +308,7 @@ export default function AdminBlogsPage() {
                   if (!editingSlug) return;
                   try {
                     const res = await fetch(
-                      `${process.env.NEXT_PUBLIC_API_BASE}/blog/${editingSlug}`,
+                      `${process.env.NEXT_PUBLIC_API_BASE}/${editingSlug}`,
                       {
                         method: "PUT",
                         headers: { "Content-Type": "application/json" },
