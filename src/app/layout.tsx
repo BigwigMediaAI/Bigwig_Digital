@@ -44,7 +44,7 @@ export default function RootLayout({
         />
         <meta
           name="google-site-verification"
-          content="QGVFfDuutJFG_i7qjxkabQ1Jph7B2trzC1H2_zC0GmI"
+          content="CQRj6Bls-OQCYgV4ne5XEQJ8-6KlU7L2JfhusyIuiwM"
         />
         {/* JSON-LD FAQ */}
         <script
