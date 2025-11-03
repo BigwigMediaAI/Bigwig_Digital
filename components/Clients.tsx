@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import { usePathname } from "next/navigation";
 
 const images = [
-  "https://www.khalsapropertydealers.com/assets/logo-DnYKs3z-.png",
+  "https://res.cloudinary.com/dqrlkbsdq/image/upload/v1762152048/logo_npwakv.webp",
   "https://res.cloudinary.com/dcq2oziz4/image/upload/v1759493003/Granth_logo_6_kyrd5s.png",
   "https://res.cloudinary.com/dcq2oziz4/image/upload/v1759494155/WhatsApp_Image_2025-10-03_at_17.51.27_4308166d_d3ll1m.jpg",
   "https://res.cloudinary.com/dcq2oziz4/image/upload/v1759494916/Gear_Tek_Logo-removebg-preview_j5p3wc.png",
@@ -21,7 +21,6 @@ const images = [
   "https://riverfront.vercel.app/assets/Logo%20for%20riverfront%20-CAIVvev0.png",
   "https://www.homesandlandgoa.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b166d281.png&w=640&q=75&dpl=dpl_CAHgoDqvf7txY4ReKMyGa6ZD9Ti4",
   "https://i1.sndcdn.com/avatars-zrGoOnkGJPMFqycp-NUkwhg-t1080x1080.jpg",
-  "https://aylesforddubai.com/wp-content/uploads/2024/11/aylesford.svg",
   "https://www.shoutlo.com/assets/images/merchant_images/merchant-133212-5c65208474154.jpg",
   "https://upload.wikimedia.org/wikipedia/commons/3/3e/Park_Inn_by_Radisson_logo.png",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs8ZV5K7FxPkLchCy1bSLTfp6aqptcTl8vGg&s",
