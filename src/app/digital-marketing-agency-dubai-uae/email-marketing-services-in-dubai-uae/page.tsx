@@ -63,7 +63,7 @@ function EmailMarketingInDubai() {
           <div className="flex justify-center">
             <Image
               src={seoImage} // replace with your email marketing image if available
-              alt="Email Marketing Services Dubai"
+              alt="Email Marketing Services in Dubai, UAE"
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />
           </div>

@@ -62,7 +62,7 @@ function WebDesignInDubai() {
           <div className="flex justify-center">
             <Image
               src={seoImage} // replace with your web development image
-              alt="Best Web Development Company in Dubai"
+              alt="Best Web Development Company in Dubai, UAE"
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />
           </div>

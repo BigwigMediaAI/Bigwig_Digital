@@ -101,7 +101,7 @@ function ContentMarketingInDubai() {
           <div className="flex justify-center">
             <Image
               src={seoImage}
-              alt="PPC Company in Dubai, UAE"
+              alt="Content Marketing Services in Dubai, UAE"
               className="rounded-2xl shadow-lg w-full h-auto object-cover"
             />
           </div>
