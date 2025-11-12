@@ -84,7 +84,7 @@ const services = [
     subtitle: "Targeted Email Marketing Campaigns in Dubai, UAE",
     desc: "Personalized campaigns with newsletters and automation for retention & conversions.",
     icon: email,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/email-marketing-services-in-dubai-uae",
   },
   {
     title: "Social Media Optimization (SMO)",
