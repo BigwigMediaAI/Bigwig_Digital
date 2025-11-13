@@ -105,7 +105,7 @@ const services = [
     subtitle: "AI & CGI Marketing Agency in Dubai, UAE",
     desc: "Next-gen marketing with AI personalization and hyper-realistic CGI ads.",
     icon: ai,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/ai-and-cgi-ads-services-in-dubai-uae",
   },
   {
     title: "Landing Page Optimization",
