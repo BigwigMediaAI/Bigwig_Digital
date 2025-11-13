@@ -10,19 +10,6 @@ import WhyBigwig from "../../../../components/WhyBigwig";
 // import { useState } from "react";
 import PopupForm from "../../../../components/PopupForm";
 import CTABanner from "../../../../components/CTABanner";
-import {
-  FaPalette,
-  FaBullhorn,
-  FaLaptop,
-  FaMobileAlt,
-  FaBoxOpen,
-  FaFileAlt,
-  FaLightbulb,
-  FaMapMarkerAlt,
-  FaClock,
-  FaDollarSign,
-  FaHandsHelping,
-} from "react-icons/fa";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -613,7 +600,7 @@ function AiCgiDubai() {
       <WhyBigwig />
       <CTABanner
         title="Elevate Your Brand with Cutting-Edge AI & CGI Ads That Captivate and Convert in Dubai."
-        buttonText="Launch Your Campaign Today"
+        buttonText="Contact Us"
       />
 
       <Footer />
