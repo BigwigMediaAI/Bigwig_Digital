@@ -91,7 +91,7 @@ const services = [
     subtitle: "Social Media Optimization Services in Dubai, UAE",
     desc: "Enhance profiles, posts, and engagement for a stronger brand presence.",
     icon: smo,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/social-media-optimization-services-in-dubai-uae",
   },
   {
     title: "Graphic Designing",
