@@ -120,7 +120,7 @@ const services = [
     subtitle: "Affiliate Marketing Solutions in Dubai, UAE",
     desc: "Expand reach with affiliates driving sales and traffic through cost-effective strategies.",
     icon: affiliate,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/affiliate-marketing-services-in-dubai-uae",
   },
   {
     title: "Video Shoot & Production",
