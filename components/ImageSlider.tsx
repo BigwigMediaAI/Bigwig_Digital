@@ -7,6 +7,13 @@ import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { CustomArrowProps } from "react-slick";
 import { useState } from "react";
 
+interface Testimonial {
+  name: string;
+  review: string;
+  rating: number;
+  image: string;
+}
+
 // Custom Arrow Components
 const NextArrow = (props: CustomArrowProps) => {
   const { onClick } = props;
@@ -172,7 +179,7 @@ export default function ImageSlider() {
   );
 }
 
-const TestimonialCard = ({ item }: { item: any }) => {
+const TestimonialCard = ({ item }: { item: Testimonial }) => {
   const [showFull, setShowFull] = useState(false);
   const truncateLength = 150;
 
