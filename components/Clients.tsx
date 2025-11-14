@@ -38,8 +38,8 @@ const Client = () => {
   );
 
   return (
-    <div className="pb-4 w-11/12 md:w-5/6 mx-auto">
-      <h2 className="text-4xl font-bold text-white text-center mb-10">
+    <div className="py-12 w-11/12 md:w-5/6 mx-auto">
+      <h2 className="text-5xl font-bold text-white text-center mb-10">
         Our Clients
       </h2>
 
@@ -92,7 +92,7 @@ const Client = () => {
       </div>
 
       {/* Show More Button */}
-      <div className="mt-6 flex justify-center">
+      <div className=" flex justify-center">
         <a
           href="/clients"
           className="inline-block bg-[#1752B4] text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition text-sm"

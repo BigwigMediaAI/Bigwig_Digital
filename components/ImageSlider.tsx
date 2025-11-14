@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { CustomArrowProps } from "react-slick";
+import { useState } from "react";
 
 // Custom Arrow Components
 const NextArrow = (props: CustomArrowProps) => {
@@ -34,68 +35,64 @@ const PrevArrow = (props: CustomArrowProps) => {
 export default function ImageSlider() {
   const testimonials = [
     {
-      name: "Amal Al Khaja",
+      name: "Chetan Pandey",
       review:
-        "I recently purchased a property through Riverfront .Their team provided expert guidance, and their knowledge of the Dubai market is unparalleled....",
+        "We have been working with Big Wig Media digital for nearly a year and their SEO + PPC combination strategy is giving us steady results. Unlike agency that over promise they deliver consistent improvements and focus on long term growth.",
       rating: 5,
-      image:
-        "https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.jpg?b=1&s=612x612&w=0&k=20&c=VsTsa0kjyZ7ALe-nyKAUfynyRxZo8H4LRMdu_ecPuOY=",
+      image: "",
     },
     {
-      name: "Fatima Al Sayegh",
+      name: "Aparajita Pandey",
       review:
-        "Riverfront helped me find my dream home in Dubai, and I couldnt be happier with the service I received...",
+        "I liked how Big Wig media digital took time to analyse our competitors before suggesting a plan. Their local SEO services helped our restaurant rank higher on Google maps, which brought in a lot of walk in customers. Truly a result oriented team.",
       rating: 5,
       image:
-        "https://t3.ftcdn.net/jpg/11/78/73/70/360_F_1178737095_LwMHsASBgW6xP8q58hjc6rH20gC2t4lg.jpg",
+        "https://lh3.googleusercontent.com/a-/ALV-UjV9LGaNpHLRB9zgIuu3-FQAitUeRxKhF-XS986Ll8-SphirLA7CrA=w90-h90-p-rp-mo-br100",
     },
     {
-      name: "Khalid Al Mansoori",
+      name: "ESHAAN AGGARWAL",
       review:
-        "I have invested in several properties in Dubai, but my experience with Riverfront has been exceptional...",
+        "What I loved most is that they didn’t offer me a one-size-fits-all plan. The strategy they created was tailor-made for my startup’s goals, and it worked beautifully.",
       rating: 5,
-      image:
-        "https://images.squarespace-cdn.com/content/v1/5c5a48b7809d8e364b16c2bf/1596588103144-YDOUWGJ09KUD4SMJJD6A/company+profile+picture.jpg",
+      image: "",
     },
     {
-      name: "Prakul Rathnakar",
+      name: "Amit Paal Siingh",
       review:
-        "I would like to thank Vanessa Lenger from Unique Properties for helping me with a hassle-free experience...",
+        "As a business based in Australia I was sceptical engaging with an overseas business but the team at Bigwig was amazing. I got great results at a very affordable pricing structure compared to what I was getting here in Australia. Highly recommended.",
       rating: 5,
       image:
-        "https://images.squarespace-cdn.com/content/v1/5c5a48b7809d8e364b16c2bf/1596588691090-TCV46R86567N1U47WJTT/corporateprofile+image.jpg",
+        "https://lh3.googleusercontent.com/a-/ALV-UjVxYdkNjf2_Uda0TFgK4Mt9fA3uftsVT9eAb6YTljLckk_immAXJw=w90-h90-p-rp-mo-ba2-br100",
     },
     {
-      name: "Pascal Macauilt",
+      name: "Piyush Paswan",
       review:
-        "Anna provided a great support at all steps of the transaction...",
+        "I was struggling with content marketing for my online business. BigWig not only created a content strategy for me but also executed it so well that our engagement grew by 60%. Love their approach!",
       rating: 5,
-      image:
-        "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg",
+      image: "",
     },
     {
-      name: "Rob Sundberg",
+      name: "Chanchal Sikha",
       review:
-        "They took care of me at every step, and I can proudly recommend both agents...",
+        "I own a fashion label and wanted help with Instagram growth. BigWig’s team helped us create a reel strategy that went viral twice in one month. Super impressed!",
       rating: 5,
-      image:
-        "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+      image: "",
     },
     {
-      name: "Emily Johnson",
+      name: "Manjot Singh",
       review:
-        "Amazing service! The team was professional and helped me find exactly what I was looking for...",
+        "They are creative, professional, and most importantly, results-driven. We hired BigWig for PPC and got more leads in the first month than we did in three months with our previous agency.",
       rating: 5,
       image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUZdrybHV3F79eAqX8lguAtd1W6Z037RAR7eDdxxi96nDBs490Dd5oH9EQAbC-Ubk5ad0&usqp=CAU",
+        "https://lh3.googleusercontent.com/a-/ALV-UjWocBrIQukTEUH6FyQY-OHikb2HnSX5lb2cg68rB_OW1zUapt_IXw=w90-h90-p-rp-mo-br100",
     },
     {
-      name: "Michael Smith",
+      name: "Kashvi Chhabra",
       review:
-        "Very pleased with the experience. They guided me throughout the entire process...",
+        "Shoutout to the BigWig team for redesigning our outdated website and improving our page speed. It not only looks better now but also performs better in search engines.",
       rating: 5,
       image:
-        "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?cs=srgb&dl=pexels-olly-733872.jpg&fm=jpg",
+        "https://lh3.googleusercontent.com/a-/ALV-UjVZZS5xpnWcD6qeivGWgPcOxB9vmVoBiGuvRREcL8JdNDsNZNG1AQ=w90-h90-p-rp-mo-br100",
     },
   ];
 
@@ -127,32 +124,30 @@ export default function ImageSlider() {
   };
 
   return (
-    <div className="w-11/12 mx-auto px-2 mb-10 py-4">
-      <h1 className="md:block hidden text-5xl mb-5 text-center text-gray-100 font-bold">
-        Look What Our Beloved Clients Say About Us
+    <div className="w-11/12 mx-auto px-2 mb-16 py-8">
+      <h1 className="md:block hidden text-4xl md:text-5xl mb-10 text-center text-gray-100 font-bold">
+        What Our Clients Say About Us
       </h1>
 
-      <div className="flex flex-col md:flex-row items-center gap-6 mt-5">
-        {/* Left Side */}
+      <div className="flex flex-col md:flex-row items-start gap-8 mt-5">
+        {/* Left Side Info */}
         <div className="md:w-1/3 text-center md:text-left">
-          <h2 className="text-2xl font-semibold text-gray-100">
+          <h2 className="text-2xl font-bold text-gray-100 mb-3">
             CLIENT TESTIMONIALS
           </h2>
-          <div className="flex items-center gap-2 mt-2 justify-center md:justify-start">
-            <div className="rounded-full p-2 text-gray-100 text-xl font-bold">
-              <img
-                src="https://www.svgrepo.com/show/475656/google-color.svg"
-                alt=""
-                className="w-8"
-              />
-            </div>
+          <div className="flex items-center gap-3 mt-2 justify-center md:justify-start">
+            <img
+              src="https://www.svgrepo.com/show/475656/google-color.svg"
+              alt=""
+              className="w-10 h-10"
+            />
             <div>
               <p className="font-bold text-lg text-gray-100">Rated 4.8/5</p>
             </div>
           </div>
           <p className="text-gray-400 mt-4">
-            Don&#39;t just take our word for it. Here&#39;s what our clients
-            have to say about their Unique experience.
+            Don’t just take our word for it. Here’s what our clients have to say
+            about their unique experience.
           </p>
         </div>
 
@@ -160,47 +155,79 @@ export default function ImageSlider() {
         <div className="md:w-2/3 w-full relative">
           <Slider {...settings}>
             {testimonials.map((item, index) => (
-              <div key={index} className="p-4">
-                <div className="bg-neutral-950 shadow-md rounded-lg p-6 h-72 w-3/4 md:w-full mx-auto border border-gray-700">
-                  <p className="text-gray-200 mb-4">
-                    {item.review.slice(0, 100)}...
-                  </p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full overflow-hidden">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="ml-3">
-                      <p className="font-semibold text-gray-100">{item.name}</p>
-                      <div className="flex">
-                        {Array.from({ length: item.rating }).map((_, i) => (
-                          <Star
-                            key={i}
-                            size={16}
-                            fill="#d49325"
-                            stroke="none"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <TestimonialCard key={index} item={item} />
             ))}
           </Slider>
         </div>
       </div>
 
-      <div className="flex justify-center mx-auto">
+      <div className="flex justify-center mt-8">
         <a href="/contact">
-          <button className="mt-6 bg-[#1752B4] text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 text-sm">
-            Want to grow your business
+          <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transform transition duration-300 font-semibold text-sm md:text-base">
+            Want to grow your business?
           </button>
         </a>
       </div>
     </div>
   );
 }
+
+const TestimonialCard = ({ item }: { item: any }) => {
+  const [showFull, setShowFull] = useState(false);
+  const truncateLength = 150;
+
+  const isTruncated = item.review.length > truncateLength;
+  const displayedText = showFull
+    ? item.review
+    : item.review.slice(0, truncateLength);
+
+  return (
+    <div className="p-2">
+      <div
+        className={`bg-gradient-to-br from-gray-900/80 to-gray-950/90 shadow-xl rounded-2xl p-6 border border-gray-700 transition-all duration-300 overflow-hidden ${
+          showFull ? "h-auto" : "h-64"
+        }`}
+      >
+        {/* Review */}
+        <p className="text-gray-300 mb-3 text-xs md:text-sm leading-relaxed">
+          {displayedText}
+          {isTruncated && !showFull && "..."}
+        </p>
+
+        {/* Read More / Less */}
+        {isTruncated && (
+          <button
+            className="text-blue-400 text-xs mt-1 font-semibold hover:underline"
+            onClick={() => setShowFull(!showFull)}
+          >
+            {showFull ? "Show Less" : "Read More"}
+          </button>
+        )}
+
+        {/* Profile Section */}
+        <div className="flex items-center mt-4">
+          <div className="w-10 h-10 rounded-full bg-[var(--primary-color)] flex items-center justify-center text-white font-semibold overflow-hidden text-sm">
+            {item.image ? (
+              <img
+                src={item.image}
+                alt={item.name}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <span>{item.name.charAt(0).toUpperCase()}</span>
+            )}
+          </div>
+
+          <div className="ml-3">
+            <p className="font-semibold text-gray-100 text-sm">{item.name}</p>
+            <div className="flex mt-1">
+              {Array.from({ length: item.rating }).map((_, i) => (
+                <Star key={i} size={14} fill="#d49325" stroke="none" />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
