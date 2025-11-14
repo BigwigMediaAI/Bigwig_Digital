@@ -127,7 +127,7 @@ const services = [
     subtitle: "Professional Video Shoot Services in Dubai, UAE",
     desc: "Corporate films, ads, and reels crafted with high-quality storytelling visuals.",
     icon: video,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/video-shoot-services-in-dubai-uae",
   },
   {
     title: "Public Relations (PR)",
