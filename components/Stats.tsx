@@ -11,7 +11,7 @@ const stats = [
   { value: 8, label: "Beautiful\nYears of Experience" },
   { value: 6, label: "Astonishing\nIn-House AI Products" },
   { value: 5, label: "Stunning\nWorldwide Offices" },
-  { value: 10, label: "Applaudable\nAwards" },
+  // { value: 10, label: "Applaudable\nAwards" },
 ];
 
 const Stats: React.FC = () => {
@@ -77,7 +77,7 @@ const Stats: React.FC = () => {
       className="relative bg-cover bg-center bg-no-repeat py-12"
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 w-11/12 md:w-5/6 mx-auto">
         {/* Desktop View */}
         <div className="hidden md:flex justify-between text-center text-white">
           {stats.map((stat, index) => (

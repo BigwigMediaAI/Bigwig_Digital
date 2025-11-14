@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import axios from "axios";
+
 type FormDataType = {
   fullName: string;
   email: string;
@@ -52,7 +53,6 @@ const ApplicationForm = () => {
     for (const key of Object.keys(formData) as (keyof FormDataType)[]) {
       data.append(key, formData[key]);
     }
-
     data.append("resume", resume);
 
     try {
@@ -63,13 +63,11 @@ const ApplicationForm = () => {
         "https://bigwigdigitalbackend.onrender.com/api/submit-job",
         data,
         {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+          headers: { "Content-Type": "multipart/form-data" },
         }
       );
 
-      setMessage("Application submitted successfully!");
+      setMessage("Application submitted successfully! 🎉");
       setFormData({
         fullName: "",
         email: "",
@@ -83,7 +81,7 @@ const ApplicationForm = () => {
       setResume(null);
     } catch (err: unknown) {
       console.error(err);
-      setMessage("Failed to submit application.");
+      setMessage("❌ Failed to submit application.");
     } finally {
       setLoading(false);
     }
@@ -92,106 +90,89 @@ const ApplicationForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-white p-6 rounded shadow-md"
+      className="space-y-6 bg-white/70 backdrop-blur-md p-8 rounded-2xl shadow-xl border border-gray-200"
     >
-      <h2 className="text-2xl font-semibold mb-2">Apply for this job</h2>
+      <h2 className="text-3xl font-bold mb-4 text-[var(--primary-color)]">
+        Apply for this Job
+      </h2>
 
       {/* Grid layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <input
-          type="text"
-          name="fullName"
-          placeholder="Full Name"
-          value={formData.fullName}
-          onChange={handleChange}
-          className="border p-2"
-          required
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {[
+          { name: "fullName", placeholder: "Full Name", type: "text" },
+          { name: "email", placeholder: "Email", type: "email" },
+          { name: "mobileNumber", placeholder: "Mobile Number", type: "tel" },
+          { name: "experience", placeholder: "Total Experience", type: "text" },
+          { name: "cctc", placeholder: "Current CTC", type: "text" },
+          { name: "ectc", placeholder: "Expected CTC", type: "text" },
+          { name: "noticePeriod", placeholder: "Notice Period", type: "text" },
+        ].map((field, i) => (
+          <input
+            key={i}
+            type={field.type}
+            name={field.name}
+            placeholder={field.placeholder}
+            value={(formData as any)[field.name]}
+            onChange={handleChange}
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition"
+            required={
+              field.name === "fullName" ||
+              field.name === "email" ||
+              field.name === "mobileNumber"
+            }
+          />
+        ))}
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="border p-2"
-          required
-        />
-
-        <input
-          type="tel"
-          name="mobileNumber"
-          placeholder="Mobile Number"
-          value={formData.mobileNumber}
-          onChange={handleChange}
-          className="border p-2"
-          required
-        />
-
-        <input
-          type="text"
-          name="experience"
-          placeholder="Total Experience"
-          value={formData.experience}
-          onChange={handleChange}
-          className="border p-2"
-        />
-
-        <input
-          type="text"
-          name="cctc"
-          placeholder="Current CTC"
-          value={formData.cctc}
-          onChange={handleChange}
-          className="border p-2"
-        />
-
-        <input
-          type="text"
-          name="ectc"
-          placeholder="Expected CTC"
-          value={formData.ectc}
-          onChange={handleChange}
-          className="border p-2"
-        />
-
-        <input
-          type="text"
-          name="noticePeriod"
-          placeholder="Notice Period"
-          value={formData.noticePeriod}
-          onChange={handleChange}
-          className="border p-2"
-        />
-
-        <input
-          type="file"
-          accept=".pdf,.doc,.docx"
-          onChange={handleResumeChange}
-          className="border p-2"
-          required
-        />
+        {/* Resume Upload */}
+        <div className="md:col-span-2">
+          <textarea
+            name="coverLetter"
+            placeholder="Write a short note (optional)…"
+            value={formData.coverLetter}
+            onChange={handleChange}
+            rows={3}
+            className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition"
+          />
+          <label className="block w-full border-2 border-dashed border-gray-400 rounded-xl p-5 cursor-pointer hover:bg-gray-50 transition">
+            <div className="text-center">
+              <p className="font-semibold text-gray-700">
+                {resume ? resume.name : "Upload Resume (PDF)"}
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Click to browse or drag & drop
+              </p>
+            </div>
+            <input
+              type="file"
+              accept=".pdf"
+              className="hidden"
+              onChange={handleResumeChange}
+              required
+            />
+          </label>
+        </div>
       </div>
 
       {/* Full width textarea */}
-      <textarea
-        name="coverLetter"
-        placeholder="Note"
-        value={formData.coverLetter}
-        onChange={handleChange}
-        rows={2}
-        className="w-full border p-2"
-      />
 
       <button
         type="submit"
         disabled={loading}
-        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+        className="w-full bg-[var(--primary-color)] text-white py-3 rounded-xl text-lg font-semibold hover:bg-[var(--primary-color)]/90 cursor-pointer transition active:scale-95"
       >
         {loading ? "Submitting..." : "Submit Application"}
       </button>
 
-      {message && <p className="text-sm mt-2 text-gray-700">{message}</p>}
+      {/* Message */}
+      {message && (
+        <p
+          className={`text-center text-sm font-medium ${
+            message.includes("successfully") ? "text-green-600" : "text-red-600"
+          }`}
+        >
+          {message}
+        </p>
+      )}
     </form>
   );
 };
