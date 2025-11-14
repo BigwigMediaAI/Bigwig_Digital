@@ -50,9 +50,9 @@ const ApplicationForm = () => {
     }
 
     const data = new FormData();
-    for (const key of Object.keys(formData) as (keyof FormDataType)[]) {
-      data.append(key, formData[key]);
-    }
+    Object.entries(formData).forEach(([key, value]) => {
+      data.append(key, value);
+    });
     data.append("resume", resume);
 
     try {
@@ -68,6 +68,8 @@ const ApplicationForm = () => {
       );
 
       setMessage("Application submitted successfully! 🎉");
+
+      // Reset form
       setFormData({
         fullName: "",
         email: "",
@@ -79,7 +81,7 @@ const ApplicationForm = () => {
         coverLetter: "",
       });
       setResume(null);
-    } catch (err: unknown) {
+    } catch (err) {
       console.error(err);
       setMessage("❌ Failed to submit application.");
     } finally {
@@ -106,13 +108,13 @@ const ApplicationForm = () => {
           { name: "cctc", placeholder: "Current CTC", type: "text" },
           { name: "ectc", placeholder: "Expected CTC", type: "text" },
           { name: "noticePeriod", placeholder: "Notice Period", type: "text" },
-        ].map((field, i) => (
+        ].map((field) => (
           <input
-            key={i}
+            key={field.name}
             type={field.type}
             name={field.name}
             placeholder={field.placeholder}
-            value={(formData as any)[field.name]}
+            value={formData[field.name as keyof FormDataType]}
             onChange={handleChange}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition"
             required={
@@ -123,8 +125,8 @@ const ApplicationForm = () => {
           />
         ))}
 
-        {/* Resume Upload */}
-        <div className="md:col-span-2">
+        {/* Cover letter + Resume */}
+        <div className="md:col-span-2 space-y-4">
           <textarea
             name="coverLetter"
             placeholder="Write a short note (optional)…"
@@ -133,6 +135,7 @@ const ApplicationForm = () => {
             rows={3}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-800 focus:ring-2 focus:ring-black focus:border-black transition"
           />
+
           <label className="block w-full border-2 border-dashed border-gray-400 rounded-xl p-5 cursor-pointer hover:bg-gray-50 transition">
             <div className="text-center">
               <p className="font-semibold text-gray-700">
@@ -153,8 +156,7 @@ const ApplicationForm = () => {
         </div>
       </div>
 
-      {/* Full width textarea */}
-
+      {/* Submit Button */}
       <button
         type="submit"
         disabled={loading}
