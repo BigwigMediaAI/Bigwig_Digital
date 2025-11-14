@@ -70,14 +70,14 @@ const Nav: React.FC = () => {
 
         <div className="flex items-center gap-3 w-full md:w-auto justify-end">
           <a
-            href="tel:+918368573451"
+            href="tel:+919685892813"
             className="hidden md:flex items-center gap-1"
           >
             <Phone className="w-4 h-4 hover:text-[var(--primary-color)]" />
-            <span>+91 8368573451</span>
+            <span>+91 9685892813</span>
           </a>
           <a
-            href="mailto:vipul@bigwigmedia.in"
+            href="mailto:support@bigwigmedia.in"
             className="w-7 h-7 flex items-center justify-center border border-gray-500 rounded-full transition-transform duration-500 hover:rotate-[360deg]"
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = "var(--primary-color)";

@@ -127,15 +127,15 @@ function Footer2() {
                   <li className="flex items-center">
                     <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
                     <a
-                      href="mailto:vipul@bigwigmedia.in"
+                      href="mailto:support@bigwigmedia.in"
                       className="hover:underline"
                     >
-                      vipul@bigwigmedia.in
+                      support@bigwigmedia.in
                     </a>
                   </li>
                   <li className="flex items-center">
                     <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                    +91 83685 73451
+                    +91 96858 92813
                   </li>
                 </ul>
               </div>

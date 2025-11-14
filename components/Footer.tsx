@@ -99,7 +99,7 @@ function Footer() {
                 </h3>
                 <ul className="space-y-2 text-sm">
                   {[
-                    "Real Estate Industry",
+                    "Real Estate",
                     "Beauty",
                     "Education",
                     "Finance/Lending",
@@ -123,12 +123,12 @@ function Footer() {
                       href="mailto:vipul@bigwigmedia.in"
                       className="hover:underline"
                     >
-                      vipul@bigwigmedia.in
+                      support@bigwigmedia.in
                     </a>
                   </li>
                   <li className="flex items-center">
                     <FontAwesomeIcon icon={faPhone} className="mr-2" />
-                    +91 83685 73451
+                    +91 96858 92813
                   </li>
                 </ul>
               </div>
@@ -201,25 +201,25 @@ function Footer() {
                   },
                 ],
               },
-              {
-                title: "Free Resources",
-                clickable: false,
-                links: [
-                  { name: "Digital Marketing Starter Guide" },
-                  { name: "Ultimate SEO Checklist" },
-                  { name: "Social Media Content Calendar" },
-                  { name: "PPC Campaign Templates" },
-                  { name: "Email Marketing Best Practices" },
-                  { name: "Content Strategy Workbook" },
-                  { name: "Facebook Ads Targeting Cheatsheet" },
-                  { name: "Google Ads Keyword Planner Guide" },
-                  { name: "Influencer Collaboration Checklist" },
-                  { name: "Landing Page Conversion Tips" },
-                  { name: "SEO Audit Template" },
-                  { name: "Instagram Hashtag Guide" },
-                  { name: "E-commerce Product Page Optimization Guide" },
-                ],
-              },
+              // {
+              //   title: "Free Resources",
+              //   clickable: false,
+              //   links: [
+              //     { name: "Digital Marketing Starter Guide" },
+              //     { name: "Ultimate SEO Checklist" },
+              //     { name: "Social Media Content Calendar" },
+              //     { name: "PPC Campaign Templates" },
+              //     { name: "Email Marketing Best Practices" },
+              //     { name: "Content Strategy Workbook" },
+              //     { name: "Facebook Ads Targeting Cheatsheet" },
+              //     { name: "Google Ads Keyword Planner Guide" },
+              //     { name: "Influencer Collaboration Checklist" },
+              //     { name: "Landing Page Conversion Tips" },
+              //     { name: "SEO Audit Template" },
+              //     { name: "Instagram Hashtag Guide" },
+              //     { name: "E-commerce Product Page Optimization Guide" },
+              //   ],
+              // },
               // {
               //   title: "Industries We Serve",
               //   clickable: false,

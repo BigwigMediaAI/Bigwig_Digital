@@ -121,24 +121,21 @@ export default function ContactPage() {
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-8">
         {/* Office Info */}
         <div className="pt-4">
-          <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
+          {/* <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
           <hr />
           <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
           <p className="mb-1 text-lg">Dubai</p>
           <p className="mb-4">
             1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
-          </p>
+          </p> */}
           <h2 className="text-2xl mb-2 font-semibold">India</h2>
           <hr />
-          <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2>
+          {/* <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2> */}
           <p className="mb-1 text-lg font-semibold">Delhi</p>
           <p className="mb-4">
             Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
-          <p className="mb-1 text-lg font-semibold">Delhi</p>
-          <p className="mb-4">
-            S-1, 3rd Floor, Janta Market, Rajouri Garden New Delhi - 110027
-          </p>
+
           <h2 className="text-2xl mb-2 font-semibold">Australia</h2>
           <hr />
           <p className="mb-1 text-lg font-semibold">Melbourne</p>
@@ -154,7 +151,7 @@ export default function ContactPage() {
           <p className="text-gray-400 mt-8">
             Our business operating hours are as follows:
           </p>
-          <p className="mt-2">Monday to Saturday: 10:30am - 7:30pm</p>
+          <p className="mt-2">Monday to Saturday: 10:30am - 7:00pm</p>
         </div>
         {/* Contact Options */}
         <div>
@@ -165,32 +162,24 @@ export default function ContactPage() {
           <div className="flex flex-col gap-4">
             <div className="bg-white p-4 rounded-md flex gap-4 shadow-sm">
               <Phone className="text-gray-700" />
-              <span className="text-sm text-gray-700">
-                +971 505029471 (Dubai)
-              </span>
-            </div>
-            <div className="bg-white p-4 rounded-md flex gap-4 shadow-sm">
-              <Phone className="text-gray-700" />
-              <span className="text-sm text-gray-700">
-                +91 83685 73451 (India)
-              </span>
+              <span className="text-sm text-gray-700">+91 9685892813</span>
             </div>
             <a
-              href="https://wa.me/+918368573451"
+              href="https://wa.me/+919685892813"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white p-4 rounded-md flex gap-4 shadow-sm"
             >
               <FaWhatsapp className="text-green-600" />
-              <span className="text-sm text-gray-700">+91 83685 73451</span>
+              <span className="text-sm text-gray-700">+91 96858 92813</span>
             </a>
             <a
-              href="mailto:vipul@bigwigmedia.in"
+              href="mailto:support@bigwigmedia.in"
               className="bg-white p-4 rounded-md flex gap-4 shadow-sm"
             >
               <Mail className="text-gray-700" />
               <span className="text-sm text-gray-700">
-                vipul@bigwigmedia.in
+                support@bigwigmedia.in
               </span>
             </a>
             <a
@@ -300,7 +289,7 @@ export default function ContactPage() {
         {/* Map */}
         <div className="w-full md:w-1/2 h-[450px] rounded-lg overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.668560792657!2d55.264871674024235!3d25.18066683237258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69004a524faf%3A0x13d5b1575adb574a!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1744201890505!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.322121979646!2d77.19070767529064!3d28.673932275642237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03586419b693%3A0x627bb399c7e86209!2sBigwig%20Media%20Digital%20-%20Digital%20Marketing%20Company!5e1!3m2!1sen!2sin!4v1763114888587!5m2!1sen!2sin"
             width="100%"
             height="100%"
             loading="lazy"
