@@ -148,7 +148,7 @@ const services = [
     subtitle: "Online Reputation Management Agency in Dubai, UAE",
     desc: "Protect and enhance your brand with reviews, SEO presence & ORM strategies.",
     icon: orm,
-    link: "#",
+    link: "/digital-marketing-agency-dubai-uae/orm-services-in-dubai-uae",
   },
 ];
 
