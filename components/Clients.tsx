@@ -38,7 +38,7 @@ const Client = () => {
 
   return (
     <div className="py-12 w-11/12 md:w-5/6 mx-auto">
-      <h2 className="text-5xl font-bold  text-center mb-10">Our Clients</h2>
+      <h2 className="text-5xl font-bold  text-center">Our Clients</h2>
 
       {/* Mobile Carousel */}
       <div

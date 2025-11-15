@@ -166,31 +166,24 @@ function Footer() {
                     name: "Email Marketing",
                     path: "/services/email-marketing",
                   },
+                  // {
+                  //   name: "Whatsapp Marketing",
+                  //   path: "#",
+                  // },
                   {
                     name: "Social Media Optimization",
                     path: "/services/social-media-optimization",
                   },
                   {
-                    name: "Graphic Designing",
+                    name: "Graphic Designing & Video Editing",
                     path: "/services/graphic-designing",
                   },
-                  {
-                    name: "AI and CGI Marketing",
-                    path: "/services/ai-cgi-marketing",
-                  },
-                  {
-                    name: "Landing Page Optimization",
-                    path: "/services/landing-page-optimization",
-                  },
+
                   {
                     name: "Affiliate Marketing",
                     path: "/services/affiliate-marketing",
                   },
-                  { name: "Video Shoot", path: "/services/video-shoot" },
-                  {
-                    name: "Public Relations",
-                    path: "/services/public-relations",
-                  },
+
                   {
                     name: "Influencer Marketing",
                     path: "/services/influencer-marketing",

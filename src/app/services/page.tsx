@@ -77,29 +77,29 @@ const services = [
     image: smo,
   },
   {
-    title: "Graphic Designing",
+    title: "Graphic Designing & Video Editing",
     heading: "Designs that speak louder than words!",
     content:
       "We create eye-catching visuals that reflect your brand and grab attention instantly.",
     path: "/services/graphic-designing",
     image: graphic,
   },
-  {
-    title: "AI and CGI Marketing",
-    heading: "Modern visuals for modern audiences!",
-    content:
-      "We blend creativity with AI & CGI to craft futuristic ads that stand out and drive action.",
-    path: "/services/ai-cgi-marketing",
-    image: ai,
-  },
-  {
-    title: "Landing Page Optimization",
-    heading: "Don’t just land, convert!",
-    content:
-      "We turn ordinary landing pages into high-performing sales machines.",
-    path: "/services/landing-page-optimization",
-    image: landing,
-  },
+  // {
+  //   title: "AI and CGI Marketing",
+  //   heading: "Modern visuals for modern audiences!",
+  //   content:
+  //     "We blend creativity with AI & CGI to craft futuristic ads that stand out and drive action.",
+  //   path: "/services/ai-cgi-marketing",
+  //   image: ai,
+  // },
+  // {
+  //   title: "Landing Page Optimization",
+  //   heading: "Don’t just land, convert!",
+  //   content:
+  //     "We turn ordinary landing pages into high-performing sales machines.",
+  //   path: "/services/landing-page-optimization",
+  //   image: landing,
+  // },
   {
     title: "Affiliate Marketing",
     heading: "Let others sell for you, smartly!",
@@ -108,22 +108,22 @@ const services = [
     path: "/services/affiliate-marketing",
     image: affiliate,
   },
-  {
-    title: "Video Shoot",
-    heading: "Lights. Camera. Convert.",
-    content:
-      "We produce high-quality videos that capture your story and connect with your audience.",
-    path: "/services/video-shoot",
-    image: video,
-  },
-  {
-    title: "Public Relations",
-    heading: "We put your brand in the right spotlight.",
-    content:
-      "Build trust and credibility with strategic media coverage and powerful brand stories.",
-    path: "/services/public-relations",
-    image: publicRelation,
-  },
+  // {
+  //   title: "Video Shoot",
+  //   heading: "Lights. Camera. Convert.",
+  //   content:
+  //     "We produce high-quality videos that capture your story and connect with your audience.",
+  //   path: "/services/video-shoot",
+  //   image: video,
+  // },
+  // {
+  //   title: "Public Relations",
+  //   heading: "We put your brand in the right spotlight.",
+  //   content:
+  //     "Build trust and credibility with strategic media coverage and powerful brand stories.",
+  //   path: "/services/public-relations",
+  //   image: publicRelation,
+  // },
   {
     title: "Influencer Marketing",
     heading: "Real people. Real influence. Real results.",

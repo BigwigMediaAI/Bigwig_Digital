@@ -13,6 +13,7 @@ import Stats from "../../components/Stats";
 import FAQ from "../../components/Faq";
 import LocationsSection from "../../components/Location";
 import Footer from "../../components/Footer";
+import ServicesPage from "../../components/Services";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Partners />
       <Stats />
       <Client />
+      <ServicesPage />
       {/* <ScrollOverlappingText />
       <FlipCard /> */}
       <ImageSlider />
