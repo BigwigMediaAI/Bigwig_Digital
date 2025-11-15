@@ -49,13 +49,14 @@ const Blogs = () => {
   };
 
   return (
-    <div className="bg-black text-white font-raleway font-light py-16">
+    <div className="bg-white text-gray-900 font-raleway font-light py-10">
       <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
         Our Blogs
       </h1>
+
       <section className="w-[90%] mx-auto">
         {blogs.length === 0 ? (
-          <p className="text-center text-gray-400">
+          <p className="text-center text-gray-500">
             No blog posts available at the moment.
           </p>
         ) : (
@@ -63,28 +64,26 @@ const Blogs = () => {
             {blogs.map((post) => (
               <div
                 key={post._id}
-                className="cursor-pointer relative rounded-lg p-[1.5px] hover:shadow-[0_0_10px_var(--primary-color)] transition"
-                style={{
-                  background:
-                    "linear-gradient(to bottom, #111, var(--primary-color))",
-                }}
+                className="cursor-pointer rounded-lg bg-white border border-gray-200 shadow-sm hover:shadow-lg transition-all"
                 onClick={() => handlePostClick(post.slug)}
               >
-                <div className="bg-black rounded-lg h-[340px] flex flex-col overflow-hidden text-left">
+                <div className="rounded-lg h-[340px] flex flex-col overflow-hidden text-left">
                   <img
                     src={post.coverImage}
                     alt={`Cover image for ${post.title}`}
                     className="w-full h-[160px] object-cover rounded-t-lg"
                   />
+
                   <div className="p-4 flex flex-col flex-grow justify-between">
                     <div>
-                      <h3 className="text-sm font-semibold text-white mb-1 line-clamp-2">
+                      <h3 className="text-sm font-semibold text-gray-900 mb-1 line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-xs text-gray-400 mb-2 line-clamp-2">
+                      <p className="text-xs text-gray-600 mb-2 line-clamp-2">
                         {post.excerpt}
                       </p>
                     </div>
+
                     <p className="text-xs text-gray-500 italic">
                       By {post.author} •{" "}
                       {new Date(post.datePublished).toLocaleDateString()}

@@ -17,7 +17,6 @@ const images = [
   "https://res.cloudinary.com/dcq2oziz4/image/upload/v1759493451/Screenshot_2025-10-03_174033_n9gbp7.png",
   "https://res.cloudinary.com/dcq2oziz4/image/upload/v1759494780/Screenshot_2025-10-03_180244_utdinx.png",
   "https://www.stellarbinge.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.3fb31e53.png&w=384&q=75",
-  "https://www.integratedlognet.com/assets/iln%20logo%20(1)-By-pImIc.png",
   "https://riverfront.vercel.app/assets/Logo%20for%20riverfront%20-CAIVvev0.png",
   "https://www.homesandlandgoa.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.b166d281.png&w=640&q=75",
   "https://res.cloudinary.com/dqrlkbsdq/image/upload/v1763112478/DBN_logo_x7wjzx.webp",
@@ -39,9 +38,7 @@ const Client = () => {
 
   return (
     <div className="py-12 w-11/12 md:w-5/6 mx-auto">
-      <h2 className="text-5xl font-bold text-white text-center mb-10">
-        Our Clients
-      </h2>
+      <h2 className="text-5xl font-bold  text-center mb-10">Our Clients</h2>
 
       {/* Mobile Carousel */}
       <div

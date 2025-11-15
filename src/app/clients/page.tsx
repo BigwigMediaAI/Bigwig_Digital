@@ -77,7 +77,7 @@ function Clients() {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div>
       <Nav />
 
       <title>Our Clients</title>

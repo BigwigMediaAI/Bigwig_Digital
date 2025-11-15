@@ -8,7 +8,7 @@ import chooseYou from "../Assets/method/choices-order-svgrepo-com (1).svg";
 import Rocket from "../Assets/method/rocket-svgrepo-com.svg";
 import analysis from "../Assets/method/analysis-analytics-chart-2-svgrepo-com.svg";
 import support from "../Assets/method/support-online-center-svgrepo-com.svg";
-import { ArrowLeft, ArrowRight } from "lucide-react"; // Better arrow icons
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 const workFlowData = [
@@ -17,7 +17,7 @@ const workFlowData = [
     title: "We Attend",
     image: understanding,
     content:
-      "Every good story starts with 'We were just talking…' Well, we listen. Your ideas, concerns, and caffeine intake levels,everything. We’re basically the therapists of the business world, minus the couch and with a lot more coffee.",
+      "Every good story starts with 'We were just talking…' Well, we listen. Your ideas, concerns, and caffeine intake levels, everything. We’re basically the therapists of the business world, minus the couch and with a lot more coffee.",
   },
   {
     id: "we_probe",
@@ -31,52 +31,51 @@ const workFlowData = [
     title: "We Breakthrough",
     image: implementation,
     content:
-      "Boom! That’s the sound of barriers breaking and breakthroughs happening. We don’t just think outside the box,we recycle the box, throw a party, and build a rocket with the leftover cardboard.",
+      "Boom! That’s the sound of barriers breaking and breakthroughs happening. We don’t just think outside the box, we recycle the box, throw a party, and build a rocket with the leftover cardboard.",
   },
   {
     id: "We_Present",
     title: "We Present",
     image: maintenance,
     content:
-      "Now comes the show-and-tell. Except we don't show stick figures,we show magic. We bring the big guns: shiny presentations, genius ideas, and a slight addiction to overdelivering. We came, we conquered, we clicked ‘Present.’",
+      "Now comes the show-and-tell. Except we don't show stick figures, we show magic. We bring the big guns: shiny presentations, genius ideas, and a slight addiction to overdelivering.",
   },
   {
     id: "You_choose",
     title: "You Choose",
     image: chooseYou,
     content:
-      "Here’s the plot twist,you’re in charge. Like the captain of the ship, or the final judge on a reality show. We bring the ideas, you bring the nod (or dramatic pause), and together we make history. Or at least a really cool project.",
+      "Here’s the plot twist—you’re in charge. Like the captain of the ship, or the final judge on a reality show. We bring the ideas, you bring the nod, and together we make history.",
   },
   {
     id: "We_Execute",
     title: "We Execute",
     image: Rocket,
     content:
-      "This is where the cape comes on. We fly into action like caffeinated superheroes. Websites? Apps? Campaigns? You name it,we build it, launch it, and probably high-five each other afterward.",
+      "This is where the cape comes on. We fly into action like caffeinated superheroes. Websites? Apps? Campaigns? You name it, we build it, launch it, and probably high-five each other afterward.",
   },
   {
     id: "We_Analyze",
     title: "We Analyze and Optimize",
     image: analysis,
     content:
-      "Done? Ha, not yet. We zoom in like CSI experts,checking what worked, what didn’t, and who forgot to put a semicolon. If Plan A fails, don’t worry,we’ve got plans B through Z, and one involving pizza. Just in case.",
+      "Done? Ha, not yet. We zoom in like CSI experts, checking what worked, what didn’t, and who forgot to put a semicolon. If Plan A fails—don’t worry, we’ve got plans B through Z.",
   },
   {
     id: "We_retain",
     title: "We Retain",
     image: support,
     content:
-      "You thought we were done? Plot twist! We stick around like glitter,helpful, sparkly, and impossible to get rid of. We support, strategize, and occasionally send memes. It’s not a goodbye, it’s a ‘What’s next?’",
+      "You thought we were done? Plot twist! We stick around like glitter—helpful, sparkly, and impossible to get rid of. It’s not a goodbye, it’s a ‘What’s next?’",
   },
 ];
 
 export default function HowWeWork() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [active, setActive] = useState(workFlowData[0].id); // Desktop state
+  const [active, setActive] = useState(workFlowData[0].id);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.hash) {
-      // Delay to ensure DOM is rendered
       setTimeout(() => {
         const sectionId = window.location.hash.replace("#", "");
         const section = document.getElementById(sectionId);
@@ -88,7 +87,7 @@ export default function HowWeWork() {
         }
       }, 100);
     }
-  }, []); // Removed Next.js hooks
+  }, []);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev > 0 ? prev - 1 : workFlowData.length - 1));
@@ -99,24 +98,24 @@ export default function HowWeWork() {
   };
 
   return (
-    <div id="method" className="text-white mb-10 py-4 bg-black px-5">
-      <h2 className="text-5xl font-bold text-center mb-10 text-white">
+    <div id="method" className="mb-10 py-4 px-5 bg-white">
+      <h2 className="text-5xl font-bold text-center mb-10 text-gray-900">
         Method to Madness
       </h2>
 
       {/* Mobile View */}
-      <div className="md:hidden relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-lg border border-gray-700">
-        <div className="relative bg-[#D20E0E] flex justify-center items-center h-40">
+      <div className="md:hidden relative w-full max-w-sm mx-auto rounded-xl overflow-hidden shadow-md border border-gray-300 bg-white">
+        <div className="relative bg-gradient-to-r from-red-500 to-red-600 flex justify-center items-center h-40">
           <div className="absolute w-full top-1/2 -translate-y-1/2 flex justify-between px-4">
             <button
               onClick={handlePrev}
-              className="bg-neutral-950 hover:bg-white/30 text-white p-2 rounded-full"
+              className="bg-white/70 hover:bg-white text-gray-900 p-2 rounded-full"
             >
               <ArrowLeft size={20} />
             </button>
             <button
               onClick={handleNext}
-              className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full"
+              className="bg-white/70 hover:bg-white text-gray-900 p-2 rounded-full"
             >
               <ArrowRight size={20} />
             </button>
@@ -127,11 +126,11 @@ export default function HowWeWork() {
             className="w-14 h-14 z-10"
           />
         </div>
-        <div className="bg-[#1f1f1f] p-6 text-center">
-          <h3 className="text-lg font-semibold mb-2">
+        <div className="p-6 text-center">
+          <h3 className="text-lg font-semibold mb-2 text-gray-900">
             {workFlowData[activeIndex].title}
           </h3>
-          <p className="text-gray-300 text-sm">
+          <p className="text-gray-600 text-sm">
             {workFlowData[activeIndex].content}
           </p>
         </div>
@@ -139,15 +138,16 @@ export default function HowWeWork() {
 
       {/* Desktop View */}
       <div className="hidden md:block">
-        <div className="w-11/12 mx-auto grid grid-cols-4 gap-4">
+        <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-4 gap-4">
           {workFlowData.map((item) => (
             <div
               key={item.id}
               onClick={() => setActive(item.id)}
-              className={`cursor-pointer p-4 rounded-xl text-center transition-all duration-300 shadow-md border border-gray-700 ${
+              className={`cursor-pointer p-4 rounded-xl text-center transition-all duration-300 shadow-sm border border-gray-300
+              ${
                 active === item.id
-                  ? "bg-[#D20E0E] text-white shadow-lg"
-                  : "bg-[#1f1f1f] text-gray-300 hover:bg-[#2c2c2c]"
+                  ? "bg-red-500 text-white shadow-md"
+                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
               <Image
@@ -159,15 +159,16 @@ export default function HowWeWork() {
             </div>
           ))}
         </div>
-        <div className="mt-8 w-11/12 mx-auto bg-[#1f1f1f] border border-gray-700 p-6 rounded-xl shadow-lg">
+
+        <div className="mt-8 w-11/12 md:w-5/6 mx-auto bg-white border border-gray-300 p-6 rounded-xl shadow-md">
           {workFlowData
             .filter((item) => item.id === active)
             .map((item) => (
               <div key={item.id}>
-                <h3 className="text-2xl font-bold mb-3 text-white border-b border-[#D20E0E] inline-block pb-1">
+                <h3 className="text-2xl font-bold mb-3 text-red-600 border-b border-red-400 inline-block pb-1">
                   {item.title}
                 </h3>
-                <p className="mt-4 text-gray-300 whitespace-pre-line text-base leading-relaxed">
+                <p className="mt-4 text-gray-700 text-base leading-relaxed">
                   {item.content}
                 </p>
               </div>

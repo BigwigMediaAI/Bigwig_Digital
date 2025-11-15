@@ -16,14 +16,14 @@ import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div>
       <Nav />
       <Hero />
       <Partners />
       <Stats />
       <Client />
-      <ScrollOverlappingText />
-      <FlipCard />
+      {/* <ScrollOverlappingText />
+      <FlipCard /> */}
       <ImageSlider />
       <AboutUs />
       <CaseCard />

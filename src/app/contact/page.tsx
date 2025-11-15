@@ -108,8 +108,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-white min-h-screen text-black">
       <Nav />
+
       <title>Contact BigWig Digital</title>
       <meta
         name="description"
@@ -121,70 +122,71 @@ export default function ContactPage() {
       <section className="w-full md:w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 py-8">
         {/* Office Info */}
         <div className="pt-4">
-          {/* <h2 className="text-2xl mb-2 font-semibold">Dubai</h2>
-          <hr />
-          <h2 className="text-xl mb-2 font-semibold">Head Office</h2>
-          <p className="mb-1 text-lg">Dubai</p>
-          <p className="mb-4">
-            1703, Damac XL tower, Marasi Drive, Business bay, Dubai, UAE.
-          </p> */}
           <h2 className="text-2xl mb-2 font-semibold">India</h2>
-          <hr />
-          {/* <h2 className="text-xl mb-2 font-semibold">Branch Offices</h2> */}
+          <hr className="border-gray-300" />
           <p className="mb-1 text-lg font-semibold">Delhi</p>
-          <p className="mb-4">
-            Plot # 2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
+          <p className="mb-4 text-gray-700">
+            Plot #2, Sanjay Nagar, Gulabi Bagh, Delhi 110007, India
           </p>
 
           <h2 className="text-2xl mb-2 font-semibold">Australia</h2>
-          <hr />
+          <hr className="border-gray-300" />
           <p className="mb-1 text-lg font-semibold">Melbourne</p>
-          <p className="mb-4">80 Lsabella way, Tarneit 3029 Melbourne</p>
+          <p className="mb-4 text-gray-700">
+            80 Lsabella way, Tarneit 3029 Melbourne
+          </p>
 
           <h2 className="text-2xl mb-2 font-semibold">New Zealand</h2>
-          <hr />
+          <hr className="border-gray-300" />
           <p className="mb-1 text-lg font-semibold">Auckland</p>
-          <p className="mb-4">
-            9/136 Marua Road, Mount Wellington, Auckland 1051
+          <p className="mb-4 text-gray-700">
+            9/136 Marua Road, Mount Wellington, Auckland 1051
           </p>
 
-          <p className="text-gray-400 mt-8">
+          <p className="text-gray-600 mt-8">
             Our business operating hours are as follows:
           </p>
-          <p className="mt-2">Monday to Saturday: 10:30am - 7:00pm</p>
+          <p className="mt-2 text-gray-700">
+            Monday to Saturday: 10:30am - 7:00pm
+          </p>
         </div>
+
         {/* Contact Options */}
         <div>
           <h2 className="text-xl font-semibold mb-2 font-sans">Get in Touch</h2>
-          <p className="mb-4 text-gray-400">
+          <p className="mb-4 text-gray-600">
             Please contact us via phone or email below or visit us during hours.
           </p>
+
           <div className="flex flex-col gap-4">
-            <div className="bg-white p-4 rounded-md flex gap-4 shadow-sm">
+            <div className="bg-gray-100 p-4 rounded-md flex gap-4 shadow-sm">
               <Phone className="text-gray-700" />
               <span className="text-sm text-gray-700">+91 9685892813</span>
             </div>
+
             <a
               href="https://wa.me/+919685892813"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white p-4 rounded-md flex gap-4 shadow-sm"
+              className="bg-gray-100 p-4 rounded-md flex gap-4 shadow-sm"
             >
               <FaWhatsapp className="text-green-600" />
               <span className="text-sm text-gray-700">+91 96858 92813</span>
             </a>
+
             <a
               href="mailto:support@bigwigmedia.in"
-              className="bg-white p-4 rounded-md flex gap-4 shadow-sm"
+              className="bg-gray-100 p-4 rounded-md flex gap-4 shadow-sm"
             >
               <Mail className="text-gray-700" />
               <span className="text-sm text-gray-700">
                 support@bigwigmedia.in
               </span>
             </a>
+
             <a
               href="sms:+918368573451"
-              className="bg-white p-4 rounded-md flex gap-4 shadow-sm"
+              className="bg-gray-100 p-4 rounded-md flex gap-4 shadow-sm"
             >
               <MessageSquareText className="text-gray-700" />
               <span className="text-sm text-gray-700">+91 83685 73451</span>
@@ -195,18 +197,18 @@ export default function ContactPage() {
 
       {/* Intro to Form */}
       <div className="w-full md:w-[90%] mx-auto px-5">
-        <h2 className="text-lg text-[var(--secondary-color)]">
+        <h2 className="text-lg text-blue-600">
           Have questions or need marketing advice?
         </h2>
-        <p className="text-md text-gray-400 mb-6">
+        <p className="text-md text-gray-600 mb-6">
           Fill out the form and we’ll respond within 24 hours.
         </p>
       </div>
 
       {/* Form & Map */}
-      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7 bg-black">
+      <div className="flex flex-col md:flex-row justify-center items-start w-full md:w-[90%] mx-auto px-6 py-8 gap-10 mb-7 bg-white">
         {/* Form */}
-        <div className="w-full md:w-1/2 max-w-lg bg-[#2c2c2c] rounded-lg p-8 shadow-lg">
+        <div className="w-full md:w-1/2 max-w-lg bg-gray-100 rounded-lg p-8 shadow-lg">
           {step === "form" ? (
             <form onSubmit={handleSendOtp} className="space-y-4">
               <input
@@ -215,45 +217,49 @@ export default function ContactPage() {
                 placeholder="Your Full Name"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="bg-white text-black p-3 rounded-lg w-full"
+                className="bg-white text-black border border-gray-300 p-3 rounded-lg w-full"
                 required
               />
+
               <input
                 type="email"
                 name="email"
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`bg-white text-black p-3 rounded-lg w-full ${
-                  errors.email ? "border border-red-500" : ""
+                className={`bg-white text-black border p-3 rounded-lg w-full ${
+                  errors.email ? "border-red-500" : "border-gray-300"
                 }`}
                 required
               />
               {errors.email && (
                 <p className="text-red-500 text-sm">{errors.email}</p>
               )}
+
               <PhoneInput
                 placeholder="Enter phone number"
                 value={formData.phone}
                 onChange={handlePhoneChange}
                 defaultCountry="IN"
                 international
-                className={`bg-white text-black p-3 rounded-lg w-full ${
-                  errors.phone ? "border border-red-500" : ""
+                className={`bg-white text-black border p-3 rounded-lg w-full ${
+                  errors.phone ? "border-red-500" : "border-gray-300"
                 }`}
               />
               {errors.phone && (
                 <p className="text-red-500 text-sm">{errors.phone}</p>
               )}
+
               <textarea
                 name="message"
                 placeholder="Your Message"
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="bg-white text-black p-3 rounded-lg w-full"
+                className="bg-white text-black border border-gray-300 p-3 rounded-lg w-full"
                 required
               />
+
               <button
                 type="submit"
                 disabled={loading}
@@ -269,9 +275,10 @@ export default function ContactPage() {
                 placeholder="Enter OTP"
                 value={otp}
                 onChange={(e) => setOtp(e.target.value)}
-                className="bg-white text-black p-3 rounded-lg w-full"
+                className="bg-white text-black border border-gray-300 p-3 rounded-lg w-full"
                 required
               />
+
               <button
                 type="submit"
                 disabled={loading}
@@ -281,8 +288,11 @@ export default function ContactPage() {
               </button>
             </form>
           )}
+
           {statusMessage && (
-            <p className="text-sm text-center mt-3">{statusMessage}</p>
+            <p className="text-sm text-center mt-3 text-gray-600">
+              {statusMessage}
+            </p>
           )}
         </div>
 
@@ -299,16 +309,20 @@ export default function ContactPage() {
           ></iframe>
         </div>
       </div>
+
+      {/* Success Popup */}
       {showSuccessPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-          <div className="bg-white text-black rounded-xl p-6 max-w-sm w-full shadow-2xl text-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+          <div className="bg-white text-black rounded-xl p-6 max-w-sm w-full shadow-xl text-center border border-gray-200">
             <h3 className="text-xl font-bold text-green-600 mb-4">
               Thank you!
             </h3>
-            <p className="mb-4">
+
+            <p className="mb-4 text-gray-700">
               Your response has been added. Our representative will contact you
               within 24 hours.
             </p>
+
             <button
               className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
               onClick={() => setShowSuccessPopup(false)}

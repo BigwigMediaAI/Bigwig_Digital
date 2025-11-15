@@ -69,26 +69,23 @@ const AboutUs = () => {
   ];
 
   return (
-    <section
-      id="about"
-      className="w-11/12 mx-auto bg-neutral-950 text-white py-4 mb-10 px-0 md:px-5"
-    >
+    <section id="about" className="w-11/12 md:w-5/6 mx-auto  py-4 mb-10 ">
       <h1 className="text-5xl text-center py-4 font-bold leading-tight mb-7">
         About Us
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 items-start">
         <div className="text-left">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight pb-5">
+          <h2 className="text-4xl md:text-5xl font-semibold leading-tight pb-5">
             What Makes us{" "}
-            <span className="underline italic text-gray-200 mt-2 transition-all duration-300 ease-in-out">
+            <span className="underline italic text-[var(--primary-color)] mt-2 transition-all duration-300 ease-in-out">
               {rotatingWords[currentWordIndex]}?
             </span>
           </h2>
         </div>
 
         <div
-          className="text-gray-300 text-lg text-justify leading-relaxed"
+          className=" text-lg text-justify leading-relaxed"
           data-aos="zoom-in"
         >
           In a fast-changing digital world, first impressions are everything. As
@@ -125,14 +122,14 @@ const AboutUs = () => {
           </div>
 
           <div
-            className="bg-[#28282B] border border-gray-700 rounded-xl shadow-md p-3 w-[85%] mx-auto mt-12"
+            className=" border border-gray-700 rounded-xl shadow-md p-3 w-[85%] mx-auto mt-12"
             data-aos="zoom-in"
           >
             <h3 className="text-xl font-semibold mb-2">
               {cards[mobileIndex].title}
             </h3>
             <hr className="border-gray-600 mb-4" />
-            <p className="text-lg text-gray-400 text-justify">
+            <p className="text-lg text-gray-700 text-justify">
               {cards[mobileIndex].content}
             </p>
           </div>
@@ -142,12 +139,12 @@ const AboutUs = () => {
           {cards.map((card, i) => (
             <div
               key={i}
-              className="bg-[#1b1b1e] rounded-xl p-6 shadow-md"
+              className=" rounded-xl p-6 shadow-md"
               data-aos="zoom-in"
             >
               <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
               <hr className="border-gray-600 mb-4" />
-              <p className="text-lg text-gray-400 text-justify">
+              <p className="text-lg text-gray-700 text-justify">
                 {card.content}
               </p>
             </div>

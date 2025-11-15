@@ -20,7 +20,7 @@ function Footer() {
       <Image
         src={line2}
         alt=""
-        className="absolute top-0 left-0 invert"
+        className="absolute top-0 left-0"
         draggable="false"
       />
       <footer className="bg-[#1f1f1f] text-white pt-12 pb-6">

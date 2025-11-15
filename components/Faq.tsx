@@ -76,7 +76,7 @@ const ToggleFAQ = () => {
   };
 
   return (
-    <section id="faq" className="text-white mb-10 py-4 px-10 md:px-20">
+    <section id="faq" className="text-white mb-10  w-11/12 md:w-5/6 mx-auto ">
       <h2 className="text-5xl font-bold text-center mb-2 text-white">
         Frequently Asked Questions
       </h2>
