@@ -47,6 +47,12 @@ export default function Career() {
 
   return (
     <div>
+      <title>Digital Marketing Careers at BigWig Media | Join Our Team</title>
+      <meta
+        name="description"
+        content="Discover digital marketing job opportunities at BigWig Media and grow your career with our expert team. Apply now."
+      />
+
       <Nav />
 
       <div className="bg-white text-black">
