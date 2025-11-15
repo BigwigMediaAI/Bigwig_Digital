@@ -8,6 +8,13 @@ import "swiper/css/navigation";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
+interface Testimonial {
+  name: string;
+  review: string;
+  rating: number;
+  image: string;
+}
+
 // Custom Navigation Buttons
 const CustomPrev = () => (
   <div className="swiper-button-prev-custom absolute left-1 top-1/2 -translate-y-1/2 z-10 md:hidden cursor-pointer">
@@ -149,7 +156,7 @@ export default function ImageSlider() {
   );
 }
 
-const TestimonialCard = ({ item }: { item: any }) => {
+const TestimonialCard = ({ item }: { item: Testimonial }) => {
   const [showFull, setShowFull] = useState(false);
   const truncateLength = 150;
 
