@@ -89,15 +89,14 @@ function About() {
           <p>
             We are working with clients from India, U.A.E. New Zealand,
             Australia etc across verticals like ecommerce, technology, retail
-            and events across verticals like ecommerce, technology, retail and
-            events. At Bigwig Digital, we help brands grow, engage audiences,
-            and convert in the digital world. From SEO and social media to paid
-            ads, content creation, and web strategy we craft data-driven
-            campaigns and strategies that deliver real, live results. Whether
-            you&#39;re building your brand or boosting sales, we deliver smart
-            digital solutions tailored to your goals. We are hungry for
-            creativity and passionate about driving results. Our clients below
-            can attest to our efforts!
+            and events. At Bigwig Digital, we help brands grow, engage
+            audiences, and convert in the digital world. From SEO and social
+            media to paid ads, content creation, and web strategy we craft
+            data-driven campaigns and strategies that deliver real, live
+            results. Whether you&#39;re building your brand or boosting sales,
+            we deliver smart digital solutions tailored to your goals. We are
+            hungry for creativity and passionate about driving results. Our
+            clients below can attest to our efforts!
           </p>
         </section>
 
