@@ -94,7 +94,7 @@ export default function ServicesPage() {
     <section className="w-11/12 md:w-5/6 mx-auto py-12">
       {/* Heading */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Explore Our{" "}
           <span className="text-[var(--primary-color)]">Premium Services</span>
         </h1>

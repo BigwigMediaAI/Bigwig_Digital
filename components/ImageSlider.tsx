@@ -147,7 +147,7 @@ export default function ImageSlider() {
 
       <div className="flex justify-center mt-8">
         <a href="/contact">
-          <button className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300 font-semibold text-sm md:text-base">
+          <button className="bg-[var(--primary-color)] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300 font-semibold text-sm md:text-base">
             Want to grow your business?
           </button>
         </a>

@@ -92,7 +92,7 @@ const Client = () => {
       <div className=" flex justify-center">
         <a
           href="/clients"
-          className="inline-block bg-[#1752B4] text-white px-6 py-2 rounded-md shadow hover:bg-blue-700 transition text-sm"
+          className="bg-[var(--primary-color)] text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition duration-300 font-semibold text-sm md:text-base"
         >
           Show More
         </a>
